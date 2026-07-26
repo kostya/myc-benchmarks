@@ -82,7 +82,7 @@ puts "----------------------------- Run benchmark ------------------------------
 run_h = {}
 
 def run(binary)
-  c = "#{binary} ./test.js"
+  c = "#{binary} ./run.js"
   res = `#{c}`
   line = res.split("\n").find { |l| l.include?("Summary") }
   if line && line.include?("50, 50, ") && line =~ /Summary:\s*(\d+\.\d+)s/
