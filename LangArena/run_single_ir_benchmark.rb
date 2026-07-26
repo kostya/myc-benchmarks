@@ -18,12 +18,12 @@ CLANG_OPTS =   [
     "opts" => ["-O3", "./binaries/single_clang_o3"],
   },
   {
-    "name" => "clang(-O1, ll)",
-    "opts" => ["-O1", "./binaries/single_clang_o2"],
+    "name" => "clang(-O2, ll)",
+    "opts" => ["-O2", "./binaries/single_clang_o2"],
   },
   {
-    "name" => "clang(-O2, ll)",
-    "opts" => ["-O2", "./binaries/single_clang_o1"],
+    "name" => "clang(-O1, ll)",
+    "opts" => ["-O1", "./binaries/single_clang_o1"],
   },
   {
     "name" => "clang(-O0, ll)",
