@@ -1,0 +1,1638 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :BinarytreesObj_TreeNode
+  TYPE :ptr<BinarytreesObj_TreeNode>
+  TYPE :ptr<BinarytreesObj_TreeNode>
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :BinarytreesObjData
+  TYPE :i64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :BinarytreesArena_Node
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :BinarytreesArena_Arena
+  TYPE :ptr<BinarytreesArena_Node>
+  TYPE :u64
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :BinarytreesArenaData
+  TYPE :i64
+  TYPE :u32
+  TYPE :ptr<BinarytreesArena_Arena>
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :realloc
+  ARGS
+    TYPE :ptr<void>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesObj_TreeNode_new
+  ARGS
+    TYPE :i32
+    TYPE :i32
+  RETURN
+    TYPE :ptr<BinarytreesObj_TreeNode>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    SIZEOF :BinarytreesObj_TreeNode
+    CALL :malloc
+    AS :ptr<BinarytreesObj_TreeNode>
+    LOCAL :__s0_node :ptr<BinarytreesObj_TreeNode>
+    STORE
+    PARAM 0
+    LOCAL :__s0_node
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<BinarytreesObj_TreeNode>
+    LOCAL :__s0_node
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<BinarytreesObj_TreeNode>
+    LOCAL :__s0_node
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 0
+    PARAM 1
+    BINARY :more
+    IF
+      THEN
+        PUSH 1
+        PARAM 1
+        BINARY :sub
+        PUSH 1
+        BINARY :shl
+        LOCAL :__s1_shift :i32
+        STORE
+        PUSH 1
+        PARAM 1
+        BINARY :sub
+        LOCAL :__s1_shift
+        PARAM 0
+        BINARY :sub
+        CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_new
+        LOCAL :__s0_node
+        DEREF
+        FIELD 0
+        STORE
+        PUSH 1
+        PARAM 1
+        BINARY :sub
+        LOCAL :__s1_shift
+        PARAM 0
+        BINARY :add
+        CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_new
+        LOCAL :__s0_node
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    LOCAL :__s0_node
+    RET
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesObj_TreeNode_free
+  ARGS
+    TYPE :ptr<BinarytreesObj_TreeNode>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<BinarytreesObj_TreeNode>
+    PARAM 0
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_free
+    PARAM 0
+    DEREF
+    FIELD 1
+    CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_free
+    PARAM 0
+    AS :ptr<void>
+    CALL :free
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesObj_TreeNode_sum
+  ARGS
+    TYPE :ptr<BinarytreesObj_TreeNode>
+  RETURN
+    TYPE :u32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 1
+    AS :u32
+    PARAM 0
+    DEREF
+    FIELD 2
+    AS :u32
+    BINARY :add
+    LOCAL :__s0_total :u32
+    STORE
+    PUSH 0
+    AS :ptr<BinarytreesObj_TreeNode>
+    PARAM 0
+    DEREF
+    FIELD 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 0
+        CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_sum
+        LOCAL :__s0_total
+        BINARY :add
+        LOCAL :__s0_total
+        STORE
+    ENDIF
+    PUSH 0
+    AS :ptr<BinarytreesObj_TreeNode>
+    PARAM 0
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 1
+        CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_sum
+        LOCAL :__s0_total
+        BINARY :add
+        LOCAL :__s0_total
+        STORE
+    ENDIF
+    LOCAL :__s0_total
+    RET
+ENDFUNC
+
+FUNC :BinarytreesObj_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<BinarytreesObjData>
+    LOCAL :__s0_data :ptr<BinarytreesObjData>
+    STORE
+    PUSH :depth
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :BinarytreesObj_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<BinarytreesObjData>
+    LOCAL :__s0_data :ptr<BinarytreesObjData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    AS :i32
+    PUSH 0
+    CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_new
+    LOCAL :__s0_root :ptr<BinarytreesObj_TreeNode>
+    STORE
+    LOCAL :__s0_root
+    CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_sum
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :add
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    LOCAL :__s0_root
+    CALL :static_fn_binarytrees_c_BinarytreesObj_TreeNode_free
+ENDFUNC
+
+FUNC :BinarytreesObj_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<BinarytreesObjData>
+    LOCAL :__s0_data :ptr<BinarytreesObjData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    RET
+ENDFUNC
+
+FUNC :BinarytreesObj_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH 0
+    AS :ptr<Benchmark>
+    PARAM 0
+    BINARY :not_eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 11
+        BINARY :not_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 11
+        AS :ptr<BinarytreesObjData>
+        LOCAL :__s1_data :ptr<BinarytreesObjData>
+        STORE
+        LOCAL :__s1_data
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 11
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :BinarytreesObj_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Binarytrees::Obj
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    PUSH 0
+    AS :ptr<Benchmark>
+    LOCAL :__s0_bench
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Benchmark>
+        RET
+    ENDIF
+    SIZEOF :BinarytreesObjData
+    CALL :malloc
+    AS :ptr<BinarytreesObjData>
+    LOCAL :__s1_data :ptr<BinarytreesObjData>
+    STORE
+    PUSH 0
+    AS :ptr<BinarytreesObjData>
+    LOCAL :__s1_data
+    BINARY :eq
+    IF
+      THEN
+        LOCAL :__s0_bench
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Benchmark>
+        RET
+    ENDIF
+    PUSH 0
+    AS :i64
+    LOCAL :__s1_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s1_data
+    DEREF
+    FIELD 1
+    STORE
+    LOCAL :__s1_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :BinarytreesObj_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :BinarytreesObj_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :BinarytreesObj_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :BinarytreesObj_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_new
+  RETURN
+    TYPE :ptr<BinarytreesArena_Arena>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    SIZEOF :BinarytreesArena_Arena
+    CALL :malloc
+    AS :ptr<BinarytreesArena_Arena>
+    LOCAL :__s0_arena :ptr<BinarytreesArena_Arena>
+    STORE
+    PUSH 0
+    AS :ptr<BinarytreesArena_Arena>
+    LOCAL :__s0_arena
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<BinarytreesArena_Arena>
+        RET
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<BinarytreesArena_Node>
+    LOCAL :__s0_arena
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u64
+    LOCAL :__s0_arena
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 0
+    AS :u64
+    LOCAL :__s0_arena
+    DEREF
+    FIELD 2
+    STORE
+    LOCAL :__s0_arena
+    RET
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_free
+  ARGS
+    TYPE :ptr<BinarytreesArena_Arena>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<BinarytreesArena_Arena>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<BinarytreesArena_Node>
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 0
+            DEREF
+            FIELD 0
+            AS :ptr<void>
+            CALL :free
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<BinarytreesArena_Node>
+            PARAM 0
+            DEREF
+            FIELD 0
+            STORE
+        ENDIF
+        PUSH 0
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 1
+        STORE
+        PUSH 0
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 2
+        STORE
+        PARAM 0
+        AS :ptr<void>
+        CALL :free
+    ENDIF
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_add
+  ARGS
+    TYPE :ptr<BinarytreesArena_Arena>
+    TYPE :i32
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<BinarytreesArena_Arena>
+    PARAM 0
+    BINARY :eq
+    IF
+      THEN
+        PUSH 1
+        UNARY :neg
+        RET
+    ENDIF
+    PARAM 0
+    DEREF
+    FIELD 1
+    PARAM 0
+    DEREF
+    FIELD 2
+    BINARY :more_eq
+    IF
+      THEN
+        PUSH 0
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 1
+        BINARY :eq
+        IF
+          THEN
+            PUSH 1024
+            AS :u64
+            LOCAL :__ternary_0 :u64
+            STORE
+          ELSE
+            PUSH 2
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 1
+            BINARY :mul
+            LOCAL :__ternary_0
+            STORE
+        ENDIF
+        LOCAL :__ternary_0
+        LOCAL :__s2_new_capacity :u64
+        STORE
+        SIZEOF :BinarytreesArena_Node
+        LOCAL :__s2_new_capacity
+        BINARY :mul
+        PARAM 0
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :realloc
+        AS :ptr<BinarytreesArena_Node>
+        LOCAL :__s2_new_nodes :ptr<BinarytreesArena_Node>
+        STORE
+        PUSH 0
+        AS :ptr<BinarytreesArena_Node>
+        LOCAL :__s2_new_nodes
+        BINARY :eq
+        IF
+          THEN
+            PUSH 1
+            UNARY :neg
+            RET
+        ENDIF
+        LOCAL :__s2_new_nodes
+        PARAM 0
+        DEREF
+        FIELD 0
+        STORE
+        LOCAL :__s2_new_capacity
+        PARAM 0
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    PARAM 0
+    DEREF
+    FIELD 2
+    AS :i32
+    LOCAL :__s3_idx :i32
+    STORE
+    PARAM 1
+    LOCAL :__s3_idx
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    BINARY :add
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 1
+    UNARY :neg
+    LOCAL :__s3_idx
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    BINARY :add
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 1
+    UNARY :neg
+    LOCAL :__s3_idx
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    BINARY :add
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 1 :u64
+    PARAM 0
+    DEREF
+    FIELD 2
+    BINARY :add
+    PARAM 0
+    DEREF
+    FIELD 2
+    STORE
+    LOCAL :__s3_idx
+    RET
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesArena_build_tree
+  ARGS
+    TYPE :ptr<BinarytreesArena_Arena>
+    TYPE :i32
+    TYPE :i32
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<BinarytreesArena_Arena>
+    PARAM 0
+    BINARY :eq
+    IF
+      THEN
+        PUSH 1
+        UNARY :neg
+        RET
+    ENDIF
+    PARAM 1
+    PARAM 0
+    CALL :static_fn_binarytrees_c_BinarytreesArena_Arena_add
+    LOCAL :__s1_idx :i32
+    STORE
+    PUSH 0
+    LOCAL :__s1_idx
+    BINARY :less
+    IF
+      THEN
+        PUSH 1
+        UNARY :neg
+        RET
+    ENDIF
+    PUSH 0
+    PARAM 2
+    BINARY :more
+    IF
+      THEN
+        PUSH 1
+        PARAM 2
+        BINARY :sub
+        PUSH 1
+        BINARY :shl
+        LOCAL :__s3_shift :i32
+        STORE
+        PUSH 1
+        PARAM 2
+        BINARY :sub
+        LOCAL :__s3_shift
+        PARAM 1
+        BINARY :sub
+        PARAM 0
+        CALL :static_fn_binarytrees_c_BinarytreesArena_build_tree
+        LOCAL :__s3_left_idx :i32
+        STORE
+        PUSH 1
+        PARAM 2
+        BINARY :sub
+        LOCAL :__s3_shift
+        PARAM 1
+        BINARY :add
+        PARAM 0
+        CALL :static_fn_binarytrees_c_BinarytreesArena_build_tree
+        LOCAL :__s3_right_idx :i32
+        STORE
+        PUSH 0
+        LOCAL :__s3_left_idx
+        BINARY :more_eq
+        LOCAL :__sc_and_4 :bool
+        STORE
+        LOCAL :__sc_and_4
+        IF
+          THEN
+            PUSH 0
+            LOCAL :__s3_right_idx
+            BINARY :more_eq
+            LOCAL :__sc_and_4
+            STORE
+        ENDIF
+        LOCAL :__sc_and_4
+        IF
+          THEN
+            LOCAL :__s3_left_idx
+            LOCAL :__s1_idx
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 0
+            BINARY :add
+            DEREF
+            FIELD 1
+            STORE
+            LOCAL :__s3_right_idx
+            LOCAL :__s1_idx
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 0
+            BINARY :add
+            DEREF
+            FIELD 2
+            STORE
+        ENDIF
+    ENDIF
+    LOCAL :__s1_idx
+    RET
+ENDFUNC
+
+FUNC :static_fn_binarytrees_c_BinarytreesArena_sum
+  ARGS
+    TYPE :ptr<BinarytreesArena_Arena>
+    TYPE :i32
+  RETURN
+    TYPE :u32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<BinarytreesArena_Arena>
+    PARAM 0
+    BINARY :eq
+    LOCAL :__sc_or_0 :bool
+    STORE
+    LOCAL :__sc_or_0
+    IF
+      THEN
+      ELSE
+        PUSH 0
+        PARAM 1
+        BINARY :less
+        LOCAL :__sc_or_0
+        STORE
+    ENDIF
+    LOCAL :__sc_or_0
+    LOCAL :__sc_or_0
+    STORE
+    LOCAL :__sc_or_0
+    IF
+      THEN
+      ELSE
+        PARAM 0
+        DEREF
+        FIELD 2
+        PARAM 1
+        AS :u64
+        BINARY :more_eq
+        LOCAL :__sc_or_0
+        STORE
+    ENDIF
+    LOCAL :__sc_or_0
+    IF
+      THEN
+        PUSH 0
+        AS :u32
+        RET
+    ENDIF
+    PARAM 1
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    BINARY :add
+    DEREF
+    ADDR
+    LOCAL :__s1_node :ptr<BinarytreesArena_Node>
+    STORE
+    PUSH 1
+    AS :u32
+    LOCAL :__s1_node
+    DEREF
+    FIELD 0
+    AS :u32
+    BINARY :add
+    LOCAL :__s1_total :u32
+    STORE
+    PUSH 0
+    LOCAL :__s1_node
+    DEREF
+    FIELD 1
+    BINARY :more_eq
+    IF
+      THEN
+        LOCAL :__s1_node
+        DEREF
+        FIELD 1
+        PARAM 0
+        CALL :static_fn_binarytrees_c_BinarytreesArena_sum
+        LOCAL :__s1_total
+        BINARY :add
+        LOCAL :__s1_total
+        STORE
+    ENDIF
+    PUSH 0
+    LOCAL :__s1_node
+    DEREF
+    FIELD 2
+    BINARY :more_eq
+    IF
+      THEN
+        LOCAL :__s1_node
+        DEREF
+        FIELD 2
+        PARAM 0
+        CALL :static_fn_binarytrees_c_BinarytreesArena_sum
+        LOCAL :__s1_total
+        BINARY :add
+        LOCAL :__s1_total
+        STORE
+    ENDIF
+    LOCAL :__s1_total
+    RET
+ENDFUNC
+
+FUNC :BinarytreesArena_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH 0
+    AS :ptr<Benchmark>
+    PARAM 0
+    BINARY :eq
+    LOCAL :__sc_or_0 :bool
+    STORE
+    LOCAL :__sc_or_0
+    IF
+      THEN
+      ELSE
+        PUSH 0
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 11
+        BINARY :eq
+        LOCAL :__sc_or_0
+        STORE
+    ENDIF
+    LOCAL :__sc_or_0
+    IF
+      THEN
+        RET
+    ENDIF
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<BinarytreesArenaData>
+    LOCAL :__s1_data :ptr<BinarytreesArenaData>
+    STORE
+    PUSH :depth
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s1_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s1_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :BinarytreesArena_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PUSH 0
+    AS :ptr<Benchmark>
+    PARAM 0
+    BINARY :eq
+    LOCAL :__sc_or_0 :bool
+    STORE
+    LOCAL :__sc_or_0
+    IF
+      THEN
+      ELSE
+        PUSH 0
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 11
+        BINARY :eq
+        LOCAL :__sc_or_0
+        STORE
+    ENDIF
+    LOCAL :__sc_or_0
+    IF
+      THEN
+        RET
+    ENDIF
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<BinarytreesArenaData>
+    LOCAL :__s1_data :ptr<BinarytreesArenaData>
+    STORE
+    CALL :static_fn_binarytrees_c_BinarytreesArena_Arena_new
+    LOCAL :__s1_data
+    DEREF
+    FIELD 2
+    STORE
+    LOCAL :__s1_data
+    DEREF
+    FIELD 0
+    AS :i32
+    PUSH 0
+    LOCAL :__s1_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_binarytrees_c_BinarytreesArena_build_tree
+    LOCAL :__s1_root_idx :i32
+    STORE
+    PUSH 0
+    LOCAL :__s1_root_idx
+    BINARY :more_eq
+    IF
+      THEN
+        LOCAL :__s1_root_idx
+        LOCAL :__s1_data
+        DEREF
+        FIELD 2
+        CALL :static_fn_binarytrees_c_BinarytreesArena_sum
+        LOCAL :__s1_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        LOCAL :__s1_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    LOCAL :__s1_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_binarytrees_c_BinarytreesArena_Arena_free
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<BinarytreesArena_Arena>
+    LOCAL :__s1_data
+    DEREF
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :BinarytreesArena_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PUSH 0
+    AS :ptr<Benchmark>
+    PARAM 0
+    BINARY :eq
+    LOCAL :__sc_or_0 :bool
+    STORE
+    LOCAL :__sc_or_0
+    IF
+      THEN
+      ELSE
+        PUSH 0
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 11
+        BINARY :eq
+        LOCAL :__sc_or_0
+        STORE
+    ENDIF
+    LOCAL :__sc_or_0
+    IF
+      THEN
+        PUSH 0
+        AS :u32
+        RET
+    ENDIF
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<BinarytreesArenaData>
+    LOCAL :__s1_data :ptr<BinarytreesArenaData>
+    STORE
+    LOCAL :__s1_data
+    DEREF
+    FIELD 1
+    RET
+ENDFUNC
+
+FUNC :BinarytreesArena_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH 0
+    AS :ptr<Benchmark>
+    PARAM 0
+    BINARY :not_eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 11
+        BINARY :not_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 11
+        AS :ptr<BinarytreesArenaData>
+        LOCAL :__s1_data :ptr<BinarytreesArenaData>
+        STORE
+        PUSH 0
+        AS :ptr<BinarytreesArena_Arena>
+        LOCAL :__s1_data
+        DEREF
+        FIELD 2
+        BINARY :not_eq
+        IF
+          THEN
+            LOCAL :__s1_data
+            DEREF
+            FIELD 2
+            CALL :static_fn_binarytrees_c_BinarytreesArena_Arena_free
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<BinarytreesArena_Arena>
+            LOCAL :__s1_data
+            DEREF
+            FIELD 2
+            STORE
+        ENDIF
+        LOCAL :__s1_data
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 11
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :BinarytreesArena_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Binarytrees::Arena
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    PUSH 0
+    AS :ptr<Benchmark>
+    LOCAL :__s0_bench
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Benchmark>
+        RET
+    ENDIF
+    SIZEOF :BinarytreesArenaData
+    CALL :malloc
+    AS :ptr<BinarytreesArenaData>
+    LOCAL :__s1_data :ptr<BinarytreesArenaData>
+    STORE
+    PUSH 0
+    AS :ptr<BinarytreesArenaData>
+    LOCAL :__s1_data
+    BINARY :eq
+    IF
+      THEN
+        LOCAL :__s0_bench
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Benchmark>
+        RET
+    ENDIF
+    PUSH 0
+    AS :i64
+    LOCAL :__s1_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s1_data
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<BinarytreesArena_Arena>
+    LOCAL :__s1_data
+    DEREF
+    FIELD 2
+    STORE
+    LOCAL :__s1_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :BinarytreesArena_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :BinarytreesArena_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :BinarytreesArena_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :BinarytreesArena_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

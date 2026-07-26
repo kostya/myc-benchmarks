@@ -1,0 +1,1405 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :NbodyPlanet
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+ENDSTRUCT
+
+STRUCT :NbodyData
+  TYPE :i64
+  TYPE :ptr<NbodyPlanet>
+  TYPE :i64
+  TYPE :f64
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memset
+  ARGS
+    TYPE :ptr<void>
+    TYPE :i32
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_checksum_f64
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :u32
+ENDFUNC
+
+FUNC :sqrt
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_nbody_c_Nbody_Planet_init
+  ARGS
+    TYPE :ptr<NbodyPlanet>
+    TYPE :f64
+    TYPE :f64
+    TYPE :f64
+    TYPE :f64
+    TYPE :f64
+    TYPE :f64
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    PARAM 0
+    DEREF
+    FIELD 0
+    STORE
+    PARAM 2
+    PARAM 0
+    DEREF
+    FIELD 1
+    STORE
+    PARAM 3
+    PARAM 0
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 365.24 :f64
+    PARAM 4
+    BINARY :mul
+    PARAM 0
+    DEREF
+    FIELD 3
+    STORE
+    PUSH 365.24 :f64
+    PARAM 5
+    BINARY :mul
+    PARAM 0
+    DEREF
+    FIELD 4
+    STORE
+    PUSH 365.24 :f64
+    PARAM 6
+    BINARY :mul
+    PARAM 0
+    DEREF
+    FIELD 5
+    STORE
+    PUSH 3.141592653589793 :f64
+    PUSH 3.141592653589793 :f64
+    PUSH 4
+    AS :f64
+    BINARY :mul
+    BINARY :mul
+    PARAM 7
+    BINARY :mul
+    PARAM 0
+    DEREF
+    FIELD 6
+    STORE
+ENDFUNC
+
+FUNC :static_fn_nbody_c_Nbody_energy
+  ARGS
+    TYPE :ptr<NbodyPlanet>
+    TYPE :i64
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0.0 :f64
+    LOCAL :__s0_e :f64
+    STORE
+    PUSH 0 :i64
+    LOCAL :__s0_i :i64
+    STORE
+    LOOP
+      COND
+        PARAM 1
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        BINARY :add
+        DEREF
+        ADDR
+        LOCAL :__s1_b :ptr<NbodyPlanet>
+        STORE
+        LOCAL :__s1_b
+        DEREF
+        FIELD 5
+        LOCAL :__s1_b
+        DEREF
+        FIELD 5
+        BINARY :mul
+        LOCAL :__s1_b
+        DEREF
+        FIELD 4
+        LOCAL :__s1_b
+        DEREF
+        FIELD 4
+        BINARY :mul
+        LOCAL :__s1_b
+        DEREF
+        FIELD 3
+        LOCAL :__s1_b
+        DEREF
+        FIELD 3
+        BINARY :mul
+        BINARY :add
+        BINARY :add
+        LOCAL :__s1_b
+        DEREF
+        FIELD 6
+        PUSH 0.5 :f64
+        BINARY :mul
+        BINARY :mul
+        LOCAL :__s0_e
+        BINARY :add
+        LOCAL :__s0_e
+        STORE
+        PUSH 1
+        AS :i64
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s1_j :i64
+        STORE
+        LOOP
+          COND
+            PARAM 1
+            LOCAL :__s1_j
+            BINARY :less
+          BODY
+            LOCAL :__s1_j
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            ADDR
+            LOCAL :__s2_b2 :ptr<NbodyPlanet>
+            STORE
+            LOCAL :__s2_b2
+            DEREF
+            FIELD 0
+            LOCAL :__s1_b
+            DEREF
+            FIELD 0
+            BINARY :sub
+            LOCAL :__s2_dx :f64
+            STORE
+            LOCAL :__s2_b2
+            DEREF
+            FIELD 1
+            LOCAL :__s1_b
+            DEREF
+            FIELD 1
+            BINARY :sub
+            LOCAL :__s2_dy :f64
+            STORE
+            LOCAL :__s2_b2
+            DEREF
+            FIELD 2
+            LOCAL :__s1_b
+            DEREF
+            FIELD 2
+            BINARY :sub
+            LOCAL :__s2_dz :f64
+            STORE
+            LOCAL :__s2_dz
+            LOCAL :__s2_dz
+            BINARY :mul
+            LOCAL :__s2_dy
+            LOCAL :__s2_dy
+            BINARY :mul
+            LOCAL :__s2_dx
+            LOCAL :__s2_dx
+            BINARY :mul
+            BINARY :add
+            BINARY :add
+            CALL :sqrt
+            LOCAL :__s2_distance :f64
+            STORE
+            LOCAL :__s2_distance
+            LOCAL :__s2_b2
+            DEREF
+            FIELD 6
+            LOCAL :__s1_b
+            DEREF
+            FIELD 6
+            BINARY :mul
+            BINARY :div
+            LOCAL :__s0_e
+            BINARY :sub
+            LOCAL :__s0_e
+            STORE
+          STEP
+            PUSH 1 :i64
+            LOCAL :__s1_j
+            BINARY :add
+            LOCAL :__s1_j
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    LOCAL :__s0_e
+    RET
+ENDFUNC
+
+FUNC :static_fn_nbody_c_Nbody_offset_momentum
+  ARGS
+    TYPE :ptr<NbodyPlanet>
+    TYPE :i64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0.0 :f64
+    LOCAL :__s0_px :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s0_py :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s0_pz :f64
+    STORE
+    PUSH 0 :i64
+    LOCAL :__s0_i :i64
+    STORE
+    LOOP
+      COND
+        PARAM 1
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        BINARY :add
+        DEREF
+        ADDR
+        LOCAL :__s1_b :ptr<NbodyPlanet>
+        STORE
+        LOCAL :__s1_b
+        DEREF
+        FIELD 6
+        LOCAL :__s1_b
+        DEREF
+        FIELD 3
+        BINARY :mul
+        LOCAL :__s0_px
+        BINARY :add
+        LOCAL :__s0_px
+        STORE
+        LOCAL :__s1_b
+        DEREF
+        FIELD 6
+        LOCAL :__s1_b
+        DEREF
+        FIELD 4
+        BINARY :mul
+        LOCAL :__s0_py
+        BINARY :add
+        LOCAL :__s0_py
+        STORE
+        LOCAL :__s1_b
+        DEREF
+        FIELD 6
+        LOCAL :__s1_b
+        DEREF
+        FIELD 5
+        BINARY :mul
+        LOCAL :__s0_pz
+        BINARY :add
+        LOCAL :__s0_pz
+        STORE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    AS :u64
+    PARAM 0
+    BINARY :add
+    DEREF
+    ADDR
+    LOCAL :__s1_b
+    STORE
+    PUSH 3.141592653589793 :f64
+    PUSH 3.141592653589793 :f64
+    PUSH 4
+    AS :f64
+    BINARY :mul
+    BINARY :mul
+    LOCAL :__s0_px
+    UNARY :neg
+    BINARY :div
+    LOCAL :__s1_b
+    DEREF
+    FIELD 3
+    STORE
+    PUSH 3.141592653589793 :f64
+    PUSH 3.141592653589793 :f64
+    PUSH 4
+    AS :f64
+    BINARY :mul
+    BINARY :mul
+    LOCAL :__s0_py
+    UNARY :neg
+    BINARY :div
+    LOCAL :__s1_b
+    DEREF
+    FIELD 4
+    STORE
+    PUSH 3.141592653589793 :f64
+    PUSH 3.141592653589793 :f64
+    PUSH 4
+    AS :f64
+    BINARY :mul
+    BINARY :mul
+    LOCAL :__s0_pz
+    UNARY :neg
+    BINARY :div
+    LOCAL :__s1_b
+    DEREF
+    FIELD 5
+    STORE
+ENDFUNC
+
+FUNC :static_fn_nbody_c_Nbody_Planet_move_from_i
+  ARGS
+    TYPE :ptr<NbodyPlanet>
+    TYPE :i64
+    TYPE :f64
+    TYPE :i64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 1
+    AS :i64
+    PARAM 3
+    BINARY :sub
+    AS :u64
+    PARAM 0
+    BINARY :add
+    DEREF
+    ADDR
+    LOCAL :__s0_b1 :ptr<NbodyPlanet>
+    STORE
+    PARAM 3
+    LOCAL :__s0_j :i64
+    STORE
+    LOOP
+      COND
+        PARAM 1
+        LOCAL :__s0_j
+        BINARY :less
+      BODY
+        LOCAL :__s0_j
+        AS :u64
+        PARAM 0
+        BINARY :add
+        DEREF
+        ADDR
+        LOCAL :__s1_b2 :ptr<NbodyPlanet>
+        STORE
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 0
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 0
+        BINARY :sub
+        LOCAL :__s1_dx :f64
+        STORE
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 1
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 1
+        BINARY :sub
+        LOCAL :__s1_dy :f64
+        STORE
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 2
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 2
+        BINARY :sub
+        LOCAL :__s1_dz :f64
+        STORE
+        LOCAL :__s1_dz
+        LOCAL :__s1_dz
+        BINARY :mul
+        LOCAL :__s1_dy
+        LOCAL :__s1_dy
+        BINARY :mul
+        LOCAL :__s1_dx
+        LOCAL :__s1_dx
+        BINARY :mul
+        BINARY :add
+        BINARY :add
+        LOCAL :__s1_distance_sq :f64
+        STORE
+        LOCAL :__s1_distance_sq
+        CALL :sqrt
+        LOCAL :__s1_distance :f64
+        STORE
+        LOCAL :__s1_distance
+        LOCAL :__s1_distance
+        LOCAL :__s1_distance
+        BINARY :mul
+        BINARY :mul
+        PARAM 2
+        BINARY :div
+        LOCAL :__s1_mag :f64
+        STORE
+        LOCAL :__s1_mag
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 6
+        BINARY :mul
+        LOCAL :__s1_b1_mass_mag :f64
+        STORE
+        LOCAL :__s1_mag
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 6
+        BINARY :mul
+        LOCAL :__s1_b2_mass_mag :f64
+        STORE
+        LOCAL :__s1_b2_mass_mag
+        LOCAL :__s1_dx
+        BINARY :mul
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 3
+        BINARY :sub
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 3
+        STORE
+        LOCAL :__s1_b2_mass_mag
+        LOCAL :__s1_dy
+        BINARY :mul
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 4
+        BINARY :sub
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 4
+        STORE
+        LOCAL :__s1_b2_mass_mag
+        LOCAL :__s1_dz
+        BINARY :mul
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 5
+        BINARY :sub
+        LOCAL :__s0_b1
+        DEREF
+        FIELD 5
+        STORE
+        LOCAL :__s1_b1_mass_mag
+        LOCAL :__s1_dx
+        BINARY :mul
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 3
+        BINARY :add
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 3
+        STORE
+        LOCAL :__s1_b1_mass_mag
+        LOCAL :__s1_dy
+        BINARY :mul
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 4
+        BINARY :add
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 4
+        STORE
+        LOCAL :__s1_b1_mass_mag
+        LOCAL :__s1_dz
+        BINARY :mul
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 5
+        BINARY :add
+        LOCAL :__s1_b2
+        DEREF
+        FIELD 5
+        STORE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s0_j
+        BINARY :add
+        LOCAL :__s0_j
+        STORE
+    ENDLOOP
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 3
+    PARAM 2
+    BINARY :mul
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 0
+    BINARY :add
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 0
+    STORE
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 4
+    PARAM 2
+    BINARY :mul
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 1
+    BINARY :add
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 1
+    STORE
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 5
+    PARAM 2
+    BINARY :mul
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 2
+    BINARY :add
+    LOCAL :__s0_b1
+    DEREF
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :Nbody_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NbodyData>
+    LOCAL :__s0_data :ptr<NbodyData>
+    STORE
+    PUSH 0
+    AS :ptr<NbodyPlanet>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :eq
+    IF
+      THEN
+        PUSH 5
+        AS :i64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        STORE
+        SIZEOF :NbodyPlanet
+        AS :i64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        BINARY :mul
+        AS :u64
+        CALL :malloc
+        AS :ptr<NbodyPlanet>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+        PUSH 1.0 :f64
+        PUSH 0.0 :f64
+        PUSH 0.0 :f64
+        PUSH 0.0 :f64
+        PUSH 0.0 :f64
+        PUSH 0.0 :f64
+        PUSH 0.0 :f64
+        PUSH 0
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_nbody_c_Nbody_Planet_init
+        PUSH 0.0009547919384243266 :f64
+        PUSH 6.90460016972063e-5 :f64
+        UNARY :neg
+        PUSH 0.007699011184197404 :f64
+        PUSH 0.001660076642744037 :f64
+        PUSH 0.10362204447112311 :f64
+        UNARY :neg
+        PUSH 1.1603200440274284 :f64
+        UNARY :neg
+        PUSH 4.841431442464721 :f64
+        PUSH 1
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_nbody_c_Nbody_Planet_init
+        PUSH 0.0002858859806661308 :f64
+        PUSH 2.3041729757376393e-5 :f64
+        PUSH 0.004998528012349172 :f64
+        PUSH 0.002767425107268624 :f64
+        UNARY :neg
+        PUSH 0.4035234171143214 :f64
+        UNARY :neg
+        PUSH 4.124798564124305 :f64
+        PUSH 8.34336671824458 :f64
+        PUSH 2
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_nbody_c_Nbody_Planet_init
+        PUSH 4.366244043351563e-5 :f64
+        PUSH 2.9658956854023756e-5 :f64
+        UNARY :neg
+        PUSH 0.0023784717395948095 :f64
+        PUSH 0.002964601375647616 :f64
+        PUSH 0.22330757889265573 :f64
+        UNARY :neg
+        PUSH 15.111151401698631 :f64
+        UNARY :neg
+        PUSH 12.894369562139131 :f64
+        PUSH 3
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_nbody_c_Nbody_Planet_init
+        PUSH 5.1513890204661145e-5 :f64
+        PUSH 9.515922545197159e-5 :f64
+        UNARY :neg
+        PUSH 0.001628241700382423 :f64
+        PUSH 0.0026806777249038932 :f64
+        PUSH 0.17925877295037118 :f64
+        PUSH 25.919314609987964 :f64
+        UNARY :neg
+        PUSH 15.379697114850917 :f64
+        PUSH 4
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_nbody_c_Nbody_Planet_init
+    ENDIF
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    CALL :static_fn_nbody_c_Nbody_offset_momentum
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    CALL :static_fn_nbody_c_Nbody_energy
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    STORE
+ENDFUNC
+
+FUNC :Nbody_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NbodyData>
+    LOCAL :__s0_data :ptr<NbodyData>
+    STORE
+    PUSH 0.01 :f64
+    LOCAL :__s0_dt :f64
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    AS :i32
+    LOCAL :__s0_nbodies :i32
+    STORE
+    PUSH 0
+    LOCAL :__s0_n :i32
+    STORE
+    LOOP
+      COND
+        PUSH 1000
+        LOCAL :__s0_n
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s1_i :i32
+        STORE
+        LOOP
+          COND
+            LOCAL :__s0_nbodies
+            LOCAL :__s1_i
+            BINARY :less
+          BODY
+            PUSH 1
+            LOCAL :__s1_i
+            BINARY :add
+            AS :i64
+            LOCAL :__s0_dt
+            LOCAL :__s0_data
+            DEREF
+            FIELD 2
+            LOCAL :__s0_data
+            DEREF
+            FIELD 1
+            CALL :static_fn_nbody_c_Nbody_Planet_move_from_i
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s1_i
+            BINARY :add
+            LOCAL :__s1_i
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_n
+        BINARY :add
+        LOCAL :__s0_n
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :Nbody_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NbodyData>
+    LOCAL :__s0_data :ptr<NbodyData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    CALL :static_fn_nbody_c_Nbody_energy
+    LOCAL :__s0_energy_after :f64
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    CALL :Helper_checksum_f64
+    LOCAL :__s0_checksum_before :u32
+    STORE
+    LOCAL :__s0_energy_after
+    CALL :Helper_checksum_f64
+    LOCAL :__s0_checksum_after :u32
+    STORE
+    LOCAL :__s0_checksum_after
+    AS :i64
+    PUSH 5
+    AS :i64
+    LOCAL :__s0_checksum_before
+    AS :i64
+    BINARY :shl
+    BINARY :and
+    AS :u32
+    RET
+ENDFUNC
+
+FUNC :Nbody_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NbodyData>
+    LOCAL :__s0_data :ptr<NbodyData>
+    STORE
+    PUSH 0
+    AS :ptr<NbodyData>
+    LOCAL :__s0_data
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<NbodyPlanet>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :not_eq
+        IF
+          THEN
+            LOCAL :__s0_data
+            DEREF
+            FIELD 1
+            AS :ptr<void>
+            CALL :free
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<NbodyPlanet>
+            LOCAL :__s0_data
+            DEREF
+            FIELD 1
+            STORE
+        ENDIF
+    ENDIF
+ENDFUNC
+
+FUNC :Nbody_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :CLBG::Nbody
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :NbodyData
+    CALL :malloc
+    AS :ptr<NbodyData>
+    LOCAL :__s0_data :ptr<NbodyData>
+    STORE
+    SIZEOF :NbodyData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :Nbody_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :Nbody_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :Nbody_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :Nbody_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

@@ -1,0 +1,1031 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :BinarytreesObj_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :BinarytreesArena_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :BrainfuckArray_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :BrainfuckRecursion_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Fannkuchredux_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Mandelbrot_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Matmul_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Matmul4T_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Matmul8T_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Matmul16T_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Nbody_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Spectralnorm_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Base64Encode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Base64Decode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :JsonGenerate_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :JsonParseDom_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :JsonParseMapping_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Sieve_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :TextRaytracer_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :NeuralNet_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :SortQuick_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :SortMerge_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :SortSelf_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :GraphPathBFS_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :GraphPathDFS_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :GraphPathAStar_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :BufferHashSHA256_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :BufferHashCRC32_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :CacheSimulation_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :CalculatorAst_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :CalculatorInterpreter_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :GameOfLife_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :MazeGenerator_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :MazeBFS_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :MazeAStar_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :BWTEncode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :BWTDecode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :HuffEncode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :HuffDecode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :ArithEncode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :ArithDecode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :LZWEncode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :LZWDecode_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Jaro_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :NGram_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :Words_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :LogParser_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :TemplateRegex_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :TemplateParse_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :CsvParse_create
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :fclose
+  ARGS
+    TYPE :ptr<_IO_FILE>
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :fopen
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<_IO_FILE>
+ENDFUNC
+
+FUNC :fprintf
+  ARGS
+    TYPE :ptr<_IO_FILE>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :vaarg
+ENDFUNC
+
+FUNC :printf
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :vaarg
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_load_config
+  ARGS
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :Helper_free_config
+ENDFUNC
+
+FUNC :clock_gettime
+  ARGS
+    TYPE :i32
+    TYPE :ptr<timespec>
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :Benchmark_register
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :fn<ptr<Benchmark>>
+ENDFUNC
+
+FUNC :Benchmark_all
+  ARGS
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :register_all_benchmarks
+  BODY
+    ADDR :BinarytreesObj_create
+    PUSH :Binarytrees::Obj
+    CALL :Benchmark_register
+    ADDR :BinarytreesArena_create
+    PUSH :Binarytrees::Arena
+    CALL :Benchmark_register
+    ADDR :BrainfuckArray_create
+    PUSH :Brainfuck::Array
+    CALL :Benchmark_register
+    ADDR :BrainfuckRecursion_create
+    PUSH :Brainfuck::Recursion
+    CALL :Benchmark_register
+    ADDR :Fannkuchredux_create
+    PUSH :CLBG::Fannkuchredux
+    CALL :Benchmark_register
+    ADDR :Mandelbrot_create
+    PUSH :CLBG::Mandelbrot
+    CALL :Benchmark_register
+    ADDR :Matmul_create
+    PUSH :Matmul::Single
+    CALL :Benchmark_register
+    ADDR :Matmul4T_create
+    PUSH :Matmul::T4
+    CALL :Benchmark_register
+    ADDR :Matmul8T_create
+    PUSH :Matmul::T8
+    CALL :Benchmark_register
+    ADDR :Matmul16T_create
+    PUSH :Matmul::T16
+    CALL :Benchmark_register
+    ADDR :Nbody_create
+    PUSH :CLBG::Nbody
+    CALL :Benchmark_register
+    ADDR :Spectralnorm_create
+    PUSH :CLBG::Spectralnorm
+    CALL :Benchmark_register
+    ADDR :Base64Encode_create
+    PUSH :Base64::Encode
+    CALL :Benchmark_register
+    ADDR :Base64Decode_create
+    PUSH :Base64::Decode
+    CALL :Benchmark_register
+    ADDR :JsonGenerate_create
+    PUSH :Json::Generate
+    CALL :Benchmark_register
+    ADDR :JsonParseDom_create
+    PUSH :Json::ParseDom
+    CALL :Benchmark_register
+    ADDR :JsonParseMapping_create
+    PUSH :Json::ParseMapping
+    CALL :Benchmark_register
+    ADDR :Sieve_create
+    PUSH :Etc::Sieve
+    CALL :Benchmark_register
+    ADDR :TextRaytracer_create
+    PUSH :Etc::TextRaytracer
+    CALL :Benchmark_register
+    ADDR :NeuralNet_create
+    PUSH :Etc::NeuralNet
+    CALL :Benchmark_register
+    ADDR :SortQuick_create
+    PUSH :Sort::Quick
+    CALL :Benchmark_register
+    ADDR :SortMerge_create
+    PUSH :Sort::Merge
+    CALL :Benchmark_register
+    ADDR :SortSelf_create
+    PUSH :Sort::Self
+    CALL :Benchmark_register
+    ADDR :GraphPathBFS_create
+    PUSH :Graph::BFS
+    CALL :Benchmark_register
+    ADDR :GraphPathDFS_create
+    PUSH :Graph::DFS
+    CALL :Benchmark_register
+    ADDR :GraphPathAStar_create
+    PUSH :Graph::AStar
+    CALL :Benchmark_register
+    ADDR :BufferHashSHA256_create
+    PUSH :Hash::SHA256
+    CALL :Benchmark_register
+    ADDR :BufferHashCRC32_create
+    PUSH :Hash::CRC32
+    CALL :Benchmark_register
+    ADDR :CacheSimulation_create
+    PUSH :Etc::CacheSimulation
+    CALL :Benchmark_register
+    ADDR :CalculatorAst_create
+    PUSH :Calculator::Ast
+    CALL :Benchmark_register
+    ADDR :CalculatorInterpreter_create
+    PUSH :Calculator::Interpreter
+    CALL :Benchmark_register
+    ADDR :GameOfLife_create
+    PUSH :Etc::GameOfLife
+    CALL :Benchmark_register
+    ADDR :MazeGenerator_create
+    PUSH :Maze::Generator
+    CALL :Benchmark_register
+    ADDR :MazeBFS_create
+    PUSH :Maze::BFS
+    CALL :Benchmark_register
+    ADDR :MazeAStar_create
+    PUSH :Maze::AStar
+    CALL :Benchmark_register
+    ADDR :BWTEncode_create
+    PUSH :Compress::BWTEncode
+    CALL :Benchmark_register
+    ADDR :BWTDecode_create
+    PUSH :Compress::BWTDecode
+    CALL :Benchmark_register
+    ADDR :HuffEncode_create
+    PUSH :Compress::HuffEncode
+    CALL :Benchmark_register
+    ADDR :HuffDecode_create
+    PUSH :Compress::HuffDecode
+    CALL :Benchmark_register
+    ADDR :ArithEncode_create
+    PUSH :Compress::ArithEncode
+    CALL :Benchmark_register
+    ADDR :ArithDecode_create
+    PUSH :Compress::ArithDecode
+    CALL :Benchmark_register
+    ADDR :LZWEncode_create
+    PUSH :Compress::LZWEncode
+    CALL :Benchmark_register
+    ADDR :LZWDecode_create
+    PUSH :Compress::LZWDecode
+    CALL :Benchmark_register
+    ADDR :Jaro_create
+    PUSH :Distance::Jaro
+    CALL :Benchmark_register
+    ADDR :NGram_create
+    PUSH :Distance::NGram
+    CALL :Benchmark_register
+    ADDR :Words_create
+    PUSH :Etc::Words
+    CALL :Benchmark_register
+    ADDR :LogParser_create
+    PUSH :Etc::LogParser
+    CALL :Benchmark_register
+    ADDR :TemplateRegex_create
+    PUSH :Template::Regex
+    CALL :Benchmark_register
+    ADDR :TemplateParse_create
+    PUSH :Template::Parse
+    CALL :Benchmark_register
+    ADDR :CsvParse_create
+    PUSH :CSV::Parse
+    CALL :Benchmark_register
+ENDFUNC
+
+FUNC :main
+  ARGS
+    TYPE :i32
+    TYPE :ptr<ptr<u8>>
+  RETURN
+    TYPE :i32
+  BODY
+    LOCAL :__s0_start_time :timespec
+    ADDR
+    PUSH 0
+    CALL :clock_gettime
+    STACK :drop
+    PUSH 1000000
+    AS :i64
+    LOCAL :__s0_start_time
+    FIELD 1
+    BINARY :div
+    PUSH 1000
+    AS :i64
+    LOCAL :__s0_start_time
+    FIELD 0
+    BINARY :mul
+    BINARY :add
+    PUSH "start: %ld\n"
+    CALL :printf 1
+    STACK :drop
+    PUSH 1
+    PARAM 0
+    BINARY :more
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        LOCAL :__ternary_1 :ptr<u8>
+        STORE
+      ELSE
+        PUSH :../run.js
+        LOCAL :__ternary_1
+        STORE
+    ENDIF
+    LOCAL :__ternary_1
+    LOCAL :__s0_config_file :ptr<u8>
+    STORE
+    LOCAL :__s0_config_file
+    CALL :Helper_load_config
+    CALL :register_all_benchmarks
+    PUSH 2
+    PARAM 0
+    BINARY :more
+    IF
+      THEN
+        PUSH 2
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        LOCAL :__ternary_3 :ptr<u8>
+        STORE
+      ELSE
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__ternary_3
+        STORE
+    ENDIF
+    LOCAL :__ternary_3
+    LOCAL :__s0_single_bench :ptr<u8>
+    STORE
+    LOCAL :__s0_single_bench
+    CALL :Benchmark_all
+    CALL :Helper_free_config
+    PUSH 0
+    AS :ptr<BenchmarkFactory>
+    GLOBAL :benchmark_factories
+    BINARY :not_eq
+    IF
+      THEN
+        GLOBAL :benchmark_factories
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<BenchmarkFactory>
+        GLOBAL :benchmark_factories
+        STORE
+        PUSH 0
+        AS :u64
+        GLOBAL :benchmark_factories_count
+        STORE
+        PUSH 0
+        AS :u64
+        GLOBAL :benchmark_factories_capacity
+        STORE
+    ENDIF
+    PUSH :w
+    PUSH :/tmp/recompile_marker
+    CALL :fopen
+    LOCAL :__s1_f :ptr<_IO_FILE>
+    STORE
+    PUSH 0
+    AS :ptr<_IO_FILE>
+    LOCAL :__s1_f
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH :RECOMPILE_MARKER_0
+        LOCAL :__s1_f
+        CALL :fprintf
+        STACK :drop
+        LOCAL :__s1_f
+        CALL :fclose
+        STACK :drop
+    ENDIF
+    PUSH 0
+    RET
+ENDFUNC
+

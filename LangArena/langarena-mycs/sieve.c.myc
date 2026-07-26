@@ -1,0 +1,821 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :SieveData
+  TYPE :i64
+  TYPE :u32
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memset
+  ARGS
+    TYPE :ptr<void>
+    TYPE :i32
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :sqrt
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_sieve_c_sieve_generate
+  ARGS
+    TYPE :i64
+    TYPE :ptr<i32>
+  RETURN
+    TYPE :ptr<i32>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 2
+    AS :i64
+    PARAM 0
+    BINARY :less
+    IF
+      THEN
+        PUSH 0
+        PARAM 1
+        DEREF
+        STORE
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<i32>
+        RET
+    ENDIF
+    SIZEOF :u8
+    AS :i64
+    PUSH 1
+    AS :i64
+    PARAM 0
+    BINARY :add
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<u8>
+    LOCAL :__s1_primes :ptr<u8>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s1_primes
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<i32>
+        RET
+    ENDIF
+    SIZEOF :u8
+    AS :i64
+    PUSH 1
+    AS :i64
+    PARAM 0
+    BINARY :add
+    BINARY :mul
+    AS :u64
+    PUSH 1
+    LOCAL :__s1_primes
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    PUSH 0
+    AS :u8
+    PUSH 0
+    AS :u64
+    LOCAL :__s1_primes
+    BINARY :add
+    DEREF
+    STORE
+    PUSH 0
+    AS :u8
+    PUSH 1
+    AS :u64
+    LOCAL :__s1_primes
+    BINARY :add
+    DEREF
+    STORE
+    PARAM 0
+    AS :f64
+    CALL :sqrt
+    AS :i32
+    LOCAL :__s2_sqrt_limit :i32
+    STORE
+    PUSH 2
+    LOCAL :__s2_p :i32
+    STORE
+    LOOP
+      COND
+        LOCAL :__s2_sqrt_limit
+        LOCAL :__s2_p
+        BINARY :less_eq
+      BODY
+        PUSH 1
+        LOCAL :__s2_p
+        AS :u64
+        LOCAL :__s1_primes
+        BINARY :add
+        DEREF
+        AS :i32
+        BINARY :eq
+        IF
+          THEN
+            LOCAL :__s2_p
+            LOCAL :__s2_p
+            BINARY :mul
+            LOCAL :__s4_multiple :i32
+            STORE
+            LOOP
+              COND
+                PARAM 0
+                LOCAL :__s4_multiple
+                AS :i64
+                BINARY :less_eq
+              BODY
+                PUSH 0
+                AS :u8
+                LOCAL :__s4_multiple
+                AS :u64
+                LOCAL :__s1_primes
+                BINARY :add
+                DEREF
+                STORE
+              STEP
+                LOCAL :__s2_p
+                LOCAL :__s4_multiple
+                BINARY :add
+                LOCAL :__s4_multiple
+                STORE
+            ENDLOOP
+        ENDIF
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_p
+        BINARY :add
+        LOCAL :__s2_p
+        STORE
+    ENDLOOP
+    PUSH 2
+    LOCAL :__s5_last_prime :i32
+    STORE
+    PUSH 1
+    LOCAL :__s5_count_primes :i32
+    STORE
+    PUSH 3
+    LOCAL :__s5_n :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        LOCAL :__s5_n
+        AS :i64
+        BINARY :less_eq
+      BODY
+        PUSH 1
+        LOCAL :__s5_n
+        AS :u64
+        LOCAL :__s1_primes
+        BINARY :add
+        DEREF
+        AS :i32
+        BINARY :eq
+        IF
+          THEN
+            LOCAL :__s5_n
+            LOCAL :__s5_last_prime
+            STORE
+            PUSH 1 :i32
+            LOCAL :__s5_count_primes
+            BINARY :add
+            LOCAL :__s5_count_primes
+            STORE
+        ENDIF
+      STEP
+        PUSH 2
+        LOCAL :__s5_n
+        BINARY :add
+        LOCAL :__s5_n
+        STORE
+    ENDLOOP
+    LOCAL :__s1_primes
+    AS :ptr<void>
+    CALL :free
+    LOCAL :__s5_count_primes
+    LOCAL :__s5_last_prime
+    BINARY :add
+    PARAM 1
+    DEREF
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<i32>
+    RET
+ENDFUNC
+
+FUNC :Sieve_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SieveData>
+    LOCAL :__s0_data :ptr<SieveData>
+    STORE
+    PUSH :limit
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :less_eq
+    IF
+      THEN
+        PUSH 1000000
+        AS :i64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :Sieve_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SieveData>
+    LOCAL :__s0_data :ptr<SieveData>
+    STORE
+    PUSH 0
+    LOCAL :__s0_sum :i32
+    STORE
+    LOCAL :__s0_sum
+    ADDR
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    CALL :static_fn_sieve_c_sieve_generate
+    STACK :drop
+    LOCAL :__s0_sum
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :add
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :Sieve_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SieveData>
+    LOCAL :__s0_data :ptr<SieveData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    RET
+ENDFUNC
+
+FUNC :Sieve_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Etc::Sieve
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :SieveData
+    CALL :malloc
+    AS :ptr<SieveData>
+    LOCAL :__s0_data :ptr<SieveData>
+    STORE
+    SIZEOF :SieveData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :Sieve_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :Sieve_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :Sieve_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

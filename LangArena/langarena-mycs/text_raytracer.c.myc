@@ -1,0 +1,1362 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :TRVector
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+ENDSTRUCT
+
+STRUCT :TRRay
+  TYPE :TRVector
+  TYPE :TRVector
+ENDSTRUCT
+
+STRUCT :TRColor
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+ENDSTRUCT
+
+STRUCT :TRSphere
+  TYPE :TRVector
+  TYPE :f64
+  TYPE :TRColor
+ENDSTRUCT
+
+STRUCT :TRLight
+  TYPE :TRVector
+  TYPE :TRColor
+ENDSTRUCT
+
+STRUCT :TextRaytracerData
+  TYPE :i32
+  TYPE :i32
+  TYPE :u32
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :static_text_raytracer_c_LUT
+  TYPE "flat<u8, 6>"
+  INITIAL 46 45 43 42 88 77
+  PRIVATE
+ENDGLOBAL
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memset
+  ARGS
+    TYPE :ptr<void>
+    TYPE :i32
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :sqrt
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_vector_scale
+  ARGS
+    TYPE :TRVector
+    TYPE :f64
+  RETURN
+    TYPE :TRVector
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    PARAM 0
+    FIELD 2
+    BINARY :mul
+    PARAM 1
+    PARAM 0
+    FIELD 1
+    BINARY :mul
+    PARAM 1
+    PARAM 0
+    FIELD 0
+    BINARY :mul
+    CREATE :TRVector
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_vector_add
+  ARGS
+    TYPE :TRVector
+    TYPE :TRVector
+  RETURN
+    TYPE :TRVector
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    FIELD 2
+    PARAM 0
+    FIELD 2
+    BINARY :add
+    PARAM 1
+    FIELD 1
+    PARAM 0
+    FIELD 1
+    BINARY :add
+    PARAM 1
+    FIELD 0
+    PARAM 0
+    FIELD 0
+    BINARY :add
+    CREATE :TRVector
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_vector_sub
+  ARGS
+    TYPE :TRVector
+    TYPE :TRVector
+  RETURN
+    TYPE :TRVector
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    FIELD 2
+    PARAM 0
+    FIELD 2
+    BINARY :sub
+    PARAM 1
+    FIELD 1
+    PARAM 0
+    FIELD 1
+    BINARY :sub
+    PARAM 1
+    FIELD 0
+    PARAM 0
+    FIELD 0
+    BINARY :sub
+    CREATE :TRVector
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_vector_dot
+  ARGS
+    TYPE :TRVector
+    TYPE :TRVector
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    FIELD 2
+    PARAM 0
+    FIELD 2
+    BINARY :mul
+    PARAM 1
+    FIELD 1
+    PARAM 0
+    FIELD 1
+    BINARY :mul
+    PARAM 1
+    FIELD 0
+    PARAM 0
+    FIELD 0
+    BINARY :mul
+    BINARY :add
+    BINARY :add
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_vector_magnitude
+  ARGS
+    TYPE :TRVector
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    PARAM 0
+    CALL :static_fn_text_raytracer_c_tr_vector_dot
+    CALL :sqrt
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_vector_normalize
+  ARGS
+    TYPE :TRVector
+  RETURN
+    TYPE :TRVector
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    CALL :static_fn_text_raytracer_c_tr_vector_magnitude
+    LOCAL :__s0_mag :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s0_mag
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :f64
+        PUSH 0
+        AS :f64
+        PUSH 0
+        AS :f64
+        CREATE :TRVector
+        RET
+    ENDIF
+    LOCAL :__s0_mag
+    PUSH 1.0 :f64
+    BINARY :div
+    PARAM 0
+    CALL :static_fn_text_raytracer_c_tr_vector_scale
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_color_scale
+  ARGS
+    TYPE :TRColor
+    TYPE :f64
+  RETURN
+    TYPE :TRColor
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    PARAM 0
+    FIELD 2
+    BINARY :mul
+    PARAM 1
+    PARAM 0
+    FIELD 1
+    BINARY :mul
+    PARAM 1
+    PARAM 0
+    FIELD 0
+    BINARY :mul
+    CREATE :TRColor
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_color_add
+  ARGS
+    TYPE :TRColor
+    TYPE :TRColor
+  RETURN
+    TYPE :TRColor
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    FIELD 2
+    PARAM 0
+    FIELD 2
+    BINARY :add
+    PARAM 1
+    FIELD 1
+    PARAM 0
+    FIELD 1
+    BINARY :add
+    PARAM 1
+    FIELD 0
+    PARAM 0
+    FIELD 0
+    BINARY :add
+    CREATE :TRColor
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_sphere_get_normal
+  ARGS
+    TYPE :ptr<TRSphere>
+    TYPE :TRVector
+  RETURN
+    TYPE :TRVector
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 0
+    PARAM 1
+    CALL :static_fn_text_raytracer_c_tr_vector_sub
+    CALL :static_fn_text_raytracer_c_tr_vector_normalize
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_clamp
+  ARGS
+    TYPE :f64
+    TYPE :f64
+    TYPE :f64
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    PARAM 0
+    BINARY :less
+    IF
+      THEN
+        PARAM 1
+        RET
+    ENDIF
+    PARAM 2
+    PARAM 0
+    BINARY :more
+    IF
+      THEN
+        PARAM 2
+        RET
+    ENDIF
+    PARAM 0
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_intersect_sphere
+  ARGS
+    TYPE :TRRay
+    TYPE :TRVector
+    TYPE :f64
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    FIELD 0
+    PARAM 1
+    CALL :static_fn_text_raytracer_c_tr_vector_sub
+    LOCAL :__s0_l :TRVector
+    STORE
+    PARAM 0
+    FIELD 1
+    LOCAL :__s0_l
+    CALL :static_fn_text_raytracer_c_tr_vector_dot
+    LOCAL :__s0_tca :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s0_tca
+    BINARY :less
+    IF
+      THEN
+        PUSH 1.0 :f64
+        UNARY :neg
+        RET
+    ENDIF
+    LOCAL :__s0_tca
+    LOCAL :__s0_tca
+    BINARY :mul
+    LOCAL :__s0_l
+    LOCAL :__s0_l
+    CALL :static_fn_text_raytracer_c_tr_vector_dot
+    BINARY :sub
+    LOCAL :__s1_d2 :f64
+    STORE
+    PARAM 2
+    PARAM 2
+    BINARY :mul
+    LOCAL :__s1_r2 :f64
+    STORE
+    LOCAL :__s1_r2
+    LOCAL :__s1_d2
+    BINARY :more
+    IF
+      THEN
+        PUSH 1.0 :f64
+        UNARY :neg
+        RET
+    ENDIF
+    LOCAL :__s1_d2
+    LOCAL :__s1_r2
+    BINARY :sub
+    CALL :sqrt
+    LOCAL :__s2_thc :f64
+    STORE
+    LOCAL :__s2_thc
+    LOCAL :__s0_tca
+    BINARY :sub
+    LOCAL :__s2_t0 :f64
+    STORE
+    PUSH 10000.0 :f64
+    LOCAL :__s2_t0
+    BINARY :more
+    IF
+      THEN
+        PUSH 1.0 :f64
+        UNARY :neg
+        RET
+    ENDIF
+    LOCAL :__s2_t0
+    RET
+ENDFUNC
+
+FUNC :static_fn_text_raytracer_c_tr_diffuse_shading
+  ARGS
+    TYPE :TRVector
+    TYPE :ptr<TRSphere>
+    TYPE :TRLight
+  RETURN
+    TYPE :TRColor
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    PARAM 1
+    CALL :static_fn_text_raytracer_c_tr_sphere_get_normal
+    LOCAL :__s0_n :TRVector
+    STORE
+    PARAM 0
+    PARAM 2
+    FIELD 0
+    CALL :static_fn_text_raytracer_c_tr_vector_sub
+    CALL :static_fn_text_raytracer_c_tr_vector_normalize
+    LOCAL :__s0_light_dir :TRVector
+    STORE
+    LOCAL :__s0_n
+    LOCAL :__s0_light_dir
+    CALL :static_fn_text_raytracer_c_tr_vector_dot
+    LOCAL :__s0_lam1 :f64
+    STORE
+    PUSH 1.0 :f64
+    PUSH 0.0 :f64
+    LOCAL :__s0_lam1
+    CALL :static_fn_text_raytracer_c_tr_clamp
+    LOCAL :__s0_lam2 :f64
+    STORE
+    PUSH 0.5 :f64
+    LOCAL :__s0_lam2
+    BINARY :mul
+    PARAM 2
+    FIELD 1
+    CALL :static_fn_text_raytracer_c_tr_color_scale
+    LOCAL :__s0_light_color :TRColor
+    STORE
+    PUSH 0.3 :f64
+    PARAM 1
+    DEREF
+    FIELD 2
+    CALL :static_fn_text_raytracer_c_tr_color_scale
+    LOCAL :__s0_obj_color :TRColor
+    STORE
+    LOCAL :__s0_obj_color
+    LOCAL :__s0_light_color
+    CALL :static_fn_text_raytracer_c_tr_color_add
+    RET
+ENDFUNC
+
+FUNC :TextRaytracer_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<TextRaytracerData>
+    LOCAL :__s0_data :ptr<TextRaytracerData>
+    STORE
+    PUSH :w
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    AS :i32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH :h
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    AS :i32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 0
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :less_eq
+    IF
+      THEN
+        PUSH 10
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+    PUSH 0
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :less_eq
+    IF
+      THEN
+        PUSH 10
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :TextRaytracer_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<TextRaytracerData>
+    LOCAL :__s0_data :ptr<TextRaytracerData>
+    STORE
+    PUSH 1.0 :f64
+    PUSH 0.0 :f64
+    PUSH 0.0 :f64
+    CREATE :TRColor
+    PUSH 0.4 :f64
+    PUSH 3.0 :f64
+    PUSH 0.0 :f64
+    PUSH 1.0 :f64
+    CREATE :TRVector
+    CREATE :TRSphere
+    PUSH 0.0 :f64
+    PUSH 1.0 :f64
+    PUSH 0.0 :f64
+    CREATE :TRColor
+    PUSH 0.8 :f64
+    PUSH 3.0 :f64
+    PUSH 0.0 :f64
+    PUSH 0.0 :f64
+    CREATE :TRVector
+    CREATE :TRSphere
+    PUSH 0.0 :f64
+    PUSH 0.0 :f64
+    PUSH 1.0 :f64
+    CREATE :TRColor
+    PUSH 0.3 :f64
+    PUSH 3.0 :f64
+    PUSH 0.0 :f64
+    PUSH 1.0 :f64
+    UNARY :neg
+    CREATE :TRVector
+    CREATE :TRSphere
+    CREATE "flat<TRSphere, 3>"
+    LOCAL :__s0_scene "flat<TRSphere, 3>"
+    STORE
+    PUSH 1.0 :f64
+    PUSH 1.0 :f64
+    PUSH 1.0 :f64
+    CREATE :TRColor
+    PUSH 1.7 :f64
+    PUSH 1.0 :f64
+    UNARY :neg
+    PUSH 0.7 :f64
+    CREATE :TRVector
+    CREATE :TRLight
+    LOCAL :__s0_light1 :TRLight
+    STORE
+    PUSH 0 :u32
+    LOCAL :__s0_iteration_result :u32
+    STORE
+    PUSH 0
+    LOCAL :__s0_j :i32
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        LOCAL :__s0_j
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s1_i :i32
+        STORE
+        LOOP
+          COND
+            LOCAL :__s0_data
+            DEREF
+            FIELD 0
+            LOCAL :__s1_i
+            BINARY :less
+          BODY
+            LOCAL :__s0_data
+            DEREF
+            FIELD 0
+            AS :f64
+            LOCAL :__s2_fw :f64
+            STORE
+            LOCAL :__s0_data
+            DEREF
+            FIELD 1
+            AS :f64
+            LOCAL :__s2_fh :f64
+            STORE
+            LOCAL :__s1_i
+            AS :f64
+            LOCAL :__s2_fi :f64
+            STORE
+            LOCAL :__s0_j
+            AS :f64
+            LOCAL :__s2_fj :f64
+            STORE
+            PUSH 0.0 :f64
+            PUSH 0.0 :f64
+            PUSH 0.0 :f64
+            CREATE :TRVector
+            LOCAL :__s2_ray :TRRay
+            FIELD 0
+            STORE
+            PUSH 1.0 :f64
+            LOCAL :__s2_fh
+            PUSH 2.0 :f64
+            LOCAL :__s2_fh
+            BINARY :div
+            LOCAL :__s2_fj
+            BINARY :sub
+            BINARY :div
+            LOCAL :__s2_fw
+            PUSH 2.0 :f64
+            LOCAL :__s2_fw
+            BINARY :div
+            LOCAL :__s2_fi
+            BINARY :sub
+            BINARY :div
+            CREATE :TRVector
+            LOCAL :__s2_dir :TRVector
+            STORE
+            LOCAL :__s2_dir
+            CALL :static_fn_text_raytracer_c_tr_vector_normalize
+            LOCAL :__s2_ray
+            FIELD 1
+            STORE
+            PUSH -1.0 :f64
+            LOCAL :__s2_tval :f64
+            STORE
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<TRSphere>
+            LOCAL :__s2_hit_obj :ptr<TRSphere>
+            STORE
+            PUSH 0
+            LOCAL :__s2_k :i32
+            STORE
+            LOOP
+              COND
+                PUSH 3
+                LOCAL :__s2_k
+                BINARY :less
+              BODY
+                LOCAL :__s2_k
+                AS :u64
+                LOCAL :__s0_scene
+                ADDR
+                AS :ptr<TRSphere>
+                BINARY :add
+                DEREF
+                FIELD 1
+                LOCAL :__s2_k
+                AS :u64
+                LOCAL :__s0_scene
+                ADDR
+                AS :ptr<TRSphere>
+                BINARY :add
+                DEREF
+                FIELD 0
+                LOCAL :__s2_ray
+                CALL :static_fn_text_raytracer_c_tr_intersect_sphere
+                LOCAL :__s3_intersect :f64
+                STORE
+                PUSH 0.0 :f64
+                LOCAL :__s3_intersect
+                BINARY :more_eq
+                IF
+                  THEN
+                    LOCAL :__s3_intersect
+                    LOCAL :__s2_tval
+                    STORE
+                    LOCAL :__s2_k
+                    AS :u64
+                    LOCAL :__s0_scene
+                    ADDR
+                    AS :ptr<TRSphere>
+                    BINARY :add
+                    DEREF
+                    ADDR
+                    LOCAL :__s2_hit_obj
+                    STORE
+                    BREAK
+                ENDIF
+              STEP
+                PUSH 1 :i32
+                LOCAL :__s2_k
+                BINARY :add
+                LOCAL :__s2_k
+                STORE
+            ENDLOOP
+            PUSH 32 :u8
+            LOCAL :__s4_pixel :u8
+            STORE
+            PUSH 0
+            AS :ptr<TRSphere>
+            LOCAL :__s2_hit_obj
+            BINARY :not_eq
+            LOCAL :__sc_and_17 :bool
+            STORE
+            LOCAL :__sc_and_17
+            IF
+              THEN
+                PUSH 0.0 :f64
+                LOCAL :__s2_tval
+                BINARY :more_eq
+                LOCAL :__sc_and_17
+                STORE
+            ENDIF
+            LOCAL :__sc_and_17
+            IF
+              THEN
+                LOCAL :__s2_tval
+                LOCAL :__s2_ray
+                FIELD 1
+                CALL :static_fn_text_raytracer_c_tr_vector_scale
+                LOCAL :__s2_ray
+                FIELD 0
+                CALL :static_fn_text_raytracer_c_tr_vector_add
+                LOCAL :__s5_pi :TRVector
+                STORE
+                LOCAL :__s0_light1
+                LOCAL :__s2_hit_obj
+                LOCAL :__s5_pi
+                CALL :static_fn_text_raytracer_c_tr_diffuse_shading
+                LOCAL :__s5_color :TRColor
+                STORE
+                PUSH 3.0 :f64
+                LOCAL :__s5_color
+                FIELD 2
+                LOCAL :__s5_color
+                FIELD 1
+                LOCAL :__s5_color
+                FIELD 0
+                BINARY :add
+                BINARY :add
+                BINARY :div
+                LOCAL :__s5_col :f64
+                STORE
+                PUSH 6.0 :f64
+                LOCAL :__s5_col
+                BINARY :mul
+                AS :i32
+                LOCAL :__s5_idx :i32
+                STORE
+                PUSH 0
+                LOCAL :__s5_idx
+                BINARY :less
+                IF
+                  THEN
+                    PUSH 0
+                    LOCAL :__s5_idx
+                    STORE
+                ENDIF
+                PUSH 6
+                LOCAL :__s5_idx
+                BINARY :more_eq
+                IF
+                  THEN
+                    PUSH 5
+                    LOCAL :__s5_idx
+                    STORE
+                ENDIF
+                LOCAL :__s5_idx
+                AS :u64
+                GLOBAL :static_text_raytracer_c_LUT
+                ADDR
+                AS :ptr<u8>
+                BINARY :add
+                DEREF
+                LOCAL :__s4_pixel
+                STORE
+            ENDIF
+            LOCAL :__s4_pixel
+            AS :u8
+            AS :u32
+            LOCAL :__s0_iteration_result
+            BINARY :add
+            LOCAL :__s0_iteration_result
+            STORE
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s1_i
+            BINARY :add
+            LOCAL :__s1_i
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_j
+        BINARY :add
+        LOCAL :__s0_j
+        STORE
+    ENDLOOP
+    LOCAL :__s0_iteration_result
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :add
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :TextRaytracer_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<TextRaytracerData>
+    LOCAL :__s0_data :ptr<TextRaytracerData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    RET
+ENDFUNC
+
+FUNC :TextRaytracer_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    STACK :drop
+ENDFUNC
+
+FUNC :TextRaytracer_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Etc::TextRaytracer
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :TextRaytracerData
+    CALL :malloc
+    AS :ptr<TextRaytracerData>
+    LOCAL :__s0_data :ptr<TextRaytracerData>
+    STORE
+    SIZEOF :TextRaytracerData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :TextRaytracer_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :TextRaytracer_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :TextRaytracer_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :TextRaytracer_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

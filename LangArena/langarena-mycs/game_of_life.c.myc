@@ -1,0 +1,1536 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :Cell
+  TYPE :bool
+  TYPE :bool
+  TYPE :ptr<ptr<Cell>>
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :GameOfLifeGrid
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<ptr<ptr<Cell>>>
+ENDSTRUCT
+
+STRUCT :GameOfLifeData
+  TYPE :u32
+  TYPE :i64
+  TYPE :i64
+  TYPE :GameOfLifeGrid
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memset
+  ARGS
+    TYPE :ptr<void>
+    TYPE :i32
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_next_float
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_fnv1a_hash
+  ARGS
+    TYPE :u32
+    TYPE :u32
+  RETURN
+    TYPE :u32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    LOCAL :__s0_hash :u32
+    STORE
+    PUSH 2166136261 :u32
+    LOCAL :__s0_FNV_OFFSET_BASIS :u32
+    STORE
+    PUSH 16777619 :u32
+    LOCAL :__s0_FNV_PRIME :u32
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_hash
+    BINARY :eq
+    IF
+      THEN
+        LOCAL :__s0_FNV_OFFSET_BASIS
+        LOCAL :__s0_hash
+        STORE
+    ENDIF
+    PARAM 1
+    LOCAL :__s0_hash
+    BINARY :xor
+    LOCAL :__s0_hash
+    STORE
+    LOCAL :__s0_FNV_PRIME
+    LOCAL :__s0_hash
+    BINARY :mul
+    LOCAL :__s0_hash
+    STORE
+    LOCAL :__s0_hash
+    RET
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_cell_create
+  RETURN
+    TYPE :ptr<Cell>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    SIZEOF :Cell
+    CALL :malloc
+    AS :ptr<Cell>
+    LOCAL :__s0_cell :ptr<Cell>
+    STORE
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    LOCAL :__s0_cell
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    LOCAL :__s0_cell
+    DEREF
+    FIELD 1
+    STORE
+    SIZEOF :ptr<Cell>
+    PUSH 8
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<ptr<Cell>>
+    LOCAL :__s0_cell
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    LOCAL :__s0_cell
+    DEREF
+    FIELD 3
+    STORE
+    LOCAL :__s0_cell
+    RET
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_cell_destroy
+  ARGS
+    TYPE :ptr<Cell>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 2
+    AS :ptr<void>
+    CALL :free
+    PARAM 0
+    AS :ptr<void>
+    CALL :free
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_cell_add_neighbor
+  ARGS
+    TYPE :ptr<Cell>
+    TYPE :ptr<Cell>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    PARAM 0
+    DEREF
+    FIELD 3
+    LOCAL :__tmp_0 :i32
+    STORE
+    PUSH 1 :i32
+    PARAM 0
+    DEREF
+    FIELD 3
+    BINARY :add
+    PARAM 0
+    DEREF
+    FIELD 3
+    STORE
+    LOCAL :__tmp_0
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 2
+    BINARY :add
+    DEREF
+    STORE
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_cell_compute_next_state
+  ARGS
+    TYPE :ptr<Cell>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_alive_neighbors :i32
+    STORE
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 3
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 2
+        BINARY :add
+        DEREF
+        DEREF
+        FIELD 0
+        IF
+          THEN
+            PUSH 1 :i32
+            LOCAL :__s0_alive_neighbors
+            BINARY :add
+            LOCAL :__s0_alive_neighbors
+            STORE
+        ENDIF
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PARAM 0
+    DEREF
+    FIELD 0
+    IF
+      THEN
+        PUSH 2
+        LOCAL :__s0_alive_neighbors
+        BINARY :eq
+        LOCAL :__sc_or_2 :bool
+        STORE
+        LOCAL :__sc_or_2
+        IF
+          THEN
+          ELSE
+            PUSH 3
+            LOCAL :__s0_alive_neighbors
+            BINARY :eq
+            LOCAL :__sc_or_2
+            STORE
+        ENDIF
+        LOCAL :__sc_or_2
+        PARAM 0
+        DEREF
+        FIELD 1
+        STORE
+      ELSE
+        PUSH 3
+        LOCAL :__s0_alive_neighbors
+        BINARY :eq
+        PARAM 0
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_cell_update
+  ARGS
+    TYPE :ptr<Cell>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 1
+    PARAM 0
+    DEREF
+    FIELD 0
+    STORE
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_game_of_life_grid_init
+  ARGS
+    TYPE :ptr<GameOfLifeGrid>
+    TYPE :i32
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    PARAM 0
+    DEREF
+    FIELD 0
+    STORE
+    PARAM 2
+    PARAM 0
+    DEREF
+    FIELD 1
+    STORE
+    SIZEOF :ptr<ptr<Cell>>
+    PARAM 2
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<ptr<ptr<Cell>>>
+    PARAM 0
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    LOCAL :__s0_y :i32
+    STORE
+    LOOP
+      COND
+        PARAM 2
+        LOCAL :__s0_y
+        BINARY :less
+      BODY
+        SIZEOF :ptr<Cell>
+        PARAM 1
+        AS :u64
+        BINARY :mul
+        CALL :malloc
+        AS :ptr<ptr<Cell>>
+        LOCAL :__s0_y
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 2
+        BINARY :add
+        DEREF
+        STORE
+        PUSH 0
+        LOCAL :__s1_x :i32
+        STORE
+        LOOP
+          COND
+            PARAM 1
+            LOCAL :__s1_x
+            BINARY :less
+          BODY
+            CALL :static_fn_game_of_life_c_cell_create
+            LOCAL :__s1_x
+            AS :u64
+            LOCAL :__s0_y
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 2
+            BINARY :add
+            DEREF
+            BINARY :add
+            DEREF
+            STORE
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s1_x
+            BINARY :add
+            LOCAL :__s1_x
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_y
+        BINARY :add
+        LOCAL :__s0_y
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s2_y :i32
+    STORE
+    LOOP
+      COND
+        PARAM 2
+        LOCAL :__s2_y
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s3_x :i32
+        STORE
+        LOOP
+          COND
+            PARAM 1
+            LOCAL :__s3_x
+            BINARY :less
+          BODY
+            LOCAL :__s3_x
+            AS :u64
+            LOCAL :__s2_y
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 2
+            BINARY :add
+            DEREF
+            BINARY :add
+            DEREF
+            LOCAL :__s4_cell :ptr<Cell>
+            STORE
+            PUSH -1
+            LOCAL :__s4_dy :i32
+            STORE
+            LOOP
+              COND
+                PUSH 1
+                LOCAL :__s4_dy
+                BINARY :less_eq
+              BODY
+                PUSH -1
+                LOCAL :__s5_dx :i32
+                STORE
+                LOOP
+                  COND
+                    PUSH 1
+                    LOCAL :__s5_dx
+                    BINARY :less_eq
+                  BODY
+                    PUSH 0
+                    LOCAL :__s5_dx
+                    BINARY :eq
+                    LOCAL :__sc_and_7 :bool
+                    STORE
+                    LOCAL :__sc_and_7
+                    IF
+                      THEN
+                        PUSH 0
+                        LOCAL :__s4_dy
+                        BINARY :eq
+                        LOCAL :__sc_and_7
+                        STORE
+                    ENDIF
+                    LOCAL :__sc_and_7
+                    IF
+                      THEN
+                        NEXT
+                    ENDIF
+                    PARAM 2
+                    PARAM 2
+                    LOCAL :__s4_dy
+                    LOCAL :__s2_y
+                    BINARY :add
+                    BINARY :add
+                    BINARY :rem
+                    LOCAL :__s7_ny :i32
+                    STORE
+                    PARAM 1
+                    PARAM 1
+                    LOCAL :__s5_dx
+                    LOCAL :__s3_x
+                    BINARY :add
+                    BINARY :add
+                    BINARY :rem
+                    LOCAL :__s7_nx :i32
+                    STORE
+                    LOCAL :__s7_nx
+                    AS :u64
+                    LOCAL :__s7_ny
+                    AS :u64
+                    PARAM 0
+                    DEREF
+                    FIELD 2
+                    BINARY :add
+                    DEREF
+                    BINARY :add
+                    DEREF
+                    LOCAL :__s4_cell
+                    CALL :static_fn_game_of_life_c_cell_add_neighbor
+                  STEP
+                    PUSH 1 :i32
+                    LOCAL :__s5_dx
+                    BINARY :add
+                    LOCAL :__s5_dx
+                    STORE
+                ENDLOOP
+              STEP
+                PUSH 1 :i32
+                LOCAL :__s4_dy
+                BINARY :add
+                LOCAL :__s4_dy
+                STORE
+            ENDLOOP
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s3_x
+            BINARY :add
+            LOCAL :__s3_x
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_y
+        BINARY :add
+        LOCAL :__s2_y
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_game_of_life_grid_free
+  ARGS
+    TYPE :ptr<GameOfLifeGrid>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_y :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s0_y
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s1_x :i32
+        STORE
+        LOOP
+          COND
+            PARAM 0
+            DEREF
+            FIELD 0
+            LOCAL :__s1_x
+            BINARY :less
+          BODY
+            LOCAL :__s1_x
+            AS :u64
+            LOCAL :__s0_y
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 2
+            BINARY :add
+            DEREF
+            BINARY :add
+            DEREF
+            CALL :static_fn_game_of_life_c_cell_destroy
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s1_x
+            BINARY :add
+            LOCAL :__s1_x
+            STORE
+        ENDLOOP
+        LOCAL :__s0_y
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 2
+        BINARY :add
+        DEREF
+        AS :ptr<void>
+        CALL :free
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_y
+        BINARY :add
+        LOCAL :__s0_y
+        STORE
+    ENDLOOP
+    PARAM 0
+    DEREF
+    FIELD 2
+    AS :ptr<void>
+    CALL :free
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_game_of_life_next_generation
+  ARGS
+    TYPE :ptr<GameOfLifeGrid>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_y :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s0_y
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s1_x :i32
+        STORE
+        LOOP
+          COND
+            PARAM 0
+            DEREF
+            FIELD 0
+            LOCAL :__s1_x
+            BINARY :less
+          BODY
+            LOCAL :__s1_x
+            AS :u64
+            LOCAL :__s0_y
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 2
+            BINARY :add
+            DEREF
+            BINARY :add
+            DEREF
+            CALL :static_fn_game_of_life_c_cell_compute_next_state
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s1_x
+            BINARY :add
+            LOCAL :__s1_x
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_y
+        BINARY :add
+        LOCAL :__s0_y
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s2_y :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s2_y
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s3_x :i32
+        STORE
+        LOOP
+          COND
+            PARAM 0
+            DEREF
+            FIELD 0
+            LOCAL :__s3_x
+            BINARY :less
+          BODY
+            LOCAL :__s3_x
+            AS :u64
+            LOCAL :__s2_y
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 2
+            BINARY :add
+            DEREF
+            BINARY :add
+            DEREF
+            CALL :static_fn_game_of_life_c_cell_update
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s3_x
+            BINARY :add
+            LOCAL :__s3_x
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_y
+        BINARY :add
+        LOCAL :__s2_y
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_game_of_life_count_alive
+  ARGS
+    TYPE :ptr<GameOfLifeGrid>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_count :i32
+    STORE
+    PUSH 0
+    LOCAL :__s0_y :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s0_y
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s1_x :i32
+        STORE
+        LOOP
+          COND
+            PARAM 0
+            DEREF
+            FIELD 0
+            LOCAL :__s1_x
+            BINARY :less
+          BODY
+            LOCAL :__s1_x
+            AS :u64
+            LOCAL :__s0_y
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 2
+            BINARY :add
+            DEREF
+            BINARY :add
+            DEREF
+            DEREF
+            FIELD 0
+            IF
+              THEN
+                PUSH 1 :i32
+                LOCAL :__s0_count
+                BINARY :add
+                LOCAL :__s0_count
+                STORE
+            ENDIF
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s1_x
+            BINARY :add
+            LOCAL :__s1_x
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_y
+        BINARY :add
+        LOCAL :__s0_y
+        STORE
+    ENDLOOP
+    LOCAL :__s0_count
+    RET
+ENDFUNC
+
+FUNC :static_fn_game_of_life_c_game_of_life_grid_hash
+  ARGS
+    TYPE :ptr<GameOfLifeGrid>
+  RETURN
+    TYPE :u32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :u32
+    LOCAL :__s0_hash :u32
+    STORE
+    PUSH 0
+    LOCAL :__s0_y :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s0_y
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s1_x :i32
+        STORE
+        LOOP
+          COND
+            PARAM 0
+            DEREF
+            FIELD 0
+            LOCAL :__s1_x
+            BINARY :less
+          BODY
+            LOCAL :__s1_x
+            AS :u64
+            LOCAL :__s0_y
+            AS :u64
+            PARAM 0
+            DEREF
+            FIELD 2
+            BINARY :add
+            DEREF
+            BINARY :add
+            DEREF
+            DEREF
+            FIELD 0
+            IF
+              THEN
+                PUSH 1
+                LOCAL :__ternary_3 :i32
+                STORE
+              ELSE
+                PUSH 0
+                LOCAL :__ternary_3
+                STORE
+            ENDIF
+            LOCAL :__ternary_3
+            AS :u32
+            LOCAL :__s2_alive :u32
+            STORE
+            LOCAL :__s2_alive
+            LOCAL :__s0_hash
+            CALL :static_fn_game_of_life_c_fnv1a_hash
+            LOCAL :__s0_hash
+            STORE
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s1_x
+            BINARY :add
+            LOCAL :__s1_x
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_y
+        BINARY :add
+        LOCAL :__s0_y
+        STORE
+    ENDLOOP
+    LOCAL :__s0_hash
+    RET
+ENDFUNC
+
+FUNC :GameOfLife_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<GameOfLifeData>
+    LOCAL :__s0_data :ptr<GameOfLifeData>
+    STORE
+    PUSH :w
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    PUSH :h
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :less_eq
+    IF
+      THEN
+        PUSH 256
+        AS :i64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :less_eq
+    IF
+      THEN
+        PUSH 256
+        AS :i64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        STORE
+    ENDIF
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    AS :i32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    AS :i32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    ADDR
+    CALL :static_fn_game_of_life_c_game_of_life_grid_init
+    PUSH 0
+    LOCAL :__s2_y :i32
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_data
+        DEREF
+        FIELD 3
+        FIELD 1
+        LOCAL :__s2_y
+        BINARY :less
+      BODY
+        PUSH 0
+        LOCAL :__s3_x :i32
+        STORE
+        LOOP
+          COND
+            LOCAL :__s0_data
+            DEREF
+            FIELD 3
+            FIELD 0
+            LOCAL :__s3_x
+            BINARY :less
+          BODY
+            PUSH 0.1 :f64
+            PUSH 1.0 :f64
+            CALL :Helper_next_float
+            BINARY :less
+            IF
+              THEN
+                PUSH 0
+                PUSH 1
+                BINARY :not_eq
+                LOCAL :__s3_x
+                AS :u64
+                LOCAL :__s2_y
+                AS :u64
+                LOCAL :__s0_data
+                DEREF
+                FIELD 3
+                FIELD 2
+                BINARY :add
+                DEREF
+                BINARY :add
+                DEREF
+                DEREF
+                FIELD 0
+                STORE
+            ENDIF
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s3_x
+            BINARY :add
+            LOCAL :__s3_x
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_y
+        BINARY :add
+        LOCAL :__s2_y
+        STORE
+    ENDLOOP
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+ENDFUNC
+
+FUNC :GameOfLife_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<GameOfLifeData>
+    LOCAL :__s0_data :ptr<GameOfLifeData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    ADDR
+    CALL :static_fn_game_of_life_c_game_of_life_next_generation
+ENDFUNC
+
+FUNC :GameOfLife_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<GameOfLifeData>
+    LOCAL :__s0_data :ptr<GameOfLifeData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    ADDR
+    CALL :static_fn_game_of_life_c_game_of_life_count_alive
+    LOCAL :__s0_alive :i32
+    STORE
+    LOCAL :__s0_alive
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    ADDR
+    CALL :static_fn_game_of_life_c_game_of_life_grid_hash
+    BINARY :add
+    RET
+ENDFUNC
+
+FUNC :GameOfLife_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<GameOfLifeData>
+    LOCAL :__s0_data :ptr<GameOfLifeData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    ADDR
+    CALL :static_fn_game_of_life_c_game_of_life_grid_free
+ENDFUNC
+
+FUNC :GameOfLife_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Etc::GameOfLife
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :GameOfLifeData
+    CALL :malloc
+    AS :ptr<GameOfLifeData>
+    LOCAL :__s0_data :ptr<GameOfLifeData>
+    STORE
+    SIZEOF :GameOfLifeData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :GameOfLife_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :GameOfLife_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :GameOfLife_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :GameOfLife_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

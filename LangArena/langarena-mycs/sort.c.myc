@@ -1,0 +1,1796 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :SortBaseData
+  TYPE :i64
+  TYPE :ptr<i32>
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :SortQuickData
+  TYPE :SortBaseData
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :SortMergeData
+  TYPE :SortBaseData
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :SortSelfData
+  TYPE :SortBaseData
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :qsort
+  ARGS
+    TYPE :ptr<void>
+    TYPE :u64
+    TYPE :u64
+    TYPE "fn<ptr<void>, ptr<void>, i32>"
+ENDFUNC
+
+FUNC :memcpy
+  ARGS
+    TYPE :ptr<void>
+    TYPE :ptr<void>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memset
+  ARGS
+    TYPE :ptr<void>
+    TYPE :i32
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_next_int
+  ARGS
+    TYPE :u32
+  RETURN
+    TYPE :u32
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_base_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :ptr<u8>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortBaseData>
+    LOCAL :__s0_data :ptr<SortBaseData>
+    STORE
+    PUSH :size
+    PARAM 1
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :less_eq
+    IF
+      THEN
+        PUSH 100000
+        AS :i64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+    SIZEOF :i32
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<i32>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 0 :i64
+    LOCAL :__s1_i :i64
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        PUSH 1000000
+        AS :u32
+        CALL :Helper_next_int
+        AS :i32
+        LOCAL :__s1_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        DEREF
+        STORE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_base_cleanup
+  ARGS
+    TYPE :ptr<SortBaseData>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<i32>
+    PARAM 0
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<i32>
+        PARAM 0
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_quick_quick_sort
+  ARGS
+    TYPE :ptr<i32>
+    TYPE :i64
+    TYPE :i64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 2
+    PARAM 1
+    BINARY :more_eq
+    IF
+      THEN
+        RET
+    ENDIF
+    PUSH 2
+    AS :i64
+    PARAM 2
+    PARAM 1
+    BINARY :add
+    BINARY :div
+    AS :u64
+    PARAM 0
+    BINARY :add
+    DEREF
+    LOCAL :__s1_pivot :i32
+    STORE
+    PARAM 1
+    LOCAL :__s1_i :i64
+    STORE
+    PARAM 2
+    LOCAL :__s1_j :i64
+    STORE
+    LOOP
+      COND
+        LOCAL :__s1_j
+        LOCAL :__s1_i
+        BINARY :less_eq
+      BODY
+        LOOP
+          COND
+            LOCAL :__s1_pivot
+            LOCAL :__s1_i
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            BINARY :less
+          BODY
+            PUSH 1 :i64
+            LOCAL :__s1_i
+            BINARY :add
+            LOCAL :__s1_i
+            STORE
+        ENDLOOP
+        LOOP
+          COND
+            LOCAL :__s1_pivot
+            LOCAL :__s1_j
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            BINARY :more
+          BODY
+            PUSH 1 :i64
+            LOCAL :__s1_j
+            BINARY :sub
+            LOCAL :__s1_j
+            STORE
+        ENDLOOP
+        LOCAL :__s1_j
+        LOCAL :__s1_i
+        BINARY :less_eq
+        IF
+          THEN
+            LOCAL :__s1_i
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s5_temp :i32
+            STORE
+            LOCAL :__s1_j
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s1_i
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            STORE
+            LOCAL :__s5_temp
+            LOCAL :__s1_j
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            STORE
+            PUSH 1 :i64
+            LOCAL :__s1_i
+            BINARY :add
+            LOCAL :__s1_i
+            STORE
+            PUSH 1 :i64
+            LOCAL :__s1_j
+            BINARY :sub
+            LOCAL :__s1_j
+            STORE
+        ENDIF
+    ENDLOOP
+    LOCAL :__s1_j
+    PARAM 1
+    PARAM 0
+    CALL :static_fn_sort_c_sort_quick_quick_sort
+    PARAM 2
+    LOCAL :__s1_i
+    PARAM 0
+    CALL :static_fn_sort_c_sort_quick_quick_sort
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_quick_test
+  ARGS
+    TYPE :ptr<SortQuickData>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<i32>
+    PARAM 0
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+    ENDIF
+    SIZEOF :i32
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<i32>
+    PARAM 0
+    DEREF
+    FIELD 1
+    STORE
+    SIZEOF :i32
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    BINARY :mul
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 1
+    AS :ptr<void>
+    PARAM 0
+    DEREF
+    FIELD 1
+    AS :ptr<void>
+    CALL :memcpy
+    STACK :drop
+    PUSH 1
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    BINARY :sub
+    PUSH 0
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 1
+    CALL :static_fn_sort_c_sort_quick_quick_sort
+ENDFUNC
+
+FUNC :SortQuick_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortQuickData>
+    LOCAL :__s0_data :ptr<SortQuickData>
+    STORE
+    PUSH :Sort::Quick
+    PARAM 0
+    CALL :static_fn_sort_c_sort_base_prepare
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<i32>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :SortQuick_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortQuickData>
+    LOCAL :__s0_data :ptr<SortQuickData>
+    STORE
+    LOCAL :__s0_data
+    CALL :static_fn_sort_c_sort_quick_test
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 0
+    AS :u32
+    CALL :Helper_next_int
+    AS :i32
+    LOCAL :__s0_random_index1 :i32
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 0
+    AS :u32
+    CALL :Helper_next_int
+    AS :i32
+    LOCAL :__s0_random_index2 :i32
+    STORE
+    LOCAL :__s0_random_index2
+    AS :u64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :add
+    DEREF
+    AS :u32
+    LOCAL :__s0_random_index1
+    AS :u64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 1
+    BINARY :add
+    DEREF
+    AS :u32
+    BINARY :add
+    LOCAL :__s0_iteration_result :u32
+    STORE
+    LOCAL :__s0_iteration_result
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    BINARY :add
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :SortQuick_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortQuickData>
+    LOCAL :__s0_data :ptr<SortQuickData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    RET
+ENDFUNC
+
+FUNC :SortQuick_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortQuickData>
+    LOCAL :__s0_data :ptr<SortQuickData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    ADDR
+    CALL :static_fn_sort_c_sort_base_cleanup
+    PUSH 0
+    AS :ptr<i32>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<i32>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :SortQuick_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Sort::Quick
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :SortQuickData
+    CALL :malloc
+    AS :ptr<SortQuickData>
+    LOCAL :__s0_data :ptr<SortQuickData>
+    STORE
+    SIZEOF :SortQuickData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :SortQuick_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :SortQuick_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :SortQuick_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :SortQuick_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_merge_merge
+  ARGS
+    TYPE :ptr<i32>
+    TYPE :ptr<i32>
+    TYPE :i64
+    TYPE :i64
+    TYPE :i64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 2
+    LOCAL :__s0_i :i64
+    STORE
+    LOOP
+      COND
+        PARAM 4
+        LOCAL :__s0_i
+        BINARY :less_eq
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        BINARY :add
+        DEREF
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        STORE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PARAM 2
+    LOCAL :__s1_i :i64
+    STORE
+    PUSH 1
+    AS :i64
+    PARAM 3
+    BINARY :add
+    LOCAL :__s1_j :i64
+    STORE
+    PARAM 2
+    LOCAL :__s1_k :i64
+    STORE
+    LOOP
+      COND
+        PARAM 3
+        LOCAL :__s1_i
+        BINARY :less_eq
+        LOCAL :__sc_and_4 :bool
+        STORE
+        LOCAL :__sc_and_4
+        IF
+          THEN
+            PARAM 4
+            LOCAL :__s1_j
+            BINARY :less_eq
+            LOCAL :__sc_and_4
+            STORE
+        ENDIF
+        LOCAL :__sc_and_4
+      BODY
+        LOCAL :__s1_j
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        LOCAL :__s1_i
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        BINARY :less_eq
+        IF
+          THEN
+            LOCAL :__s1_i
+            AS :u64
+            PARAM 1
+            BINARY :add
+            DEREF
+            LOCAL :__s1_k
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            STORE
+            PUSH 1 :i64
+            LOCAL :__s1_i
+            BINARY :add
+            LOCAL :__s1_i
+            STORE
+          ELSE
+            LOCAL :__s1_j
+            AS :u64
+            PARAM 1
+            BINARY :add
+            DEREF
+            LOCAL :__s1_k
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            STORE
+            PUSH 1 :i64
+            LOCAL :__s1_j
+            BINARY :add
+            LOCAL :__s1_j
+            STORE
+        ENDIF
+        PUSH 1 :i64
+        LOCAL :__s1_k
+        BINARY :add
+        LOCAL :__s1_k
+        STORE
+    ENDLOOP
+    LOOP
+      COND
+        PARAM 3
+        LOCAL :__s1_i
+        BINARY :less_eq
+      BODY
+        LOCAL :__s1_i
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        LOCAL :__s1_k
+        AS :u64
+        PARAM 0
+        BINARY :add
+        DEREF
+        STORE
+        PUSH 1 :i64
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+        PUSH 1 :i64
+        LOCAL :__s1_k
+        BINARY :add
+        LOCAL :__s1_k
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_merge_merge_sort_helper
+  ARGS
+    TYPE :ptr<i32>
+    TYPE :ptr<i32>
+    TYPE :i64
+    TYPE :i64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 3
+    PARAM 2
+    BINARY :more_eq
+    IF
+      THEN
+        RET
+    ENDIF
+    PUSH 2
+    AS :i64
+    PARAM 3
+    PARAM 2
+    BINARY :add
+    BINARY :div
+    LOCAL :__s1_mid :i64
+    STORE
+    LOCAL :__s1_mid
+    PARAM 2
+    PARAM 1
+    PARAM 0
+    CALL :static_fn_sort_c_sort_merge_merge_sort_helper
+    PARAM 3
+    PUSH 1
+    AS :i64
+    LOCAL :__s1_mid
+    BINARY :add
+    PARAM 1
+    PARAM 0
+    CALL :static_fn_sort_c_sort_merge_merge_sort_helper
+    PARAM 3
+    LOCAL :__s1_mid
+    PARAM 2
+    PARAM 1
+    PARAM 0
+    CALL :static_fn_sort_c_sort_merge_merge
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_merge_merge_sort_inplace
+  ARGS
+    TYPE :ptr<i32>
+    TYPE :i64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    SIZEOF :i32
+    AS :i64
+    PARAM 1
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<i32>
+    LOCAL :__s0_temp :ptr<i32>
+    STORE
+    PUSH 1
+    AS :i64
+    PARAM 1
+    BINARY :sub
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_temp
+    PARAM 0
+    CALL :static_fn_sort_c_sort_merge_merge_sort_helper
+    LOCAL :__s0_temp
+    AS :ptr<void>
+    CALL :free
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_merge_test
+  ARGS
+    TYPE :ptr<SortMergeData>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<i32>
+    PARAM 0
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+    ENDIF
+    SIZEOF :i32
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<i32>
+    PARAM 0
+    DEREF
+    FIELD 1
+    STORE
+    SIZEOF :i32
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    BINARY :mul
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 1
+    AS :ptr<void>
+    PARAM 0
+    DEREF
+    FIELD 1
+    AS :ptr<void>
+    CALL :memcpy
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    PARAM 0
+    DEREF
+    FIELD 1
+    CALL :static_fn_sort_c_sort_merge_merge_sort_inplace
+ENDFUNC
+
+FUNC :SortMerge_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortMergeData>
+    LOCAL :__s0_data :ptr<SortMergeData>
+    STORE
+    PUSH :Sort::Merge
+    PARAM 0
+    CALL :static_fn_sort_c_sort_base_prepare
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<i32>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :SortMerge_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortMergeData>
+    LOCAL :__s0_data :ptr<SortMergeData>
+    STORE
+    LOCAL :__s0_data
+    CALL :static_fn_sort_c_sort_merge_test
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 0
+    AS :u32
+    CALL :Helper_next_int
+    AS :i32
+    LOCAL :__s0_random_index1 :i32
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 0
+    AS :u32
+    CALL :Helper_next_int
+    AS :i32
+    LOCAL :__s0_random_index2 :i32
+    STORE
+    LOCAL :__s0_random_index2
+    AS :u64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :add
+    DEREF
+    AS :u32
+    LOCAL :__s0_random_index1
+    AS :u64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 1
+    BINARY :add
+    DEREF
+    AS :u32
+    BINARY :add
+    LOCAL :__s0_iteration_result :u32
+    STORE
+    LOCAL :__s0_iteration_result
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    BINARY :add
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :SortMerge_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortMergeData>
+    LOCAL :__s0_data :ptr<SortMergeData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    RET
+ENDFUNC
+
+FUNC :SortMerge_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortMergeData>
+    LOCAL :__s0_data :ptr<SortMergeData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    ADDR
+    CALL :static_fn_sort_c_sort_base_cleanup
+    PUSH 0
+    AS :ptr<i32>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<i32>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :SortMerge_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Sort::Merge
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :SortMergeData
+    CALL :malloc
+    AS :ptr<SortMergeData>
+    LOCAL :__s0_data :ptr<SortMergeData>
+    STORE
+    SIZEOF :SortMergeData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :SortMerge_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :SortMerge_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :SortMerge_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :SortMerge_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_self_compare
+  ARGS
+    TYPE :ptr<void>
+    TYPE :ptr<void>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    AS :ptr<i32>
+    DEREF
+    LOCAL :__s0_ia :i32
+    STORE
+    PARAM 1
+    AS :ptr<i32>
+    DEREF
+    LOCAL :__s0_ib :i32
+    STORE
+    LOCAL :__s0_ib
+    LOCAL :__s0_ia
+    BINARY :less
+    AS :i32
+    LOCAL :__s0_ib
+    LOCAL :__s0_ia
+    BINARY :more
+    AS :i32
+    BINARY :sub
+    RET
+ENDFUNC
+
+FUNC :static_fn_sort_c_sort_self_test
+  ARGS
+    TYPE :ptr<SortSelfData>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<i32>
+    PARAM 0
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+    ENDIF
+    SIZEOF :i32
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<i32>
+    PARAM 0
+    DEREF
+    FIELD 1
+    STORE
+    SIZEOF :i32
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    BINARY :mul
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 1
+    AS :ptr<void>
+    PARAM 0
+    DEREF
+    FIELD 1
+    AS :ptr<void>
+    CALL :memcpy
+    STACK :drop
+    ADDR :static_fn_sort_c_sort_self_compare
+    SIZEOF :i32
+    PARAM 0
+    DEREF
+    FIELD 0
+    FIELD 0
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 1
+    AS :ptr<void>
+    CALL :qsort
+ENDFUNC
+
+FUNC :SortSelf_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortSelfData>
+    LOCAL :__s0_data :ptr<SortSelfData>
+    STORE
+    PUSH :Sort::Self
+    PARAM 0
+    CALL :static_fn_sort_c_sort_base_prepare
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<i32>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :SortSelf_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortSelfData>
+    LOCAL :__s0_data :ptr<SortSelfData>
+    STORE
+    LOCAL :__s0_data
+    CALL :static_fn_sort_c_sort_self_test
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 0
+    AS :u32
+    CALL :Helper_next_int
+    AS :i32
+    LOCAL :__s0_random_index1 :i32
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 0
+    AS :u32
+    CALL :Helper_next_int
+    AS :i32
+    LOCAL :__s0_random_index2 :i32
+    STORE
+    LOCAL :__s0_random_index2
+    AS :u64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :add
+    DEREF
+    AS :u32
+    LOCAL :__s0_random_index1
+    AS :u64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 1
+    BINARY :add
+    DEREF
+    AS :u32
+    BINARY :add
+    LOCAL :__s0_iteration_result :u32
+    STORE
+    LOCAL :__s0_iteration_result
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    BINARY :add
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :SortSelf_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortSelfData>
+    LOCAL :__s0_data :ptr<SortSelfData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    FIELD 2
+    RET
+ENDFUNC
+
+FUNC :SortSelf_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<SortSelfData>
+    LOCAL :__s0_data :ptr<SortSelfData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    ADDR
+    CALL :static_fn_sort_c_sort_base_cleanup
+    PUSH 0
+    AS :ptr<i32>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<i32>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :SortSelf_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Sort::Self
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :SortSelfData
+    CALL :malloc
+    AS :ptr<SortSelfData>
+    LOCAL :__s0_data :ptr<SortSelfData>
+    STORE
+    SIZEOF :SortSelfData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :SortSelf_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :SortSelf_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :SortSelf_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :SortSelf_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

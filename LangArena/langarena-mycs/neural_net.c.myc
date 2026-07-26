@@ -1,0 +1,2286 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :NeuralNetNeuron
+  TYPE :ptr<ptr<NeuralNetSynapse>>
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<ptr<NeuralNetSynapse>>
+  TYPE :i32
+  TYPE :i32
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+ENDSTRUCT
+
+STRUCT :NeuralNetSynapse
+  TYPE :f64
+  TYPE :f64
+  TYPE :ptr<NeuralNetNeuron>
+  TYPE :ptr<NeuralNetNeuron>
+ENDSTRUCT
+
+STRUCT :NeuralNetwork
+  TYPE :ptr<NeuralNetNeuron>
+  TYPE :i32
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :ptr<NeuralNetSynapse>
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :NeuralNetData
+  TYPE :u32
+  TYPE :f64
+  TYPE :ptr<NeuralNetwork>
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :realloc
+  ARGS
+    TYPE :ptr<void>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memset
+  ARGS
+    TYPE :ptr<void>
+    TYPE :i32
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :Helper_reset
+ENDFUNC
+
+FUNC :Helper_next_float
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Helper_checksum_f64
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :u32
+ENDFUNC
+
+FUNC :exp
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_update_weights
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        LOCAL :__s1_synapse :ptr<NeuralNetSynapse>
+        STORE
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 0
+        LOCAL :__s1_temp_weight :f64
+        STORE
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 1
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 0
+        BINARY :sub
+        PUSH 0.3 :f64
+        BINARY :mul
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 2
+        DEREF
+        FIELD 9
+        PARAM 0
+        DEREF
+        FIELD 8
+        PUSH 1.0 :f64
+        PUSH 0.3 :f64
+        BINARY :mul
+        BINARY :mul
+        BINARY :mul
+        BINARY :add
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 0
+        BINARY :add
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 0
+        STORE
+        LOCAL :__s1_temp_weight
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 1
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PARAM 0
+    DEREF
+    FIELD 6
+    LOCAL :__s1_temp_threshold :f64
+    STORE
+    PARAM 0
+    DEREF
+    FIELD 7
+    PARAM 0
+    DEREF
+    FIELD 6
+    BINARY :sub
+    PUSH 0.3 :f64
+    BINARY :mul
+    PUSH 1.0 :f64
+    UNARY :neg
+    PARAM 0
+    DEREF
+    FIELD 8
+    PUSH 1.0 :f64
+    PUSH 0.3 :f64
+    BINARY :mul
+    BINARY :mul
+    BINARY :mul
+    BINARY :add
+    PARAM 0
+    DEREF
+    FIELD 6
+    BINARY :add
+    PARAM 0
+    DEREF
+    FIELD 6
+    STORE
+    LOCAL :__s1_temp_threshold
+    PARAM 0
+    DEREF
+    FIELD 7
+    STORE
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_init
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 1.0 :f64
+    CALL :Helper_next_float
+    LOCAL :__s0_r :f64
+    STORE
+    PARAM 0
+    DEREF
+    FIELD 7
+    PUSH 1.0 :f64
+    PUSH 2.0 :f64
+    LOCAL :__s0_r
+    BINARY :mul
+    BINARY :sub
+    STACK :swap2
+    STORE
+    PARAM 0
+    DEREF
+    FIELD 7
+    PARAM 0
+    DEREF
+    FIELD 6
+    STORE
+    PUSH 0.0 :f64
+    PARAM 0
+    DEREF
+    FIELD 9
+    STORE
+    PUSH 0.0 :f64
+    PARAM 0
+    DEREF
+    FIELD 8
+    STORE
+    PUSH 0
+    PARAM 0
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 4
+    PARAM 0
+    DEREF
+    FIELD 2
+    STORE
+    SIZEOF :ptr<NeuralNetSynapse>
+    PARAM 0
+    DEREF
+    FIELD 2
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<ptr<NeuralNetSynapse>>
+    PARAM 0
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    PARAM 0
+    DEREF
+    FIELD 4
+    STORE
+    PUSH 4
+    PARAM 0
+    DEREF
+    FIELD 5
+    STORE
+    SIZEOF :ptr<NeuralNetSynapse>
+    PARAM 0
+    DEREF
+    FIELD 5
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<ptr<NeuralNetSynapse>>
+    PARAM 0
+    DEREF
+    FIELD 3
+    STORE
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_add_synapse_in
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+    TYPE :ptr<NeuralNetSynapse>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 2
+    PARAM 0
+    DEREF
+    FIELD 1
+    BINARY :more_eq
+    IF
+      THEN
+        PUSH 2
+        PARAM 0
+        DEREF
+        FIELD 2
+        BINARY :mul
+        PARAM 0
+        DEREF
+        FIELD 2
+        STORE
+        SIZEOF :ptr<NeuralNetSynapse>
+        PARAM 0
+        DEREF
+        FIELD 2
+        AS :u64
+        BINARY :mul
+        PARAM 0
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :realloc
+        AS :ptr<ptr<NeuralNetSynapse>>
+        PARAM 0
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+    PARAM 1
+    PARAM 0
+    DEREF
+    FIELD 1
+    LOCAL :__tmp_0 :i32
+    STORE
+    PUSH 1 :i32
+    PARAM 0
+    DEREF
+    FIELD 1
+    BINARY :add
+    PARAM 0
+    DEREF
+    FIELD 1
+    STORE
+    LOCAL :__tmp_0
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    BINARY :add
+    DEREF
+    STORE
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_add_synapse_out
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+    TYPE :ptr<NeuralNetSynapse>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 5
+    PARAM 0
+    DEREF
+    FIELD 4
+    BINARY :more_eq
+    IF
+      THEN
+        PUSH 2
+        PARAM 0
+        DEREF
+        FIELD 5
+        BINARY :mul
+        PARAM 0
+        DEREF
+        FIELD 5
+        STORE
+        SIZEOF :ptr<NeuralNetSynapse>
+        PARAM 0
+        DEREF
+        FIELD 5
+        AS :u64
+        BINARY :mul
+        PARAM 0
+        DEREF
+        FIELD 3
+        AS :ptr<void>
+        CALL :realloc
+        AS :ptr<ptr<NeuralNetSynapse>>
+        PARAM 0
+        DEREF
+        FIELD 3
+        STORE
+    ENDIF
+    PARAM 1
+    PARAM 0
+    DEREF
+    FIELD 4
+    LOCAL :__tmp_0 :i32
+    STORE
+    PUSH 1 :i32
+    PARAM 0
+    DEREF
+    FIELD 4
+    BINARY :add
+    PARAM 0
+    DEREF
+    FIELD 4
+    STORE
+    LOCAL :__tmp_0
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 3
+    BINARY :add
+    DEREF
+    STORE
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_derivative
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 9
+    PUSH 1.0 :f64
+    BINARY :sub
+    PARAM 0
+    DEREF
+    FIELD 9
+    BINARY :mul
+    RET
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_calculate_output
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0.0 :f64
+    LOCAL :__s0_activation :f64
+    STORE
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        LOCAL :__s1_synapse :ptr<NeuralNetSynapse>
+        STORE
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 2
+        DEREF
+        FIELD 9
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 0
+        BINARY :mul
+        LOCAL :__s0_activation
+        BINARY :add
+        LOCAL :__s0_activation
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PARAM 0
+    DEREF
+    FIELD 6
+    LOCAL :__s0_activation
+    BINARY :sub
+    LOCAL :__s0_activation
+    STORE
+    LOCAL :__s0_activation
+    UNARY :neg
+    CALL :exp
+    PUSH 1.0 :f64
+    BINARY :add
+    PUSH 1.0 :f64
+    BINARY :div
+    PARAM 0
+    DEREF
+    FIELD 9
+    STORE
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_output_train
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    CALL :static_fn_neural_net_c_neuron_derivative
+    PARAM 0
+    DEREF
+    FIELD 9
+    PARAM 1
+    BINARY :sub
+    BINARY :mul
+    PARAM 0
+    DEREF
+    FIELD 8
+    STORE
+    PARAM 0
+    CALL :static_fn_neural_net_c_neuron_update_weights
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_neuron_hidden_train
+  ARGS
+    TYPE :ptr<NeuralNetNeuron>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0.0 :f64
+    LOCAL :__s0_sum :f64
+    STORE
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 4
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 3
+        BINARY :add
+        DEREF
+        LOCAL :__s1_synapse :ptr<NeuralNetSynapse>
+        STORE
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 3
+        DEREF
+        FIELD 8
+        LOCAL :__s1_synapse
+        DEREF
+        FIELD 1
+        BINARY :mul
+        LOCAL :__s0_sum
+        BINARY :add
+        LOCAL :__s0_sum
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PARAM 0
+    CALL :static_fn_neural_net_c_neuron_derivative
+    LOCAL :__s0_sum
+    BINARY :mul
+    PARAM 0
+    DEREF
+    FIELD 8
+    STORE
+    PARAM 0
+    CALL :static_fn_neural_net_c_neuron_update_weights
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_network_new
+  ARGS
+    TYPE :i32
+    TYPE :i32
+    TYPE :i32
+  RETURN
+    TYPE :ptr<NeuralNetwork>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    SIZEOF :NeuralNetwork
+    CALL :malloc
+    AS :ptr<NeuralNetwork>
+    LOCAL :__s0_net :ptr<NeuralNetwork>
+    STORE
+    PARAM 2
+    PARAM 1
+    PARAM 0
+    BINARY :add
+    BINARY :add
+    LOCAL :__s0_net
+    DEREF
+    FIELD 1
+    STORE
+    SIZEOF :NeuralNetNeuron
+    LOCAL :__s0_net
+    DEREF
+    FIELD 1
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<NeuralNetNeuron>
+    LOCAL :__s0_net
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_net
+        DEREF
+        FIELD 1
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_neural_net_c_neuron_init
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PARAM 0
+    LOCAL :__s0_net
+    DEREF
+    FIELD 3
+    STORE
+    PARAM 1
+    LOCAL :__s0_net
+    DEREF
+    FIELD 5
+    STORE
+    PARAM 2
+    LOCAL :__s0_net
+    DEREF
+    FIELD 7
+    STORE
+    SIZEOF :i32
+    PARAM 0
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<i32>
+    LOCAL :__s0_net
+    DEREF
+    FIELD 2
+    STORE
+    SIZEOF :i32
+    PARAM 1
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<i32>
+    LOCAL :__s0_net
+    DEREF
+    FIELD 4
+    STORE
+    SIZEOF :i32
+    PARAM 2
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<i32>
+    LOCAL :__s0_net
+    DEREF
+    FIELD 6
+    STORE
+    PUSH 0
+    LOCAL :__s1_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        LOCAL :__s1_i
+        LOCAL :__s1_i
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 2
+        BINARY :add
+        DEREF
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s2_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 1
+        LOCAL :__s2_i
+        BINARY :less
+      BODY
+        LOCAL :__s2_i
+        PARAM 0
+        BINARY :add
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 4
+        BINARY :add
+        DEREF
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_i
+        BINARY :add
+        LOCAL :__s2_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s3_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 2
+        LOCAL :__s3_i
+        BINARY :less
+      BODY
+        LOCAL :__s3_i
+        PARAM 1
+        PARAM 0
+        BINARY :add
+        BINARY :add
+        LOCAL :__s3_i
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 6
+        BINARY :add
+        DEREF
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s3_i
+        BINARY :add
+        LOCAL :__s3_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s0_net
+    DEREF
+    FIELD 9
+    STORE
+    PARAM 2
+    PARAM 1
+    BINARY :mul
+    PARAM 1
+    PARAM 0
+    BINARY :mul
+    BINARY :add
+    LOCAL :__s0_net
+    DEREF
+    FIELD 10
+    STORE
+    SIZEOF :NeuralNetSynapse
+    LOCAL :__s0_net
+    DEREF
+    FIELD 10
+    AS :u64
+    BINARY :mul
+    CALL :malloc
+    AS :ptr<NeuralNetSynapse>
+    LOCAL :__s0_net
+    DEREF
+    FIELD 8
+    STORE
+    PUSH 0
+    LOCAL :__s4_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        LOCAL :__s4_i
+        BINARY :less
+      BODY
+        LOCAL :__s4_i
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 2
+        BINARY :add
+        DEREF
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        LOCAL :__s5_source :ptr<NeuralNetNeuron>
+        STORE
+        PUSH 0
+        LOCAL :__s5_j :i32
+        STORE
+        LOOP
+          COND
+            PARAM 1
+            LOCAL :__s5_j
+            BINARY :less
+          BODY
+            LOCAL :__s5_j
+            AS :u64
+            LOCAL :__s0_net
+            DEREF
+            FIELD 4
+            BINARY :add
+            DEREF
+            AS :u64
+            LOCAL :__s0_net
+            DEREF
+            FIELD 0
+            BINARY :add
+            DEREF
+            ADDR
+            LOCAL :__s6_dest :ptr<NeuralNetNeuron>
+            STORE
+            LOCAL :__s0_net
+            DEREF
+            FIELD 9
+            LOCAL :__tmp_9 :i32
+            STORE
+            PUSH 1 :i32
+            LOCAL :__s0_net
+            DEREF
+            FIELD 9
+            BINARY :add
+            LOCAL :__s0_net
+            DEREF
+            FIELD 9
+            STORE
+            LOCAL :__tmp_9
+            AS :u64
+            LOCAL :__s0_net
+            DEREF
+            FIELD 8
+            BINARY :add
+            DEREF
+            ADDR
+            LOCAL :__s6_synapse :ptr<NeuralNetSynapse>
+            STORE
+            PUSH 1.0 :f64
+            CALL :Helper_next_float
+            LOCAL :__s6_r :f64
+            STORE
+            LOCAL :__s6_synapse
+            DEREF
+            FIELD 1
+            PUSH 1.0 :f64
+            PUSH 2.0 :f64
+            LOCAL :__s6_r
+            BINARY :mul
+            BINARY :sub
+            STACK :swap2
+            STORE
+            LOCAL :__s6_synapse
+            DEREF
+            FIELD 1
+            LOCAL :__s6_synapse
+            DEREF
+            FIELD 0
+            STORE
+            LOCAL :__s5_source
+            LOCAL :__s6_synapse
+            DEREF
+            FIELD 2
+            STORE
+            LOCAL :__s6_dest
+            LOCAL :__s6_synapse
+            DEREF
+            FIELD 3
+            STORE
+            LOCAL :__s6_synapse
+            LOCAL :__s5_source
+            CALL :static_fn_neural_net_c_neuron_add_synapse_out
+            LOCAL :__s6_synapse
+            LOCAL :__s6_dest
+            CALL :static_fn_neural_net_c_neuron_add_synapse_in
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s5_j
+            BINARY :add
+            LOCAL :__s5_j
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s4_i
+        BINARY :add
+        LOCAL :__s4_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s6_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 1
+        LOCAL :__s6_i
+        BINARY :less
+      BODY
+        LOCAL :__s6_i
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 4
+        BINARY :add
+        DEREF
+        AS :u64
+        LOCAL :__s0_net
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        LOCAL :__s7_source :ptr<NeuralNetNeuron>
+        STORE
+        PUSH 0
+        LOCAL :__s7_j :i32
+        STORE
+        LOOP
+          COND
+            PARAM 2
+            LOCAL :__s7_j
+            BINARY :less
+          BODY
+            LOCAL :__s7_j
+            AS :u64
+            LOCAL :__s0_net
+            DEREF
+            FIELD 6
+            BINARY :add
+            DEREF
+            AS :u64
+            LOCAL :__s0_net
+            DEREF
+            FIELD 0
+            BINARY :add
+            DEREF
+            ADDR
+            LOCAL :__s8_dest :ptr<NeuralNetNeuron>
+            STORE
+            LOCAL :__s0_net
+            DEREF
+            FIELD 9
+            LOCAL :__tmp_16 :i32
+            STORE
+            PUSH 1 :i32
+            LOCAL :__s0_net
+            DEREF
+            FIELD 9
+            BINARY :add
+            LOCAL :__s0_net
+            DEREF
+            FIELD 9
+            STORE
+            LOCAL :__tmp_16
+            AS :u64
+            LOCAL :__s0_net
+            DEREF
+            FIELD 8
+            BINARY :add
+            DEREF
+            ADDR
+            LOCAL :__s8_synapse :ptr<NeuralNetSynapse>
+            STORE
+            PUSH 1.0 :f64
+            CALL :Helper_next_float
+            LOCAL :__s8_r :f64
+            STORE
+            LOCAL :__s8_synapse
+            DEREF
+            FIELD 1
+            PUSH 1.0 :f64
+            PUSH 2.0 :f64
+            LOCAL :__s8_r
+            BINARY :mul
+            BINARY :sub
+            STACK :swap2
+            STORE
+            LOCAL :__s8_synapse
+            DEREF
+            FIELD 1
+            LOCAL :__s8_synapse
+            DEREF
+            FIELD 0
+            STORE
+            LOCAL :__s7_source
+            LOCAL :__s8_synapse
+            DEREF
+            FIELD 2
+            STORE
+            LOCAL :__s8_dest
+            LOCAL :__s8_synapse
+            DEREF
+            FIELD 3
+            STORE
+            LOCAL :__s8_synapse
+            LOCAL :__s7_source
+            CALL :static_fn_neural_net_c_neuron_add_synapse_out
+            LOCAL :__s8_synapse
+            LOCAL :__s8_dest
+            CALL :static_fn_neural_net_c_neuron_add_synapse_in
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s7_j
+            BINARY :add
+            LOCAL :__s7_j
+            STORE
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s6_i
+        BINARY :add
+        LOCAL :__s6_i
+        STORE
+    ENDLOOP
+    LOCAL :__s0_net
+    RET
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_network_free
+  ARGS
+    TYPE :ptr<NeuralNetwork>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<NeuralNetwork>
+    PARAM 0
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    PUSH 0
+    LOCAL :__s1_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        LOCAL :__s1_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :free
+        LOCAL :__s1_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 3
+        AS :ptr<void>
+        CALL :free
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    PARAM 0
+    DEREF
+    FIELD 0
+    AS :ptr<void>
+    CALL :free
+    PARAM 0
+    DEREF
+    FIELD 2
+    AS :ptr<void>
+    CALL :free
+    PARAM 0
+    DEREF
+    FIELD 4
+    AS :ptr<void>
+    CALL :free
+    PARAM 0
+    DEREF
+    FIELD 6
+    AS :ptr<void>
+    CALL :free
+    PARAM 0
+    DEREF
+    FIELD 8
+    AS :ptr<void>
+    CALL :free
+    PARAM 0
+    AS :ptr<void>
+    CALL :free
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_network_train
+  ARGS
+    TYPE :ptr<NeuralNetwork>
+    TYPE :ptr<f64>
+    TYPE :ptr<f64>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 3
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 2
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 9
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s1_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 5
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        LOCAL :__s1_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 4
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_neural_net_c_neuron_calculate_output
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s2_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 7
+        LOCAL :__s2_i
+        BINARY :less
+      BODY
+        LOCAL :__s2_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 6
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_neural_net_c_neuron_calculate_output
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_i
+        BINARY :add
+        LOCAL :__s2_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s3_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 7
+        LOCAL :__s3_i
+        BINARY :less
+      BODY
+        LOCAL :__s3_i
+        AS :u64
+        PARAM 2
+        BINARY :add
+        DEREF
+        LOCAL :__s3_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 6
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_neural_net_c_neuron_output_train
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s3_i
+        BINARY :add
+        LOCAL :__s3_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s4_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 5
+        LOCAL :__s4_i
+        BINARY :less
+      BODY
+        LOCAL :__s4_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 4
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_neural_net_c_neuron_hidden_train
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s4_i
+        BINARY :add
+        LOCAL :__s4_i
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_network_feed_forward
+  ARGS
+    TYPE :ptr<NeuralNetwork>
+    TYPE :ptr<f64>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 3
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 1
+        BINARY :add
+        DEREF
+        LOCAL :__s0_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 2
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 9
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s1_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 5
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        LOCAL :__s1_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 4
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_neural_net_c_neuron_calculate_output
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s2_i :i32
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        DEREF
+        FIELD 7
+        LOCAL :__s2_i
+        BINARY :less
+      BODY
+        LOCAL :__s2_i
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 6
+        BINARY :add
+        DEREF
+        AS :u64
+        PARAM 0
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        CALL :static_fn_neural_net_c_neuron_calculate_output
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_i
+        BINARY :add
+        LOCAL :__s2_i
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :static_fn_neural_net_c_network_get_output
+  ARGS
+    TYPE :ptr<NeuralNetwork>
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 6
+    BINARY :add
+    DEREF
+    AS :u64
+    PARAM 0
+    DEREF
+    FIELD 0
+    BINARY :add
+    DEREF
+    FIELD 9
+    RET
+ENDFUNC
+
+FUNC :NeuralNet_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NeuralNetData>
+    LOCAL :__s0_data :ptr<NeuralNetData>
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 0
+    AS :ptr<NeuralNetwork>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :static_fn_neural_net_c_network_free
+    ENDIF
+    CALL :Helper_reset
+    PUSH 1
+    PUSH 10
+    PUSH 2
+    CALL :static_fn_neural_net_c_network_new
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+ENDFUNC
+
+FUNC :NeuralNet_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NeuralNetData>
+    LOCAL :__s0_data :ptr<NeuralNetData>
+    STORE
+    SIZEOF "flat<f64, 2>"
+    PUSH 0 :u8
+    LOCAL :__s0_inputs_00 "flat<f64, 2>"
+    ADDR
+    CALL :memset
+    STACK :drop
+    SIZEOF "flat<f64, 1>"
+    PUSH 0 :u8
+    LOCAL :__s0_targets_0 "flat<f64, 1>"
+    ADDR
+    CALL :memset
+    STACK :drop
+    PUSH 0
+    AS :f64
+    PUSH 1
+    AS :f64
+    CREATE "flat<f64, 2>"
+    LOCAL :__s0_inputs_10 "flat<f64, 2>"
+    STORE
+    PUSH 1
+    AS :f64
+    PUSH 0
+    AS :f64
+    CREATE "flat<f64, 2>"
+    LOCAL :__s0_inputs_01 "flat<f64, 2>"
+    STORE
+    PUSH 1
+    AS :f64
+    CREATE "flat<f64, 1>"
+    LOCAL :__s0_targets_1 "flat<f64, 1>"
+    STORE
+    PUSH 1
+    AS :f64
+    PUSH 1
+    AS :f64
+    CREATE "flat<f64, 2>"
+    LOCAL :__s0_inputs_11 "flat<f64, 2>"
+    STORE
+    SIZEOF "flat<f64, 1>"
+    PUSH 0 :u8
+    LOCAL :__s0_targets_0_again "flat<f64, 1>"
+    ADDR
+    CALL :memset
+    STACK :drop
+    PUSH 0
+    LOCAL :__s0_iter :i32
+    STORE
+    LOOP
+      COND
+        PUSH 1000
+        LOCAL :__s0_iter
+        BINARY :less
+      BODY
+        LOCAL :__s0_targets_0
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_inputs_00
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :static_fn_neural_net_c_network_train
+        LOCAL :__s0_targets_1
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_inputs_10
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :static_fn_neural_net_c_network_train
+        LOCAL :__s0_targets_1
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_inputs_01
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :static_fn_neural_net_c_network_train
+        LOCAL :__s0_targets_0_again
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_inputs_11
+        ADDR
+        AS :ptr<f64>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :static_fn_neural_net_c_network_train
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_iter
+        BINARY :add
+        LOCAL :__s0_iter
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :NeuralNet_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NeuralNetData>
+    LOCAL :__s0_data :ptr<NeuralNetData>
+    STORE
+    PUSH 0
+    AS :ptr<NeuralNetwork>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :u32
+        RET
+    ENDIF
+    SIZEOF "flat<f64, 2>"
+    PUSH 0 :u8
+    LOCAL :__s1_inputs_00 "flat<f64, 2>"
+    ADDR
+    CALL :memset
+    STACK :drop
+    PUSH 1
+    AS :f64
+    PUSH 0
+    AS :f64
+    CREATE "flat<f64, 2>"
+    LOCAL :__s1_inputs_01 "flat<f64, 2>"
+    STORE
+    PUSH 0
+    AS :f64
+    PUSH 1
+    AS :f64
+    CREATE "flat<f64, 2>"
+    LOCAL :__s1_inputs_10 "flat<f64, 2>"
+    STORE
+    PUSH 1
+    AS :f64
+    PUSH 1
+    AS :f64
+    CREATE "flat<f64, 2>"
+    LOCAL :__s1_inputs_11 "flat<f64, 2>"
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s1_sum :f64
+    STORE
+    LOCAL :__s1_inputs_00
+    ADDR
+    AS :ptr<f64>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_feed_forward
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_get_output
+    LOCAL :__s1_sum
+    BINARY :add
+    LOCAL :__s1_sum
+    STORE
+    LOCAL :__s1_inputs_01
+    ADDR
+    AS :ptr<f64>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_feed_forward
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_get_output
+    LOCAL :__s1_sum
+    BINARY :add
+    LOCAL :__s1_sum
+    STORE
+    LOCAL :__s1_inputs_10
+    ADDR
+    AS :ptr<f64>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_feed_forward
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_get_output
+    LOCAL :__s1_sum
+    BINARY :add
+    LOCAL :__s1_sum
+    STORE
+    LOCAL :__s1_inputs_11
+    ADDR
+    AS :ptr<f64>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_feed_forward
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_neural_net_c_network_get_output
+    LOCAL :__s1_sum
+    BINARY :add
+    LOCAL :__s1_sum
+    STORE
+    LOCAL :__s1_sum
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    LOCAL :__s1_sum
+    CALL :Helper_checksum_f64
+    RET
+ENDFUNC
+
+FUNC :NeuralNet_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<NeuralNetData>
+    LOCAL :__s0_data :ptr<NeuralNetData>
+    STORE
+    PUSH 0
+    AS :ptr<NeuralNetwork>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :static_fn_neural_net_c_network_free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<NeuralNetwork>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :NeuralNet_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Etc::NeuralNet
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :NeuralNetData
+    CALL :malloc
+    AS :ptr<NeuralNetData>
+    LOCAL :__s0_data :ptr<NeuralNetData>
+    STORE
+    SIZEOF :NeuralNetData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :NeuralNet_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :NeuralNet_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :NeuralNet_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :NeuralNet_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

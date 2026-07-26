@@ -1,0 +1,6930 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :yyjson_alc
+  TYPE "fn<ptr<void>, u64, ptr<void>>"
+  TYPE "fn<ptr<void>, ptr<void>, u64, u64, ptr<void>>"
+  TYPE "fn<ptr<void>, ptr<void>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :yyjson_doc
+  TYPE :ptr<yyjson_val>
+  TYPE :yyjson_alc
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :yyjson_val
+  TYPE :u64
+  TYPE :yyjson_val_uni
+ENDSTRUCT
+
+STRUCT :yyjson_mut_doc
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :yyjson_alc
+  TYPE :yyjson_str_pool
+  TYPE :yyjson_val_pool
+ENDSTRUCT
+
+STRUCT :yyjson_mut_val
+  TYPE :u64
+  TYPE :yyjson_val_uni
+  TYPE :ptr<yyjson_mut_val>
+ENDSTRUCT
+
+STRUCT :yyjson_read_err
+  TYPE :u32
+  TYPE :ptr<u8>
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :yyjson_incr_state
+ENDSTRUCT
+
+STRUCT :yyjson_write_err
+  TYPE :u32
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :yyjson_arr_iter
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<yyjson_val>
+ENDSTRUCT
+
+STRUCT :yyjson_obj_iter
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<yyjson_val>
+  TYPE :ptr<yyjson_val>
+ENDSTRUCT
+
+STRUCT :yyjson_mut_arr_iter
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :ptr<yyjson_mut_val>
+ENDSTRUCT
+
+STRUCT :yyjson_mut_obj_iter
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :ptr<yyjson_mut_val>
+ENDSTRUCT
+
+STRUCT :yyjson_ptr_err
+  TYPE :u32
+  TYPE :ptr<u8>
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :yyjson_ptr_ctx
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :ptr<yyjson_mut_val>
+ENDSTRUCT
+
+STRUCT :yyjson_patch_err
+  TYPE :u32
+  TYPE :u64
+  TYPE :ptr<u8>
+  TYPE :yyjson_ptr_err
+ENDSTRUCT
+
+STRUCT :yyjson_str_chunk
+  TYPE :ptr<yyjson_str_chunk>
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :yyjson_str_pool
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<yyjson_str_chunk>
+ENDSTRUCT
+
+STRUCT :yyjson_val_chunk
+  TYPE :ptr<yyjson_val_chunk>
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :yyjson_val_pool
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :ptr<yyjson_mut_val>
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<yyjson_val_chunk>
+ENDSTRUCT
+
+STRUCT :Coord
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+  TYPE "flat<u8, 64>"
+  TYPE :i32
+  TYPE :bool
+ENDSTRUCT
+
+STRUCT :JsonGenerateData
+  TYPE :ptr<Coord>
+  TYPE :i64
+  TYPE :ptr<u8>
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :JsonParseDomData
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :JsonParseMappingData
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :yyjson_val_uni
+  TAG
+    SKIP
+  VARIANT :u64
+    TYPE :u64
+  VARIANT :i64
+    TYPE :i64
+  VARIANT :f64
+    TYPE :f64
+  VARIANT :str
+    TYPE :ptr<u8>
+  VARIANT :ptr
+    TYPE :ptr<void>
+  VARIANT :ofs
+    TYPE :u64
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_NOFLAG
+  TYPE :u32
+  INITIAL 0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_INSITU
+  TYPE :u32
+  INITIAL 1
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_STOP_WHEN_DONE
+  TYPE :u32
+  INITIAL 2
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_TRAILING_COMMAS
+  TYPE :u32
+  INITIAL 4
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_COMMENTS
+  TYPE :u32
+  INITIAL 8
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_INF_AND_NAN
+  TYPE :u32
+  INITIAL 16
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_NUMBER_AS_RAW
+  TYPE :u32
+  INITIAL 32
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_INVALID_UNICODE
+  TYPE :u32
+  INITIAL 64
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_BIGNUM_AS_RAW
+  TYPE :u32
+  INITIAL 128
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_BOM
+  TYPE :u32
+  INITIAL 256
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_EXT_NUMBER
+  TYPE :u32
+  INITIAL 512
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_EXT_ESCAPE
+  TYPE :u32
+  INITIAL 1024
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_EXT_WHITESPACE
+  TYPE :u32
+  INITIAL 2048
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_SINGLE_QUOTED_STR
+  TYPE :u32
+  INITIAL 4096
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ALLOW_UNQUOTED_KEY
+  TYPE :u32
+  INITIAL 8192
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_JSON5
+  TYPE :u32
+  INITIAL 15900
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_SUCCESS
+  TYPE :u32
+  INITIAL 0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_INVALID_PARAMETER
+  TYPE :u32
+  INITIAL 1
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_MEMORY_ALLOCATION
+  TYPE :u32
+  INITIAL 2
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_EMPTY_CONTENT
+  TYPE :u32
+  INITIAL 3
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_UNEXPECTED_CONTENT
+  TYPE :u32
+  INITIAL 4
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_UNEXPECTED_END
+  TYPE :u32
+  INITIAL 5
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_UNEXPECTED_CHARACTER
+  TYPE :u32
+  INITIAL 6
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_JSON_STRUCTURE
+  TYPE :u32
+  INITIAL 7
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_INVALID_COMMENT
+  TYPE :u32
+  INITIAL 8
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_INVALID_NUMBER
+  TYPE :u32
+  INITIAL 9
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_INVALID_STRING
+  TYPE :u32
+  INITIAL 10
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_LITERAL
+  TYPE :u32
+  INITIAL 11
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_FILE_OPEN
+  TYPE :u32
+  INITIAL 12
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_FILE_READ
+  TYPE :u32
+  INITIAL 13
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_MORE
+  TYPE :u32
+  INITIAL 14
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_READ_ERROR_DEPTH
+  TYPE :u32
+  INITIAL 15
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_NOFLAG
+  TYPE :u32
+  INITIAL 0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_PRETTY
+  TYPE :u32
+  INITIAL 1
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ESCAPE_UNICODE
+  TYPE :u32
+  INITIAL 2
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ESCAPE_SLASHES
+  TYPE :u32
+  INITIAL 4
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ALLOW_INF_AND_NAN
+  TYPE :u32
+  INITIAL 8
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_INF_AND_NAN_AS_NULL
+  TYPE :u32
+  INITIAL 16
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ALLOW_INVALID_UNICODE
+  TYPE :u32
+  INITIAL 32
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_PRETTY_TWO_SPACES
+  TYPE :u32
+  INITIAL 64
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_NEWLINE_AT_END
+  TYPE :u32
+  INITIAL 128
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_LOWERCASE_HEX
+  TYPE :u32
+  INITIAL 256
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_SUCCESS
+  TYPE :u32
+  INITIAL 0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ERROR_INVALID_PARAMETER
+  TYPE :u32
+  INITIAL 1
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ERROR_MEMORY_ALLOCATION
+  TYPE :u32
+  INITIAL 2
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ERROR_INVALID_VALUE_TYPE
+  TYPE :u32
+  INITIAL 3
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ERROR_NAN_OR_INF
+  TYPE :u32
+  INITIAL 4
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ERROR_FILE_OPEN
+  TYPE :u32
+  INITIAL 5
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ERROR_FILE_WRITE
+  TYPE :u32
+  INITIAL 6
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_WRITE_ERROR_INVALID_STRING
+  TYPE :u32
+  INITIAL 7
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PTR_ERR_NONE
+  TYPE :u32
+  INITIAL 0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PTR_ERR_PARAMETER
+  TYPE :u32
+  INITIAL 1
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PTR_ERR_SYNTAX
+  TYPE :u32
+  INITIAL 2
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PTR_ERR_RESOLVE
+  TYPE :u32
+  INITIAL 3
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PTR_ERR_NULL_ROOT
+  TYPE :u32
+  INITIAL 4
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PTR_ERR_SET_ROOT
+  TYPE :u32
+  INITIAL 5
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PTR_ERR_MEMORY_ALLOCATION
+  TYPE :u32
+  INITIAL 6
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_SUCCESS
+  TYPE :u32
+  INITIAL 0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_ERROR_INVALID_PARAMETER
+  TYPE :u32
+  INITIAL 1
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_ERROR_MEMORY_ALLOCATION
+  TYPE :u32
+  INITIAL 2
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_ERROR_INVALID_OPERATION
+  TYPE :u32
+  INITIAL 3
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_ERROR_MISSING_KEY
+  TYPE :u32
+  INITIAL 4
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_ERROR_INVALID_MEMBER
+  TYPE :u32
+  INITIAL 5
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_ERROR_EQUAL
+  TYPE :u32
+  INITIAL 6
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_YYJSON_PATCH_ERROR_POINTER
+  TYPE :u32
+  INITIAL 7
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_json_c_INFO_STR
+  TYPE :ptr<u8>
+  INITIAL "some info"
+  PRIVATE
+ENDGLOBAL
+
+FUNC :snprintf
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :u64
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :vaarg
+ENDFUNC
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memset
+  ARGS
+    TYPE :ptr<void>
+    TYPE :i32
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :strncmp
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+    TYPE :u64
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :strdup
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :strlen
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :u64
+ENDFUNC
+
+FUNC :Helper_next_int
+  ARGS
+    TYPE :u32
+  RETURN
+    TYPE :u32
+ENDFUNC
+
+FUNC :Helper_next_float
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Helper_checksum_f64
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :u32
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :round
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :yyjson_mut_doc_free
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+ENDFUNC
+
+FUNC :yyjson_mut_doc_new
+  ARGS
+    TYPE :ptr<yyjson_alc>
+  RETURN
+    TYPE :ptr<yyjson_mut_doc>
+ENDFUNC
+
+FUNC :yyjson_read_opts
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :u64
+    TYPE :u32
+    TYPE :ptr<yyjson_alc>
+    TYPE :ptr<yyjson_read_err>
+  RETURN
+    TYPE :ptr<yyjson_doc>
+ENDFUNC
+
+FUNC :yyjson_mut_write_opts
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :u32
+    TYPE :ptr<yyjson_alc>
+    TYPE :ptr<u64>
+    TYPE :ptr<yyjson_write_err>
+  RETURN
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :memcpy
+  ARGS
+    TYPE :ptr<void>
+    TYPE :ptr<void>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :unsafe_yyjson_val_pool_grow
+  ARGS
+    TYPE :ptr<yyjson_val_pool>
+    TYPE :ptr<yyjson_alc>
+    TYPE :u64
+  RETURN
+    TYPE :bool
+ENDFUNC
+
+FUNC :memcmp
+  ARGS
+    TYPE :ptr<void>
+    TYPE :ptr<void>
+    TYPE :u64
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :unsafe_yyjson_str_pool_grow
+  ARGS
+    TYPE :ptr<yyjson_str_pool>
+    TYPE :ptr<yyjson_alc>
+    TYPE :u64
+  RETURN
+    TYPE :bool
+ENDFUNC
+
+FUNC :static_fn_json_c_round_to_8_digits
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 100000000.0 :f64
+    PUSH 100000000.0 :f64
+    PARAM 0
+    BINARY :mul
+    CALL :round
+    BINARY :div
+    RET
+ENDFUNC
+
+FUNC :JsonGenerate_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonGenerateData>
+    LOCAL :__s0_data :ptr<JsonGenerateData>
+    STORE
+    PUSH 0
+    AS :ptr<Coord>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Coord>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        STORE
+    ENDIF
+    SIZEOF :Coord
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<Coord>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0 :i64
+    LOCAL :__s2_i :i64
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        LOCAL :__s2_i
+        BINARY :less
+      BODY
+        PUSH 1.0 :f64
+        CALL :Helper_next_float
+        CALL :static_fn_json_c_round_to_8_digits
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 0
+        STORE
+        PUSH 1.0 :f64
+        CALL :Helper_next_float
+        CALL :static_fn_json_c_round_to_8_digits
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 1
+        STORE
+        PUSH 1.0 :f64
+        CALL :Helper_next_float
+        CALL :static_fn_json_c_round_to_8_digits
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 2
+        STORE
+        PUSH 10000
+        AS :u32
+        CALL :Helper_next_int
+        PUSH 1.0 :f64
+        CALL :Helper_next_float
+        PUSH "%.7f %u"
+        SIZEOF "flat<u8, 64>"
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 3
+        ADDR
+        AS :ptr<u8>
+        CALL :snprintf 2
+        STACK :drop
+        PUSH 1
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 4
+        STORE
+        PUSH 0
+        PUSH 1
+        BINARY :not_eq
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        FIELD 5
+        STORE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s2_i
+        BINARY :add
+        LOCAL :__s2_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    STORE
+ENDFUNC
+
+FUNC :JsonGenerate_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonGenerateData>
+    LOCAL :__s0_data :ptr<JsonGenerateData>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        STORE
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_alc>
+    CALL :yyjson_mut_doc_new
+    LOCAL :__s1_doc :ptr<yyjson_mut_doc>
+    STORE
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    LOCAL :__s1_doc
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    LOCAL :__s1_doc
+    CALL :static_fn_json_c_yyjson_mut_obj
+    LOCAL :__s2_root :ptr<yyjson_mut_val>
+    STORE
+    LOCAL :__s2_root
+    LOCAL :__s1_doc
+    CALL :static_fn_json_c_yyjson_mut_doc_set_root
+    LOCAL :__s1_doc
+    CALL :static_fn_json_c_yyjson_mut_arr
+    LOCAL :__s2_coordinates :ptr<yyjson_mut_val>
+    STORE
+    LOCAL :__s2_coordinates
+    PUSH :coordinates
+    LOCAL :__s1_doc
+    CALL :static_fn_json_c_yyjson_mut_str
+    LOCAL :__s2_root
+    CALL :static_fn_json_c_yyjson_mut_obj_add
+    STACK :drop
+    PUSH 0 :i64
+    LOCAL :__s2_i :i64
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        LOCAL :__s2_i
+        BINARY :less
+      BODY
+        LOCAL :__s2_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        BINARY :add
+        DEREF
+        ADDR
+        LOCAL :__s3_c :ptr<Coord>
+        STORE
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_obj
+        LOCAL :__s3_coord :ptr<yyjson_mut_val>
+        STORE
+        LOCAL :__s3_c
+        DEREF
+        FIELD 0
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_real
+        PUSH :x
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_str
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_mut_obj_add
+        STACK :drop
+        LOCAL :__s3_c
+        DEREF
+        FIELD 1
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_real
+        PUSH :y
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_str
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_mut_obj_add
+        STACK :drop
+        LOCAL :__s3_c
+        DEREF
+        FIELD 2
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_real
+        PUSH :z
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_str
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_mut_obj_add
+        STACK :drop
+        LOCAL :__s3_c
+        DEREF
+        FIELD 3
+        ADDR
+        AS :ptr<u8>
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_strcpy
+        PUSH :name
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_str
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_mut_obj_add
+        STACK :drop
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_obj
+        LOCAL :__s3_opts :ptr<yyjson_mut_val>
+        STORE
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_arr
+        LOCAL :__s3_arr :ptr<yyjson_mut_val>
+        STORE
+        LOCAL :__s3_c
+        DEREF
+        FIELD 4
+        AS :u64
+        LOCAL :__s3_arr
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_arr_add_uint
+        STACK :drop
+        LOCAL :__s3_c
+        DEREF
+        FIELD 5
+        LOCAL :__s3_arr
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_arr_add_bool
+        STACK :drop
+        LOCAL :__s3_arr
+        PUSH :1
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_str
+        LOCAL :__s3_opts
+        CALL :static_fn_json_c_yyjson_mut_obj_add
+        STACK :drop
+        LOCAL :__s3_opts
+        PUSH :opts
+        LOCAL :__s1_doc
+        CALL :static_fn_json_c_yyjson_mut_str
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_mut_obj_add
+        STACK :drop
+        LOCAL :__s3_coord
+        LOCAL :__s2_coordinates
+        CALL :static_fn_json_c_yyjson_mut_arr_append
+        STACK :drop
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s2_i
+        BINARY :add
+        LOCAL :__s2_i
+        STORE
+    ENDLOOP
+    GLOBAL :static_json_c_INFO_STR
+    LOCAL :__s1_doc
+    CALL :static_fn_json_c_yyjson_mut_str
+    PUSH :info
+    LOCAL :__s1_doc
+    CALL :static_fn_json_c_yyjson_mut_str
+    LOCAL :__s2_root
+    CALL :static_fn_json_c_yyjson_mut_obj_add
+    STACK :drop
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<u64>
+    PUSH 0
+    AS :u32
+    LOCAL :__s1_doc
+    CALL :static_fn_json_c_yyjson_mut_write
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :not_eq
+    LOCAL :__sc_and_9 :bool
+    STORE
+    LOCAL :__sc_and_9
+    IF
+      THEN
+        PUSH 15
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :strlen
+        BINARY :more_eq
+        LOCAL :__sc_and_9
+        STORE
+    ENDIF
+    LOCAL :__sc_and_9
+    LOCAL :__sc_and_9
+    STORE
+    LOCAL :__sc_and_9
+    IF
+      THEN
+        PUSH 0
+        PUSH 15
+        AS :u64
+        PUSH :{"coordinates":
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :strncmp
+        BINARY :eq
+        LOCAL :__sc_and_9
+        STORE
+    ENDIF
+    LOCAL :__sc_and_9
+    IF
+      THEN
+        PUSH 1 :u32
+        LOCAL :__s0_data
+        DEREF
+        FIELD 3
+        BINARY :add
+        LOCAL :__s0_data
+        DEREF
+        FIELD 3
+        STORE
+    ENDIF
+    LOCAL :__s1_doc
+    CALL :yyjson_mut_doc_free
+ENDFUNC
+
+FUNC :JsonGenerate_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonGenerateData>
+    LOCAL :__s0_data :ptr<JsonGenerateData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    RET
+ENDFUNC
+
+FUNC :JsonGenerate_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonGenerateData>
+    LOCAL :__s0_data :ptr<JsonGenerateData>
+    STORE
+    PUSH 0
+    AS :ptr<Coord>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Coord>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :JsonGenerate_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Json::Generate
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :JsonGenerateData
+    CALL :malloc
+    AS :ptr<JsonGenerateData>
+    LOCAL :__s0_data :ptr<JsonGenerateData>
+    STORE
+    SIZEOF :JsonGenerateData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    PUSH :coords
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    ADDR :JsonGenerate_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :JsonGenerate_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :JsonGenerate_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :JsonGenerate_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
+FUNC :JsonGenerate_get_result
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :ptr<u8>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonGenerateData>
+    LOCAL :__s0_data :ptr<JsonGenerateData>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        CALL :strdup
+        LOCAL :__ternary_1 :ptr<u8>
+        STORE
+      ELSE
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__ternary_1
+        STORE
+    ENDIF
+    LOCAL :__ternary_1
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_generate_json_for_parsing
+  ARGS
+    TYPE :i64
+  RETURN
+    TYPE :ptr<u8>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    CALL :JsonGenerate_create
+    LOCAL :__s0_json_gen_bench :ptr<Benchmark>
+    STORE
+    LOCAL :__s0_json_gen_bench
+    DEREF
+    FIELD 11
+    AS :ptr<JsonGenerateData>
+    LOCAL :__s0_gen_data :ptr<JsonGenerateData>
+    STORE
+    PARAM 0
+    LOCAL :__s0_gen_data
+    DEREF
+    FIELD 1
+    STORE
+    LOCAL :__s0_json_gen_bench
+    LOCAL :__s0_json_gen_bench
+    DEREF
+    FIELD 3
+    INVOKE
+    PUSH 0
+    LOCAL :__s0_json_gen_bench
+    LOCAL :__s0_json_gen_bench
+    DEREF
+    FIELD 4
+    INVOKE
+    LOCAL :__s0_gen_data
+    DEREF
+    FIELD 2
+    CALL :strdup
+    LOCAL :__s0_json_text :ptr<u8>
+    STORE
+    LOCAL :__s0_json_gen_bench
+    LOCAL :__s0_json_gen_bench
+    DEREF
+    FIELD 10
+    INVOKE
+    LOCAL :__s0_json_gen_bench
+    DEREF
+    FIELD 11
+    CALL :free
+    LOCAL :__s0_json_gen_bench
+    AS :ptr<void>
+    CALL :free
+    LOCAL :__s0_json_text
+    RET
+ENDFUNC
+
+FUNC :JsonParseDom_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseDomData>
+    LOCAL :__s0_data :ptr<JsonParseDomData>
+    STORE
+    PUSH :coords
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_json_c_generate_json_for_parsing
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :JsonParseDom_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseDomData>
+    LOCAL :__s0_data :ptr<JsonParseDomData>
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    CALL :strlen
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    CALL :static_fn_json_c_yyjson_read
+    LOCAL :__s0_doc :ptr<yyjson_doc>
+    STORE
+    PUSH 0
+    AS :ptr<yyjson_doc>
+    LOCAL :__s0_doc
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    LOCAL :__s0_doc
+    CALL :static_fn_json_c_yyjson_doc_get_root
+    LOCAL :__s1_root :ptr<yyjson_val>
+    STORE
+    PUSH 0
+    AS :ptr<yyjson_val>
+    LOCAL :__s1_root
+    BINARY :eq
+    IF
+      THEN
+        LOCAL :__s0_doc
+        CALL :static_fn_json_c_yyjson_doc_free
+        RET
+    ENDIF
+    PUSH :coordinates
+    LOCAL :__s1_root
+    CALL :static_fn_json_c_yyjson_obj_get
+    LOCAL :__s2_coordinates :ptr<yyjson_val>
+    STORE
+    PUSH 0
+    AS :ptr<yyjson_val>
+    LOCAL :__s2_coordinates
+    BINARY :eq
+    LOCAL :__sc_or_4 :bool
+    STORE
+    LOCAL :__sc_or_4
+    IF
+      THEN
+      ELSE
+        LOCAL :__s2_coordinates
+        CALL :static_fn_json_c_yyjson_is_arr
+        UNARY :lnot
+        LOCAL :__sc_or_4
+        STORE
+    ENDIF
+    LOCAL :__sc_or_4
+    IF
+      THEN
+        LOCAL :__s0_doc
+        CALL :static_fn_json_c_yyjson_doc_free
+        RET
+    ENDIF
+    PUSH 0.0 :f64
+    LOCAL :__s3_x_sum :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s3_y_sum :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s3_z_sum :f64
+    STORE
+    PUSH 0 :u64
+    LOCAL :__s3_len :u64
+    STORE
+    PUSH 0
+    AS :u64
+    LOCAL :__s3_idx :u64
+    STORE
+    LOCAL :__s2_coordinates
+    CALL :static_fn_json_c_yyjson_arr_size
+    LOCAL :__s3_max :u64
+    STORE
+    LOCAL :__s2_coordinates
+    CALL :static_fn_json_c_yyjson_arr_get_first
+    LOCAL :__s3_coord :ptr<yyjson_val>
+    STORE
+    LOOP
+      COND
+        LOCAL :__s3_max
+        LOCAL :__s3_idx
+        BINARY :less
+      BODY
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_is_obj
+        UNARY :lnot
+        IF
+          THEN
+            NEXT
+        ENDIF
+        PUSH :x
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_obj_get
+        LOCAL :__s6_x_val :ptr<yyjson_val>
+        STORE
+        PUSH :y
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_obj_get
+        LOCAL :__s6_y_val :ptr<yyjson_val>
+        STORE
+        PUSH :z
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_obj_get
+        LOCAL :__s6_z_val :ptr<yyjson_val>
+        STORE
+        PUSH 0
+        AS :ptr<yyjson_val>
+        LOCAL :__s6_x_val
+        BINARY :not_eq
+        LOCAL :__sc_and_15 :bool
+        STORE
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            PUSH 0
+            AS :ptr<yyjson_val>
+            LOCAL :__s6_y_val
+            BINARY :not_eq
+            LOCAL :__sc_and_15
+            STORE
+        ENDIF
+        LOCAL :__sc_and_15
+        LOCAL :__sc_and_15
+        STORE
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            PUSH 0
+            AS :ptr<yyjson_val>
+            LOCAL :__s6_z_val
+            BINARY :not_eq
+            LOCAL :__sc_and_15
+            STORE
+        ENDIF
+        LOCAL :__sc_and_15
+        LOCAL :__sc_and_15
+        STORE
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            LOCAL :__s6_x_val
+            CALL :static_fn_json_c_yyjson_is_num
+            LOCAL :__sc_and_15
+            STORE
+        ENDIF
+        LOCAL :__sc_and_15
+        LOCAL :__sc_and_15
+        STORE
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            LOCAL :__s6_y_val
+            CALL :static_fn_json_c_yyjson_is_num
+            LOCAL :__sc_and_15
+            STORE
+        ENDIF
+        LOCAL :__sc_and_15
+        LOCAL :__sc_and_15
+        STORE
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            LOCAL :__s6_z_val
+            CALL :static_fn_json_c_yyjson_is_num
+            LOCAL :__sc_and_15
+            STORE
+        ENDIF
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            LOCAL :__s6_x_val
+            CALL :static_fn_json_c_yyjson_get_num
+            LOCAL :__s3_x_sum
+            BINARY :add
+            LOCAL :__s3_x_sum
+            STORE
+            LOCAL :__s6_y_val
+            CALL :static_fn_json_c_yyjson_get_num
+            LOCAL :__s3_y_sum
+            BINARY :add
+            LOCAL :__s3_y_sum
+            STORE
+            LOCAL :__s6_z_val
+            CALL :static_fn_json_c_yyjson_get_num
+            LOCAL :__s3_z_sum
+            BINARY :add
+            LOCAL :__s3_z_sum
+            STORE
+            PUSH 1 :u64
+            LOCAL :__s3_len
+            BINARY :add
+            LOCAL :__s3_len
+            STORE
+        ENDIF
+      STEP
+        PUSH 1 :u64
+        LOCAL :__s3_idx
+        BINARY :add
+        LOCAL :__s3_idx
+        STORE
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_unsafe_yyjson_get_next
+        LOCAL :__s3_coord
+        STORE
+    ENDLOOP
+    LOCAL :__s0_doc
+    CALL :static_fn_json_c_yyjson_doc_free
+    PUSH 0
+    AS :u64
+    LOCAL :__s3_len
+    BINARY :more
+    IF
+      THEN
+        LOCAL :__s3_len
+        AS :f64
+        LOCAL :__s3_x_sum
+        BINARY :div
+        LOCAL :__s9_x_avg :f64
+        STORE
+        LOCAL :__s3_len
+        AS :f64
+        LOCAL :__s3_y_sum
+        BINARY :div
+        LOCAL :__s9_y_avg :f64
+        STORE
+        LOCAL :__s3_len
+        AS :f64
+        LOCAL :__s3_z_sum
+        BINARY :div
+        LOCAL :__s9_z_avg :f64
+        STORE
+        LOCAL :__s9_z_avg
+        CALL :Helper_checksum_f64
+        LOCAL :__s9_y_avg
+        CALL :Helper_checksum_f64
+        LOCAL :__s9_x_avg
+        CALL :Helper_checksum_f64
+        BINARY :add
+        BINARY :add
+        LOCAL :__s9_checksum :u32
+        STORE
+        LOCAL :__s9_checksum
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :JsonParseDom_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseDomData>
+    LOCAL :__s0_data :ptr<JsonParseDomData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    RET
+ENDFUNC
+
+FUNC :JsonParseDom_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseDomData>
+    LOCAL :__s0_data :ptr<JsonParseDomData>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :JsonParseDom_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Json::ParseDom
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :JsonParseDomData
+    CALL :malloc
+    AS :ptr<JsonParseDomData>
+    LOCAL :__s0_data :ptr<JsonParseDomData>
+    STORE
+    SIZEOF :JsonParseDomData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :JsonParseDom_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :JsonParseDom_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :JsonParseDom_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :JsonParseDom_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
+FUNC :JsonParseMapping_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseMappingData>
+    LOCAL :__s0_data :ptr<JsonParseMappingData>
+    STORE
+    PUSH :coords
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :less_eq
+    IF
+      THEN
+        PUSH 1000
+        AS :i64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        STORE
+    ENDIF
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_json_c_generate_json_for_parsing
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :JsonParseMapping_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseMappingData>
+    LOCAL :__s0_data :ptr<JsonParseMappingData>
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    CALL :strlen
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    CALL :static_fn_json_c_yyjson_read
+    LOCAL :__s0_doc :ptr<yyjson_doc>
+    STORE
+    PUSH 0
+    AS :ptr<yyjson_doc>
+    LOCAL :__s0_doc
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    LOCAL :__s0_doc
+    CALL :static_fn_json_c_yyjson_doc_get_root
+    LOCAL :__s1_root :ptr<yyjson_val>
+    STORE
+    PUSH 0
+    AS :ptr<yyjson_val>
+    LOCAL :__s1_root
+    BINARY :eq
+    IF
+      THEN
+        LOCAL :__s0_doc
+        CALL :static_fn_json_c_yyjson_doc_free
+        RET
+    ENDIF
+    PUSH :coordinates
+    LOCAL :__s1_root
+    CALL :static_fn_json_c_yyjson_obj_get
+    LOCAL :__s2_coordinates :ptr<yyjson_val>
+    STORE
+    PUSH 0
+    AS :ptr<yyjson_val>
+    LOCAL :__s2_coordinates
+    BINARY :eq
+    LOCAL :__sc_or_4 :bool
+    STORE
+    LOCAL :__sc_or_4
+    IF
+      THEN
+      ELSE
+        LOCAL :__s2_coordinates
+        CALL :static_fn_json_c_yyjson_is_arr
+        UNARY :lnot
+        LOCAL :__sc_or_4
+        STORE
+    ENDIF
+    LOCAL :__sc_or_4
+    IF
+      THEN
+        LOCAL :__s0_doc
+        CALL :static_fn_json_c_yyjson_doc_free
+        RET
+    ENDIF
+    PUSH 0.0 :f64
+    LOCAL :__s3_x_sum :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s3_y_sum :f64
+    STORE
+    PUSH 0.0 :f64
+    LOCAL :__s3_z_sum :f64
+    STORE
+    PUSH 0 :u64
+    LOCAL :__s3_len :u64
+    STORE
+    PUSH 0
+    AS :u64
+    LOCAL :__s3_idx :u64
+    STORE
+    LOCAL :__s2_coordinates
+    CALL :static_fn_json_c_yyjson_arr_size
+    LOCAL :__s3_max :u64
+    STORE
+    LOCAL :__s2_coordinates
+    CALL :static_fn_json_c_yyjson_arr_get_first
+    LOCAL :__s3_coord :ptr<yyjson_val>
+    STORE
+    LOOP
+      COND
+        LOCAL :__s3_max
+        LOCAL :__s3_idx
+        BINARY :less
+      BODY
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_is_obj
+        UNARY :lnot
+        IF
+          THEN
+            NEXT
+        ENDIF
+        PUSH :x
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_obj_get
+        LOCAL :__s6_x_val :ptr<yyjson_val>
+        STORE
+        PUSH :y
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_obj_get
+        LOCAL :__s6_y_val :ptr<yyjson_val>
+        STORE
+        PUSH :z
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_yyjson_obj_get
+        LOCAL :__s6_z_val :ptr<yyjson_val>
+        STORE
+        PUSH 0
+        AS :ptr<yyjson_val>
+        LOCAL :__s6_x_val
+        BINARY :not_eq
+        LOCAL :__sc_and_15 :bool
+        STORE
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            PUSH 0
+            AS :ptr<yyjson_val>
+            LOCAL :__s6_y_val
+            BINARY :not_eq
+            LOCAL :__sc_and_15
+            STORE
+        ENDIF
+        LOCAL :__sc_and_15
+        LOCAL :__sc_and_15
+        STORE
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            PUSH 0
+            AS :ptr<yyjson_val>
+            LOCAL :__s6_z_val
+            BINARY :not_eq
+            LOCAL :__sc_and_15
+            STORE
+        ENDIF
+        LOCAL :__sc_and_15
+        IF
+          THEN
+            LOCAL :__s6_x_val
+            CALL :static_fn_json_c_yyjson_get_num
+            LOCAL :__s3_x_sum
+            BINARY :add
+            LOCAL :__s3_x_sum
+            STORE
+            LOCAL :__s6_y_val
+            CALL :static_fn_json_c_yyjson_get_num
+            LOCAL :__s3_y_sum
+            BINARY :add
+            LOCAL :__s3_y_sum
+            STORE
+            LOCAL :__s6_z_val
+            CALL :static_fn_json_c_yyjson_get_num
+            LOCAL :__s3_z_sum
+            BINARY :add
+            LOCAL :__s3_z_sum
+            STORE
+            PUSH 1 :u64
+            LOCAL :__s3_len
+            BINARY :add
+            LOCAL :__s3_len
+            STORE
+        ENDIF
+      STEP
+        PUSH 1 :u64
+        LOCAL :__s3_idx
+        BINARY :add
+        LOCAL :__s3_idx
+        STORE
+        LOCAL :__s3_coord
+        CALL :static_fn_json_c_unsafe_yyjson_get_next
+        LOCAL :__s3_coord
+        STORE
+    ENDLOOP
+    LOCAL :__s0_doc
+    CALL :static_fn_json_c_yyjson_doc_free
+    PUSH 0
+    AS :u64
+    LOCAL :__s3_len
+    BINARY :more
+    IF
+      THEN
+        LOCAL :__s3_len
+        AS :f64
+        LOCAL :__s3_x_sum
+        BINARY :div
+        LOCAL :__s9_x_avg :f64
+        STORE
+        LOCAL :__s3_len
+        AS :f64
+        LOCAL :__s3_y_sum
+        BINARY :div
+        LOCAL :__s9_y_avg :f64
+        STORE
+        LOCAL :__s3_len
+        AS :f64
+        LOCAL :__s3_z_sum
+        BINARY :div
+        LOCAL :__s9_z_avg :f64
+        STORE
+        LOCAL :__s9_z_avg
+        CALL :Helper_checksum_f64
+        LOCAL :__s9_y_avg
+        CALL :Helper_checksum_f64
+        LOCAL :__s9_x_avg
+        CALL :Helper_checksum_f64
+        BINARY :add
+        BINARY :add
+        LOCAL :__s9_checksum :u32
+        STORE
+        LOCAL :__s9_checksum
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :JsonParseMapping_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseMappingData>
+    LOCAL :__s0_data :ptr<JsonParseMappingData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    RET
+ENDFUNC
+
+FUNC :JsonParseMapping_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<JsonParseMappingData>
+    LOCAL :__s0_data :ptr<JsonParseMappingData>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :JsonParseMapping_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Json::ParseMapping
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :JsonParseMappingData
+    CALL :malloc
+    AS :ptr<JsonParseMappingData>
+    LOCAL :__s0_data :ptr<JsonParseMappingData>
+    STORE
+    SIZEOF :JsonParseMappingData
+    PUSH 0
+    LOCAL :__s0_data
+    AS :ptr<void>
+    CALL :memset
+    STACK :drop
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :JsonParseMapping_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :JsonParseMapping_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :JsonParseMapping_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :JsonParseMapping_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_read
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :u64
+    TYPE :u32
+  RETURN
+    TYPE :ptr<yyjson_doc>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 2
+    LOCAL :__s0_flg :u32
+    STORE
+    GLOBAL :static_json_c_YYJSON_READ_INSITU
+    UNARY :bnot
+    LOCAL :__s0_flg
+    BINARY :and
+    LOCAL :__s0_flg
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_read_err>
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_alc>
+    LOCAL :__s0_flg
+    PARAM 1
+    PARAM 0
+    AS :ptr<void>
+    AS :u64
+    AS :u64
+    AS :ptr<void>
+    AS :ptr<u8>
+    CALL :yyjson_read_opts
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_write
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :u32
+    TYPE :ptr<u64>
+  RETURN
+    TYPE :ptr<u8>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_write_err>
+    PARAM 2
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_alc>
+    PARAM 1
+    PARAM 0
+    CALL :yyjson_mut_write_opts
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_doc_get_root
+  ARGS
+    TYPE :ptr<yyjson_doc>
+  RETURN
+    TYPE :ptr<yyjson_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_doc>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 0
+        LOCAL :__ternary_0 :ptr<yyjson_val>
+        STORE
+      ELSE
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<yyjson_val>
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_doc_free
+  ARGS
+    TYPE :ptr<yyjson_doc>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_doc>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 1
+        LOCAL :__s1_alc :yyjson_alc
+        STORE
+        SIZEOF :yyjson_alc
+        PUSH 0
+        PARAM 0
+        DEREF
+        FIELD 1
+        ADDR
+        AS :ptr<void>
+        CALL :memset
+        STACK :drop
+        PUSH 0
+        AS :ptr<u8>
+        PARAM 0
+        DEREF
+        FIELD 4
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 0
+            DEREF
+            FIELD 4
+            AS :ptr<void>
+            LOCAL :__s1_alc
+            FIELD 3
+            LOCAL :__s1_alc
+            FIELD 2
+            INVOKE
+        ENDIF
+        PARAM 0
+        AS :ptr<void>
+        LOCAL :__s1_alc
+        FIELD 3
+        LOCAL :__s1_alc
+        FIELD 2
+        INVOKE
+    ENDIF
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_is_num
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_val>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_is_num
+        LOCAL :__ternary_0 :bool
+        STORE
+      ELSE
+        PUSH 0
+        PUSH 0
+        BINARY :not_eq
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_is_arr
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_val>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_is_arr
+        LOCAL :__ternary_0 :bool
+        STORE
+      ELSE
+        PUSH 0
+        PUSH 0
+        BINARY :not_eq
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_is_obj
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_val>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_is_obj
+        LOCAL :__ternary_0 :bool
+        STORE
+      ELSE
+        PUSH 0
+        PUSH 0
+        BINARY :not_eq
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_get_num
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_val>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_get_num
+        LOCAL :__ternary_0 :f64
+        STORE
+      ELSE
+        PUSH 0.0 :f64
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_arr_size
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :u64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    CALL :static_fn_json_c_yyjson_is_arr
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_get_len
+        LOCAL :__ternary_0 :u64
+        STORE
+      ELSE
+        PUSH 0
+        AS :u64
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_arr_get_first
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :ptr<yyjson_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PARAM 0
+    CALL :static_fn_json_c_yyjson_is_arr
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 0 :i64
+        PUSH 0
+        AS :u64
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_get_len
+        BINARY :more
+        UNARY :lnot
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 0
+            CALL :static_fn_json_c_unsafe_yyjson_get_first
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_obj_get
+  ARGS
+    TYPE :ptr<yyjson_val>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<yyjson_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<u8>
+    PARAM 1
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 1
+        CALL :strlen
+        LOCAL :__ternary_0 :u64
+        STORE
+      ELSE
+        PUSH 0
+        AS :u64
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    PARAM 1
+    PARAM 0
+    CALL :static_fn_json_c_yyjson_obj_getn
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_doc_set_root
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 1
+        PARAM 0
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_real
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :f64
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :eq
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_val
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        PUSH 0 :i64
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        LOCAL :__s1_val
+        BINARY :eq
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 1
+            LOCAL :__s1_val
+            AS :ptr<void>
+            CALL :static_fn_json_c_unsafe_yyjson_set_real
+            LOCAL :__s1_val
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_mut_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_str
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :not_eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<u8>
+        PARAM 1
+        BINARY :not_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_val
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        PUSH 0 :i64
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        LOCAL :__s1_val
+        BINARY :eq
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 1
+            LOCAL :__s1_val
+            AS :ptr<void>
+            CALL :static_fn_json_c_unsafe_yyjson_set_str
+            LOCAL :__s1_val
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_mut_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_strcpy
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :not_eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<u8>
+        PARAM 1
+        BINARY :not_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_val
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        PUSH 0 :i64
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        LOCAL :__s1_val
+        BINARY :eq
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 1
+            CALL :strlen
+            LOCAL :__s3_len :u64
+            STORE
+            LOCAL :__s3_len
+            PARAM 1
+            CALL :static_fn_json_c_unsafe_yyjson_is_str_noesc
+            LOCAL :__s3_noesc :bool
+            STORE
+            LOCAL :__s3_noesc
+            IF
+              THEN
+                PUSH 3
+                PUSH 1
+                BINARY :shl
+                AS :u8
+                LOCAL :__ternary_4 :u8
+                STORE
+              ELSE
+                PUSH 3
+                PUSH 0
+                BINARY :shl
+                AS :u8
+                LOCAL :__ternary_4
+                STORE
+            ENDIF
+            LOCAL :__ternary_4
+            LOCAL :__s3_sub :u8
+            STORE
+            LOCAL :__s3_len
+            PARAM 1
+            PARAM 0
+            CALL :static_fn_json_c_unsafe_yyjson_mut_strncpy
+            LOCAL :__s3_new_str :ptr<u8>
+            STORE
+            PUSH 0 :i64
+            PUSH 0
+            AS :ptr<u8>
+            LOCAL :__s3_new_str
+            BINARY :eq
+            UNARY :lnot
+            UNARY :lnot
+            AS :i64
+            BINARY :not_eq
+            IF
+              THEN
+                PUSH 0
+                AS :ptr<void>
+                AS :ptr<yyjson_mut_val>
+                RET
+            ENDIF
+            LOCAL :__s3_len
+            LOCAL :__s3_sub
+            PUSH 5
+            AS :u8
+            LOCAL :__s1_val
+            AS :ptr<void>
+            CALL :static_fn_json_c_unsafe_yyjson_set_tag
+            LOCAL :__s3_new_str
+            LOCAL :__s1_val
+            DEREF
+            FIELD 1
+            AS :yyjson_val_uni::str
+            FIELD 1
+            STORE
+            LOCAL :__s1_val
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_mut_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_arr
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :eq
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_val
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        PUSH 0 :i64
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        LOCAL :__s1_val
+        BINARY :eq
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PUSH 3
+            PUSH 0
+            BINARY :shl
+            AS :u8
+            PUSH 6
+            AS :u8
+            BINARY :or
+            AS :u64
+            LOCAL :__s1_val
+            DEREF
+            FIELD 0
+            STORE
+            LOCAL :__s1_val
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_mut_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_arr_append
+  ARGS
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :ptr<yyjson_mut_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PARAM 0
+    CALL :static_fn_json_c_yyjson_mut_is_arr
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        PARAM 1
+        BINARY :not_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_get_len
+        LOCAL :__s1_len :u64
+        STORE
+        PUSH 1
+        AS :u64
+        LOCAL :__s1_len
+        BINARY :add
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_set_len
+        PUSH 0
+        AS :u64
+        LOCAL :__s1_len
+        BINARY :eq
+        IF
+          THEN
+            PARAM 1
+            PARAM 1
+            DEREF
+            FIELD 2
+            STORE
+          ELSE
+            PARAM 0
+            DEREF
+            FIELD 1
+            AS :yyjson_val_uni::ptr
+            FIELD 1
+            AS :ptr<yyjson_mut_val>
+            LOCAL :__s3_prev :ptr<yyjson_mut_val>
+            STORE
+            LOCAL :__s3_prev
+            DEREF
+            FIELD 2
+            LOCAL :__s3_next :ptr<yyjson_mut_val>
+            STORE
+            PARAM 1
+            LOCAL :__s3_prev
+            DEREF
+            FIELD 2
+            STORE
+            LOCAL :__s3_next
+            PARAM 1
+            DEREF
+            FIELD 2
+            STORE
+        ENDIF
+        PARAM 1
+        AS :ptr<void>
+        PARAM 0
+        DEREF
+        FIELD 1
+        AS :yyjson_val_uni::ptr
+        FIELD 1
+        STORE
+        PUSH 0
+        PUSH 1
+        BINARY :not_eq
+        RET
+    ENDIF
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_arr_add_bool
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :bool
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :not_eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PARAM 1
+        CALL :static_fn_json_c_yyjson_mut_is_arr
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 2
+        PARAM 0
+        CALL :static_fn_json_c_yyjson_mut_bool
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        LOCAL :__s1_val
+        PARAM 1
+        CALL :static_fn_json_c_yyjson_mut_arr_append
+        RET
+    ENDIF
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_arr_add_uint
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :u64
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :not_eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PARAM 1
+        CALL :static_fn_json_c_yyjson_mut_is_arr
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 2
+        PARAM 0
+        CALL :static_fn_json_c_yyjson_mut_uint
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        LOCAL :__s1_val
+        PARAM 1
+        CALL :static_fn_json_c_yyjson_mut_arr_append
+        RET
+    ENDIF
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_obj
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :eq
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_val
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        PUSH 0 :i64
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        LOCAL :__s1_val
+        BINARY :eq
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PUSH 3
+            PUSH 0
+            BINARY :shl
+            AS :u8
+            PUSH 7
+            AS :u8
+            BINARY :or
+            AS :u64
+            LOCAL :__s1_val
+            DEREF
+            FIELD 0
+            STORE
+            LOCAL :__s1_val
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_mut_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_obj_add
+  ARGS
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :ptr<yyjson_mut_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PARAM 0
+    CALL :static_fn_json_c_yyjson_mut_is_obj
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PARAM 1
+        CALL :static_fn_json_c_yyjson_mut_is_str
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    LOCAL :__sc_and_0
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        PARAM 2
+        BINARY :not_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_get_len
+        PARAM 2
+        PARAM 1
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_obj_add
+        PUSH 0
+        PUSH 1
+        BINARY :not_eq
+        RET
+    ENDIF
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_get_next
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :ptr<yyjson_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    AS :ptr<void>
+    CALL :static_fn_json_c_unsafe_yyjson_is_ctn
+    LOCAL :__s0_is_ctn :bool
+    STORE
+    PARAM 0
+    DEREF
+    FIELD 1
+    AS :yyjson_val_uni::ofs
+    FIELD 1
+    LOCAL :__s0_ctn_ofs :u64
+    STORE
+    LOCAL :__s0_is_ctn
+    IF
+      THEN
+        LOCAL :__s0_ctn_ofs
+        LOCAL :__ternary_2 :u64
+        STORE
+      ELSE
+        SIZEOF :yyjson_val
+        LOCAL :__ternary_2
+        STORE
+    ENDIF
+    LOCAL :__ternary_2
+    LOCAL :__s0_ofs :u64
+    STORE
+    PARAM 0
+    AS :ptr<void>
+    AS :u64
+    AS :u64
+    AS :ptr<void>
+    AS :ptr<u8>
+    LOCAL :__s0_ptr :ptr<u8>
+    STORE
+    LOCAL :__s0_ofs
+    LOCAL :__s0_ptr
+    BINARY :add
+    AS :ptr<void>
+    AS :ptr<yyjson_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_obj_getn
+  ARGS
+    TYPE :ptr<yyjson_val>
+    TYPE :ptr<u8>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<yyjson_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PARAM 0
+    CALL :static_fn_json_c_yyjson_is_obj
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<u8>
+        PARAM 1
+        BINARY :not_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_get_len
+        LOCAL :__s1_len :u64
+        STORE
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_get_first
+        LOCAL :__s1_key :ptr<yyjson_val>
+        STORE
+        LOOP
+          COND
+            PUSH 0
+            AS :u64
+            LOCAL :__s1_len
+            LOCAL :__tmp_3 :u64
+            STORE
+            PUSH 1 :u64
+            LOCAL :__s1_len
+            BINARY :sub
+            LOCAL :__s1_len
+            STORE
+            LOCAL :__tmp_3
+            BINARY :more
+          BODY
+            PARAM 2
+            PARAM 1
+            LOCAL :__s1_key
+            AS :ptr<void>
+            CALL :static_fn_json_c_unsafe_yyjson_equals_strn
+            IF
+              THEN
+                PUSH 1
+                AS :u64
+                LOCAL :__s1_key
+                BINARY :add
+                RET
+            ENDIF
+            PUSH 1
+            AS :u64
+            LOCAL :__s1_key
+            BINARY :add
+            CALL :static_fn_json_c_unsafe_yyjson_get_next
+            LOCAL :__s1_key
+            STORE
+        ENDLOOP
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_is_str
+  ARGS
+    TYPE :ptr<yyjson_mut_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_mut_val>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_is_str
+        LOCAL :__ternary_0 :bool
+        STORE
+      ELSE
+        PUSH 0
+        PUSH 0
+        BINARY :not_eq
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_is_arr
+  ARGS
+    TYPE :ptr<yyjson_mut_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_mut_val>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_is_arr
+        LOCAL :__ternary_0 :bool
+        STORE
+      ELSE
+        PUSH 0
+        PUSH 0
+        BINARY :not_eq
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_is_obj
+  ARGS
+    TYPE :ptr<yyjson_mut_val>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :ptr<yyjson_mut_val>
+    PARAM 0
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<void>
+        CALL :static_fn_json_c_unsafe_yyjson_is_obj
+        LOCAL :__ternary_0 :bool
+        STORE
+      ELSE
+        PUSH 0
+        PUSH 0
+        BINARY :not_eq
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_bool
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :bool
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :eq
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_val
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        PUSH 0 :i64
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        LOCAL :__s1_val
+        BINARY :eq
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 1
+            LOCAL :__s1_val
+            AS :ptr<void>
+            CALL :static_fn_json_c_unsafe_yyjson_set_bool
+            LOCAL :__s1_val
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_mut_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_yyjson_mut_uint
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<yyjson_mut_doc>
+    PARAM 0
+    BINARY :eq
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 1
+        AS :u64
+        PARAM 0
+        CALL :static_fn_json_c_unsafe_yyjson_mut_val
+        LOCAL :__s1_val :ptr<yyjson_mut_val>
+        STORE
+        PUSH 0 :i64
+        PUSH 0
+        AS :ptr<yyjson_mut_val>
+        LOCAL :__s1_val
+        BINARY :eq
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PARAM 1
+            LOCAL :__s1_val
+            AS :ptr<void>
+            CALL :static_fn_json_c_unsafe_yyjson_set_uint
+            LOCAL :__s1_val
+            RET
+        ENDIF
+    ENDIF
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<yyjson_mut_val>
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :u64
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 32
+        AS :u64
+        PARAM 1
+        BINARY :less_eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PARAM 1
+        PUSH 0
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 0
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s2_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s2_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_2 :bool
+            STORE
+            LOCAL :__sc_or_2
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s2_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_2
+                STORE
+            ENDIF
+            LOCAL :__sc_or_2
+            LOCAL :__sc_or_2
+            STORE
+            LOCAL :__sc_or_2
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s2_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_2
+                STORE
+            ENDIF
+            LOCAL :__sc_or_2
+            LOCAL :__sc_or_2
+            STORE
+            LOCAL :__sc_or_2
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s2_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_2
+                STORE
+            ENDIF
+            LOCAL :__sc_or_2
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 1
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 1
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s4_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s4_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_4 :bool
+            STORE
+            LOCAL :__sc_or_4
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s4_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_4
+                STORE
+            ENDIF
+            LOCAL :__sc_or_4
+            LOCAL :__sc_or_4
+            STORE
+            LOCAL :__sc_or_4
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s4_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_4
+                STORE
+            ENDIF
+            LOCAL :__sc_or_4
+            LOCAL :__sc_or_4
+            STORE
+            LOCAL :__sc_or_4
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s4_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_4
+                STORE
+            ENDIF
+            LOCAL :__sc_or_4
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 2
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 2
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s6_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s6_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_6 :bool
+            STORE
+            LOCAL :__sc_or_6
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s6_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_6
+                STORE
+            ENDIF
+            LOCAL :__sc_or_6
+            LOCAL :__sc_or_6
+            STORE
+            LOCAL :__sc_or_6
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s6_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_6
+                STORE
+            ENDIF
+            LOCAL :__sc_or_6
+            LOCAL :__sc_or_6
+            STORE
+            LOCAL :__sc_or_6
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s6_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_6
+                STORE
+            ENDIF
+            LOCAL :__sc_or_6
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 3
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 3
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s8_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s8_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_8 :bool
+            STORE
+            LOCAL :__sc_or_8
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s8_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_8
+                STORE
+            ENDIF
+            LOCAL :__sc_or_8
+            LOCAL :__sc_or_8
+            STORE
+            LOCAL :__sc_or_8
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s8_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_8
+                STORE
+            ENDIF
+            LOCAL :__sc_or_8
+            LOCAL :__sc_or_8
+            STORE
+            LOCAL :__sc_or_8
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s8_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_8
+                STORE
+            ENDIF
+            LOCAL :__sc_or_8
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 4
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 4
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s10_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s10_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_10 :bool
+            STORE
+            LOCAL :__sc_or_10
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s10_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_10
+                STORE
+            ENDIF
+            LOCAL :__sc_or_10
+            LOCAL :__sc_or_10
+            STORE
+            LOCAL :__sc_or_10
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s10_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_10
+                STORE
+            ENDIF
+            LOCAL :__sc_or_10
+            LOCAL :__sc_or_10
+            STORE
+            LOCAL :__sc_or_10
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s10_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_10
+                STORE
+            ENDIF
+            LOCAL :__sc_or_10
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 5
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 5
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s12_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s12_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_12 :bool
+            STORE
+            LOCAL :__sc_or_12
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s12_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_12
+                STORE
+            ENDIF
+            LOCAL :__sc_or_12
+            LOCAL :__sc_or_12
+            STORE
+            LOCAL :__sc_or_12
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s12_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_12
+                STORE
+            ENDIF
+            LOCAL :__sc_or_12
+            LOCAL :__sc_or_12
+            STORE
+            LOCAL :__sc_or_12
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s12_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_12
+                STORE
+            ENDIF
+            LOCAL :__sc_or_12
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 6
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 6
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s14_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s14_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_14 :bool
+            STORE
+            LOCAL :__sc_or_14
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s14_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_14
+                STORE
+            ENDIF
+            LOCAL :__sc_or_14
+            LOCAL :__sc_or_14
+            STORE
+            LOCAL :__sc_or_14
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s14_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_14
+                STORE
+            ENDIF
+            LOCAL :__sc_or_14
+            LOCAL :__sc_or_14
+            STORE
+            LOCAL :__sc_or_14
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s14_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_14
+                STORE
+            ENDIF
+            LOCAL :__sc_or_14
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 7
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 7
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s16_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s16_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_16 :bool
+            STORE
+            LOCAL :__sc_or_16
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s16_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_16
+                STORE
+            ENDIF
+            LOCAL :__sc_or_16
+            LOCAL :__sc_or_16
+            STORE
+            LOCAL :__sc_or_16
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s16_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_16
+                STORE
+            ENDIF
+            LOCAL :__sc_or_16
+            LOCAL :__sc_or_16
+            STORE
+            LOCAL :__sc_or_16
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s16_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_16
+                STORE
+            ENDIF
+            LOCAL :__sc_or_16
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 8
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 8
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s18_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s18_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_18 :bool
+            STORE
+            LOCAL :__sc_or_18
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s18_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_18
+                STORE
+            ENDIF
+            LOCAL :__sc_or_18
+            LOCAL :__sc_or_18
+            STORE
+            LOCAL :__sc_or_18
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s18_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_18
+                STORE
+            ENDIF
+            LOCAL :__sc_or_18
+            LOCAL :__sc_or_18
+            STORE
+            LOCAL :__sc_or_18
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s18_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_18
+                STORE
+            ENDIF
+            LOCAL :__sc_or_18
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 9
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 9
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s20_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s20_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_20 :bool
+            STORE
+            LOCAL :__sc_or_20
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s20_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_20
+                STORE
+            ENDIF
+            LOCAL :__sc_or_20
+            LOCAL :__sc_or_20
+            STORE
+            LOCAL :__sc_or_20
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s20_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_20
+                STORE
+            ENDIF
+            LOCAL :__sc_or_20
+            LOCAL :__sc_or_20
+            STORE
+            LOCAL :__sc_or_20
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s20_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_20
+                STORE
+            ENDIF
+            LOCAL :__sc_or_20
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 10
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 10
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s22_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s22_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_22 :bool
+            STORE
+            LOCAL :__sc_or_22
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s22_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_22
+                STORE
+            ENDIF
+            LOCAL :__sc_or_22
+            LOCAL :__sc_or_22
+            STORE
+            LOCAL :__sc_or_22
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s22_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_22
+                STORE
+            ENDIF
+            LOCAL :__sc_or_22
+            LOCAL :__sc_or_22
+            STORE
+            LOCAL :__sc_or_22
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s22_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_22
+                STORE
+            ENDIF
+            LOCAL :__sc_or_22
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 11
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 11
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s24_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s24_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_24 :bool
+            STORE
+            LOCAL :__sc_or_24
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s24_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_24
+                STORE
+            ENDIF
+            LOCAL :__sc_or_24
+            LOCAL :__sc_or_24
+            STORE
+            LOCAL :__sc_or_24
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s24_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_24
+                STORE
+            ENDIF
+            LOCAL :__sc_or_24
+            LOCAL :__sc_or_24
+            STORE
+            LOCAL :__sc_or_24
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s24_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_24
+                STORE
+            ENDIF
+            LOCAL :__sc_or_24
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 12
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 12
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s26_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s26_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_26 :bool
+            STORE
+            LOCAL :__sc_or_26
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s26_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_26
+                STORE
+            ENDIF
+            LOCAL :__sc_or_26
+            LOCAL :__sc_or_26
+            STORE
+            LOCAL :__sc_or_26
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s26_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_26
+                STORE
+            ENDIF
+            LOCAL :__sc_or_26
+            LOCAL :__sc_or_26
+            STORE
+            LOCAL :__sc_or_26
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s26_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_26
+                STORE
+            ENDIF
+            LOCAL :__sc_or_26
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 13
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 13
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s28_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s28_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_28 :bool
+            STORE
+            LOCAL :__sc_or_28
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s28_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_28
+                STORE
+            ENDIF
+            LOCAL :__sc_or_28
+            LOCAL :__sc_or_28
+            STORE
+            LOCAL :__sc_or_28
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s28_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_28
+                STORE
+            ENDIF
+            LOCAL :__sc_or_28
+            LOCAL :__sc_or_28
+            STORE
+            LOCAL :__sc_or_28
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s28_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_28
+                STORE
+            ENDIF
+            LOCAL :__sc_or_28
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 14
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 14
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s30_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s30_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_30 :bool
+            STORE
+            LOCAL :__sc_or_30
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s30_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_30
+                STORE
+            ENDIF
+            LOCAL :__sc_or_30
+            LOCAL :__sc_or_30
+            STORE
+            LOCAL :__sc_or_30
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s30_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_30
+                STORE
+            ENDIF
+            LOCAL :__sc_or_30
+            LOCAL :__sc_or_30
+            STORE
+            LOCAL :__sc_or_30
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s30_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_30
+                STORE
+            ENDIF
+            LOCAL :__sc_or_30
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 15
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 15
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s32_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s32_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_32 :bool
+            STORE
+            LOCAL :__sc_or_32
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s32_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_32
+                STORE
+            ENDIF
+            LOCAL :__sc_or_32
+            LOCAL :__sc_or_32
+            STORE
+            LOCAL :__sc_or_32
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s32_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_32
+                STORE
+            ENDIF
+            LOCAL :__sc_or_32
+            LOCAL :__sc_or_32
+            STORE
+            LOCAL :__sc_or_32
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s32_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_32
+                STORE
+            ENDIF
+            LOCAL :__sc_or_32
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 16
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 16
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s34_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s34_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_34 :bool
+            STORE
+            LOCAL :__sc_or_34
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s34_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_34
+                STORE
+            ENDIF
+            LOCAL :__sc_or_34
+            LOCAL :__sc_or_34
+            STORE
+            LOCAL :__sc_or_34
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s34_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_34
+                STORE
+            ENDIF
+            LOCAL :__sc_or_34
+            LOCAL :__sc_or_34
+            STORE
+            LOCAL :__sc_or_34
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s34_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_34
+                STORE
+            ENDIF
+            LOCAL :__sc_or_34
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 17
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 17
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s36_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s36_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_36 :bool
+            STORE
+            LOCAL :__sc_or_36
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s36_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_36
+                STORE
+            ENDIF
+            LOCAL :__sc_or_36
+            LOCAL :__sc_or_36
+            STORE
+            LOCAL :__sc_or_36
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s36_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_36
+                STORE
+            ENDIF
+            LOCAL :__sc_or_36
+            LOCAL :__sc_or_36
+            STORE
+            LOCAL :__sc_or_36
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s36_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_36
+                STORE
+            ENDIF
+            LOCAL :__sc_or_36
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 18
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 18
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s38_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s38_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_38 :bool
+            STORE
+            LOCAL :__sc_or_38
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s38_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_38
+                STORE
+            ENDIF
+            LOCAL :__sc_or_38
+            LOCAL :__sc_or_38
+            STORE
+            LOCAL :__sc_or_38
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s38_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_38
+                STORE
+            ENDIF
+            LOCAL :__sc_or_38
+            LOCAL :__sc_or_38
+            STORE
+            LOCAL :__sc_or_38
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s38_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_38
+                STORE
+            ENDIF
+            LOCAL :__sc_or_38
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 19
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 19
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s40_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s40_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_40 :bool
+            STORE
+            LOCAL :__sc_or_40
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s40_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_40
+                STORE
+            ENDIF
+            LOCAL :__sc_or_40
+            LOCAL :__sc_or_40
+            STORE
+            LOCAL :__sc_or_40
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s40_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_40
+                STORE
+            ENDIF
+            LOCAL :__sc_or_40
+            LOCAL :__sc_or_40
+            STORE
+            LOCAL :__sc_or_40
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s40_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_40
+                STORE
+            ENDIF
+            LOCAL :__sc_or_40
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 20
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 20
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s42_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s42_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_42 :bool
+            STORE
+            LOCAL :__sc_or_42
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s42_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_42
+                STORE
+            ENDIF
+            LOCAL :__sc_or_42
+            LOCAL :__sc_or_42
+            STORE
+            LOCAL :__sc_or_42
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s42_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_42
+                STORE
+            ENDIF
+            LOCAL :__sc_or_42
+            LOCAL :__sc_or_42
+            STORE
+            LOCAL :__sc_or_42
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s42_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_42
+                STORE
+            ENDIF
+            LOCAL :__sc_or_42
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 21
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 21
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s44_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s44_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_44 :bool
+            STORE
+            LOCAL :__sc_or_44
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s44_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_44
+                STORE
+            ENDIF
+            LOCAL :__sc_or_44
+            LOCAL :__sc_or_44
+            STORE
+            LOCAL :__sc_or_44
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s44_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_44
+                STORE
+            ENDIF
+            LOCAL :__sc_or_44
+            LOCAL :__sc_or_44
+            STORE
+            LOCAL :__sc_or_44
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s44_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_44
+                STORE
+            ENDIF
+            LOCAL :__sc_or_44
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 22
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 22
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s46_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s46_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_46 :bool
+            STORE
+            LOCAL :__sc_or_46
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s46_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_46
+                STORE
+            ENDIF
+            LOCAL :__sc_or_46
+            LOCAL :__sc_or_46
+            STORE
+            LOCAL :__sc_or_46
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s46_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_46
+                STORE
+            ENDIF
+            LOCAL :__sc_or_46
+            LOCAL :__sc_or_46
+            STORE
+            LOCAL :__sc_or_46
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s46_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_46
+                STORE
+            ENDIF
+            LOCAL :__sc_or_46
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 23
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 23
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s48_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s48_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_48 :bool
+            STORE
+            LOCAL :__sc_or_48
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s48_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_48
+                STORE
+            ENDIF
+            LOCAL :__sc_or_48
+            LOCAL :__sc_or_48
+            STORE
+            LOCAL :__sc_or_48
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s48_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_48
+                STORE
+            ENDIF
+            LOCAL :__sc_or_48
+            LOCAL :__sc_or_48
+            STORE
+            LOCAL :__sc_or_48
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s48_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_48
+                STORE
+            ENDIF
+            LOCAL :__sc_or_48
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 24
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 24
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s50_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s50_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_50 :bool
+            STORE
+            LOCAL :__sc_or_50
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s50_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_50
+                STORE
+            ENDIF
+            LOCAL :__sc_or_50
+            LOCAL :__sc_or_50
+            STORE
+            LOCAL :__sc_or_50
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s50_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_50
+                STORE
+            ENDIF
+            LOCAL :__sc_or_50
+            LOCAL :__sc_or_50
+            STORE
+            LOCAL :__sc_or_50
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s50_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_50
+                STORE
+            ENDIF
+            LOCAL :__sc_or_50
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 25
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 25
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s52_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s52_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_52 :bool
+            STORE
+            LOCAL :__sc_or_52
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s52_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_52
+                STORE
+            ENDIF
+            LOCAL :__sc_or_52
+            LOCAL :__sc_or_52
+            STORE
+            LOCAL :__sc_or_52
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s52_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_52
+                STORE
+            ENDIF
+            LOCAL :__sc_or_52
+            LOCAL :__sc_or_52
+            STORE
+            LOCAL :__sc_or_52
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s52_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_52
+                STORE
+            ENDIF
+            LOCAL :__sc_or_52
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 26
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 26
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s54_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s54_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_54 :bool
+            STORE
+            LOCAL :__sc_or_54
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s54_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_54
+                STORE
+            ENDIF
+            LOCAL :__sc_or_54
+            LOCAL :__sc_or_54
+            STORE
+            LOCAL :__sc_or_54
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s54_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_54
+                STORE
+            ENDIF
+            LOCAL :__sc_or_54
+            LOCAL :__sc_or_54
+            STORE
+            LOCAL :__sc_or_54
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s54_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_54
+                STORE
+            ENDIF
+            LOCAL :__sc_or_54
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 27
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 27
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s56_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s56_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_56 :bool
+            STORE
+            LOCAL :__sc_or_56
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s56_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_56
+                STORE
+            ENDIF
+            LOCAL :__sc_or_56
+            LOCAL :__sc_or_56
+            STORE
+            LOCAL :__sc_or_56
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s56_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_56
+                STORE
+            ENDIF
+            LOCAL :__sc_or_56
+            LOCAL :__sc_or_56
+            STORE
+            LOCAL :__sc_or_56
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s56_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_56
+                STORE
+            ENDIF
+            LOCAL :__sc_or_56
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 28
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 28
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s58_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s58_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_58 :bool
+            STORE
+            LOCAL :__sc_or_58
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s58_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_58
+                STORE
+            ENDIF
+            LOCAL :__sc_or_58
+            LOCAL :__sc_or_58
+            STORE
+            LOCAL :__sc_or_58
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s58_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_58
+                STORE
+            ENDIF
+            LOCAL :__sc_or_58
+            LOCAL :__sc_or_58
+            STORE
+            LOCAL :__sc_or_58
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s58_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_58
+                STORE
+            ENDIF
+            LOCAL :__sc_or_58
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 29
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 29
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s60_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s60_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_60 :bool
+            STORE
+            LOCAL :__sc_or_60
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s60_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_60
+                STORE
+            ENDIF
+            LOCAL :__sc_or_60
+            LOCAL :__sc_or_60
+            STORE
+            LOCAL :__sc_or_60
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s60_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_60
+                STORE
+            ENDIF
+            LOCAL :__sc_or_60
+            LOCAL :__sc_or_60
+            STORE
+            LOCAL :__sc_or_60
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s60_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_60
+                STORE
+            ENDIF
+            LOCAL :__sc_or_60
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 30
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 30
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s62_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s62_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_62 :bool
+            STORE
+            LOCAL :__sc_or_62
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s62_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_62
+                STORE
+            ENDIF
+            LOCAL :__sc_or_62
+            LOCAL :__sc_or_62
+            STORE
+            LOCAL :__sc_or_62
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s62_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_62
+                STORE
+            ENDIF
+            LOCAL :__sc_or_62
+            LOCAL :__sc_or_62
+            STORE
+            LOCAL :__sc_or_62
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s62_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_62
+                STORE
+            ENDIF
+            LOCAL :__sc_or_62
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PARAM 1
+        PUSH 31
+        AS :u64
+        BINARY :less
+        IF
+          THEN
+            PUSH 31
+            AS :u64
+            PARAM 0
+            BINARY :add
+            DEREF
+            LOCAL :__s64_c :u8
+            STORE
+            PUSH 32
+            LOCAL :__s64_c
+            AS :i32
+            BINARY :less
+            LOCAL :__sc_or_64 :bool
+            STORE
+            LOCAL :__sc_or_64
+            IF
+              THEN
+              ELSE
+                PUSH 126
+                LOCAL :__s64_c
+                AS :i32
+                BINARY :more
+                LOCAL :__sc_or_64
+                STORE
+            ENDIF
+            LOCAL :__sc_or_64
+            LOCAL :__sc_or_64
+            STORE
+            LOCAL :__sc_or_64
+            IF
+              THEN
+              ELSE
+                PUSH 34
+                LOCAL :__s64_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_64
+                STORE
+            ENDIF
+            LOCAL :__sc_or_64
+            LOCAL :__sc_or_64
+            STORE
+            LOCAL :__sc_or_64
+            IF
+              THEN
+              ELSE
+                PUSH 92
+                LOCAL :__s64_c
+                AS :i32
+                BINARY :eq
+                LOCAL :__sc_or_64
+                STORE
+            ENDIF
+            LOCAL :__sc_or_64
+            IF
+              THEN
+                PUSH 0
+                PUSH 0
+                BINARY :not_eq
+                RET
+            ENDIF
+        ENDIF
+        PUSH 0
+        PUSH 1
+        BINARY :not_eq
+        RET
+    ENDIF
+    PUSH 0
+    PUSH 0
+    BINARY :not_eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_is_num
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 4
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_get_type
+    BINARY :eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_is_arr
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 6
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_get_type
+    BINARY :eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_is_obj
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 7
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_get_type
+    BINARY :eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_is_ctn
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 6 :u8
+    LOCAL :__s0_mask :u8
+    STORE
+    LOCAL :__s0_mask
+    LOCAL :__s0_mask
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_get_tag
+    BINARY :and
+    BINARY :eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_get_num
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_get_tag
+    LOCAL :__s0_tag :u8
+    STORE
+    PUSH 3
+    PUSH 2
+    BINARY :shl
+    AS :u8
+    PUSH 4
+    AS :u8
+    BINARY :or
+    LOCAL :__s0_tag
+    BINARY :eq
+    IF
+      THEN
+        PARAM 0
+        AS :ptr<yyjson_val>
+        DEREF
+        FIELD 1
+        AS :yyjson_val_uni::f64
+        FIELD 1
+        RET
+      ELSE
+        PUSH 3
+        PUSH 1
+        BINARY :shl
+        AS :u8
+        PUSH 4
+        AS :u8
+        BINARY :or
+        LOCAL :__s0_tag
+        BINARY :eq
+        IF
+          THEN
+            PARAM 0
+            AS :ptr<yyjson_val>
+            DEREF
+            FIELD 1
+            AS :yyjson_val_uni::i64
+            FIELD 1
+            AS :f64
+            RET
+          ELSE
+            PUSH 3
+            PUSH 0
+            BINARY :shl
+            AS :u8
+            PUSH 4
+            AS :u8
+            BINARY :or
+            LOCAL :__s0_tag
+            BINARY :eq
+            IF
+              THEN
+                PARAM 0
+                AS :ptr<yyjson_val>
+                DEREF
+                FIELD 1
+                AS :yyjson_val_uni::u64
+                FIELD 1
+                CALL :static_fn_json_c_unsafe_yyjson_u64_to_f64
+                RET
+            ENDIF
+        ENDIF
+    ENDIF
+    PUSH 0.0 :f64
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_get_len
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :u64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 8
+    AS :u8
+    AS :u64
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 0
+    BINARY :shr
+    AS :u64
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_get_first
+  ARGS
+    TYPE :ptr<yyjson_val>
+  RETURN
+    TYPE :ptr<yyjson_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 1
+    AS :u64
+    PARAM 0
+    AS :ptr<void>
+    AS :u64
+    AS :u64
+    AS :ptr<void>
+    AS :ptr<yyjson_val>
+    BINARY :add
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_set_len
+  ARGS
+    TYPE :ptr<void>
+    TYPE :u64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 255
+    AS :u8
+    AS :u64
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 0
+    BINARY :and
+    LOCAL :__s0_tag :u64
+    STORE
+    PUSH 8
+    AS :u8
+    AS :u64
+    PARAM 1
+    AS :u64
+    BINARY :shl
+    LOCAL :__s0_tag
+    BINARY :or
+    LOCAL :__s0_tag
+    STORE
+    LOCAL :__s0_tag
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 0
+    STORE
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_set_tag
+  ARGS
+    TYPE :ptr<void>
+    TYPE :u8
+    TYPE :u8
+    TYPE :u64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 8
+    AS :u8
+    AS :u64
+    PARAM 3
+    AS :u64
+    BINARY :shl
+    LOCAL :__s0_tag :u64
+    STORE
+    PARAM 2
+    PARAM 1
+    BINARY :or
+    AS :u64
+    LOCAL :__s0_tag
+    BINARY :or
+    LOCAL :__s0_tag
+    STORE
+    LOCAL :__s0_tag
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 0
+    STORE
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_set_real
+  ARGS
+    TYPE :ptr<void>
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :u64
+    PUSH 3
+    PUSH 2
+    BINARY :shl
+    AS :u8
+    PUSH 4
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_set_tag
+    PARAM 1
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 1
+    AS :yyjson_val_uni::f64
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_set_str
+  ARGS
+    TYPE :ptr<void>
+    TYPE :ptr<u8>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    CALL :strlen
+    LOCAL :__s0_len :u64
+    STORE
+    LOCAL :__s0_len
+    PARAM 1
+    CALL :static_fn_json_c_unsafe_yyjson_is_str_noesc
+    LOCAL :__s0_noesc :bool
+    STORE
+    LOCAL :__s0_noesc
+    IF
+      THEN
+        PUSH 3
+        PUSH 1
+        BINARY :shl
+        AS :u8
+        LOCAL :__ternary_2 :u8
+        STORE
+      ELSE
+        PUSH 3
+        PUSH 0
+        BINARY :shl
+        AS :u8
+        LOCAL :__ternary_2
+        STORE
+    ENDIF
+    LOCAL :__ternary_2
+    LOCAL :__s0_subtype :u8
+    STORE
+    LOCAL :__s0_len
+    LOCAL :__s0_subtype
+    PUSH 5
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_set_tag
+    PARAM 1
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 1
+    AS :yyjson_val_uni::str
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_mut_strncpy
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :ptr<u8>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<u8>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 2
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_mut_str_alc
+    LOCAL :__s0_mem :ptr<u8>
+    STORE
+    PUSH 0 :i64
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_mem
+    BINARY :eq
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        RET
+    ENDIF
+    PARAM 2
+    PARAM 1
+    AS :ptr<void>
+    LOCAL :__s0_mem
+    AS :ptr<void>
+    CALL :memcpy
+    STACK :drop
+    PUSH 0
+    AS :u8
+    PARAM 2
+    LOCAL :__s0_mem
+    BINARY :add
+    DEREF
+    STORE
+    LOCAL :__s0_mem
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_mut_val
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<yyjson_mut_val>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 1
+    ADDR
+    LOCAL :__s0_alc :ptr<yyjson_alc>
+    STORE
+    PARAM 0
+    DEREF
+    FIELD 3
+    ADDR
+    LOCAL :__s0_pool :ptr<yyjson_val_pool>
+    STORE
+    PUSH 0 :i64
+    PARAM 1
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 0
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 1
+    BINARY :sub
+    AS :u64
+    BINARY :less
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 0 :i64
+        PARAM 1
+        LOCAL :__s0_alc
+        LOCAL :__s0_pool
+        CALL :unsafe_yyjson_val_pool_grow
+        UNARY :lnot
+        UNARY :lnot
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<yyjson_mut_val>
+            RET
+        ENDIF
+    ENDIF
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 0
+    LOCAL :__s0_val :ptr<yyjson_mut_val>
+    STORE
+    PARAM 1
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 0
+    BINARY :add
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 0
+    STORE
+    LOCAL :__s0_val
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_mut_obj_add
+  ARGS
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :ptr<yyjson_mut_val>
+    TYPE :u64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0 :i64
+    PUSH 0 :u64
+    PARAM 3
+    BINARY :eq
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 1
+        AS :yyjson_val_uni::ptr
+        FIELD 1
+        AS :ptr<yyjson_mut_val>
+        DEREF
+        FIELD 2
+        LOCAL :__s1_prev_val :ptr<yyjson_mut_val>
+        STORE
+        LOCAL :__s1_prev_val
+        DEREF
+        FIELD 2
+        LOCAL :__s1_next_key :ptr<yyjson_mut_val>
+        STORE
+        PARAM 1
+        LOCAL :__s1_prev_val
+        DEREF
+        FIELD 2
+        STORE
+        LOCAL :__s1_next_key
+        PARAM 2
+        DEREF
+        FIELD 2
+        STORE
+      ELSE
+        PARAM 1
+        PARAM 2
+        DEREF
+        FIELD 2
+        STORE
+    ENDIF
+    PARAM 2
+    PARAM 1
+    DEREF
+    FIELD 2
+    STORE
+    PARAM 1
+    AS :ptr<void>
+    PARAM 0
+    DEREF
+    FIELD 1
+    AS :yyjson_val_uni::ptr
+    FIELD 1
+    STORE
+    PUSH 1
+    AS :u64
+    PARAM 3
+    BINARY :add
+    PARAM 0
+    AS :ptr<void>
+    CALL :static_fn_json_c_unsafe_yyjson_set_len
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_u64_to_f64
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :f64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    AS :f64
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_get_type
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :u8
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 0
+    AS :u8
+    LOCAL :__s0_tag :u8
+    STORE
+    PUSH 7
+    AS :u8
+    LOCAL :__s0_tag
+    BINARY :and
+    AS :u8
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_get_tag
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :u8
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 0
+    AS :u8
+    LOCAL :__s0_tag :u8
+    STORE
+    PUSH 255
+    AS :u8
+    LOCAL :__s0_tag
+    BINARY :and
+    AS :u8
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_is_str
+  ARGS
+    TYPE :ptr<void>
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 5
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_get_type
+    BINARY :eq
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_equals_strn
+  ARGS
+    TYPE :ptr<void>
+    TYPE :ptr<u8>
+    TYPE :u64
+  RETURN
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 2
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_get_len
+    BINARY :eq
+    LOCAL :__sc_and_0 :bool
+    STORE
+    LOCAL :__sc_and_0
+    IF
+      THEN
+        PUSH 0
+        PARAM 2
+        PARAM 1
+        AS :ptr<void>
+        PARAM 0
+        AS :ptr<yyjson_val>
+        DEREF
+        FIELD 1
+        AS :yyjson_val_uni::str
+        FIELD 1
+        AS :ptr<void>
+        CALL :memcmp
+        BINARY :eq
+        LOCAL :__sc_and_0
+        STORE
+    ENDIF
+    LOCAL :__sc_and_0
+    RET
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_set_bool
+  ARGS
+    TYPE :ptr<void>
+    TYPE :bool
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 1
+    IF
+      THEN
+        PUSH 3
+        PUSH 1
+        BINARY :shl
+        AS :u8
+        LOCAL :__ternary_0 :u8
+        STORE
+      ELSE
+        PUSH 3
+        PUSH 0
+        BINARY :shl
+        AS :u8
+        LOCAL :__ternary_0
+        STORE
+    ENDIF
+    LOCAL :__ternary_0
+    LOCAL :__s0_subtype :u8
+    STORE
+    PUSH 0
+    AS :u64
+    LOCAL :__s0_subtype
+    PUSH 3
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_set_tag
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_set_uint
+  ARGS
+    TYPE :ptr<void>
+    TYPE :u64
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    AS :u64
+    PUSH 3
+    PUSH 0
+    BINARY :shl
+    AS :u8
+    PUSH 4
+    AS :u8
+    PARAM 0
+    CALL :static_fn_json_c_unsafe_yyjson_set_tag
+    PARAM 1
+    PARAM 0
+    AS :ptr<yyjson_val>
+    DEREF
+    FIELD 1
+    AS :yyjson_val_uni::u64
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :static_fn_json_c_unsafe_yyjson_mut_str_alc
+  ARGS
+    TYPE :ptr<yyjson_mut_doc>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<u8>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 1
+    ADDR
+    LOCAL :__s0_alc :ptr<yyjson_alc>
+    STORE
+    PARAM 0
+    DEREF
+    FIELD 2
+    ADDR
+    LOCAL :__s0_pool :ptr<yyjson_str_pool>
+    STORE
+    PUSH 0 :i64
+    PUSH 1
+    UNARY :neg
+    AS :u64
+    PARAM 1
+    BINARY :eq
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        RET
+    ENDIF
+    PUSH 0 :i64
+    PARAM 1
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 0
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 1
+    BINARY :sub
+    AS :u64
+    BINARY :less_eq
+    UNARY :lnot
+    UNARY :lnot
+    AS :i64
+    BINARY :not_eq
+    IF
+      THEN
+        PUSH 0 :i64
+        PUSH 1
+        AS :u64
+        PARAM 1
+        BINARY :add
+        LOCAL :__s0_alc
+        LOCAL :__s0_pool
+        CALL :unsafe_yyjson_str_pool_grow
+        UNARY :lnot
+        UNARY :lnot
+        UNARY :lnot
+        AS :i64
+        BINARY :not_eq
+        IF
+          THEN
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<u8>
+            RET
+        ENDIF
+    ENDIF
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 0
+    LOCAL :__s0_mem :ptr<u8>
+    STORE
+    PUSH 1
+    AS :u64
+    PARAM 1
+    LOCAL :__s0_mem
+    BINARY :add
+    BINARY :add
+    LOCAL :__s0_pool
+    DEREF
+    FIELD 0
+    STORE
+    LOCAL :__s0_mem
+    RET
+ENDFUNC
+

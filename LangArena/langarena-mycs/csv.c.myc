@@ -1,0 +1,1454 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :CsvParseData
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :Point
+  TYPE :f64
+  TYPE :f64
+  TYPE :f64
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+FUNC :snprintf
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :u64
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :vaarg
+ENDFUNC
+
+FUNC :strtod
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<ptr<u8>>
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :calloc
+  ARGS
+    TYPE :u64
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :memcpy
+  ARGS
+    TYPE :ptr<void>
+    TYPE :ptr<void>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :strchr
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :i32
+  RETURN
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :strlen
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :u64
+ENDFUNC
+
+FUNC :Helper_next_float
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :f64
+ENDFUNC
+
+FUNC :Helper_checksum_f64
+  ARGS
+    TYPE :f64
+  RETURN
+    TYPE :u32
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :static_fn_csv_c_generate_csv_for_parsing
+  ARGS
+    TYPE :i64
+  RETURN
+    TYPE :ptr<u8>
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 1
+    AS :i64
+    PUSH 100
+    AS :i64
+    PARAM 0
+    BINARY :mul
+    BINARY :add
+    AS :u64
+    LOCAL :__s0_capacity :u64
+    STORE
+    LOCAL :__s0_capacity
+    CALL :malloc
+    AS :ptr<u8>
+    LOCAL :__s0_buffer :ptr<u8>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_buffer
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        RET
+    ENDIF
+    PUSH 0 :u64
+    LOCAL :__s1_pos :u64
+    STORE
+    PUSH 0 :i64
+    LOCAL :__s1_i :i64
+    STORE
+    LOOP
+      COND
+        PARAM 0
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        PUSH 26
+        AS :i64
+        LOCAL :__s1_i
+        BINARY :rem
+        PUSH 65
+        AS :i64
+        BINARY :add
+        AS :u8
+        LOCAL :__s2_c :u8
+        STORE
+        PUSH 1.0 :f64
+        CALL :Helper_next_float
+        LOCAL :__s2_x :f64
+        STORE
+        PUSH 1.0 :f64
+        CALL :Helper_next_float
+        LOCAL :__s2_z :f64
+        STORE
+        PUSH 1.0 :f64
+        CALL :Helper_next_float
+        LOCAL :__s2_y :f64
+        STORE
+        LOCAL :__s2_y
+        PUSH 100
+        AS :i64
+        LOCAL :__s1_i
+        BINARY :rem
+        AS :i64
+        PUSH 0
+        AS :i64
+        PUSH 2
+        AS :i64
+        LOCAL :__s1_i
+        BINARY :rem
+        BINARY :eq
+        IF
+          THEN
+            PUSH :true
+            LOCAL :__ternary_8 :ptr<u8>
+            STORE
+          ELSE
+            PUSH :false
+            LOCAL :__ternary_8
+            STORE
+        ENDIF
+        LOCAL :__ternary_8
+        LOCAL :__s2_z
+        LOCAL :__s2_x
+        PUSH 100
+        AS :i64
+        LOCAL :__s1_i
+        BINARY :rem
+        AS :i64
+        LOCAL :__s2_c
+        PUSH "\"point %c\\n, \"\"%lld\"\"\",%.10f,,%.10f,\"[%s\\n, %lld]\",%.10f\n"
+        LOCAL :__s1_pos
+        LOCAL :__s0_capacity
+        BINARY :sub
+        LOCAL :__s1_pos
+        LOCAL :__s0_buffer
+        BINARY :add
+        CALL :snprintf 7
+        AS :u64
+        LOCAL :__s1_pos
+        BINARY :add
+        LOCAL :__s1_pos
+        STORE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    LOCAL :__s0_buffer
+    RET
+ENDFUNC
+
+FUNC :CsvParse_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<CsvParseData>
+    LOCAL :__s0_data :ptr<CsvParseData>
+    STORE
+    PUSH :rows
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    CALL :static_fn_csv_c_generate_csv_for_parsing
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+ENDFUNC
+
+FUNC :static_fn_csv_c_parse_csv_line
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<f64>
+    TYPE :ptr<f64>
+    TYPE :ptr<f64>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    LOCAL :__s0_field_idx :i32
+    STORE
+    PARAM 0
+    LOCAL :__s0_start :ptr<u8>
+    STORE
+    PUSH 0
+    LOCAL :__s0_in_quotes :i32
+    STORE
+    SIZEOF "flat<ptr<u8>, 6>"
+    PUSH 0 :u8
+    LOCAL :__s0_field_starts "flat<ptr<u8>, 6>"
+    ADDR
+    CALL :memset
+    STACK :drop
+    SIZEOF "flat<ptr<u8>, 6>"
+    PUSH 0 :u8
+    LOCAL :__s0_field_ends "flat<ptr<u8>, 6>"
+    ADDR
+    CALL :memset
+    STACK :drop
+    PARAM 0
+    LOCAL :__s0_p :ptr<u8>
+    STORE
+    LOOP
+      COND
+        PUSH 0 :u8
+        LOCAL :__s0_p
+        DEREF
+        BINARY :not_eq
+        LOCAL :__sc_and_6 :bool
+        STORE
+        LOCAL :__sc_and_6
+        IF
+          THEN
+            PUSH 6
+            LOCAL :__s0_field_idx
+            BINARY :less
+            LOCAL :__sc_and_6
+            STORE
+        ENDIF
+        LOCAL :__sc_and_6
+      BODY
+        PUSH 34
+        LOCAL :__s0_p
+        DEREF
+        AS :i32
+        BINARY :eq
+        IF
+          THEN
+            PUSH 0
+            LOCAL :__s0_in_quotes
+            BINARY :eq
+            AS :i32
+            LOCAL :__s0_in_quotes
+            STORE
+          ELSE
+            PUSH 44
+            LOCAL :__s0_p
+            DEREF
+            AS :i32
+            BINARY :eq
+            LOCAL :__sc_and_7 :bool
+            STORE
+            LOCAL :__sc_and_7
+            IF
+              THEN
+                PUSH 0
+                LOCAL :__s0_in_quotes
+                BINARY :eq
+                LOCAL :__sc_and_7
+                STORE
+            ENDIF
+            LOCAL :__sc_and_7
+            IF
+              THEN
+                LOCAL :__s0_start
+                LOCAL :__s0_field_idx
+                AS :u64
+                LOCAL :__s0_field_starts
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                STORE
+                LOCAL :__s0_p
+                LOCAL :__s0_field_idx
+                AS :u64
+                LOCAL :__s0_field_ends
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                STORE
+                PUSH 1 :i32
+                LOCAL :__s0_field_idx
+                BINARY :add
+                LOCAL :__s0_field_idx
+                STORE
+                PUSH 1
+                AS :u64
+                LOCAL :__s0_p
+                BINARY :add
+                LOCAL :__s0_start
+                STORE
+            ENDIF
+        ENDIF
+      STEP
+        PUSH 1 :u64
+        LOCAL :__s0_p
+        BINARY :add
+        LOCAL :__s0_p
+        STORE
+    ENDLOOP
+    PUSH 6
+    LOCAL :__s0_field_idx
+    BINARY :less
+    LOCAL :__sc_and_8 :bool
+    STORE
+    LOCAL :__sc_and_8
+    IF
+      THEN
+        PUSH 0 :u8
+        LOCAL :__s0_start
+        DEREF
+        BINARY :not_eq
+        LOCAL :__sc_and_8
+        STORE
+    ENDIF
+    LOCAL :__sc_and_8
+    IF
+      THEN
+        LOCAL :__s0_start
+        LOCAL :__s0_field_idx
+        AS :u64
+        LOCAL :__s0_field_starts
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        STORE
+        LOCAL :__s0_start
+        CALL :strlen
+        LOCAL :__s0_start
+        BINARY :add
+        LOCAL :__s0_field_idx
+        AS :u64
+        LOCAL :__s0_field_ends
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        STORE
+        PUSH 1 :i32
+        LOCAL :__s0_field_idx
+        BINARY :add
+        LOCAL :__s0_field_idx
+        STORE
+    ENDIF
+    PUSH 6
+    LOCAL :__s0_field_idx
+    BINARY :less
+    IF
+      THEN
+        PUSH 1
+        UNARY :neg
+        RET
+    ENDIF
+    PUSH 1
+    AS :u64
+    LOCAL :__s0_field_starts
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    PUSH 1
+    AS :u64
+    LOCAL :__s0_field_ends
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    BINARY :sub
+    AS :u64
+    LOCAL :__s6_len :u64
+    STORE
+    SIZEOF "flat<u8, 64>"
+    LOCAL :__s6_len
+    BINARY :more_eq
+    IF
+      THEN
+        PUSH 1
+        UNARY :neg
+        RET
+    ENDIF
+    LOCAL :__s6_len
+    PUSH 1
+    AS :u64
+    LOCAL :__s0_field_starts
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    AS :ptr<void>
+    LOCAL :__s6_buf "flat<u8, 64>"
+    ADDR
+    AS :ptr<u8>
+    AS :ptr<void>
+    CALL :memcpy
+    STACK :drop
+    PUSH 0
+    AS :u8
+    LOCAL :__s6_len
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    BINARY :add
+    DEREF
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<ptr<u8>>
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    CALL :strtod
+    PARAM 1
+    DEREF
+    STORE
+    PUSH 3
+    AS :u64
+    LOCAL :__s0_field_starts
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    PUSH 3
+    AS :u64
+    LOCAL :__s0_field_ends
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    BINARY :sub
+    AS :u64
+    LOCAL :__s6_len
+    STORE
+    SIZEOF "flat<u8, 64>"
+    LOCAL :__s6_len
+    BINARY :more_eq
+    IF
+      THEN
+        PUSH 1
+        UNARY :neg
+        RET
+    ENDIF
+    LOCAL :__s6_len
+    PUSH 3
+    AS :u64
+    LOCAL :__s0_field_starts
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    AS :ptr<void>
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    AS :ptr<void>
+    CALL :memcpy
+    STACK :drop
+    PUSH 0
+    AS :u8
+    LOCAL :__s6_len
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    BINARY :add
+    DEREF
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<ptr<u8>>
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    CALL :strtod
+    PARAM 3
+    DEREF
+    STORE
+    PUSH 5
+    AS :u64
+    LOCAL :__s0_field_starts
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    PUSH 5
+    AS :u64
+    LOCAL :__s0_field_ends
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    BINARY :sub
+    AS :u64
+    LOCAL :__s6_len
+    STORE
+    SIZEOF "flat<u8, 64>"
+    LOCAL :__s6_len
+    BINARY :more_eq
+    IF
+      THEN
+        PUSH 1
+        UNARY :neg
+        RET
+    ENDIF
+    LOCAL :__s6_len
+    PUSH 5
+    AS :u64
+    LOCAL :__s0_field_starts
+    ADDR
+    AS :ptr<ptr<u8>>
+    BINARY :add
+    DEREF
+    AS :ptr<void>
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    AS :ptr<void>
+    CALL :memcpy
+    STACK :drop
+    PUSH 0
+    AS :u8
+    LOCAL :__s6_len
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    BINARY :add
+    DEREF
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    AS :ptr<ptr<u8>>
+    LOCAL :__s6_buf
+    ADDR
+    AS :ptr<u8>
+    CALL :strtod
+    PARAM 2
+    DEREF
+    STORE
+    PUSH 0
+    RET
+ENDFUNC
+
+FUNC :CsvParse_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<CsvParseData>
+    LOCAL :__s0_data :ptr<CsvParseData>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    SIZEOF :Point
+    AS :i64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    BINARY :mul
+    AS :u64
+    CALL :malloc
+    AS :ptr<Point>
+    LOCAL :__s1_points :ptr<Point>
+    STORE
+    PUSH 0
+    AS :ptr<Point>
+    LOCAL :__s1_points
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    PUSH 0
+    LOCAL :__s2_point_count :i32
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    LOCAL :__s2_s :ptr<u8>
+    STORE
+    LOOP
+      COND
+        PUSH 0 :u8
+        LOCAL :__s2_s
+        DEREF
+        BINARY :not_eq
+        LOCAL :__sc_and_4 :bool
+        STORE
+        LOCAL :__sc_and_4
+        IF
+          THEN
+            LOCAL :__s0_data
+            DEREF
+            FIELD 2
+            LOCAL :__s2_point_count
+            AS :i64
+            BINARY :less
+            LOCAL :__sc_and_4
+            STORE
+        ENDIF
+        LOCAL :__sc_and_4
+      BODY
+        PUSH 10
+        LOCAL :__s2_s
+        CALL :strchr
+        LOCAL :__s3_e :ptr<u8>
+        STORE
+        PUSH 0
+        AS :ptr<u8>
+        LOCAL :__s3_e
+        BINARY :eq
+        IF
+          THEN
+            LOCAL :__s2_s
+            CALL :strlen
+            LOCAL :__s2_s
+            BINARY :add
+            LOCAL :__s3_e
+            STORE
+        ENDIF
+        LOCAL :__s2_s
+        LOCAL :__s3_e
+        BINARY :sub
+        AS :u64
+        LOCAL :__s4_len :u64
+        STORE
+        SIZEOF "flat<u8, 512>"
+        LOCAL :__s4_len
+        BINARY :less
+        IF
+          THEN
+            LOCAL :__s4_len
+            LOCAL :__s2_s
+            AS :ptr<void>
+            LOCAL :__s4_line "flat<u8, 512>"
+            ADDR
+            AS :ptr<u8>
+            AS :ptr<void>
+            CALL :memcpy
+            STACK :drop
+            PUSH 0
+            AS :u8
+            LOCAL :__s4_len
+            LOCAL :__s4_line
+            ADDR
+            AS :ptr<u8>
+            BINARY :add
+            DEREF
+            STORE
+            PUSH 0
+            LOCAL :__s5_z :f64
+            ADDR
+            LOCAL :__s5_y :f64
+            ADDR
+            LOCAL :__s5_x :f64
+            ADDR
+            LOCAL :__s4_line
+            ADDR
+            AS :ptr<u8>
+            CALL :static_fn_csv_c_parse_csv_line
+            BINARY :eq
+            IF
+              THEN
+                LOCAL :__s5_x
+                LOCAL :__s2_point_count
+                AS :u64
+                LOCAL :__s1_points
+                BINARY :add
+                DEREF
+                FIELD 0
+                STORE
+                LOCAL :__s5_y
+                LOCAL :__s2_point_count
+                AS :u64
+                LOCAL :__s1_points
+                BINARY :add
+                DEREF
+                FIELD 1
+                STORE
+                LOCAL :__s5_z
+                LOCAL :__s2_point_count
+                AS :u64
+                LOCAL :__s1_points
+                BINARY :add
+                DEREF
+                FIELD 2
+                STORE
+                PUSH 1 :i32
+                LOCAL :__s2_point_count
+                BINARY :add
+                LOCAL :__s2_point_count
+                STORE
+            ENDIF
+        ENDIF
+        PUSH 1
+        AS :u64
+        LOCAL :__s3_e
+        BINARY :add
+        LOCAL :__s2_s
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s2_point_count
+    BINARY :more
+    IF
+      THEN
+        PUSH 0.0 :f64
+        LOCAL :__s7_x_sum :f64
+        STORE
+        PUSH 0.0 :f64
+        LOCAL :__s7_y_sum :f64
+        STORE
+        PUSH 0.0 :f64
+        LOCAL :__s7_z_sum :f64
+        STORE
+        PUSH 0
+        LOCAL :__s7_i :i32
+        STORE
+        LOOP
+          COND
+            LOCAL :__s2_point_count
+            LOCAL :__s7_i
+            BINARY :less
+          BODY
+            LOCAL :__s7_i
+            AS :u64
+            LOCAL :__s1_points
+            BINARY :add
+            DEREF
+            FIELD 0
+            LOCAL :__s7_x_sum
+            BINARY :add
+            LOCAL :__s7_x_sum
+            STORE
+            LOCAL :__s7_i
+            AS :u64
+            LOCAL :__s1_points
+            BINARY :add
+            DEREF
+            FIELD 1
+            LOCAL :__s7_y_sum
+            BINARY :add
+            LOCAL :__s7_y_sum
+            STORE
+            LOCAL :__s7_i
+            AS :u64
+            LOCAL :__s1_points
+            BINARY :add
+            DEREF
+            FIELD 2
+            LOCAL :__s7_z_sum
+            BINARY :add
+            LOCAL :__s7_z_sum
+            STORE
+          STEP
+            PUSH 1 :i32
+            LOCAL :__s7_i
+            BINARY :add
+            LOCAL :__s7_i
+            STORE
+        ENDLOOP
+        LOCAL :__s2_point_count
+        AS :f64
+        LOCAL :__s8_len :f64
+        STORE
+        LOCAL :__s8_len
+        LOCAL :__s7_z_sum
+        BINARY :div
+        CALL :Helper_checksum_f64
+        LOCAL :__s8_len
+        LOCAL :__s7_y_sum
+        BINARY :div
+        CALL :Helper_checksum_f64
+        LOCAL :__s8_len
+        LOCAL :__s7_x_sum
+        BINARY :div
+        CALL :Helper_checksum_f64
+        BINARY :add
+        BINARY :add
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        BINARY :add
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    LOCAL :__s1_points
+    AS :ptr<void>
+    CALL :free
+ENDFUNC
+
+FUNC :CsvParse_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<CsvParseData>
+    LOCAL :__s0_data :ptr<CsvParseData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    RET
+ENDFUNC
+
+FUNC :CsvParse_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<CsvParseData>
+    LOCAL :__s0_data :ptr<CsvParseData>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        STORE
+    ENDIF
+ENDFUNC
+
+FUNC :CsvParse_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :CSV::Parse
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    PUSH 0
+    AS :ptr<Benchmark>
+    LOCAL :__s0_bench
+    BINARY :eq
+    IF
+      THEN
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Benchmark>
+        RET
+    ENDIF
+    SIZEOF :CsvParseData
+    PUSH 1
+    AS :u64
+    CALL :calloc
+    AS :ptr<CsvParseData>
+    LOCAL :__s1_data :ptr<CsvParseData>
+    STORE
+    PUSH 0
+    AS :ptr<CsvParseData>
+    LOCAL :__s1_data
+    BINARY :eq
+    IF
+      THEN
+        LOCAL :__s0_bench
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<Benchmark>
+        RET
+    ENDIF
+    LOCAL :__s1_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :CsvParse_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :CsvParse_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :CsvParse_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :CsvParse_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+

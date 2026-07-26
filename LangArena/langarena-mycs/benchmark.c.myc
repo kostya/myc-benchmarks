@@ -1,0 +1,1268 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+  INITIAL 0
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+  INITIAL 0
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+  INITIAL 0
+ENDGLOBAL
+
+FUNC :fflush
+  ARGS
+    TYPE :ptr<_IO_FILE>
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :printf
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :vaarg
+ENDFUNC
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :realloc
+  ARGS
+    TYPE :ptr<void>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :exit
+  ARGS
+    TYPE :i32
+ENDFUNC
+
+FUNC :strncpy
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+    TYPE :u64
+  RETURN
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :strcmp
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :strstr
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :strlen
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :u64
+ENDFUNC
+
+FUNC :usleep
+  ARGS
+    TYPE :u32
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :Helper_reset
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :tolower
+  ARGS
+    TYPE :i32
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :clock_gettime
+  ARGS
+    TYPE :i32
+    TYPE :ptr<timespec>
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :Benchmark_default_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    STACK :drop
+ENDFUNC
+
+FUNC :Benchmark_default_warmup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :warmup_iterations
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    LOCAL :__s0_warmup_iters :i64
+    STORE
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_warmup_iters
+    BINARY :eq
+    IF
+      THEN
+        PARAM 0
+        PARAM 0
+        DEREF
+        FIELD 8
+        INVOKE
+        LOCAL :__s0_warmup_iters
+        STORE
+        PUSH 0.2 :f64
+        LOCAL :__s0_warmup_iters
+        AS :f64
+        BINARY :mul
+        AS :i64
+        LOCAL :__s0_warmup_iters
+        STORE
+        PUSH 1
+        AS :i64
+        LOCAL :__s0_warmup_iters
+        BINARY :less
+        IF
+          THEN
+            PUSH 1
+            AS :i64
+            LOCAL :__s0_warmup_iters
+            STORE
+        ENDIF
+    ENDIF
+    PUSH 0 :i64
+    LOCAL :__s2_i :i64
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_warmup_iters
+        LOCAL :__s2_i
+        BINARY :less
+      BODY
+        LOCAL :__s2_i
+        AS :i32
+        PARAM 0
+        PARAM 0
+        DEREF
+        FIELD 4
+        INVOKE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s2_i
+        BINARY :add
+        LOCAL :__s2_i
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :Benchmark_default_run_all
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    PARAM 0
+    DEREF
+    FIELD 8
+    INVOKE
+    LOCAL :__s0_iters :i64
+    STORE
+    PUSH 0 :i64
+    LOCAL :__s0_i :i64
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_iters
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        AS :i32
+        PARAM 0
+        PARAM 0
+        DEREF
+        FIELD 4
+        INVOKE
+      STEP
+        PUSH 1 :i64
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :Benchmark_default_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 1
+    RET
+ENDFUNC
+
+FUNC :Benchmark_default_iterations
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :i64
+  BODY
+    PUSH 0
+    AS :i64
+    PARAM 0
+    DEREF
+    FIELD 2
+    BINARY :more
+    IF
+      THEN
+        PARAM 0
+        DEREF
+        FIELD 2
+        RET
+    ENDIF
+    PUSH :iterations
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    PARAM 0
+    DEREF
+    FIELD 2
+    STORE
+    PARAM 0
+    DEREF
+    FIELD 2
+    RET
+ENDFUNC
+
+FUNC :Benchmark_default_expected_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :i64
+  BODY
+    PUSH :checksum
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    RET
+ENDFUNC
+
+FUNC :Benchmark_default_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    STACK :drop
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    SIZEOF :Benchmark
+    CALL :malloc
+    AS :ptr<Benchmark>
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    PARAM 0
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 0
+    AS :i64
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :Benchmark_default_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :Benchmark_default_warmup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 6
+    STORE
+    ADDR :Benchmark_default_run_all
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 5
+    STORE
+    ADDR :Benchmark_default_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :Benchmark_default_iterations
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 8
+    STORE
+    ADDR :Benchmark_default_expected_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 9
+    STORE
+    ADDR :Benchmark_default_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
+FUNC :Benchmark_register
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :fn<ptr<Benchmark>>
+  BODY
+    GLOBAL :benchmark_factories_capacity
+    GLOBAL :benchmark_factories_count
+    BINARY :more_eq
+    IF
+      THEN
+        PUSH 0 :u64
+        GLOBAL :benchmark_factories_capacity
+        BINARY :not_eq
+        IF
+          THEN
+            PUSH 2
+            AS :u64
+            GLOBAL :benchmark_factories_capacity
+            BINARY :mul
+            LOCAL :__ternary_0 :u64
+            STORE
+          ELSE
+            PUSH 16
+            AS :u64
+            LOCAL :__ternary_0
+            STORE
+        ENDIF
+        LOCAL :__ternary_0
+        GLOBAL :benchmark_factories_capacity
+        STORE
+        GLOBAL :benchmark_factories_capacity
+        SIZEOF :BenchmarkFactory
+        BINARY :mul
+        GLOBAL :benchmark_factories
+        AS :ptr<void>
+        CALL :realloc
+        AS :ptr<BenchmarkFactory>
+        GLOBAL :benchmark_factories
+        STORE
+    ENDIF
+    PUSH 1
+    AS :u64
+    SIZEOF "flat<u8, 100>"
+    BINARY :sub
+    PARAM 0
+    GLOBAL :benchmark_factories_count
+    GLOBAL :benchmark_factories
+    BINARY :add
+    DEREF
+    FIELD 0
+    ADDR
+    AS :ptr<u8>
+    CALL :strncpy
+    STACK :drop
+    PUSH 0
+    AS :u8
+    PUSH 1
+    AS :u64
+    SIZEOF "flat<u8, 100>"
+    BINARY :sub
+    GLOBAL :benchmark_factories_count
+    GLOBAL :benchmark_factories
+    BINARY :add
+    DEREF
+    FIELD 0
+    ADDR
+    AS :ptr<u8>
+    BINARY :add
+    DEREF
+    STORE
+    PARAM 1
+    GLOBAL :benchmark_factories_count
+    GLOBAL :benchmark_factories
+    BINARY :add
+    DEREF
+    FIELD 1
+    STORE
+    PUSH 1 :u64
+    GLOBAL :benchmark_factories_count
+    BINARY :add
+    GLOBAL :benchmark_factories_count
+    STORE
+ENDFUNC
+
+FUNC :Benchmark_all
+  ARGS
+    TYPE :ptr<u8>
+  BODY
+    PUSH 0.0 :f64
+    LOCAL :__s0_summary_time :f64
+    STORE
+    PUSH 0
+    LOCAL :__s0_ok :i32
+    STORE
+    PUSH 0
+    LOCAL :__s0_fails :i32
+    STORE
+    PUSH 0 :u64
+    LOCAL :__s0_i :u64
+    STORE
+    LOOP
+      COND
+        GLOBAL :global_order_count
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        LOCAL :__s0_i
+        GLOBAL :global_order
+        BINARY :add
+        DEREF
+        LOCAL :__s1_bench_name :ptr<u8>
+        STORE
+        PUSH 0
+        AS :ptr<u8>
+        PARAM 0
+        BINARY :not_eq
+        LOCAL :__sc_and_5 :bool
+        STORE
+        LOCAL :__sc_and_5
+        IF
+          THEN
+            PUSH 0
+            AS :u64
+            PARAM 0
+            CALL :strlen
+            BINARY :more
+            LOCAL :__sc_and_5
+            STORE
+        ENDIF
+        LOCAL :__sc_and_5
+        IF
+          THEN
+            LOCAL :__s1_bench_name
+            LOCAL :__s2_haystack :ptr<u8>
+            STORE
+            PARAM 0
+            LOCAL :__s2_needle :ptr<u8>
+            STORE
+            PUSH 1
+            AS :u64
+            SIZEOF "flat<u8, 100>"
+            BINARY :sub
+            LOCAL :__s2_haystack
+            LOCAL :__s2_haystack_lower "flat<u8, 100>"
+            ADDR
+            AS :ptr<u8>
+            CALL :strncpy
+            STACK :drop
+            PUSH 0
+            AS :u8
+            PUSH 1
+            AS :u64
+            SIZEOF "flat<u8, 100>"
+            BINARY :sub
+            LOCAL :__s2_haystack_lower
+            ADDR
+            AS :ptr<u8>
+            BINARY :add
+            DEREF
+            STORE
+            PUSH 1
+            AS :u64
+            SIZEOF "flat<u8, 100>"
+            BINARY :sub
+            LOCAL :__s2_needle
+            LOCAL :__s2_needle_lower "flat<u8, 100>"
+            ADDR
+            AS :ptr<u8>
+            CALL :strncpy
+            STACK :drop
+            PUSH 0
+            AS :u8
+            PUSH 1
+            AS :u64
+            SIZEOF "flat<u8, 100>"
+            BINARY :sub
+            LOCAL :__s2_needle_lower
+            ADDR
+            AS :ptr<u8>
+            BINARY :add
+            DEREF
+            STORE
+            LOCAL :__s2_haystack_lower
+            ADDR
+            AS :ptr<u8>
+            LOCAL :__s2_p :ptr<u8>
+            STORE
+            LOOP
+              COND
+                PUSH 0 :u8
+                LOCAL :__s2_p
+                DEREF
+                BINARY :not_eq
+              BODY
+                LOCAL :__s2_p
+                DEREF
+                AS :i32
+                CALL :tolower
+                AS :u8
+                LOCAL :__s2_p
+                DEREF
+                STORE
+              STEP
+                PUSH 1 :u64
+                LOCAL :__s2_p
+                BINARY :add
+                LOCAL :__s2_p
+                STORE
+            ENDLOOP
+            LOCAL :__s2_needle_lower
+            ADDR
+            AS :ptr<u8>
+            LOCAL :__s3_p :ptr<u8>
+            STORE
+            LOOP
+              COND
+                PUSH 0 :u8
+                LOCAL :__s3_p
+                DEREF
+                BINARY :not_eq
+              BODY
+                LOCAL :__s3_p
+                DEREF
+                AS :i32
+                CALL :tolower
+                AS :u8
+                LOCAL :__s3_p
+                DEREF
+                STORE
+              STEP
+                PUSH 1 :u64
+                LOCAL :__s3_p
+                BINARY :add
+                LOCAL :__s3_p
+                STORE
+            ENDLOOP
+            PUSH 0
+            AS :ptr<void>
+            AS :u64
+            LOCAL :__s2_needle_lower
+            ADDR
+            AS :ptr<u8>
+            LOCAL :__s2_haystack_lower
+            ADDR
+            AS :ptr<u8>
+            CALL :strstr
+            AS :u64
+            BINARY :eq
+            IF
+              THEN
+                NEXT
+            ENDIF
+        ENDIF
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<BenchmarkFactory>
+        LOCAL :__s5_factory :ptr<BenchmarkFactory>
+        STORE
+        PUSH 0 :u64
+        LOCAL :__s5_j :u64
+        STORE
+        LOOP
+          COND
+            GLOBAL :benchmark_factories_count
+            LOCAL :__s5_j
+            BINARY :less
+          BODY
+            PUSH 0
+            LOCAL :__s1_bench_name
+            LOCAL :__s5_j
+            GLOBAL :benchmark_factories
+            BINARY :add
+            DEREF
+            FIELD 0
+            ADDR
+            AS :ptr<u8>
+            CALL :strcmp
+            BINARY :eq
+            IF
+              THEN
+                LOCAL :__s5_j
+                GLOBAL :benchmark_factories
+                BINARY :add
+                DEREF
+                ADDR
+                LOCAL :__s5_factory
+                STORE
+                BREAK
+            ENDIF
+          STEP
+            PUSH 1 :u64
+            LOCAL :__s5_j
+            BINARY :add
+            LOCAL :__s5_j
+            STORE
+        ENDLOOP
+        PUSH 0
+        AS :ptr<BenchmarkFactory>
+        LOCAL :__s5_factory
+        BINARY :eq
+        IF
+          THEN
+            LOCAL :__s1_bench_name
+            PUSH "Warning: Benchmark '%s' defined in config but not found in code\n"
+            CALL :printf 1
+            STACK :drop
+            NEXT
+        ENDIF
+        LOCAL :__s1_bench_name
+        PUSH "%s: "
+        CALL :printf 1
+        STACK :drop
+        GLOBAL :stdout
+        CALL :fflush
+        STACK :drop
+        LOCAL :__s5_factory
+        DEREF
+        FIELD 1
+        INVOKE
+        LOCAL :__s8_bench :ptr<Benchmark>
+        STORE
+        CALL :Helper_reset
+        LOCAL :__s8_bench
+        LOCAL :__s8_bench
+        DEREF
+        FIELD 3
+        INVOKE
+        LOCAL :__s8_bench
+        LOCAL :__s8_bench
+        DEREF
+        FIELD 6
+        INVOKE
+        CALL :Helper_reset
+        LOCAL :__s0_start :timespec
+        ADDR
+        PUSH 1
+        CALL :clock_gettime
+        STACK :drop
+        LOCAL :__s8_bench
+        LOCAL :__s8_bench
+        DEREF
+        FIELD 5
+        INVOKE
+        LOCAL :__s0_end :timespec
+        ADDR
+        PUSH 1
+        CALL :clock_gettime
+        STACK :drop
+        PUSH 1.0e-9 :f64
+        LOCAL :__s0_start
+        FIELD 1
+        LOCAL :__s0_end
+        FIELD 1
+        BINARY :sub
+        AS :f64
+        BINARY :mul
+        LOCAL :__s0_start
+        FIELD 0
+        LOCAL :__s0_end
+        FIELD 0
+        BINARY :sub
+        AS :f64
+        BINARY :add
+        LOCAL :__s8_duration :f64
+        STORE
+        LOCAL :__s8_duration
+        LOCAL :__s0_summary_time
+        BINARY :add
+        LOCAL :__s0_summary_time
+        STORE
+        LOCAL :__s8_bench
+        LOCAL :__s8_bench
+        DEREF
+        FIELD 7
+        INVOKE
+        LOCAL :__s8_actual_checksum :u32
+        STORE
+        LOCAL :__s8_bench
+        LOCAL :__s8_bench
+        DEREF
+        FIELD 9
+        INVOKE
+        AS :u32
+        LOCAL :__s8_expected_checksum :u32
+        STORE
+        LOCAL :__s8_expected_checksum
+        LOCAL :__s8_actual_checksum
+        BINARY :eq
+        IF
+          THEN
+            PUSH "OK "
+            CALL :printf
+            STACK :drop
+            PUSH 1 :i32
+            LOCAL :__s0_ok
+            BINARY :add
+            LOCAL :__s0_ok
+            STORE
+          ELSE
+            LOCAL :__s8_expected_checksum
+            AS :u32
+            LOCAL :__s8_actual_checksum
+            PUSH "ERR[actual=%u, expected=%u] "
+            CALL :printf 2
+            STACK :drop
+            PUSH 1 :i32
+            LOCAL :__s0_fails
+            BINARY :add
+            LOCAL :__s0_fails
+            STORE
+        ENDIF
+        LOCAL :__s8_duration
+        PUSH "in %.3fs\n"
+        CALL :printf 1
+        STACK :drop
+        LOCAL :__s8_bench
+        LOCAL :__s8_bench
+        DEREF
+        FIELD 10
+        INVOKE
+        LOCAL :__s8_bench
+        DEREF
+        FIELD 11
+        CALL :free
+        LOCAL :__s8_bench
+        AS :ptr<void>
+        CALL :free
+        PUSH 1000
+        AS :u32
+        CALL :usleep
+        STACK :drop
+      STEP
+        PUSH 1 :u64
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    LOCAL :__s0_fails
+    LOCAL :__s0_ok
+    BINARY :add
+    BINARY :more
+    IF
+      THEN
+        LOCAL :__s0_fails
+        LOCAL :__s0_ok
+        LOCAL :__s0_fails
+        LOCAL :__s0_ok
+        BINARY :add
+        LOCAL :__s0_summary_time
+        PUSH "Summary: %.4fs, %d, %d, %d\n"
+        CALL :printf 4
+        STACK :drop
+    ENDIF
+    PUSH 0
+    LOCAL :__s0_fails
+    BINARY :more
+    IF
+      THEN
+        PUSH 1
+        CALL :exit
+    ENDIF
+ENDFUNC
+

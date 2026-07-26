@@ -1,0 +1,2079 @@
+STRUCT :__fsid_t
+  TYPE "flat<i32, 2>"
+ENDSTRUCT
+
+STRUCT :__mbstate_t
+  TYPE :i32
+  TYPE :__inline_type_1
+ENDSTRUCT
+
+STRUCT :_G_fpos_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_G_fpos64_t
+  TYPE :i64
+  TYPE :__mbstate_t
+ENDSTRUCT
+
+STRUCT :_IO_FILE
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :ptr<_IO_marker>
+  TYPE :ptr<_IO_FILE>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :u16
+  TYPE :i8
+  TYPE "flat<u8, 1>"
+  TYPE :ptr<void>
+  TYPE :i64
+  TYPE :ptr<_IO_codecvt>
+  TYPE :ptr<_IO_wide_data>
+  TYPE :ptr<_IO_FILE>
+  TYPE :ptr<void>
+  TYPE :u64
+  TYPE :i32
+  TYPE "flat<u8, 20>"
+ENDSTRUCT
+
+STRUCT :_IO_marker
+ENDSTRUCT
+
+STRUCT :_IO_codecvt
+ENDSTRUCT
+
+STRUCT :_IO_wide_data
+ENDSTRUCT
+
+STRUCT :_IO_cookie_io_functions_t
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<u8>, u64, i64>"
+  TYPE "fn<ptr<void>, ptr<i64>, i32, i32>"
+  TYPE "fn<ptr<void>, i32>"
+ENDSTRUCT
+
+STRUCT :div_t
+  TYPE :i32
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :ldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :lldiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :__sigset_t
+  TYPE "flat<u64, 16>"
+ENDSTRUCT
+
+STRUCT :timeval
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :timespec
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :fd_set
+  TYPE "flat<i64, 16>"
+ENDSTRUCT
+
+STRUCT :__inline_type_2
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_internal_list
+  TYPE :ptr<__pthread_internal_list>
+  TYPE :ptr<__pthread_internal_list>
+ENDSTRUCT
+
+STRUCT :__pthread_internal_slist
+  TYPE :ptr<__pthread_internal_slist>
+ENDSTRUCT
+
+STRUCT :__pthread_mutex_s
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i16
+  TYPE :i16
+  TYPE :__pthread_internal_list
+ENDSTRUCT
+
+STRUCT :__pthread_rwlock_arch_t
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i8
+  TYPE "flat<u8, 7>"
+  TYPE :u64
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :__pthread_cond_s
+  TYPE :__atomic_wide_counter
+  TYPE :__atomic_wide_counter
+  TYPE "flat<u32, 2>"
+  TYPE "flat<u32, 2>"
+  TYPE :u32
+  TYPE :u32
+  TYPE "flat<u32, 2>"
+ENDSTRUCT
+
+STRUCT :__once_flag
+  TYPE :i32
+ENDSTRUCT
+
+STRUCT :random_data
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :ptr<i32>
+ENDSTRUCT
+
+STRUCT :drand48_data
+  TYPE "flat<u16, 3>"
+  TYPE "flat<u16, 3>"
+  TYPE :u16
+  TYPE :u16
+  TYPE :u64
+ENDSTRUCT
+
+STRUCT :__locale_data
+ENDSTRUCT
+
+STRUCT :__locale_struct
+  TYPE "flat<ptr<__locale_data>, 13>"
+  TYPE :ptr<u16>
+  TYPE :ptr<i32>
+  TYPE :ptr<i32>
+  TYPE "flat<ptr<u8>, 13>"
+ENDSTRUCT
+
+STRUCT :tm
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i32
+  TYPE :i64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :itimerspec
+  TYPE :timespec
+  TYPE :timespec
+ENDSTRUCT
+
+STRUCT :sigevent
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_bucket
+  TYPE :ptr<UT_hash_handle>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_table
+  TYPE :ptr<UT_hash_bucket>
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<UT_hash_handle>
+  TYPE :i64
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :Benchmark
+  TYPE :ptr<u8>
+  TYPE :u32
+  TYPE :i64
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, i32, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE "fn<ptr<Benchmark>, u32>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, i64>"
+  TYPE "fn<ptr<Benchmark>, void>"
+  TYPE :ptr<void>
+ENDSTRUCT
+
+STRUCT :BenchmarkFactory
+  TYPE "flat<u8, 100>"
+  TYPE :fn<ptr<Benchmark>>
+ENDSTRUCT
+
+STRUCT :imaxdiv_t
+  TYPE :i64
+  TYPE :i64
+ENDSTRUCT
+
+STRUCT :pcre2_real_general_context_8
+ENDSTRUCT
+
+STRUCT :pcre2_real_compile_context_8
+ENDSTRUCT
+
+STRUCT :pcre2_real_match_context_8
+ENDSTRUCT
+
+STRUCT :pcre2_real_convert_context_8
+ENDSTRUCT
+
+STRUCT :pcre2_real_code_8
+ENDSTRUCT
+
+STRUCT :pcre2_real_match_data_8
+ENDSTRUCT
+
+STRUCT :pcre2_real_jit_stack_8
+ENDSTRUCT
+
+STRUCT :pcre2_callout_block_8
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<u64>
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<u8>
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :pcre2_callout_enumerate_block_8
+  TYPE :u32
+  TYPE :u64
+  TYPE :u64
+  TYPE :u32
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<u8>
+ENDSTRUCT
+
+STRUCT :pcre2_substitute_callout_block_8
+  TYPE :u32
+  TYPE :ptr<u8>
+  TYPE :ptr<u8>
+  TYPE "flat<u64, 2>"
+  TYPE :ptr<u64>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :pcre2_real_general_context_16
+ENDSTRUCT
+
+STRUCT :pcre2_real_compile_context_16
+ENDSTRUCT
+
+STRUCT :pcre2_real_match_context_16
+ENDSTRUCT
+
+STRUCT :pcre2_real_convert_context_16
+ENDSTRUCT
+
+STRUCT :pcre2_real_code_16
+ENDSTRUCT
+
+STRUCT :pcre2_real_match_data_16
+ENDSTRUCT
+
+STRUCT :pcre2_real_jit_stack_16
+ENDSTRUCT
+
+STRUCT :pcre2_callout_block_16
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<u64>
+  TYPE :ptr<u16>
+  TYPE :ptr<u16>
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<u16>
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :pcre2_callout_enumerate_block_16
+  TYPE :u32
+  TYPE :u64
+  TYPE :u64
+  TYPE :u32
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<u16>
+ENDSTRUCT
+
+STRUCT :pcre2_substitute_callout_block_16
+  TYPE :u32
+  TYPE :ptr<u16>
+  TYPE :ptr<u16>
+  TYPE "flat<u64, 2>"
+  TYPE :ptr<u64>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :pcre2_real_general_context_32
+ENDSTRUCT
+
+STRUCT :pcre2_real_compile_context_32
+ENDSTRUCT
+
+STRUCT :pcre2_real_match_context_32
+ENDSTRUCT
+
+STRUCT :pcre2_real_convert_context_32
+ENDSTRUCT
+
+STRUCT :pcre2_real_code_32
+ENDSTRUCT
+
+STRUCT :pcre2_real_match_data_32
+ENDSTRUCT
+
+STRUCT :pcre2_real_jit_stack_32
+ENDSTRUCT
+
+STRUCT :pcre2_callout_block_32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :u32
+  TYPE :ptr<u64>
+  TYPE :ptr<u32>
+  TYPE :ptr<u32>
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<u32>
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :pcre2_callout_enumerate_block_32
+  TYPE :u32
+  TYPE :u64
+  TYPE :u64
+  TYPE :u32
+  TYPE :u64
+  TYPE :u64
+  TYPE :ptr<u32>
+ENDSTRUCT
+
+STRUCT :pcre2_substitute_callout_block_32
+  TYPE :u32
+  TYPE :ptr<u32>
+  TYPE :ptr<u32>
+  TYPE "flat<u64, 2>"
+  TYPE :ptr<u64>
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :LogParserData
+  TYPE :i32
+  TYPE :ptr<u8>
+  TYPE :u64
+  TYPE :u32
+  TYPE "flat<ptr<pcre2_real_code_8>, 13>"
+  TYPE "flat<ptr<pcre2_real_match_data_8>, 13>"
+ENDSTRUCT
+
+ENUM :__inline_type_1
+  TAG
+    SKIP
+  VARIANT :__wch
+    TYPE :u32
+  VARIANT :__wchb
+    TYPE "flat<u8, 4>"
+ENDENUM
+
+ENUM :__atomic_wide_counter
+  TAG
+    SKIP
+  VARIANT :__value64
+    TYPE :u64
+  VARIANT :__value32
+    TYPE :__inline_type_2
+ENDENUM
+
+ENUM :pthread_mutexattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_condattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+ENUM :pthread_attr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_mutex_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_mutex_s
+  VARIANT :__size
+    TYPE "flat<u8, 40>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_cond_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_cond_s
+  VARIANT :__size
+    TYPE "flat<u8, 48>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlock_t
+  TAG
+    SKIP
+  VARIANT :__data
+    TYPE :__pthread_rwlock_arch_t
+  VARIANT :__size
+    TYPE "flat<u8, 56>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_rwlockattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 8>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrier_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 32>"
+  VARIANT :__align
+    TYPE :i64
+ENDENUM
+
+ENUM :pthread_barrierattr_t
+  TAG
+    SKIP
+  VARIANT :__size
+    TYPE "flat<u8, 4>"
+  VARIANT :__align
+    TYPE :i32
+ENDENUM
+
+GLOBAL :stdin
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stdout
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :stderr
+  TYPE :ptr<_IO_FILE>
+ENDGLOBAL
+
+GLOBAL :__environ
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :optarg
+  TYPE :ptr<u8>
+ENDGLOBAL
+
+GLOBAL :optind
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :opterr
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :optopt
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :global_order
+  TYPE :ptr<ptr<u8>>
+ENDGLOBAL
+
+GLOBAL :global_order_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :signgam
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :__daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :__timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :tzname
+  TYPE "flat<ptr<u8>, 2>"
+ENDGLOBAL
+
+GLOBAL :daylight
+  TYPE :i32
+ENDGLOBAL
+
+GLOBAL :timezone
+  TYPE :i64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories
+  TYPE :ptr<BenchmarkFactory>
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_count
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :benchmark_factories_capacity
+  TYPE :u64
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_PATTERN_NAMES
+  TYPE "flat<ptr<u8>, 13>"
+  INITIAL :errors :bots :suspicious :ips :api_calls :post_requests :auth_attempts :methods :emails :passwords :tokens :sessions :peak_hours
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_PATTERNS
+  TYPE "flat<ptr<u8>, 13>"
+  INITIAL " [5][0-9]{2} | [4][0-9]{2} " :(?i)bot|crawler|scanner|spider|indexing|crawl|robot|spider "(?i)etc/passwd|wp-admin|\\.\\./" "\\d+\\.\\d+\\.\\d+\\.35" "/api/[^ \" ]+" "POST [^ ]* HTTP" :(?i)/login|/signin :(?i)get|post|put "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}" "password=[^&\\s\"]+" "token=[^&\\s\"]+|api[_-]?key=[^&\\s\"]+" "session[_-]?id=[^&\\s\"]+" "\\[\\d+/\\w+/\\d+:1[3-7]:\\d+:\\d+ [+\\-]\\d+\\]"
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_IPS
+  TYPE "flat<ptr<u8>, 255>"
+  INITIAL 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_METHODS
+  TYPE "flat<ptr<u8>, 4>"
+  INITIAL :GET :POST :PUT :DELETE
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_PATHS
+  TYPE "flat<ptr<u8>, 6>"
+  INITIAL :/index.html :/api/users :/admin :/images/logo.png :/etc/passwd :/wp-admin/setup.php
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_STATUSES
+  TYPE "flat<i32, 11>"
+  INITIAL 200 201 301 302 400 401 403 404 500 502 503
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_AGENTS
+  TYPE "flat<ptr<u8>, 4>"
+  INITIAL :Mozilla/5.0 :Googlebot/2.1 :curl/7.68.0 :scanner/2.0
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_USERS
+  TYPE "flat<ptr<u8>, 8>"
+  INITIAL :john :jane :alex :sarah :mike :anna :david :elena
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :static_log_parser_c_DOMAINS
+  TYPE "flat<ptr<u8>, 6>"
+  INITIAL :example.com :gmail.com :yahoo.com :hotmail.com :company.org :mail.ru
+  PRIVATE
+ENDGLOBAL
+
+GLOBAL :init_ips_initialized
+  TYPE :i32
+  INITIAL 0
+  PRIVATE
+ENDGLOBAL
+
+FUNC :sprintf
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :vaarg
+ENDFUNC
+
+FUNC :snprintf
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :u64
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :vaarg
+ENDFUNC
+
+FUNC :malloc
+  ARGS
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :calloc
+  ARGS
+    TYPE :u64
+    TYPE :u64
+  RETURN
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :free
+  ARGS
+    TYPE :ptr<void>
+ENDFUNC
+
+FUNC :strcat
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<u8>
+ENDFUNC
+
+FUNC :Helper_config_i64
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :i64
+ENDFUNC
+
+FUNC :Benchmark_create
+  ARGS
+    TYPE :ptr<u8>
+  RETURN
+    TYPE :ptr<Benchmark>
+ENDFUNC
+
+FUNC :pcre2_compile_8
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :u64
+    TYPE :u32
+    TYPE :ptr<i32>
+    TYPE :ptr<u64>
+    TYPE :ptr<pcre2_real_compile_context_8>
+  RETURN
+    TYPE :ptr<pcre2_real_code_8>
+ENDFUNC
+
+FUNC :pcre2_code_free_8
+  ARGS
+    TYPE :ptr<pcre2_real_code_8>
+ENDFUNC
+
+FUNC :pcre2_match_data_create_from_pattern_8
+  ARGS
+    TYPE :ptr<pcre2_real_code_8>
+    TYPE :ptr<pcre2_real_general_context_8>
+  RETURN
+    TYPE :ptr<pcre2_real_match_data_8>
+ENDFUNC
+
+FUNC :pcre2_match_data_free_8
+  ARGS
+    TYPE :ptr<pcre2_real_match_data_8>
+ENDFUNC
+
+FUNC :pcre2_get_ovector_pointer_8
+  ARGS
+    TYPE :ptr<pcre2_real_match_data_8>
+  RETURN
+    TYPE :ptr<u64>
+ENDFUNC
+
+FUNC :pcre2_jit_compile_8
+  ARGS
+    TYPE :ptr<pcre2_real_code_8>
+    TYPE :u32
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :pcre2_jit_match_8
+  ARGS
+    TYPE :ptr<pcre2_real_code_8>
+    TYPE :ptr<u8>
+    TYPE :u64
+    TYPE :u64
+    TYPE :u32
+    TYPE :ptr<pcre2_real_match_data_8>
+    TYPE :ptr<pcre2_real_match_context_8>
+  RETURN
+    TYPE :i32
+ENDFUNC
+
+FUNC :static_fn_log_parser_c_init_ips
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    GLOBAL :init_ips_initialized
+    BINARY :not_eq
+    IF
+      THEN
+        RET
+    ENDIF
+    PUSH 0
+    LOCAL :__s1_i :i32
+    STORE
+    LOOP
+      COND
+        PUSH 255
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        PUSH 16
+        AS :u64
+        CALL :malloc
+        AS :ptr<u8>
+        LOCAL :__s2_ip :ptr<u8>
+        STORE
+        PUSH 1
+        LOCAL :__s1_i
+        BINARY :add
+        PUSH :192.168.1.%d
+        PUSH 16
+        AS :u64
+        LOCAL :__s2_ip
+        CALL :snprintf 1
+        STACK :drop
+        LOCAL :__s2_ip
+        LOCAL :__s1_i
+        AS :u64
+        GLOBAL :static_log_parser_c_IPS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    PUSH 1
+    GLOBAL :init_ips_initialized
+    STORE
+ENDFUNC
+
+FUNC :static_fn_log_parser_c_generate_log_line
+  ARGS
+    TYPE :ptr<u8>
+    TYPE :ptr<u64>
+    TYPE :i32
+  ATTRIBUTES
+    ATTR :private
+  BODY
+    PUSH 0
+    PUSH 3
+    PARAM 2
+    BINARY :rem
+    BINARY :eq
+    IF
+      THEN
+        PUSH 4
+        PARAM 2
+        BINARY :rem
+        AS :u64
+        GLOBAL :static_log_parser_c_AGENTS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        PUSH 6
+        PARAM 2
+        BINARY :rem
+        AS :u64
+        GLOBAL :static_log_parser_c_DOMAINS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        PUSH 11
+        PARAM 2
+        BINARY :rem
+        AS :u64
+        GLOBAL :static_log_parser_c_STATUSES
+        ADDR
+        AS :ptr<i32>
+        BINARY :add
+        DEREF
+        PUSH 10000
+        PARAM 2
+        BINARY :rem
+        PUSH 6
+        PARAM 2
+        BINARY :rem
+        AS :u64
+        GLOBAL :static_log_parser_c_DOMAINS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        PUSH 100
+        PARAM 2
+        BINARY :rem
+        PUSH 8
+        PARAM 2
+        BINARY :rem
+        AS :u64
+        GLOBAL :static_log_parser_c_USERS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        PUSH 4
+        PARAM 2
+        BINARY :rem
+        AS :u64
+        GLOBAL :static_log_parser_c_METHODS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        PUSH 60
+        PARAM 2
+        BINARY :rem
+        PUSH 31
+        PARAM 2
+        BINARY :rem
+        PUSH 255
+        PARAM 2
+        BINARY :rem
+        AS :u64
+        GLOBAL :static_log_parser_c_IPS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        PUSH "%s - - [%d/Oct/2023:%d:55:36 +0000] \"%s /login?email=%s%d@%s&password=secret%d HTTP/1.1\" %d 2326 \"http://%s\" \"%s\"\n"
+        PARAM 1
+        DEREF
+        PARAM 0
+        BINARY :add
+        CALL :sprintf 11
+        AS :u64
+        PARAM 1
+        DEREF
+        BINARY :add
+        PARAM 1
+        DEREF
+        STORE
+      ELSE
+        PUSH 0
+        PUSH 5
+        PARAM 2
+        BINARY :rem
+        BINARY :eq
+        IF
+          THEN
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            PUSH 0 :u8
+            CREATE "flat<u8, 200>"
+            LOCAL :__s3_token "flat<u8, 200>"
+            STORE
+            PUSH 0
+            LOCAL :__s3_j :i32
+            STORE
+            LOOP
+              COND
+                PUSH 1
+                PUSH 3
+                PARAM 2
+                BINARY :rem
+                BINARY :add
+                LOCAL :__s3_j
+                BINARY :less
+              BODY
+                PUSH :abcdef123456
+                LOCAL :__s3_token
+                ADDR
+                AS :ptr<u8>
+                CALL :strcat
+                STACK :drop
+              STEP
+                PUSH 1 :i32
+                LOCAL :__s3_j
+                BINARY :add
+                LOCAL :__s3_j
+                STORE
+            ENDLOOP
+            PUSH 4
+            PARAM 2
+            BINARY :rem
+            AS :u64
+            GLOBAL :static_log_parser_c_AGENTS
+            ADDR
+            AS :ptr<ptr<u8>>
+            BINARY :add
+            DEREF
+            PUSH 6
+            PARAM 2
+            BINARY :rem
+            AS :u64
+            GLOBAL :static_log_parser_c_DOMAINS
+            ADDR
+            AS :ptr<ptr<u8>>
+            BINARY :add
+            DEREF
+            PUSH 11
+            PARAM 2
+            BINARY :rem
+            AS :u64
+            GLOBAL :static_log_parser_c_STATUSES
+            ADDR
+            AS :ptr<i32>
+            BINARY :add
+            DEREF
+            LOCAL :__s3_token
+            ADDR
+            AS :ptr<u8>
+            PUSH 4
+            PARAM 2
+            BINARY :rem
+            AS :u64
+            GLOBAL :static_log_parser_c_METHODS
+            ADDR
+            AS :ptr<ptr<u8>>
+            BINARY :add
+            DEREF
+            PUSH 60
+            PARAM 2
+            BINARY :rem
+            PUSH 31
+            PARAM 2
+            BINARY :rem
+            PUSH 255
+            PARAM 2
+            BINARY :rem
+            AS :u64
+            GLOBAL :static_log_parser_c_IPS
+            ADDR
+            AS :ptr<ptr<u8>>
+            BINARY :add
+            DEREF
+            PUSH "%s - - [%d/Oct/2023:%d:55:36 +0000] \"%s /api/data?token=%s HTTP/1.1\" %d 2326 \"http://%s\" \"%s\"\n"
+            PARAM 1
+            DEREF
+            PARAM 0
+            BINARY :add
+            CALL :sprintf 8
+            AS :u64
+            PARAM 1
+            DEREF
+            BINARY :add
+            PARAM 1
+            DEREF
+            STORE
+          ELSE
+            PUSH 0
+            PUSH 7
+            PARAM 2
+            BINARY :rem
+            BINARY :eq
+            IF
+              THEN
+                PUSH 4
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_AGENTS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH 6
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_DOMAINS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH 11
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_STATUSES
+                ADDR
+                AS :ptr<i32>
+                BINARY :add
+                DEREF
+                PUSH 12345
+                PARAM 2
+                BINARY :mul
+                PUSH 4
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_METHODS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH 60
+                PARAM 2
+                BINARY :rem
+                PUSH 31
+                PARAM 2
+                BINARY :rem
+                PUSH 255
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_IPS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH "%s - - [%d/Oct/2023:%d:55:36 +0000] \"%s /user/profile?session_id=sess_%x HTTP/1.1\" %d 2326 \"http://%s\" \"%s\"\n"
+                PARAM 1
+                DEREF
+                PARAM 0
+                BINARY :add
+                CALL :sprintf 8
+                AS :u64
+                PARAM 1
+                DEREF
+                BINARY :add
+                PARAM 1
+                DEREF
+                STORE
+              ELSE
+                PUSH 4
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_AGENTS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH 6
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_DOMAINS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH 11
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_STATUSES
+                ADDR
+                AS :ptr<i32>
+                BINARY :add
+                DEREF
+                PUSH 6
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_PATHS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH 4
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_METHODS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH 60
+                PARAM 2
+                BINARY :rem
+                PUSH 31
+                PARAM 2
+                BINARY :rem
+                PUSH 255
+                PARAM 2
+                BINARY :rem
+                AS :u64
+                GLOBAL :static_log_parser_c_IPS
+                ADDR
+                AS :ptr<ptr<u8>>
+                BINARY :add
+                DEREF
+                PUSH "%s - - [%d/Oct/2023:%d:55:36 +0000] \"%s %s HTTP/1.1\" %d 2326 \"http://%s\" \"%s\"\n"
+                PARAM 1
+                DEREF
+                PARAM 0
+                BINARY :add
+                CALL :sprintf 8
+                AS :u64
+                PARAM 1
+                DEREF
+                BINARY :add
+                PARAM 1
+                DEREF
+                STORE
+            ENDIF
+        ENDIF
+    ENDIF
+ENDFUNC
+
+FUNC :LogParser_prepare
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<LogParserData>
+    LOCAL :__s0_data :ptr<LogParserData>
+    STORE
+    CALL :static_fn_log_parser_c_init_ips
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    PUSH :lines_count
+    PARAM 0
+    DEREF
+    FIELD 0
+    CALL :Helper_config_i64
+    AS :i32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    STORE
+    PUSH 1
+    PUSH 200
+    LOCAL :__s0_data
+    DEREF
+    FIELD 0
+    BINARY :mul
+    BINARY :add
+    AS :u64
+    LOCAL :__s1_estimated_size :u64
+    STORE
+    LOCAL :__s1_estimated_size
+    CALL :malloc
+    AS :ptr<u8>
+    LOCAL :__s1_log_buf :ptr<u8>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s1_log_buf
+    BINARY :eq
+    IF
+      THEN
+        RET
+    ENDIF
+    PUSH 0 :u64
+    LOCAL :__s2_pos :u64
+    STORE
+    PUSH 0
+    LOCAL :__s2_i :i32
+    STORE
+    LOOP
+      COND
+        LOCAL :__s0_data
+        DEREF
+        FIELD 0
+        LOCAL :__s2_i
+        BINARY :less
+      BODY
+        LOCAL :__s2_i
+        LOCAL :__s2_pos
+        ADDR
+        LOCAL :__s1_log_buf
+        CALL :static_fn_log_parser_c_generate_log_line
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s2_i
+        BINARY :add
+        LOCAL :__s2_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    AS :u8
+    LOCAL :__s2_pos
+    LOCAL :__s1_log_buf
+    BINARY :add
+    DEREF
+    STORE
+    LOCAL :__s1_log_buf
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    STORE
+    LOCAL :__s2_pos
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    LOCAL :__s3_i :i32
+    STORE
+    LOOP
+      COND
+        PUSH 13
+        LOCAL :__s3_i
+        BINARY :less
+      BODY
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<pcre2_real_compile_context_8>
+        LOCAL :__s4_erroroffset :u64
+        ADDR
+        LOCAL :__s4_errornumber :i32
+        ADDR
+        PUSH 1073741824 :u32
+        PUSH 524288 :u32
+        BINARY :or
+        PUSH 0
+        AS :u64
+        UNARY :bnot
+        LOCAL :__s3_i
+        AS :u64
+        GLOBAL :static_log_parser_c_PATTERNS
+        ADDR
+        AS :ptr<ptr<u8>>
+        BINARY :add
+        DEREF
+        AS :ptr<u8>
+        CALL :pcre2_compile_8
+        LOCAL :__s3_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 4
+        ADDR
+        AS :ptr<ptr<pcre2_real_code_8>>
+        BINARY :add
+        DEREF
+        STORE
+        PUSH 0
+        AS :ptr<pcre2_real_code_8>
+        LOCAL :__s3_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 4
+        ADDR
+        AS :ptr<ptr<pcre2_real_code_8>>
+        BINARY :add
+        DEREF
+        BINARY :not_eq
+        IF
+          THEN
+            PUSH 1 :u32
+            LOCAL :__s3_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 4
+            ADDR
+            AS :ptr<ptr<pcre2_real_code_8>>
+            BINARY :add
+            DEREF
+            CALL :pcre2_jit_compile_8
+            STACK :drop
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<pcre2_real_general_context_8>
+            LOCAL :__s3_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 4
+            ADDR
+            AS :ptr<ptr<pcre2_real_code_8>>
+            BINARY :add
+            DEREF
+            CALL :pcre2_match_data_create_from_pattern_8
+            LOCAL :__s3_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 5
+            ADDR
+            AS :ptr<ptr<pcre2_real_match_data_8>>
+            BINARY :add
+            DEREF
+            STORE
+        ENDIF
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s3_i
+        BINARY :add
+        LOCAL :__s3_i
+        STORE
+    ENDLOOP
+ENDFUNC
+
+FUNC :LogParser_run
+  ARGS
+    TYPE :ptr<Benchmark>
+    TYPE :i32
+  BODY
+    PARAM 1
+    STACK :drop
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<LogParserData>
+    LOCAL :__s0_data :ptr<LogParserData>
+    STORE
+    SIZEOF "flat<i32, 13>"
+    PUSH 0 :u8
+    LOCAL :__s0_matches "flat<i32, 13>"
+    ADDR
+    CALL :memset
+    STACK :drop
+    GLOBAL :static_log_parser_c_PATTERN_NAMES
+    STACK :drop
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PUSH 13
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        PUSH 0
+        AS :ptr<pcre2_real_code_8>
+        LOCAL :__s0_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 4
+        ADDR
+        AS :ptr<ptr<pcre2_real_code_8>>
+        BINARY :add
+        DEREF
+        BINARY :eq
+        IF
+          THEN
+            NEXT
+        ENDIF
+        PUSH 0 :u64
+        LOCAL :__s2_start_offset :u64
+        STORE
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        AS :ptr<u8>
+        LOCAL :__s2_subject :ptr<u8>
+        STORE
+        LOCAL :__s0_data
+        DEREF
+        FIELD 2
+        LOCAL :__s2_subject_len :u64
+        STORE
+        LOOP
+          COND
+            PUSH 0
+            PUSH 1
+            BINARY :not_eq
+          BODY
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<pcre2_real_match_context_8>
+            LOCAL :__s0_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 5
+            ADDR
+            AS :ptr<ptr<pcre2_real_match_data_8>>
+            BINARY :add
+            DEREF
+            PUSH 0
+            AS :u32
+            LOCAL :__s2_start_offset
+            LOCAL :__s2_subject_len
+            LOCAL :__s2_subject
+            LOCAL :__s0_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 4
+            ADDR
+            AS :ptr<ptr<pcre2_real_code_8>>
+            BINARY :add
+            DEREF
+            CALL :pcre2_jit_match_8
+            LOCAL :__s3_rc :i32
+            STORE
+            PUSH 0
+            LOCAL :__s3_rc
+            BINARY :less
+            IF
+              THEN
+                BREAK
+            ENDIF
+            PUSH 1 :i32
+            LOCAL :__s0_i
+            AS :u64
+            LOCAL :__s0_matches
+            ADDR
+            AS :ptr<i32>
+            BINARY :add
+            DEREF
+            BINARY :add
+            LOCAL :__s0_i
+            AS :u64
+            LOCAL :__s0_matches
+            ADDR
+            AS :ptr<i32>
+            BINARY :add
+            DEREF
+            STORE
+            LOCAL :__s0_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 5
+            ADDR
+            AS :ptr<ptr<pcre2_real_match_data_8>>
+            BINARY :add
+            DEREF
+            CALL :pcre2_get_ovector_pointer_8
+            LOCAL :__s4_ovector :ptr<u64>
+            STORE
+            PUSH 1
+            AS :u64
+            LOCAL :__s4_ovector
+            BINARY :add
+            DEREF
+            LOCAL :__s2_start_offset
+            STORE
+            LOCAL :__s2_subject_len
+            LOCAL :__s2_start_offset
+            BINARY :more_eq
+            IF
+              THEN
+                BREAK
+            ENDIF
+        ENDLOOP
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    PUSH 0 :u32
+    LOCAL :__s5_total :u32
+    STORE
+    PUSH 0
+    LOCAL :__s5_i :i32
+    STORE
+    LOOP
+      COND
+        PUSH 13
+        LOCAL :__s5_i
+        BINARY :less
+      BODY
+        LOCAL :__s5_i
+        AS :u64
+        LOCAL :__s0_matches
+        ADDR
+        AS :ptr<i32>
+        BINARY :add
+        DEREF
+        AS :u32
+        LOCAL :__s5_total
+        BINARY :add
+        LOCAL :__s5_total
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s5_i
+        BINARY :add
+        LOCAL :__s5_i
+        STORE
+    ENDLOOP
+    LOCAL :__s5_total
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    BINARY :add
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    STORE
+ENDFUNC
+
+FUNC :LogParser_checksum
+  ARGS
+    TYPE :ptr<Benchmark>
+  RETURN
+    TYPE :u32
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<LogParserData>
+    LOCAL :__s0_data :ptr<LogParserData>
+    STORE
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    RET
+ENDFUNC
+
+FUNC :LogParser_cleanup
+  ARGS
+    TYPE :ptr<Benchmark>
+  BODY
+    PARAM 0
+    DEREF
+    FIELD 11
+    AS :ptr<LogParserData>
+    LOCAL :__s0_data :ptr<LogParserData>
+    STORE
+    PUSH 0
+    AS :ptr<u8>
+    LOCAL :__s0_data
+    DEREF
+    FIELD 1
+    BINARY :not_eq
+    IF
+      THEN
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        AS :ptr<void>
+        CALL :free
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<u8>
+        LOCAL :__s0_data
+        DEREF
+        FIELD 1
+        STORE
+    ENDIF
+    PUSH 0
+    LOCAL :__s1_i :i32
+    STORE
+    LOOP
+      COND
+        PUSH 13
+        LOCAL :__s1_i
+        BINARY :less
+      BODY
+        PUSH 0
+        AS :ptr<pcre2_real_code_8>
+        LOCAL :__s1_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 4
+        ADDR
+        AS :ptr<ptr<pcre2_real_code_8>>
+        BINARY :add
+        DEREF
+        BINARY :not_eq
+        IF
+          THEN
+            LOCAL :__s1_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 4
+            ADDR
+            AS :ptr<ptr<pcre2_real_code_8>>
+            BINARY :add
+            DEREF
+            CALL :pcre2_code_free_8
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<pcre2_real_code_8>
+            LOCAL :__s1_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 4
+            ADDR
+            AS :ptr<ptr<pcre2_real_code_8>>
+            BINARY :add
+            DEREF
+            STORE
+        ENDIF
+        PUSH 0
+        AS :ptr<pcre2_real_match_data_8>
+        LOCAL :__s1_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 5
+        ADDR
+        AS :ptr<ptr<pcre2_real_match_data_8>>
+        BINARY :add
+        DEREF
+        BINARY :not_eq
+        IF
+          THEN
+            LOCAL :__s1_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 5
+            ADDR
+            AS :ptr<ptr<pcre2_real_match_data_8>>
+            BINARY :add
+            DEREF
+            CALL :pcre2_match_data_free_8
+            PUSH 0
+            AS :ptr<void>
+            AS :ptr<pcre2_real_match_data_8>
+            LOCAL :__s1_i
+            AS :u64
+            LOCAL :__s0_data
+            DEREF
+            FIELD 5
+            ADDR
+            AS :ptr<ptr<pcre2_real_match_data_8>>
+            BINARY :add
+            DEREF
+            STORE
+        ENDIF
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s1_i
+        BINARY :add
+        LOCAL :__s1_i
+        STORE
+    ENDLOOP
+    PUSH 0
+    AS :u64
+    LOCAL :__s0_data
+    DEREF
+    FIELD 2
+    STORE
+    PUSH 0
+    AS :u32
+    LOCAL :__s0_data
+    DEREF
+    FIELD 3
+    STORE
+ENDFUNC
+
+FUNC :LogParser_create
+  RETURN
+    TYPE :ptr<Benchmark>
+  BODY
+    PUSH :Etc::LogParser
+    CALL :Benchmark_create
+    LOCAL :__s0_bench :ptr<Benchmark>
+    STORE
+    SIZEOF :LogParserData
+    PUSH 1
+    AS :u64
+    CALL :calloc
+    AS :ptr<LogParserData>
+    LOCAL :__s0_data :ptr<LogParserData>
+    STORE
+    PUSH 0
+    LOCAL :__s0_i :i32
+    STORE
+    LOOP
+      COND
+        PUSH 13
+        LOCAL :__s0_i
+        BINARY :less
+      BODY
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<pcre2_real_code_8>
+        LOCAL :__s0_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 4
+        ADDR
+        AS :ptr<ptr<pcre2_real_code_8>>
+        BINARY :add
+        DEREF
+        STORE
+        PUSH 0
+        AS :ptr<void>
+        AS :ptr<pcre2_real_match_data_8>
+        LOCAL :__s0_i
+        AS :u64
+        LOCAL :__s0_data
+        DEREF
+        FIELD 5
+        ADDR
+        AS :ptr<ptr<pcre2_real_match_data_8>>
+        BINARY :add
+        DEREF
+        STORE
+      STEP
+        PUSH 1 :i32
+        LOCAL :__s0_i
+        BINARY :add
+        LOCAL :__s0_i
+        STORE
+    ENDLOOP
+    LOCAL :__s0_data
+    AS :ptr<void>
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 11
+    STORE
+    ADDR :LogParser_prepare
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 3
+    STORE
+    ADDR :LogParser_run
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 4
+    STORE
+    ADDR :LogParser_checksum
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 7
+    STORE
+    ADDR :LogParser_cleanup
+    LOCAL :__s0_bench
+    DEREF
+    FIELD 10
+    STORE
+    LOCAL :__s0_bench
+    RET
+ENDFUNC
+
