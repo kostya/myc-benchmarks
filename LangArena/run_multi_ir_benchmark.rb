@@ -62,7 +62,7 @@ def compile_myc(backend, output, flag, build_dir)
     objs = []
     LLS.each do |ll|
       obj = "./target/multi-myc-objs/#{build_dir}/" + File.basename(ll) + ".o"
-      cmd = "myc-#{backend} o #{flags} #{ll} #{obj}"
+      cmd = "myc-#{backend} o #{flag} #{ll} #{obj}"
       run_cmd cmd
       objs << obj
     end
