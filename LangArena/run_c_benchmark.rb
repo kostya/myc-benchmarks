@@ -1,4 +1,4 @@
-require File.join(__dir__, 'shared_bench')
+require File.join(__dir__, 'shared')
 
 gen_h = {}
 compile_h = {}
