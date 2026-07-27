@@ -17,23 +17,23 @@ end
 MYCC =   [
   {
     "name" => "mycc(default, llvm)",
-    "opts" => ["--backend llvm", "./target/mycc_llvm_default"],
+    "opts" => ["--backend llvm", "./target/c_mycc_llvm_default"],
   },
   {
     "name" => "mycc(final, llvm)",
-    "opts" => ["--backend llvm --final", "./target/mycc_llvm_final"],
+    "opts" => ["--backend llvm --final", "./c_target/mycc_llvm_final"],
   },
   {
     "name" => "mycc(default, qbe)",
-    "opts" => ["--backend qbe", "./target/mycc_qbe_default"],
+    "opts" => ["--backend qbe", "./target/c_mycc_qbe_default"],
   },
   {
     "name" => "mycc(default, c, clang)",
-    "opts" => ["--backend c", "./target/mycc_c_default"],
+    "opts" => ["--backend c", "./target/c_mycc_c_default"],
   },
   {
     "name" => "mycc(final, c, clang)",
-    "opts" => ["--backend c --final", "./target/mycc_c_final"],
+    "opts" => ["--backend c --final", "./target/c_mycc_c_final"],
   },
 ]
 
@@ -149,7 +149,7 @@ puts "----------------------------- Run benchmark ------------------------------
 run_h = {}
 
 def run(binary)
-  c = "#{binary} #{ROOT}/../run.js"
+  c = "#{binary} ./run.js"
   res = `#{c}`
   line = res.split("\n").find { |l| l.include?("Summary") }
   if line && line.include?("50, 50, ") && line =~ /Summary:\s*(\d+\.\d+)s/
@@ -172,7 +172,7 @@ puts "----------------------------- Run finished -------------------------------
 
 def markdown_table(build_times, run_times)
   output = []
-  output << "| Compiler | Build time | Runtime |"
+  output << "| Compiler | Compile time | Runtime |"
   output << "|:-------|-------------:|-----:|"
 
   build_times.each do |compiler, time|
