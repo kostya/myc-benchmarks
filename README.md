@@ -28,7 +28,7 @@ cd LangArena; ruby gen_ll.rb; cd -
 
 Comparing pure compiler backends without С parsing overhead. Both MYC [LangArena/langarena-single-myc/langarena.myc](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-myc/langarena.myc) and LL [LangArena/langarena-single-ll/langarena.ll](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-ll/langarena.ll) represent the same program and both generated from the same C program (in ./LangArena/c folder) in O0 mode without any processing (by scripts `LangArena/gen_myc.rb` and `LangArena/gen_ll.rb`). This benchmark shows raw optimization and code generation skills for both engines.
 
-`Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)`, `myc 0.9.0-f237d9c, LLVM 20.1.2`
+`Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)` vs `myc 0.9.0-f237d9c LLVM 20.1.2`
 
 ```
 cd LangArena; ruby run_single_ir_benchmark.rb; cd -
