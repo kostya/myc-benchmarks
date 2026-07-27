@@ -133,7 +133,7 @@ puts "----------------------------- Run finished -------------------------------
 
 def markdown_table(build_times, run_times)
   output = []
-  output << "| Compiler | Build time | Runtime |"
+  output << "| Compiler | Compile time | Runtime |"
   output << "|:-------|-------------:|-----:|"
 
   build_times.each do |compiler, time|
