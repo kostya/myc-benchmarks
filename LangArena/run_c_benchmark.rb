@@ -1,6 +1,5 @@
 require File.join(__dir__, 'shared_bench')
 
-puts "----------------------------- Gen IR files -----------------------------------------------"
 gen_h = {}
 compile_h = {}
 output_h = {}
