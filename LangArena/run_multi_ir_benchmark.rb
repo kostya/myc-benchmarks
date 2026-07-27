@@ -60,7 +60,7 @@ def compile_myc(backend, output, flag, build_dir)
   touch_dir("./target/multi-myc-objs/#{build_dir}")
   measure do
     objs = []
-    LLS.each do |ll|
+    MYCS.each do |ll|
       obj = "./target/multi-myc-objs/#{build_dir}/" + File.basename(ll) + ".o"
       cmd = "myc-#{backend} o #{flag} #{ll} #{obj}"
       run_cmd cmd
