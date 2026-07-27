@@ -74,23 +74,23 @@ end
 OPTS = [
   {
     "name" => "myc-llvm(default)",
-    "opts" => ["llvm", "./binaries/multi_myc_llvm_default", "", "llvm-default"],
+    "opts" => ["llvm", "./target/multi_myc_llvm_default", "", "llvm-default"],
   },
   {
     "name" => "myc-llvm(final)",
-    "opts" => ["llvm", "./binaries/multi_myc_llvm_final", "--final", "llvm-final"],
+    "opts" => ["llvm", "./target/multi_myc_llvm_final", "--final", "llvm-final"],
   },
   {
     "name" => "myc-qbe(default)",
-    "opts" => ["qbe", "./binaries/multi_myc_qbe_default", "", "qbe-default"],
+    "opts" => ["qbe", "./target/multi_myc_qbe_default", "", "qbe-default"],
   },
   {
     "name" => "myc-c(default, clang)",
-    "opts" => ["c", "./binaries/multi_myc_c_default", "", "c-default"],
+    "opts" => ["c", "./target/multi_myc_c_default", "", "c-default"],
   },
   {
     "name" => "myc-c(final, clang)",
-    "opts" => ["c", "./binaries/multi_myc_c_final", "--final", "c-final"],
+    "opts" => ["c", "./target/multi_myc_c_final", "--final", "c-final"],
   },
 ]
 
