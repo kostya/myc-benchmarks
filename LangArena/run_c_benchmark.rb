@@ -1,88 +1,156 @@
-require File.join(__dir__, 'shared')
+require File.join(__dir__, 'shared_bench')
+
+puts "----------------------------- Gen IR files -----------------------------------------------"
+gen_h = {}
 compile_h = {}
 output_h = {}
 
-puts "----------------------------- Compile clang LL files -----------------------------------------------"
+puts "----------------------------- Compile Mycc c files -----------------------------------------------"
 
-def compile_clang_ll(flags, output)
+def compile_mycc(flag, output)
+  File.delete(output) rescue nil
   measure do
-    File.delete(output) rescue nil
-    cmd = "clang #{flags} langarena-single-ll/langarena.ll #{LINK_FLAGS} -o #{output}"
+    cmd = "CC=clang MYC_LINKER_FLAGS='#{LINK_FLAGS}' MYCC_INCLUDE='#{INCLUDES_STR_MYC}' mycc c #{flag} c/src/*.c c/main.c -o #{output}"
     run_cmd cmd
   end
 end
 
-CLANG_OPTS =   [
+MYCC =   [
   {
-    "name" => "clang(-O3, ll)",
-    "opts" => ["-O3", "./target/single_clang_o3"],
+    "name" => "mycc(default, llvm)",
+    "opts" => ["--backend llvm", "./target/mycc_llvm_default"],
   },
   {
-    "name" => "clang(-O2, ll)",
-    "opts" => ["-O2", "./target/single_clang_o2"],
+    "name" => "mycc(final, llvm)",
+    "opts" => ["--backend llvm --final", "./target/mycc_llvm_final"],
   },
   {
-    "name" => "clang(-O1, ll)",
-    "opts" => ["-O1", "./target/single_clang_o1"],
+    "name" => "mycc(default, qbe)",
+    "opts" => ["--backend qbe", "./target/mycc_qbe_default"],
   },
   {
-    "name" => "clang(-O0, ll)",
-    "opts" => ["-O0", "./target/single_clang_o0"],
+    "name" => "mycc(default, c, clang)",
+    "opts" => ["--backend c", "./target/mycc_c_default"],
+  },
+  {
+    "name" => "mycc(final, c, clang)",
+    "opts" => ["--backend c --final", "./target/mycc_c_final"],
   },
 ]
 
-CLANG_OPTS.each do |h|
-  puts "Compile clang ll #{h["name"]}"
-  compile_h[h["name"]] = compile_clang_ll(*h["opts"])
+MYCC.each do |h|
+  puts "Compile mycc #{h["name"]}"
+  compile_h[h["name"]] = compile_mycc(*h["opts"])
   output_h[h["name"]] = h["opts"][1]
 end
 
+puts "----------------------------- Compile clang C files -----------------------------------------------"
 
-puts "----------------------------- Compile Myc IR files -----------------------------------------------"
-
-def compile_myc(backend, output, flag)
+def compile_clang_c(flags, output)
+  File.delete(output) rescue nil
   measure do
-    File.delete(output) rescue nil
-    cmd = "CC=clang MYC_LINKER_FLAGS='#{LINK_FLAGS}' myc-#{backend} langarena-single-myc/langarena.myc c #{output} #{flag}"
+    cmd = "clang #{flags} #{INCLUDES_STR_CC} c/src/*.c c/main.c #{LINK_FLAGS} -o #{output}"
     run_cmd cmd
   end
 end
 
-OPTS = [
+CLANG_OPTS_C =   [
   {
-    "name" => "myc-llvm(default)",
-    "opts" => ["llvm", "./target/single_myc_llvm_default", ""],
+    "name" => "clang(-O3, c)",
+    "opts" => ["-O3", "./target/c_clang_o3"],
   },
   {
-    "name" => "myc-llvm(final)",
-    "opts" => ["llvm", "./target/single_myc_llvm_final", "--final"],
+    "name" => "clang(-O2, c)",
+    "opts" => ["-O2", "./target/c_clang_o2"],
   },
   {
-    "name" => "myc-qbe(default)",
-    "opts" => ["qbe", "./target/single_myc_qbe_default", ""],
+    "name" => "clang(-O1, c)",
+    "opts" => ["-O1", "./target/c_clang_o1"],
   },
   {
-    "name" => "myc-c(default, clang)",
-    "opts" => ["c", "./target/single_myc_c_default", ""],
-  },
-  {
-    "name" => "myc-c(final, clang)",
-    "opts" => ["c", "./target/single_myc_c_final", "--final"],
+    "name" => "clang(-O0, c)",
+    "opts" => ["-O0", "./target/c_clang_o0"],
   },
 ]
 
-OPTS.each do |h|
-  puts "Compile MYC #{h["name"]}"
-  compile_h[h["name"]] = compile_myc(*h["opts"])
+CLANG_OPTS_C.each do |h|
+  puts "Compile clang c #{h["name"]}"
+  compile_h[h["name"]] = compile_clang_c(*h["opts"])
   output_h[h["name"]] = h["opts"][1]
 end
 
+puts "----------------------------- Compile gcc -----------------------------------------------"
+
+
+def compile_gcc_c(flags, output)
+  File.delete(output) rescue nil
+  measure do
+    cmd = "gcc #{flags} #{INCLUDES_STR_CC} c/src/*.c c/main.c #{LINK_FLAGS} -o #{output}"
+    run_cmd cmd
+  end
+end
+
+GCC_OPTS_C =   [
+  {
+    "name" => "gcc(-O3, c)",
+    "opts" => ["-O3", "./target/c_gcc_o3"],
+  },
+  {
+    "name" => "gcc(-O2, c)",
+    "opts" => ["-O2", "./target/c_gcc_o2"],
+  },
+  {
+    "name" => "gcc(-O1, c)",
+    "opts" => ["-O1", "./target/c_gcc_o1"],
+  },
+  {
+    "name" => "gcc(-O0, c)",
+    "opts" => ["-O0", "./target/c_gcc_o0"],
+  },
+]
+
+GCC_OPTS_C.each do |h|
+  puts "Compile gcc c #{h["name"]}"
+  compile_h[h["name"]] = compile_gcc_c(*h["opts"])
+  output_h[h["name"]] = h["opts"][1]
+end
+
+
+puts "----------------------------- Compile cproc -----------------------------------------------"
+
+
+def compile_cproc_c(output)
+  File.delete(output) rescue nil
+  measure do
+    cmd = "cproc #{INCLUDES_STR_CC} c/src/*.c c/main.c #{LINK_FLAGS} -o #{output}"
+    run_cmd cmd
+  end
+end
+
+CPROC_OPTS_C =   [
+  {
+    "name" => "cproc",
+    "opts" => ["./target/c_cproc"],
+  },
+]
+
+CPROC_OPTS_C.each do |h|
+  puts "Compile cproc c #{h["name"]}"
+  compile_h[h["name"]] = compile_cproc_c(*h["opts"])
+  output_h[h["name"]] = h["opts"][0]
+end
+
+puts "----------------------------- Compile finished -----------------------------------------------"
+
+p "-" * 100
+p gen_h
+p compile_h
 
 puts "----------------------------- Run benchmark -----------------------------------------------"
 run_h = {}
 
 def run(binary)
-  c = "#{binary} ./run.js"
+  c = "#{binary} #{ROOT}/../run.js"
   res = `#{c}`
   line = res.split("\n").find { |l| l.include?("Summary") }
   if line && line.include?("50, 50, ") && line =~ /Summary:\s*(\d+\.\d+)s/
@@ -95,30 +163,23 @@ def run(binary)
 end
 
 output_h.each do |name, output|
-  begin
-    puts "Run #{name} #{output}"
-    run_h[name] = run(output)
-  rescue => ex
-    p ex
-  end
+  puts "Run #{name} #{output}"
+  run_h[name] = run(output)
 end
 
-p compile_h
 p run_h
 
 puts "----------------------------- Run finished -----------------------------------------------"
 
 def markdown_table(build_times, run_times)
   output = []
-  output << "| Compiler | Compile time | Runtime |"
+  output << "| Compiler | Build time | Runtime |"
   output << "|:-------|-------------:|-----:|"
 
   build_times.each do |compiler, time|
-    if run_times[compiler]
-      ms = (time * 1000).round
-      run = "#{run_times[compiler].round(1)}s"
-      output << "| #{compiler} | #{ms}ms | #{run} |"
-    end
+    ms = (time * 1000).round
+    run = "#{run_times[compiler].round(1)}s"
+    output << "| #{compiler} | #{ms}ms | #{run} |"
   end
 
   output.join("\n")
