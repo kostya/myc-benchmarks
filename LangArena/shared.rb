@@ -23,3 +23,11 @@ def run_cmd(cmd)
 end
 
 FileUtils.mkdir_p("./binaries")
+
+def touch_dir(dir)
+  FileUtils.mkdir_p(dir)
+end
+
+def rm_dir(dir)
+  FileUtils.rm_rf(dir)
+end

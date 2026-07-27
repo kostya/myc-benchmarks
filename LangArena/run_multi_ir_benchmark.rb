@@ -4,10 +4,22 @@ output_h = {}
 
 puts "----------------------------- Compile clang LL files -----------------------------------------------"
 
-def compile_clang_ll(flags, output)
+rm_dir("./target/multi-ll-objs")
+touch_dir("./target/multi-ll-objs")
+
+LLS = Dir.glob("langarena-lls/**/*.ll")
+
+def compile_clang_ll(flags, output, build_dir)
+  touch_dir("./target/multi-ll-objs/#{build_dir}")
   measure do
-    File.delete(output) rescue nil
-    cmd = "clang #{flags} langarena-single-ll/langarena.ll #{LINK_FLAGS} -o #{output}"
+    objs = []
+    LLS.each do |ll|
+      obj = "./target/multi-ll-objs/#{build_dir}/" + File.basename(ll) + ".o"
+      cmd = "clang #{flags} #{ll} -c -o #{obj}"
+      run_cmd cmd
+      objs << obj
+    end
+    cmd = "clang #{LINK_FLAGS} #{objs.join(" ")} -o #{output}"
     run_cmd cmd
   end
 end
@@ -15,19 +27,19 @@ end
 CLANG_OPTS =   [
   {
     "name" => "clang(-O3, ll)",
-    "opts" => ["-O3", "./target/single_clang_o3"],
+    "opts" => ["-O3", "./target/multi_clang_o3", "o3"],
   },
   {
     "name" => "clang(-O2, ll)",
-    "opts" => ["-O2", "./target/single_clang_o2"],
+    "opts" => ["-O2", "./target/multi_clang_o2", "o2"],
   },
   {
     "name" => "clang(-O1, ll)",
-    "opts" => ["-O1", "./target/single_clang_o1"],
+    "opts" => ["-O1", "./target/multi_clang_o1", "o1"],
   },
   {
     "name" => "clang(-O0, ll)",
-    "opts" => ["-O0", "./target/single_clang_o0"],
+    "opts" => ["-O0", "./target/multi_clang_o0", "o0"],
   },
 ]
 
@@ -39,11 +51,22 @@ end
 
 
 puts "----------------------------- Compile Myc IR files -----------------------------------------------"
+rm_dir("./target/multi-myc-objs")
+touch_dir("./target/multi-myc-objs")
 
-def compile_myc(backend, output, flag)
+MYCS = Dir.glob("langarena-mycs/**/*.myc")
+
+def compile_myc(backend, output, flag, build_dir)
+  touch_dir("./target/multi-myc-objs/#{build_dir}")
   measure do
-    File.delete(output) rescue nil
-    cmd = "MYC_LINKER_FLAGS='#{LINK_FLAGS}' myc-#{backend} langarena-single-myc/langarena.myc c #{output} #{flag}"
+    objs = []
+    LLS.each do |ll|
+      obj = "./target/multi-myc-objs/#{build_dir}/" + File.basename(ll) + ".o"
+      cmd = "myc-#{backend} o #{flags} #{ll} #{obj}"
+      run_cmd cmd
+      objs << obj
+    end
+    cmd = "MYC_LINKER_FLAGS='#{LINK_FLAGS}' myc-#{backend} #{objs.join(" ")} c #{output}"
     run_cmd cmd
   end
 end
@@ -51,23 +74,23 @@ end
 OPTS = [
   {
     "name" => "myc-llvm(default)",
-    "opts" => ["llvm", "./target/single_myc_llvm_default", ""],
+    "opts" => ["llvm", "./binaries/multi_myc_llvm_default", "", "llvm-default"],
   },
   {
     "name" => "myc-llvm(final)",
-    "opts" => ["llvm", "./target/single_myc_llvm_final", "--final"],
+    "opts" => ["llvm", "./binaries/multi_myc_llvm_final", "--final", "llvm-final"],
   },
   {
     "name" => "myc-qbe(default)",
-    "opts" => ["qbe", "./target/single_myc_qbe_default", ""],
+    "opts" => ["qbe", "./binaries/multi_myc_qbe_default", "", "qbe-default"],
   },
   {
     "name" => "myc-c(default, clang)",
-    "opts" => ["c", "./target/single_myc_c_default", ""],
+    "opts" => ["c", "./binaries/multi_myc_c_default", "", "c-default"],
   },
   {
     "name" => "myc-c(final, clang)",
-    "opts" => ["c", "./target/single_myc_c_final", "--final"],
+    "opts" => ["c", "./binaries/multi_myc_c_final", "--final", "c-final"],
   },
 ]
 
