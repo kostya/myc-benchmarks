@@ -66,7 +66,7 @@ def compile_myc(backend, output, flag, build_dir)
       run_cmd cmd
       objs << obj
     end
-    cmd = "MYC_LINKER_FLAGS='#{LINK_FLAGS}' myc-#{backend} #{objs.join(" ")} c #{output}"
+    cmd = "CC=clang MYC_LINKER_FLAGS='#{LINK_FLAGS}' myc-#{backend} #{objs.join(" ")} c #{output}"
     run_cmd cmd
   end
 end

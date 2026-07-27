@@ -43,7 +43,7 @@ puts "----------------------------- Compile Myc IR files -----------------------
 def compile_myc(backend, output, flag)
   measure do
     File.delete(output) rescue nil
-    cmd = "MYC_LINKER_FLAGS='#{LINK_FLAGS}' myc-#{backend} langarena-single-myc/langarena.myc c #{output} #{flag}"
+    cmd = "CC=clang MYC_LINKER_FLAGS='#{LINK_FLAGS}' myc-#{backend} langarena-single-myc/langarena.myc c #{output} #{flag}"
     run_cmd cmd
   end
 end
