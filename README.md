@@ -110,7 +110,7 @@ cd brainfuck-compiler && ruby run.rb
 
 ## Benchmark 4: Examples
 
-This benchmark run programs from examples folder, simple benchmarks:
+This benchmark compare myc backens on simple micro benchmarks:
 
 ```
 cd examples && ruby run.rb
