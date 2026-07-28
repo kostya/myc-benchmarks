@@ -227,7 +227,7 @@ ENDSTRUCT
 
 STRUCT :AST_Node
   TYPE :i32
-  TYPE :__inline_type_3
+  TYPE :__inline_type_calculator_c_3
 ENDSTRUCT
 
 STRUCT :AST_BinaryOp
@@ -271,7 +271,7 @@ STRUCT :CalculatorInterpreterData
   TYPE :u32
 ENDSTRUCT
 
-ENUM :__inline_type_3
+ENUM :__inline_type_calculator_c_3
   TAG
     SKIP
   VARIANT :number_value
@@ -13946,7 +13946,7 @@ FUNC :static_fn_calculator_c_ast_node_new_number
     LOCAL :__s0_node
     DEREF
     FIELD 1
-    AS :__inline_type_3::number_value
+    AS :__inline_type_calculator_c_3::number_value
     FIELD 1
     STORE
     LOCAL :__s0_node
@@ -13976,7 +13976,7 @@ FUNC :static_fn_calculator_c_ast_node_new_variable
     LOCAL :__s0_node
     DEREF
     FIELD 1
-    AS :__inline_type_3::variable_name
+    AS :__inline_type_calculator_c_3::variable_name
     FIELD 1
     STORE
     LOCAL :__s0_node
@@ -14027,7 +14027,7 @@ FUNC :static_fn_calculator_c_ast_node_new_binary_op
     LOCAL :__s0_node
     DEREF
     FIELD 1
-    AS :__inline_type_3::binary_op
+    AS :__inline_type_calculator_c_3::binary_op
     FIELD 1
     STORE
     LOCAL :__s0_node
@@ -14073,7 +14073,7 @@ FUNC :static_fn_calculator_c_ast_node_new_assignment
     LOCAL :__s0_node
     DEREF
     FIELD 1
-    AS :__inline_type_3::assignment
+    AS :__inline_type_calculator_c_3::assignment
     FIELD 1
     STORE
     LOCAL :__s0_node
@@ -14126,7 +14126,7 @@ FUNC :static_fn_calculator_c_ast_node_free
     PARAM 0
     DEREF
     FIELD 1
-    AS :__inline_type_3::variable_name
+    AS :__inline_type_calculator_c_3::variable_name
     FIELD 1
     AS :ptr<void>
     CALL :free
@@ -14137,7 +14137,7 @@ FUNC :static_fn_calculator_c_ast_node_free
     PARAM 0
     DEREF
     FIELD 1
-    AS :__inline_type_3::binary_op
+    AS :__inline_type_calculator_c_3::binary_op
     FIELD 1
     BINARY :not_eq
     IF
@@ -14145,7 +14145,7 @@ FUNC :static_fn_calculator_c_ast_node_free
         PARAM 0
         DEREF
         FIELD 1
-        AS :__inline_type_3::binary_op
+        AS :__inline_type_calculator_c_3::binary_op
         FIELD 1
         DEREF
         FIELD 1
@@ -14153,7 +14153,7 @@ FUNC :static_fn_calculator_c_ast_node_free
         PARAM 0
         DEREF
         FIELD 1
-        AS :__inline_type_3::binary_op
+        AS :__inline_type_calculator_c_3::binary_op
         FIELD 1
         DEREF
         FIELD 2
@@ -14161,7 +14161,7 @@ FUNC :static_fn_calculator_c_ast_node_free
         PARAM 0
         DEREF
         FIELD 1
-        AS :__inline_type_3::binary_op
+        AS :__inline_type_calculator_c_3::binary_op
         FIELD 1
         AS :ptr<void>
         CALL :free
@@ -14173,7 +14173,7 @@ FUNC :static_fn_calculator_c_ast_node_free
     PARAM 0
     DEREF
     FIELD 1
-    AS :__inline_type_3::assignment
+    AS :__inline_type_calculator_c_3::assignment
     FIELD 1
     BINARY :not_eq
     IF
@@ -14181,7 +14181,7 @@ FUNC :static_fn_calculator_c_ast_node_free
         PARAM 0
         DEREF
         FIELD 1
-        AS :__inline_type_3::assignment
+        AS :__inline_type_calculator_c_3::assignment
         FIELD 1
         DEREF
         FIELD 0
@@ -14190,7 +14190,7 @@ FUNC :static_fn_calculator_c_ast_node_free
         PARAM 0
         DEREF
         FIELD 1
-        AS :__inline_type_3::assignment
+        AS :__inline_type_calculator_c_3::assignment
         FIELD 1
         DEREF
         FIELD 1
@@ -14198,7 +14198,7 @@ FUNC :static_fn_calculator_c_ast_node_free
         PARAM 0
         DEREF
         FIELD 1
-        AS :__inline_type_3::assignment
+        AS :__inline_type_calculator_c_3::assignment
         FIELD 1
         AS :ptr<void>
         CALL :free
@@ -15600,7 +15600,7 @@ FUNC :CalculatorAst_run
         LOCAL :__s5_last
         DEREF
         FIELD 1
-        AS :__inline_type_3::assignment
+        AS :__inline_type_calculator_c_3::assignment
         FIELD 1
         DEREF
         FIELD 0
@@ -20328,14 +20328,14 @@ FUNC :static_fn_calculator_c_calculator_interpreter_evaluate
     PARAM 0
     DEREF
     FIELD 1
-    AS :__inline_type_3::number_value
+    AS :__inline_type_calculator_c_3::number_value
     FIELD 1
     RET
     LABEL :__switch_12__case_1
     PARAM 0
     DEREF
     FIELD 1
-    AS :__inline_type_3::variable_name
+    AS :__inline_type_calculator_c_3::variable_name
     FIELD 1
     PARAM 1
     CALL :static_fn_calculator_c_calculator_interpreter_context_get
@@ -20363,7 +20363,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_evaluate
     PARAM 0
     DEREF
     FIELD 1
-    AS :__inline_type_3::binary_op
+    AS :__inline_type_calculator_c_3::binary_op
     FIELD 1
     LOCAL :__s3_binop :ptr<AST_BinaryOp>
     STORE
@@ -20457,7 +20457,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_evaluate
     PARAM 0
     DEREF
     FIELD 1
-    AS :__inline_type_3::assignment
+    AS :__inline_type_calculator_c_3::assignment
     FIELD 1
     LOCAL :__s10_assign :ptr<AST_Assignment>
     STORE

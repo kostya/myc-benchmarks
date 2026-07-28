@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_1
+  TYPE :__inline_type_log_parser_c_1
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_2
+STRUCT :__inline_type_log_parser_c_2
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -448,7 +448,7 @@ STRUCT :LogParserData
   TYPE "flat<ptr<pcre2_real_match_data_8>, 13>"
 ENDSTRUCT
 
-ENUM :__inline_type_1
+ENUM :__inline_type_log_parser_c_1
   TAG
     SKIP
   VARIANT :__wch
@@ -463,7 +463,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_2
+    TYPE :__inline_type_log_parser_c_2
 ENDENUM
 
 ENUM :pthread_mutexattr_t
