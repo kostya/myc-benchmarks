@@ -54,6 +54,8 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 
 4. myc-c - adds overhead by generating C code and compiling it through the full Clang stack, so it can't compete with the other two backends on compile time. It's primarily a fallback backend for portability. Runtime is respectable: 60.6s default, 53.3s final - within 2% of Clang -O3 when using clang as the final compiler.
 
+![plot](plot1.png)
+
 
 ## Benchmark2: LangArena C files with Myc,Clang,Gcc,Cproc.
 
