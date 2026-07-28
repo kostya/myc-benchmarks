@@ -40,69 +40,68 @@ colors = [
     '#8E44AD',
 ]
 
-fig, ax = plt.subplots(figsize=(8, 5), dpi=100)
+fig, ax = plt.subplots(figsize=(12, 8), dpi=100)
 fig.patch.set_facecolor('#1a1a2e')
 ax.set_facecolor('#1a1a2e')
 
 x_coords = [item[1] for item in data]
 y_coords = [item[2] for item in data]
-labels = [name.replace(', ll', '').replace(', clang', '') for name, _, _ in data]
+labels = [name.replace(', llvm', '').replace(', clang', '').replace(', c', '') for name, _, _ in data]
 
 for i, (x, y) in enumerate(zip(x_coords, y_coords)):
-    ax.scatter(x, y, c=colors[i], s=180, edgecolors='white', linewidth=0.8, zorder=5)
+    ax.scatter(x, y, c=colors[i], s=250, edgecolors='white', linewidth=1.2, zorder=5)
 
-ax.set_xlim(0, 4500)
-ax.set_ylim(0, 150)
+ax.set_xlim(0, 5500)
+ax.set_ylim(40, 150)
 
 ta.allocate(
     ax,
     x_coords, y_coords, labels,
     x_scatter=x_coords, y_scatter=y_coords,
-    textsize=9,
+    textsize=12,
     draw_lines=True,
     linecolor='gray',
-    linewidth=0.5,
-    max_distance=0.3,
+    linewidth=0.8,
+    max_distance=0.1,
     min_distance=0.05,
-    margin=0.02,
+    margin=0.03,
     fontfamily='monospace',
-    bbox=dict(boxstyle='round,pad=0.3', facecolor='#2d2d44', edgecolor='#555', alpha=0.9)
+    bbox=dict(boxstyle='round,pad=0.4', facecolor='#2d2d44', edgecolor='#555', alpha=0.9)
 )
 
 for text_obj in ax.texts:
     text_obj.set_color('white')
     text_obj.set_fontweight('bold')
 
-ax.set_xlabel('Compile time (ms)', color='white', fontsize=12)
-ax.set_ylabel('Runtime (seconds)', color='white', fontsize=12)
-ax.tick_params(colors='white')
+ax.set_xlabel('Compile time (ms)', color='white', fontsize=14)
+ax.set_ylabel('Runtime (seconds)', color='white', fontsize=14)
+ax.tick_params(colors='white', labelsize=11)
 ax.spines['bottom'].set_color('gray')
 ax.spines['left'].set_color('gray')
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.grid(True, alpha=0.15, color='white')
 
-ax.annotate('← faster compile', xy=(0.02, 0.02), xycoords='axes fraction', 
-            color='white', fontsize=10, alpha=0.7)
-ax.annotate('↓ faster runtime', xy=(0.02, 0.95), xycoords='axes fraction', 
-            color='white', fontsize=10, alpha=0.7)
-
 from matplotlib.lines import Line2D
 legend_elements = []
-legend_names = ["clang -O3", "clang -O2", "clang -O1", "clang -O0",
-                "myc-llvm(default)", "myc-llvm(final)",
-                "myc-qbe(default)",
-                "myc-c(default)", "myc-c(final)"]
+legend_names = [
+    "mycc(default, llvm)", "mycc(final, llvm)",
+    "mycc(default, qbe)", "mycc(default, c, clang)", "mycc(final, c, clang)",
+    "clang -O3", "clang -O2", "clang -O1", "clang -O0",
+    "gcc -O3", "gcc -O2", "gcc -O1", "gcc -O0",
+    "cproc"
+]
 for i, name in enumerate(legend_names):
     legend_elements.append(Line2D([0], [0], marker='o', color='w', markerfacecolor=colors[i],
-                                  markersize=10, label=name))
+                                  markersize=12, label=name))
 
+# Легенда в 2 колонки, чтобы поместилась
 ax.legend(handles=legend_elements, loc='upper right', facecolor='#2d2d44',
-          edgecolor='gray', labelcolor='white', fontsize=8, ncol=1)
+          edgecolor='gray', labelcolor='white', fontsize=9, ncol=2)
 
-ax.set_title('LangArena benchmark: pure IR compile, myc vs clang',
-             color='white', fontsize=14, fontweight='bold', pad=20)
+ax.set_title('LangArena C benchmark',
+             color='white', fontsize=16, fontweight='bold', pad=25)
 
 plt.tight_layout()
-plt.savefig('plot2.png', dpi=100, facecolor='#1a1a2e')
+plt.savefig('plot2.png', dpi=150, facecolor='#1a1a2e', bbox_inches='tight')
 plt.show()
