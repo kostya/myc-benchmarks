@@ -7,7 +7,9 @@ git clone https://github.com/kostya/myc-benchmarks.git
 cd myc-benchmarks
 ```
 
-# LangArena
+# LangArena Benchmark:
+
+[LangArena](https://github.com/kostya/LangArena) is a benchmark suite of 50 tests and 9,000 lines of non-trivial C code (json, base64, multithreaded matmul, neural net, compression, maze A*, bf interpreter, and others) with heavy macros like uthash. The `./c` directory contains 29 `.c` files (230KB total), which we'll use for comparison. This is not just a random benchmark - each of the 50 tests validates its output using checksums. A compiler can't "cheat" by deleting or skipping work.
 
 ### Fetch and Build deps
 ```
@@ -24,7 +26,7 @@ cd LangArena; ruby gen_myc.rb; cd -
 cd LangArena; ruby gen_ll.rb; cd -
 ```
 
-## Benchmark1: [LangArena](https://github.com/kostya/LangArena) single IR file Myc vs Clang.
+## Benchmark 1: LangArena single IR file Myc vs Clang.
 
 Compile LangArena C benchmark, from signle IR files (to remove parsing overhead). Both MYC [LangArena/langarena-single-myc/langarena.myc](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-myc/langarena.myc) and LL [LangArena/langarena-single-ll/langarena.ll](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-ll/langarena.ll) represent the same program and both generated from the same C program (in ./LangArena/c folder) in O0 mode without any processing (by scripts `LangArena/gen_myc.rb` and `LangArena/gen_ll.rb`). This benchmark shows raw optimization and code generation skills for both engines.
 
@@ -57,7 +59,7 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 ![plot](plot1.png)
 
 
-## Benchmark2: LangArena C files with Myc,Clang,Gcc,Cproc.
+## Benchmark 2: LangArena C files with Myc,Clang,Gcc,Cproc.
 
 This benchmark compiles the full LangArena C project (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one: `clang LangArena/c/src/*.c`. This reveals the parsing overhead each compiler adds on top of code generation.
 
