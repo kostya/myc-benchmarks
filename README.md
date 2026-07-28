@@ -48,6 +48,7 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 
 ![plot](plot1.png)
 
+This scatter plot shows the tradeoff between compile time and runtime. The ideal is the bottom-left corner: fast compiles, fast runtime. This is the Pareto frontier - you can't improve one without sacrificing the other. Myc-qbe(default) and myc-llvm(default) occupy a spot that even Go would respect. Measured on pure IR files - no parsing overhead, just optimization and code generation for both MycIR and LLVM-LL.
 
 ## Benchmark 2: LangArena C benchmark - Myc,Clang,Gcc,Cproc.
 
