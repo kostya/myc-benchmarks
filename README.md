@@ -61,7 +61,7 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 
 ## Benchmark 2: LangArena C files with Myc,Clang,Gcc,Cproc.
 
-This benchmark compiles the full LangArena C project (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one (`clang LangArena/c/src/*.c`), to remove the overhead of multiple command invocations.
+This benchmark compiles the C files in `LangArena/c` dir (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one (`clang LangArena/c/src/*.c`), to remove the overhead of multiple command invocations.
 
 `mycc 0.10.0-dev-4e16e50 c99-subset compiler (backend: unknown) (https://github.com/kostya/myc)`, `gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0`, `Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)`, `cproc master`
 
