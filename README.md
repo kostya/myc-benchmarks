@@ -108,3 +108,43 @@ cd brainfuck-compiler && ruby run.rb
 | myc | myc-c(final) | 486 | 1544ms | 641ms |
 
 
+## Benchmark 4: Examples
+
+This benchmark run programs from examples folder, simple benchmarks:
+
+```
+cd examples && ruby run.rb
+```
+
+| Benchmark | Backend | Compile | Run |
+|:----------|:-------:|--------:|----:|
+| mandel.myc | myc-llvm | 320ms | 721ms |
+| | myc-qbe | 499ms | 773ms |
+| | myc-c | 1320ms | 614ms |
+| | myc-llvm-final | 1111ms | 615ms |
+| | myc-qbe-final | 483ms | 775ms |
+| | myc-c-final | 1577ms | 637ms |
+| bf.myc | myc-llvm | 91ms | 1350ms |
+| | myc-qbe | 105ms | 2677ms |
+| | myc-c | 117ms | 1601ms |
+| | myc-llvm-final | 102ms | 1292ms |
+| | myc-qbe-final | 104ms | 2697ms |
+| | myc-c-final | 115ms | 1429ms |
+| loop.myc | myc-llvm | 85ms | 411ms |
+| | myc-qbe | 100ms | 369ms |
+| | myc-c | 101ms | 234ms |
+| | myc-llvm-final | 89ms | 327ms |
+| | myc-qbe-final | 98ms | 368ms |
+| | myc-c-final | 100ms | 247ms |
+| loop.c | myc-llvm | 231ms | 420ms |
+| | myc-qbe | 137ms | 368ms |
+| | myc-c | 146ms | 224ms |
+| | myc-llvm-final | 122ms | 403ms |
+| | myc-qbe-final | 132ms | 421ms |
+| | myc-c-final | 127ms | 423ms |
+| sieve.c | myc-llvm | 141ms | 229ms |
+| | myc-qbe | 144ms | 285ms |
+| | myc-c | 148ms | 237ms |
+| | myc-llvm-final | 134ms | 234ms |
+| | myc-qbe-final | 132ms | 235ms |
+| | myc-c-final | 132ms | 233ms |
