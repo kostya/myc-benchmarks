@@ -9,7 +9,7 @@ cd myc-benchmarks
 
 # LangArena Benchmark:
 
-[LangArena](https://github.com/kostya/LangArena) is a benchmark suite of 50 tests and 9,000 lines of non-trivial C code (json, base64, multithreaded matmul, neural net, compression, maze A*, bf interpreter, and others) with heavy macros like uthash. The `./c` directory contains 29 `.c` files (230KB total), which we'll use for comparison. This is not just a random benchmark - each of the 50 tests validates its output using checksums. A compiler can't "cheat" by deleting or skipping work.
+[LangArena](https://github.com/kostya/LangArena) is a benchmark suite of 50 tests and 9,000 lines of non-trivial C code (json, base64, multithreaded matmul, neural net, compression, maze A*, bf interpreter, and others) with heavy macros like uthash. The `./c` directory contains 29 `.c` files (230KB total), which we'll use for comparison. This is not just a random benchmark - it's a set of tasks close to production use. Each of the 50 tests validates its output using checksums. A compiler can't "cheat" by deleting or skipping work.
 
 ### Fetch and Build deps
 ```
