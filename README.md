@@ -84,4 +84,4 @@ cd LangArena; ruby run_c_benchmark.rb; cd -
 
 4. GCC has better O0->O3 scaling. 
 
-
+![plot](plot2.png)
