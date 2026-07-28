@@ -21,7 +21,7 @@ MYCC =   [
   },
   {
     "name" => "mycc(final, llvm)",
-    "opts" => ["--backend llvm --final", "./c_target/mycc_llvm_final"],
+    "opts" => ["--backend llvm --final", "./c_target/c_mycc_llvm_final"],
   },
   {
     "name" => "mycc(default, qbe)",
