@@ -28,7 +28,7 @@ cd LangArena; ruby gen_ll.rb; cd -
 
 ## Benchmark 1: LangArena single IR file Myc vs Clang.
 
-Compile LangArena C benchmark, from single IR files (to remove parsing overhead). Both MYC [LangArena/langarena-single-myc/langarena.myc](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-myc/langarena.myc) and LL [LangArena/langarena-single-ll/langarena.ll](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-ll/langarena.ll) represent the same program and both generated from the same 29 C files (in ./LangArena/c folder) in O0 mode without any processing (by scripts `LangArena/gen_myc.rb` and `LangArena/gen_ll.rb`). This benchmark shows raw optimization and code generation skills for both engines.
+Compile LangArena C benchmark, from single IR file (to remove parsing overhead). Both MYC [LangArena/langarena-single-myc/langarena.myc](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-myc/langarena.myc) and LL [LangArena/langarena-single-ll/langarena.ll](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-ll/langarena.ll) represent the same program and both generated from the same 29 C files (in ./LangArena/c folder) in O0 mode without any processing (by scripts `LangArena/gen_myc.rb` and `LangArena/gen_ll.rb`). This benchmark shows raw optimization and code generation skills for both engines.
 
 `Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)` vs `myc 0.10.0-dev-4e16e50 LLVM 20.1.2`
 
