@@ -88,7 +88,7 @@ for i, name in enumerate(legend_names):
 ax.legend(handles=legend_elements, loc='upper right', facecolor='#2d2d44',
           edgecolor='gray', labelcolor='white', fontsize=10, ncol=1)
 
-ax.set_title('LangArena benchmark: pure IR compile, myc vs clang',
+ax.set_title('LangArena benchmark: Pure IR Compilation - Myc vs Clang',
              color='white', fontsize=16, fontweight='bold', pad=25)
 
 plt.tight_layout()
