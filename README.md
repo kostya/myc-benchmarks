@@ -61,7 +61,7 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 
 ## Benchmark 2: LangArena C files with Myc,Clang,Gcc,Cproc.
 
-This benchmark compiles the full LangArena C project (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one: `clang LangArena/c/src/*.c`. This reveals the parsing overhead each compiler adds on top of code generation.
+This benchmark compiles the full LangArena C project (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one (`clang LangArena/c/src/*.c`), to remove the overhead of multiple command invocations.
 
 `mycc 0.10.0-dev-4e16e50 c99-subset compiler (backend: unknown) (https://github.com/kostya/myc)`, `gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0`, `Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)`, `cproc master`
 
@@ -86,7 +86,7 @@ cd LangArena; ruby run_c_benchmark.rb; cd -
 | gcc(-O0, c) | 1304ms | 134.9s |
 | cproc | 726ms | 72.8s |
 
-1. Parsing is the real bottleneck. Compare Clang -O0 on C (1605ms) vs Clang -O0 on LLVM IR (193ms). 88% of Clang's compile time is spent on parsing C and generating IR, not on optimization or codegen. Shocking O_o.
+1. Parsing is the real bottleneck for clang. Compare Clang -O0 on C (1605ms) vs Clang -O0 on LLVM IR (193ms). 88% of Clang's compile time is spent on parsing C and generating IR, not on optimization or codegen. Shocking O_o.
 
 2. cproc proves fast C parsing is possible. cproc compiles the same C code in 726ms - 2.2x faster than Clang -O0. Runtime is only 40% slower than Clang -O3 (72.8s vs 51.8s). As we saw earlier from myc-qbe results, QBE (cproc's backend) spends ~262ms on codegen, meaning cproc's parsing itself is roughly ~464ms.
 
