@@ -24,11 +24,11 @@ cd LangArena; ruby gen_myc.rb; cd -
 cd LangArena; ruby gen_ll.rb; cd -
 ```
 
-## Benchmark1: LangArena single IR file Myc vs Clang.
+## Benchmark1: [LangArena](https://github.com/kostya/LangArena) single IR file Myc vs Clang.
 
-Comparing pure compiler backends without С parsing overhead. Both MYC [LangArena/langarena-single-myc/langarena.myc](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-myc/langarena.myc) and LL [LangArena/langarena-single-ll/langarena.ll](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-ll/langarena.ll) represent the same program and both generated from the same C program (in ./LangArena/c folder) in O0 mode without any processing (by scripts `LangArena/gen_myc.rb` and `LangArena/gen_ll.rb`). This benchmark shows raw optimization and code generation skills for both engines.
+Compile LangArena C benchmark, from signle IR files (to remove parsing overhead). Both MYC [LangArena/langarena-single-myc/langarena.myc](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-myc/langarena.myc) and LL [LangArena/langarena-single-ll/langarena.ll](https://github.com/kostya/myc-benchmarks/blob/master/LangArena/langarena-single-ll/langarena.ll) represent the same program and both generated from the same C program (in ./LangArena/c folder) in O0 mode without any processing (by scripts `LangArena/gen_myc.rb` and `LangArena/gen_ll.rb`). This benchmark shows raw optimization and code generation skills for both engines.
 
-`Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)` vs `myc 0.9.0-f237d9c LLVM 20.1.2`
+`Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)` vs `myc 0.10.0-dev-4e16e50 LLVM 20.1.2`
 
 ```
 cd LangArena; ruby run_single_ir_benchmark.rb; cd -
@@ -57,5 +57,37 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 
 ## Benchmark2: LangArena C files with Myc,Clang,Gcc,Cproc.
 
+This benchmark compiles the full LangArena C project (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one: `clang LangArena/c/src/*.c`. This reveals the parsing overhead each compiler adds on top of code generation.
+
+`mycc 0.10.0-dev-4e16e50 c99-subset compiler (backend: unknown) (https://github.com/kostya/myc)`, `gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0`, `Ubuntu clang version 20.1.2 (0ubuntu1~24.04.3)`, `cproc master`
+
+```
+cd LangArena; ruby run_c_benchmark.rb; cd -
+```
+
+| Compiler | Compile time | Runtime |
+|:-------|-------------:|-----:|
+| mycc(default, llvm) | 2713ms | 60.4s |
+| mycc(final, llvm) | 3669ms | 53.6s |
+| mycc(default, qbe) | 2442ms | 68.5s |
+| mycc(default, c, clang) | 4471ms | 59.5s |
+| mycc(final, c, clang) | 4920ms | 52.0s |
+| clang(-O3, c) | 3042ms | 51.8s |
+| clang(-O2, c) | 3001ms | 52.0s |
+| clang(-O1, c) | 2739ms | 54.2s |
+| clang(-O0, c) | 1605ms | 141.1s |
+| gcc(-O3, c) | 3470ms | 52.4s |
+| gcc(-O2, c) | 2986ms | 54.7s |
+| gcc(-O1, c) | 2143ms | 58.0s |
+| gcc(-O0, c) | 1304ms | 134.9s |
+| cproc | 726ms | 72.8s |
+
+1. Parsing is the real bottleneck. Compare Clang -O0 on C (1605ms) vs Clang -O0 on LLVM IR (193ms). 88% of Clang's compile time is spent on parsing C and generating IR, not on optimization or codegen. Shocking O_o.
+
+2. cproc proves fast C parsing is possible. cproc compiles the same C code in 726ms - 2.2x faster than Clang -O0. Runtime is only 40% slower than Clang -O3 (72.8s vs 51.8s). As we saw earlier from myc-qbe results, QBE (cproc's backend) spends ~262ms on codegen, meaning cproc's parsing itself is roughly ~464ms.
+
+3. mycc doesn't shine in this benchmark. mycc relies on libclang for parsing, and has very rough frontend implementation (3-week POC), not a production C frontend.
+
+4. GCC has better O0->O3 scaling. 
 
 
