@@ -49,7 +49,7 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 ![plot](plot1.png)
 
 
-## Benchmark 2: LangArena C files with Myc,Clang,Gcc,Cproc.
+## Benchmark 2: LangArena C benchmark - Myc,Clang,Gcc,Cproc.
 
 This benchmark compiles the C files in `LangArena/c` dir (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one (`clang LangArena/c/src/*.c`), to remove the overhead of multiple command invocations.
 
