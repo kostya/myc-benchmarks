@@ -86,3 +86,25 @@ cd LangArena; ruby run_c_benchmark.rb; cd -
 4. GCC has better O0->O3 scaling. 
 
 ![plot](plot2.png)
+
+
+## Benchmark 3: Brainfuck compiler
+
+This benchmark compares different IRs (LLVM, QBE, C, Myc) against each other. The same Brainfuck program generates each IR, then compiles and runs. This shows whether Myc adds overhead compared to using each backend directly.
+
+```
+cd brainfuck-compiler && ruby run.rb
+```
+
+| IR | Compiler | IR size, Kb | Compile time | Run time |
+|:---------:|:---------:|:---------:|:---------:|:---------:|
+| llvm-ll | clang(-O3) | 1529 | 1298ms | 624ms |
+| myc | myc-llvm(default) | 486 | 213ms | 714ms |
+| myc | myc-llvm(final) | 486 | 1073ms | 616ms |
+| qbe-ssa | qbe + clang(as+linker) | 345 | 122ms + 140ms | 780ms |
+| myc | myc-qbe(default) | 486 | 479ms | 772ms |
+| c | clang(-O3) | 128 | 1166ms | 615ms |
+| myc | myc-c(default) | 486 | 1336ms | 623ms |
+| myc | myc-c(final) | 486 | 1544ms | 641ms |
+
+

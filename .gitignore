@@ -4,3 +4,7 @@ binaries/
 todo/
 *.out
 py/
+bin_*
+*.ll
+*.ssa
+*.s
