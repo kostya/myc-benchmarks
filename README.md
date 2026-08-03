@@ -87,8 +87,39 @@ cd LangArena; ruby run_c_benchmark.rb; cd -
 
 ![plot](plot2.png)
 
+## Benchmark 3: LangArena C benchmark amalgamation - Myc,Clang,Gcc,Cproc.
 
-## Benchmark 3: Brainfuck compiler
+This benchmark compiles the amalgamated C file `LangArena/c-amalgamation/single.c`. It can now be directly compared with Benchmark 1 (single IR), since the unexpected per-file overhead has been eliminated.
+
+```
+cd LangArena; ruby run_c_amalgamation_benchmark.rb; cd -
+```
+
+| Compiler | Compile time | Runtime |
+|:-------|-------------:|-----:|
+| mycc(default, llvm) | 1285ms | 59.3s |
+| mycc(final, llvm) | 2306ms | 52.6s |
+| mycc(default, qbe) | 716ms | 67.8s |
+| mycc(default, c, clang) | 2114ms | 56.6s |
+| mycc(final, c, clang) | 2647ms | 51.9s |
+| clang(-O3, c) | 1803ms | 51.9s |
+| clang(-O2, c) | 1767ms | 51.6s |
+| clang(-O1, c) | 1463ms | 54.9s |
+| clang(-O0, c) | 355ms | 141.7s |
+| gcc(-O3, c) | 2712ms | 52.3s |
+| gcc(-O2, c) | 2154ms | 54.4s |
+| gcc(-O1, c) | 1219ms | 57.9s |
+| gcc(-O0, c) | 543ms | 134.4s |
+| cproc | 166ms | 72.6s |
+
+1. mycc consistently adds ~450ms over single IR - this is the cost of libclang overhead.
+
+2. cproc is the absolute leader in compilation speed.
+
+3. Clang adds roughly ~200ms for all optimization levels compared to single IR.
+
+
+## Benchmark 4: Brainfuck compiler
 
 This benchmark compares different IRs (LLVM, QBE, C, Myc) against each other. The same Brainfuck program generates each IR, then compiles and runs. This shows whether Myc adds overhead compared to using each backend directly.
 
@@ -108,7 +139,7 @@ cd brainfuck-compiler && ruby run.rb
 | myc | myc-c(final) | 486 | 1544ms | 641ms |
 
 
-## Benchmark 4: Examples
+## Benchmark 5: Examples
 
 This benchmark compare myc backens on simple micro benchmarks:
 

@@ -9,7 +9,7 @@ puts "----------------------------- Compile Mycc c files -----------------------
 def compile_mycc(flag, output)
   File.delete(output) rescue nil
   measure do
-    cmd = "CC=clang MYC_LINKER_FLAGS='#{LINK_FLAGS}' MYCC_INCLUDE='#{INCLUDES_STR_MYC}' mycc c #{flag} c-amalgama/single.c -o #{output}"
+    cmd = "CC=clang MYC_LINKER_FLAGS='#{LINK_FLAGS}' MYCC_INCLUDE='#{INCLUDES_STR_MYC}' mycc c #{flag} c-amalgamation/single.c -o #{output}"
     run_cmd cmd
   end
 end
@@ -48,7 +48,7 @@ puts "----------------------------- Compile clang C files ----------------------
 def compile_clang_c(flags, output)
   File.delete(output) rescue nil
   measure do
-    cmd = "clang #{flags} #{INCLUDES_STR_CC} c-amalgama/single.c #{LINK_FLAGS} -o #{output}"
+    cmd = "clang #{flags} #{INCLUDES_STR_CC} c-amalgamation/single.c #{LINK_FLAGS} -o #{output}"
     run_cmd cmd
   end
 end
@@ -84,7 +84,7 @@ puts "----------------------------- Compile gcc --------------------------------
 def compile_gcc_c(flags, output)
   File.delete(output) rescue nil
   measure do
-    cmd = "gcc #{flags} #{INCLUDES_STR_CC} c-amalgama/single.c #{LINK_FLAGS} -o #{output}"
+    cmd = "gcc #{flags} #{INCLUDES_STR_CC} c-amalgamation/single.c #{LINK_FLAGS} -o #{output}"
     run_cmd cmd
   end
 end
@@ -121,7 +121,7 @@ puts "----------------------------- Compile cproc ------------------------------
 def compile_cproc_c(output)
   File.delete(output) rescue nil
   measure do
-    cmd = "cproc #{INCLUDES_STR_CC} c-amalgama/single.c #{LINK_FLAGS} -o #{output}"
+    cmd = "cproc #{INCLUDES_STR_CC} c-amalgamation/single.c #{LINK_FLAGS} -o #{output}"
     run_cmd cmd
   end
 end
