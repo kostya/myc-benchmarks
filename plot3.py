@@ -51,7 +51,7 @@ labels = [name.replace(', llvm', '').replace(', clang', '').replace(', c', '') f
 for i, (x, y) in enumerate(zip(x_coords, y_coords)):
     ax.scatter(x, y, c=colors[i], s=250, edgecolors='white', linewidth=1.2, zorder=5)
 
-ax.set_xlim(0, 5500)
+ax.set_xlim(0, 3200)
 ax.set_ylim(40, 150)
 
 ta.allocate(
