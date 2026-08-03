@@ -8917,59 +8917,6 @@ Benchmark *Words_create(void) {
   return bench;
 }
 
-
-
-Benchmark *BinarytreesObj_create(void);
-Benchmark *BinarytreesArena_create(void);
-Benchmark *BrainfuckArray_create(void);
-Benchmark *BrainfuckRecursion_create(void);
-Benchmark *Fannkuchredux_create(void);
-Benchmark *Mandelbrot_create(void);
-Benchmark *Matmul_create(void);
-Benchmark *Matmul4T_create(void);
-Benchmark *Matmul8T_create(void);
-Benchmark *Matmul16T_create(void);
-Benchmark *Nbody_create(void);
-Benchmark *Spectralnorm_create(void);
-Benchmark *Base64Encode_create(void);
-Benchmark *Base64Decode_create(void);
-Benchmark *JsonGenerate_create(void);
-Benchmark *JsonParseDom_create(void);
-Benchmark *JsonParseMapping_create(void);
-Benchmark *Sieve_create(void);
-Benchmark *TextRaytracer_create(void);
-Benchmark *NeuralNet_create(void);
-Benchmark *SortQuick_create(void);
-Benchmark *SortMerge_create(void);
-Benchmark *SortSelf_create(void);
-Benchmark *GraphPathBFS_create(void);
-Benchmark *GraphPathDFS_create(void);
-Benchmark *GraphPathAStar_create(void);
-Benchmark *BufferHashSHA256_create(void);
-Benchmark *BufferHashCRC32_create(void);
-Benchmark *CacheSimulation_create(void);
-Benchmark *CalculatorAst_create(void);
-Benchmark *CalculatorInterpreter_create(void);
-Benchmark *GameOfLife_create(void);
-Benchmark *MazeGenerator_create(void);
-Benchmark *MazeBFS_create(void);
-Benchmark *MazeAStar_create(void);
-Benchmark *BWTEncode_create(void);
-Benchmark *BWTDecode_create(void);
-Benchmark *HuffEncode_create(void);
-Benchmark *HuffDecode_create(void);
-Benchmark *ArithEncode_create(void);
-Benchmark *ArithDecode_create(void);
-Benchmark *LZWEncode_create(void);
-Benchmark *LZWDecode_create(void);
-Benchmark *Jaro_create(void);
-Benchmark *NGram_create(void);
-Benchmark *Words_create(void);
-Benchmark *LogParser_create(void);
-Benchmark *TemplateRegex_create(void);
-Benchmark *TemplateParse_create(void);
-Benchmark *CsvParse_create(void);
-
 void register_all_benchmarks(void) {
   Benchmark_register("Binarytrees::Obj", BinarytreesObj_create);
   Benchmark_register("Binarytrees::Arena", BinarytreesArena_create);
