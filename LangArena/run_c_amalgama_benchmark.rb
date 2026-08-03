@@ -17,23 +17,23 @@ end
 MYCC =   [
   {
     "name" => "mycc(default, llvm)",
-    "opts" => ["--backend llvm", "./target/c_mycc_llvm_default"],
+    "opts" => ["--backend llvm", "./target/c_ama_mycc_llvm_default"],
   },
   {
     "name" => "mycc(final, llvm)",
-    "opts" => ["--backend llvm --final", "./target/c_mycc_llvm_final"],
+    "opts" => ["--backend llvm --final", "./target/c_ama_mycc_llvm_final"],
   },
   {
     "name" => "mycc(default, qbe)",
-    "opts" => ["--backend qbe", "./target/c_mycc_qbe_default"],
+    "opts" => ["--backend qbe", "./target/c_ama_mycc_qbe_default"],
   },
   {
     "name" => "mycc(default, c, clang)",
-    "opts" => ["--backend c", "./target/c_mycc_c_default"],
+    "opts" => ["--backend c", "./target/c_ama_mycc_c_default"],
   },
   {
     "name" => "mycc(final, c, clang)",
-    "opts" => ["--backend c --final", "./target/c_mycc_c_final"],
+    "opts" => ["--backend c --final", "./target/c_ama_mycc_c_final"],
   },
 ]
 
@@ -56,19 +56,19 @@ end
 CLANG_OPTS_C =   [
   {
     "name" => "clang(-O3, c)",
-    "opts" => ["-O3", "./target/c_clang_o3"],
+    "opts" => ["-O3", "./target/c_ama_clang_o3"],
   },
   {
     "name" => "clang(-O2, c)",
-    "opts" => ["-O2", "./target/c_clang_o2"],
+    "opts" => ["-O2", "./target/c_ama_clang_o2"],
   },
   {
     "name" => "clang(-O1, c)",
-    "opts" => ["-O1", "./target/c_clang_o1"],
+    "opts" => ["-O1", "./target/c_ama_clang_o1"],
   },
   {
     "name" => "clang(-O0, c)",
-    "opts" => ["-O0", "./target/c_clang_o0"],
+    "opts" => ["-O0", "./target/c_ama_clang_o0"],
   },
 ]
 
@@ -92,19 +92,19 @@ end
 GCC_OPTS_C =   [
   {
     "name" => "gcc(-O3, c)",
-    "opts" => ["-O3", "./target/c_gcc_o3"],
+    "opts" => ["-O3", "./target/c_ama_gcc_o3"],
   },
   {
     "name" => "gcc(-O2, c)",
-    "opts" => ["-O2", "./target/c_gcc_o2"],
+    "opts" => ["-O2", "./target/c_ama_gcc_o2"],
   },
   {
     "name" => "gcc(-O1, c)",
-    "opts" => ["-O1", "./target/c_gcc_o1"],
+    "opts" => ["-O1", "./target/c_ama_gcc_o1"],
   },
   {
     "name" => "gcc(-O0, c)",
-    "opts" => ["-O0", "./target/c_gcc_o0"],
+    "opts" => ["-O0", "./target/c_ama_gcc_o0"],
   },
 ]
 
@@ -129,7 +129,7 @@ end
 CPROC_OPTS_C =   [
   {
     "name" => "cproc",
-    "opts" => ["./target/c_cproc"],
+    "opts" => ["./target/c_ama_cproc"],
   },
 ]
 
