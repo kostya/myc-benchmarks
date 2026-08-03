@@ -54,10 +54,6 @@ typedef struct {
   Benchmark *(*create)(void);
 } BenchmarkFactory;
 
-// extern BenchmarkFactory *benchmark_factories;
-// extern size_t benchmark_factories_count;
-// extern size_t benchmark_factories_capacity;
-
 void Benchmark_register(const char *name, Benchmark *(*factory)(void));
 void Benchmark_all(const char *single_bench);
 
@@ -77,7 +73,6 @@ void Helper_load_config(const char *filename);
 void Helper_free_config(void);
 int64_t Helper_config_i64(const char *class_name, const char *field_name);
 const char *Helper_config_s(const char *class_name, const char *field_name);
-
 
 typedef struct {
   char *input_str;
