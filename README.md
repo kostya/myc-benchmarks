@@ -118,6 +118,7 @@ cd LangArena; ruby run_c_amalgamation_benchmark.rb; cd -
 
 3. Clang adds roughly ~200ms for all optimization levels compared to single IR.
 
+![plot](plot3.png)
 
 ## Benchmark 4: Brainfuck compiler
 

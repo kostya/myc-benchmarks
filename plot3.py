@@ -99,9 +99,9 @@ for i, name in enumerate(legend_names):
 ax.legend(handles=legend_elements, loc='upper right', facecolor='#2d2d44',
           edgecolor='gray', labelcolor='white', fontsize=9, ncol=2)
 
-ax.set_title('LangArena C benchmark',
+ax.set_title('LangArena C amalgamation benchmark',
              color='white', fontsize=16, fontweight='bold', pad=25)
 
 plt.tight_layout()
-plt.savefig('plot2.png', dpi=150, facecolor='#1a1a2e', bbox_inches='tight')
+plt.savefig('plot3.png', dpi=150, facecolor='#1a1a2e', bbox_inches='tight')
 plt.show()
