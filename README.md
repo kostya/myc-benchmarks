@@ -48,9 +48,9 @@ cd LangArena; ruby run_single_ir_benchmark.rb; cd -
 
 ![plot](plot1.png)
 
-This scatter plot shows the tradeoff between compile time and runtime. The ideal is the bottom-left corner: fast compiles, fast runtime. This is the Pareto frontier - you can't improve one without sacrificing the other. Myc-qbe(default) and myc-llvm(default) occupy a spot that even Go would respect. Measured on pure IR files - no parsing overhead, just optimization and code generation for both MycIR and LLVM-LL.
+This scatter plot shows the tradeoff between compile time and runtime. The ideal is the bottom-left corner: fast compiles, fast runtime. This is the Pareto frontier - you can't improve one without sacrificing the other. Myc-qbe(default) and myc-llvm(default) occupy a spot that even Go would respect. Measured on pure IR files - no C parsing overhead, just optimization and code generation for both MycIR and LLVM-LL.
 
-## Benchmark 2: LangArena C benchmark - Myc,Clang,Gcc,Cproc.
+## Benchmark 2: LangArena C benchmark - Mycc,Clang,Gcc,Cproc.
 
 This benchmark compiles the C files in `LangArena/c` dir (excluding two precompiled dependencies: yyjson.o and libbase64.o). All files are compiled at once, not one by one (`clang LangArena/c/src/*.c`), to remove the overhead of multiple command invocations.
 
@@ -87,7 +87,7 @@ cd LangArena; ruby run_c_benchmark.rb; cd -
 
 ![plot](plot2.png)
 
-## Benchmark 3: LangArena C benchmark amalgamation - Myc,Clang,Gcc,Cproc.
+## Benchmark 3: LangArena C benchmark amalgamation - Mycc,Clang,Gcc,Cproc.
 
 This benchmark compiles the amalgamated C file `LangArena/c-amalgamation/single.c`. It can now be directly compared with Benchmark 1 (single IR), since the unexpected per-file overhead has been eliminated.
 
