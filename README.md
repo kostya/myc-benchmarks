@@ -89,7 +89,7 @@ cd LangArena; ruby run_c_benchmark.rb; cd -
 
 ## Benchmark 3: LangArena C benchmark amalgamation - Mycc,Clang,Gcc,Cproc.
 
-This benchmark compiles the amalgamated C file `LangArena/c-amalgamation/single.c`. It can now be directly compared with Benchmark 1 (single IR), since the unexpected per-file overhead has been eliminated.
+This benchmark compiles the amalgamated C file `LangArena/c-amalgamation/single.c`. It can now be directly compared with Benchmark 1 (single IR), since the unexpected per-file overhead (from Benchmark 2) has been eliminated.
 
 ```
 cd LangArena; ruby run_c_amalgamation_benchmark.rb; cd -
