@@ -587,9 +587,7 @@ FUNC :static_fn_neural_net_c_neuron_update_weights
         PARAM 0
         DEREF
         FIELD 8
-        PUSH 1.0 :f64
         PUSH 0.3 :f64
-        BINARY :mul
         BINARY :mul
         BINARY :mul
         BINARY :add
@@ -627,14 +625,11 @@ FUNC :static_fn_neural_net_c_neuron_update_weights
     BINARY :sub
     PUSH 0.3 :f64
     BINARY :mul
-    PUSH 1.0 :f64
-    UNARY :neg
+    PUSH -1.0 :f64
     PARAM 0
     DEREF
     FIELD 8
-    PUSH 1.0 :f64
     PUSH 0.3 :f64
-    BINARY :mul
     BINARY :mul
     BINARY :mul
     BINARY :add
@@ -700,7 +695,7 @@ FUNC :static_fn_neural_net_c_neuron_init
     DEREF
     FIELD 2
     STORE
-    SIZEOF :ptr<NeuralNetSynapse>
+    PUSH 8 :u64
     PARAM 0
     DEREF
     FIELD 2
@@ -722,7 +717,7 @@ FUNC :static_fn_neural_net_c_neuron_init
     DEREF
     FIELD 5
     STORE
-    SIZEOF :ptr<NeuralNetSynapse>
+    PUSH 8 :u64
     PARAM 0
     DEREF
     FIELD 5
@@ -761,7 +756,7 @@ FUNC :static_fn_neural_net_c_neuron_add_synapse_in
         DEREF
         FIELD 2
         STORE
-        SIZEOF :ptr<NeuralNetSynapse>
+        PUSH 8 :u64
         PARAM 0
         DEREF
         FIELD 2
@@ -828,7 +823,7 @@ FUNC :static_fn_neural_net_c_neuron_add_synapse_out
         DEREF
         FIELD 5
         STORE
-        SIZEOF :ptr<NeuralNetSynapse>
+        PUSH 8 :u64
         PARAM 0
         DEREF
         FIELD 5
@@ -1053,7 +1048,7 @@ FUNC :static_fn_neural_net_c_network_new
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :NeuralNetwork
+    PUSH 80 :u64
     CALL :malloc
     AS :ptr<NeuralNetwork>
     LOCAL :__s0_net :ptr<NeuralNetwork>
@@ -1067,7 +1062,7 @@ FUNC :static_fn_neural_net_c_network_new
     DEREF
     FIELD 1
     STORE
-    SIZEOF :NeuralNetNeuron
+    PUSH 64 :u64
     LOCAL :__s0_net
     DEREF
     FIELD 1
@@ -1121,7 +1116,7 @@ FUNC :static_fn_neural_net_c_network_new
     DEREF
     FIELD 7
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 0
     AS :u64
     BINARY :mul
@@ -1131,7 +1126,7 @@ FUNC :static_fn_neural_net_c_network_new
     DEREF
     FIELD 2
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 1
     AS :u64
     BINARY :mul
@@ -1141,7 +1136,7 @@ FUNC :static_fn_neural_net_c_network_new
     DEREF
     FIELD 4
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 2
     AS :u64
     BINARY :mul
@@ -1248,7 +1243,7 @@ FUNC :static_fn_neural_net_c_network_new
     DEREF
     FIELD 10
     STORE
-    SIZEOF :NeuralNetSynapse
+    PUSH 32 :u64
     LOCAL :__s0_net
     DEREF
     FIELD 10
@@ -1929,8 +1924,7 @@ FUNC :NeuralNet_prepare
     AS :ptr<NeuralNetData>
     LOCAL :__s0_data :ptr<NeuralNetData>
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1977,50 +1971,38 @@ FUNC :NeuralNet_run
     AS :ptr<NeuralNetData>
     LOCAL :__s0_data :ptr<NeuralNetData>
     STORE
-    SIZEOF "flat<f64, 2>"
-    PUSH 0 :u8
+    PUSH 0.0 :f64
+    PUSH 0.0 :f64
+    CREATE "flat<f64, 2>"
     LOCAL :__s0_inputs_00 "flat<f64, 2>"
-    ADDR
-    CALL :memset
-    STACK :drop
-    SIZEOF "flat<f64, 1>"
-    PUSH 0 :u8
+    STORE
+    PUSH 0.0 :f64
+    CREATE "flat<f64, 1>"
     LOCAL :__s0_targets_0 "flat<f64, 1>"
-    ADDR
-    CALL :memset
-    STACK :drop
-    PUSH 0
-    AS :f64
-    PUSH 1
-    AS :f64
+    STORE
+    PUSH 0.0 :f64
+    PUSH 1.0 :f64
     CREATE "flat<f64, 2>"
     LOCAL :__s0_inputs_10 "flat<f64, 2>"
     STORE
-    PUSH 1
-    AS :f64
-    PUSH 0
-    AS :f64
+    PUSH 1.0 :f64
+    PUSH 0.0 :f64
     CREATE "flat<f64, 2>"
     LOCAL :__s0_inputs_01 "flat<f64, 2>"
     STORE
-    PUSH 1
-    AS :f64
+    PUSH 1.0 :f64
     CREATE "flat<f64, 1>"
     LOCAL :__s0_targets_1 "flat<f64, 1>"
     STORE
-    PUSH 1
-    AS :f64
-    PUSH 1
-    AS :f64
+    PUSH 1.0 :f64
+    PUSH 1.0 :f64
     CREATE "flat<f64, 2>"
     LOCAL :__s0_inputs_11 "flat<f64, 2>"
     STORE
-    SIZEOF "flat<f64, 1>"
-    PUSH 0 :u8
+    PUSH 0.0 :f64
+    CREATE "flat<f64, 1>"
     LOCAL :__s0_targets_0_again "flat<f64, 1>"
-    ADDR
-    CALL :memset
-    STACK :drop
+    STORE
     PUSH 0
     LOCAL :__s0_iter :i32
     STORE
@@ -2099,34 +2081,26 @@ FUNC :NeuralNet_checksum
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :u32
+        PUSH 0 :u32
         RET
     ENDIF
-    SIZEOF "flat<f64, 2>"
-    PUSH 0 :u8
+    PUSH 0.0 :f64
+    PUSH 0.0 :f64
+    CREATE "flat<f64, 2>"
     LOCAL :__s1_inputs_00 "flat<f64, 2>"
-    ADDR
-    CALL :memset
-    STACK :drop
-    PUSH 1
-    AS :f64
-    PUSH 0
-    AS :f64
+    STORE
+    PUSH 1.0 :f64
+    PUSH 0.0 :f64
     CREATE "flat<f64, 2>"
     LOCAL :__s1_inputs_01 "flat<f64, 2>"
     STORE
-    PUSH 0
-    AS :f64
-    PUSH 1
-    AS :f64
+    PUSH 0.0 :f64
+    PUSH 1.0 :f64
     CREATE "flat<f64, 2>"
     LOCAL :__s1_inputs_10 "flat<f64, 2>"
     STORE
-    PUSH 1
-    AS :f64
-    PUSH 1
-    AS :f64
+    PUSH 1.0 :f64
+    PUSH 1.0 :f64
     CREATE "flat<f64, 2>"
     LOCAL :__s1_inputs_11 "flat<f64, 2>"
     STORE
@@ -2243,12 +2217,12 @@ FUNC :NeuralNet_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :NeuralNetData
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<NeuralNetData>
     LOCAL :__s0_data :ptr<NeuralNetData>
     STORE
-    SIZEOF :NeuralNetData
+    PUSH 24 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

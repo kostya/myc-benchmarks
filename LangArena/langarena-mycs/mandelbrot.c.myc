@@ -548,15 +548,13 @@ FUNC :static_fn_mandelbrot_c_Mandelbrot_grow_result
         BINARY :not_eq
         IF
           THEN
-            PUSH 2
-            AS :u64
+            PUSH 2 :u64
             LOCAL :__s0_new_capacity
             BINARY :mul
             LOCAL :__ternary_1 :u64
             STORE
           ELSE
-            PUSH 1024
-            AS :u64
+            PUSH 1024 :u64
             LOCAL :__ternary_1
             STORE
         ENDIF
@@ -667,38 +665,33 @@ FUNC :Mandelbrot_prepare
     DEREF
     FIELD 1
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     BINARY :eq
     IF
       THEN
-        PUSH 200
-        AS :i64
+        PUSH 200 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         STORE
     ENDIF
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
     BINARY :eq
     IF
       THEN
-        PUSH 200
-        AS :i64
+        PUSH 200 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
         STORE
     ENDIF
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_data
     DEREF
     FIELD 3
@@ -733,7 +726,7 @@ FUNC :Mandelbrot_run
     LOCAL :__s0_h
     LOCAL :__s0_w
     PUSH "P4\n%d %d\n"
-    SIZEOF "flat<u8, 256>"
+    PUSH 256 :u64
     LOCAL :__s0_header "flat<u8, 256>"
     ADDR
     AS :ptr<u8>
@@ -817,7 +810,7 @@ FUNC :Mandelbrot_run
             STORE
             LOOP
               COND
-                LOCAL :__s0_ITER
+                PUSH 50
                 LOCAL :__s2_i
                 BINARY :less
                 LOCAL :__sc_and_18 :bool
@@ -825,9 +818,7 @@ FUNC :Mandelbrot_run
                 LOCAL :__sc_and_18
                 IF
                   THEN
-                    LOCAL :__s0_LIMIT
-                    LOCAL :__s0_LIMIT
-                    BINARY :mul
+                    PUSH 4.0 :f64
                     LOCAL :__s2_ti
                     LOCAL :__s2_tr
                     BINARY :add
@@ -875,9 +866,7 @@ FUNC :Mandelbrot_run
             BINARY :shl
             LOCAL :__s0_byte_acc
             STORE
-            LOCAL :__s0_LIMIT
-            LOCAL :__s0_LIMIT
-            BINARY :mul
+            PUSH 4.0 :f64
             LOCAL :__s2_ti
             LOCAL :__s2_tr
             BINARY :add
@@ -901,14 +890,12 @@ FUNC :Mandelbrot_run
             BINARY :eq
             IF
               THEN
-                PUSH 1
-                AS :u64
+                PUSH 1 :u64
                 LOCAL :__s0_byte_acc
                 ADDR
                 LOCAL :__s0_data
                 CALL :static_fn_mandelbrot_c_Mandelbrot_append
-                PUSH 0
-                AS :u8
+                PUSH 0 :u8
                 LOCAL :__s0_byte_acc
                 STORE
                 PUSH 0
@@ -932,14 +919,12 @@ FUNC :Mandelbrot_run
                     BINARY :shl
                     LOCAL :__s0_byte_acc
                     STORE
-                    PUSH 1
-                    AS :u64
+                    PUSH 1 :u64
                     LOCAL :__s0_byte_acc
                     ADDR
                     LOCAL :__s0_data
                     CALL :static_fn_mandelbrot_c_Mandelbrot_append
-                    PUSH 0
-                    AS :u8
+                    PUSH 0 :u8
                     LOCAL :__s0_byte_acc
                     STORE
                     PUSH 0
@@ -987,8 +972,7 @@ FUNC :Mandelbrot_checksum
     IF
       THEN
       ELSE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         LOCAL :__s0_data
         DEREF
         FIELD 3
@@ -999,8 +983,7 @@ FUNC :Mandelbrot_checksum
     LOCAL :__sc_or_1
     IF
       THEN
-        PUSH 0
-        AS :u32
+        PUSH 0 :u32
         RET
     ENDIF
     LOCAL :__s0_data
@@ -1044,14 +1027,12 @@ FUNC :Mandelbrot_cleanup
         FIELD 2
         STORE
     ENDIF
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_data
     DEREF
     FIELD 3
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_data
     DEREF
     FIELD 4
@@ -1066,9 +1047,8 @@ FUNC :Mandelbrot_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MandelbrotData
-    PUSH 1
-    AS :u64
+    PUSH 40 :u64
+    PUSH 1 :u64
     CALL :calloc
     AS :ptr<MandelbrotData>
     LOCAL :__s0_data :ptr<MandelbrotData>
@@ -1087,31 +1067,27 @@ FUNC :Mandelbrot_create
     DEREF
     FIELD 1
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     BINARY :eq
     IF
       THEN
-        PUSH 200
-        AS :i64
+        PUSH 200 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         STORE
     ENDIF
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
     BINARY :eq
     IF
       THEN
-        PUSH 200
-        AS :i64
+        PUSH 200 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -1124,14 +1100,12 @@ FUNC :Mandelbrot_create
     DEREF
     FIELD 2
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_data
     DEREF
     FIELD 3
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_data
     DEREF
     FIELD 4

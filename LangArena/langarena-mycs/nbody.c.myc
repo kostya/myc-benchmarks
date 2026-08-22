@@ -547,12 +547,7 @@ FUNC :static_fn_nbody_c_Nbody_Planet_init
     DEREF
     FIELD 5
     STORE
-    PUSH 3.141592653589793 :f64
-    PUSH 3.141592653589793 :f64
-    PUSH 4
-    AS :f64
-    BINARY :mul
-    BINARY :mul
+    PUSH 39.47841760435743 :f64
     PARAM 7
     BINARY :mul
     PARAM 0
@@ -623,8 +618,7 @@ FUNC :static_fn_nbody_c_Nbody_energy
         BINARY :add
         LOCAL :__s0_e
         STORE
-        PUSH 1
-        AS :i64
+        PUSH 1 :i64
         LOCAL :__s0_i
         BINARY :add
         LOCAL :__s1_j :i64
@@ -796,12 +790,7 @@ FUNC :static_fn_nbody_c_Nbody_offset_momentum
     ADDR
     LOCAL :__s1_b
     STORE
-    PUSH 3.141592653589793 :f64
-    PUSH 3.141592653589793 :f64
-    PUSH 4
-    AS :f64
-    BINARY :mul
-    BINARY :mul
+    PUSH 39.47841760435743 :f64
     LOCAL :__s0_px
     UNARY :neg
     BINARY :div
@@ -809,12 +798,7 @@ FUNC :static_fn_nbody_c_Nbody_offset_momentum
     DEREF
     FIELD 3
     STORE
-    PUSH 3.141592653589793 :f64
-    PUSH 3.141592653589793 :f64
-    PUSH 4
-    AS :f64
-    BINARY :mul
-    BINARY :mul
+    PUSH 39.47841760435743 :f64
     LOCAL :__s0_py
     UNARY :neg
     BINARY :div
@@ -822,12 +806,7 @@ FUNC :static_fn_nbody_c_Nbody_offset_momentum
     DEREF
     FIELD 4
     STORE
-    PUSH 3.141592653589793 :f64
-    PUSH 3.141592653589793 :f64
-    PUSH 4
-    AS :f64
-    BINARY :mul
-    BINARY :mul
+    PUSH 39.47841760435743 :f64
     LOCAL :__s0_pz
     UNARY :neg
     BINARY :div
@@ -846,8 +825,7 @@ FUNC :static_fn_nbody_c_Nbody_Planet_move_from_i
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 1
-    AS :i64
+    PUSH 1 :i64
     PARAM 3
     BINARY :sub
     AS :u64
@@ -1073,13 +1051,12 @@ FUNC :Nbody_prepare
     BINARY :eq
     IF
       THEN
-        PUSH 5
-        AS :i64
+        PUSH 5 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 2
         STORE
-        SIZEOF :NbodyPlanet
+        PUSH 56 :u64
         AS :i64
         LOCAL :__s0_data
         DEREF
@@ -1109,14 +1086,11 @@ FUNC :Nbody_prepare
         ADDR
         CALL :static_fn_nbody_c_Nbody_Planet_init
         PUSH 0.0009547919384243266 :f64
-        PUSH 6.90460016972063e-5 :f64
-        UNARY :neg
+        PUSH -6.90460016972063e-5 :f64
         PUSH 0.007699011184197404 :f64
         PUSH 0.001660076642744037 :f64
-        PUSH 0.10362204447112311 :f64
-        UNARY :neg
-        PUSH 1.1603200440274284 :f64
-        UNARY :neg
+        PUSH -0.10362204447112311 :f64
+        PUSH -1.1603200440274284 :f64
         PUSH 4.841431442464721 :f64
         PUSH 1
         AS :u64
@@ -1130,10 +1104,8 @@ FUNC :Nbody_prepare
         PUSH 0.0002858859806661308 :f64
         PUSH 2.3041729757376393e-5 :f64
         PUSH 0.004998528012349172 :f64
-        PUSH 0.002767425107268624 :f64
-        UNARY :neg
-        PUSH 0.4035234171143214 :f64
-        UNARY :neg
+        PUSH -0.002767425107268624 :f64
+        PUSH -0.4035234171143214 :f64
         PUSH 4.124798564124305 :f64
         PUSH 8.34336671824458 :f64
         PUSH 2
@@ -1146,14 +1118,11 @@ FUNC :Nbody_prepare
         ADDR
         CALL :static_fn_nbody_c_Nbody_Planet_init
         PUSH 4.366244043351563e-5 :f64
-        PUSH 2.9658956854023756e-5 :f64
-        UNARY :neg
+        PUSH -2.9658956854023756e-5 :f64
         PUSH 0.0023784717395948095 :f64
         PUSH 0.002964601375647616 :f64
-        PUSH 0.22330757889265573 :f64
-        UNARY :neg
-        PUSH 15.111151401698631 :f64
-        UNARY :neg
+        PUSH -0.22330757889265573 :f64
+        PUSH -15.111151401698631 :f64
         PUSH 12.894369562139131 :f64
         PUSH 3
         AS :u64
@@ -1165,13 +1134,11 @@ FUNC :Nbody_prepare
         ADDR
         CALL :static_fn_nbody_c_Nbody_Planet_init
         PUSH 5.1513890204661145e-5 :f64
-        PUSH 9.515922545197159e-5 :f64
-        UNARY :neg
+        PUSH -9.515922545197159e-5 :f64
         PUSH 0.001628241700382423 :f64
         PUSH 0.0026806777249038932 :f64
         PUSH 0.17925877295037118 :f64
-        PUSH 25.919314609987964 :f64
-        UNARY :neg
+        PUSH -25.919314609987964 :f64
         PUSH 15.379697114850917 :f64
         PUSH 4
         AS :u64
@@ -1362,12 +1329,12 @@ FUNC :Nbody_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :NbodyData
+    PUSH 32 :u64
     CALL :malloc
     AS :ptr<NbodyData>
     LOCAL :__s0_data :ptr<NbodyData>
     STORE
-    SIZEOF :NbodyData
+    PUSH 32 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

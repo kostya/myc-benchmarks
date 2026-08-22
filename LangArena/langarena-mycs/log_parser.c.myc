@@ -835,8 +835,7 @@ FUNC :static_fn_log_parser_c_init_ips
         LOCAL :__s1_i
         BINARY :less
       BODY
-        PUSH 16
-        AS :u64
+        PUSH 16 :u64
         CALL :malloc
         AS :ptr<u8>
         LOCAL :__s2_ip :ptr<u8>
@@ -845,8 +844,7 @@ FUNC :static_fn_log_parser_c_init_ips
         LOCAL :__s1_i
         BINARY :add
         PUSH :192.168.1.%d
-        PUSH 16
-        AS :u64
+        PUSH 16 :u64
         LOCAL :__s2_ip
         CALL :snprintf 1
         STACK :drop
@@ -1523,8 +1521,7 @@ FUNC :LogParser_prepare
         LOCAL :__s2_i
         STORE
     ENDLOOP
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s2_pos
     LOCAL :__s1_log_buf
     BINARY :add
@@ -1556,12 +1553,8 @@ FUNC :LogParser_prepare
         ADDR
         LOCAL :__s4_errornumber :i32
         ADDR
-        PUSH 1073741824 :u32
-        PUSH 524288 :u32
-        BINARY :or
-        PUSH 0
-        AS :u64
-        UNARY :bnot
+        PUSH 1074266112 :u32
+        PUSH -1 :u64
         LOCAL :__s3_i
         AS :u64
         GLOBAL :static_log_parser_c_PATTERNS
@@ -1718,8 +1711,7 @@ FUNC :LogParser_run
             AS :ptr<ptr<pcre2_real_match_data_8>>
             BINARY :add
             DEREF
-            PUSH 0
-            AS :u32
+            PUSH 0 :u32
             LOCAL :__s2_start_offset
             LOCAL :__s2_subject_len
             LOCAL :__s2_subject
@@ -1976,14 +1968,12 @@ FUNC :LogParser_cleanup
         LOCAL :__s1_i
         STORE
     ENDLOOP
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_data
     DEREF
     FIELD 2
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 3
@@ -1998,9 +1988,8 @@ FUNC :LogParser_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :LogParserData
-    PUSH 1
-    AS :u64
+    PUSH 240 :u64
+    PUSH 1 :u64
     CALL :calloc
     AS :ptr<LogParserData>
     LOCAL :__s0_data :ptr<LogParserData>

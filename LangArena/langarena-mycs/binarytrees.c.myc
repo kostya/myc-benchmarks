@@ -512,7 +512,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesObj_TreeNode_new
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :BinarytreesObj_TreeNode
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<BinarytreesObj_TreeNode>
     LOCAL :__s0_node :ptr<BinarytreesObj_TreeNode>
@@ -610,8 +610,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesObj_TreeNode_sum
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 1
-    AS :u32
+    PUSH 1 :u32
     PARAM 0
     DEREF
     FIELD 2
@@ -676,8 +675,7 @@ FUNC :BinarytreesObj_prepare
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -799,7 +797,7 @@ FUNC :BinarytreesObj_create
         AS :ptr<Benchmark>
         RET
     ENDIF
-    SIZEOF :BinarytreesObjData
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<BinarytreesObjData>
     LOCAL :__s1_data :ptr<BinarytreesObjData>
@@ -818,14 +816,12 @@ FUNC :BinarytreesObj_create
         AS :ptr<Benchmark>
         RET
     ENDIF
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s1_data
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s1_data
     DEREF
     FIELD 1
@@ -866,7 +862,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_new
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :BinarytreesArena_Arena
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<BinarytreesArena_Arena>
     LOCAL :__s0_arena :ptr<BinarytreesArena_Arena>
@@ -889,14 +885,12 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_new
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_arena
     DEREF
     FIELD 1
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_arena
     DEREF
     FIELD 2
@@ -938,14 +932,12 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_free
             FIELD 0
             STORE
         ENDIF
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         PARAM 0
         DEREF
         FIELD 1
         STORE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         PARAM 0
         DEREF
         FIELD 2
@@ -971,8 +963,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_add
     BINARY :eq
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         RET
     ENDIF
     PARAM 0
@@ -984,21 +975,18 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_add
     BINARY :more_eq
     IF
       THEN
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         PARAM 0
         DEREF
         FIELD 1
         BINARY :eq
         IF
           THEN
-            PUSH 1024
-            AS :u64
+            PUSH 1024 :u64
             LOCAL :__ternary_0 :u64
             STORE
           ELSE
-            PUSH 2
-            AS :u64
+            PUSH 2 :u64
             PARAM 0
             DEREF
             FIELD 1
@@ -1009,7 +997,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_add
         LOCAL :__ternary_0
         LOCAL :__s2_new_capacity :u64
         STORE
-        SIZEOF :BinarytreesArena_Node
+        PUSH 12 :u64
         LOCAL :__s2_new_capacity
         BINARY :mul
         PARAM 0
@@ -1026,8 +1014,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_add
         BINARY :eq
         IF
           THEN
-            PUSH 1
-            UNARY :neg
+            PUSH -1
             RET
         ENDIF
         LOCAL :__s2_new_nodes
@@ -1057,8 +1044,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_add
     DEREF
     FIELD 0
     STORE
-    PUSH 1
-    UNARY :neg
+    PUSH -1
     LOCAL :__s3_idx
     AS :u64
     PARAM 0
@@ -1068,8 +1054,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_Arena_add
     DEREF
     FIELD 1
     STORE
-    PUSH 1
-    UNARY :neg
+    PUSH -1
     LOCAL :__s3_idx
     AS :u64
     PARAM 0
@@ -1108,8 +1093,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_build_tree
     BINARY :eq
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         RET
     ENDIF
     PARAM 1
@@ -1122,8 +1106,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_build_tree
     BINARY :less
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         RET
     ENDIF
     PUSH 0
@@ -1245,8 +1228,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_sum
     LOCAL :__sc_or_0
     IF
       THEN
-        PUSH 0
-        AS :u32
+        PUSH 0 :u32
         RET
     ENDIF
     PARAM 1
@@ -1259,8 +1241,7 @@ FUNC :static_fn_binarytrees_c_BinarytreesArena_sum
     ADDR
     LOCAL :__s1_node :ptr<BinarytreesArena_Node>
     STORE
-    PUSH 1
-    AS :u32
+    PUSH 1 :u32
     LOCAL :__s1_node
     DEREF
     FIELD 0
@@ -1349,8 +1330,7 @@ FUNC :BinarytreesArena_prepare
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s1_data
     DEREF
     FIELD 1
@@ -1470,8 +1450,7 @@ FUNC :BinarytreesArena_checksum
     LOCAL :__sc_or_0
     IF
       THEN
-        PUSH 0
-        AS :u32
+        PUSH 0 :u32
         RET
     ENDIF
     PARAM 0
@@ -1568,7 +1547,7 @@ FUNC :BinarytreesArena_create
         AS :ptr<Benchmark>
         RET
     ENDIF
-    SIZEOF :BinarytreesArenaData
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<BinarytreesArenaData>
     LOCAL :__s1_data :ptr<BinarytreesArenaData>
@@ -1587,14 +1566,12 @@ FUNC :BinarytreesArena_create
         AS :ptr<Benchmark>
         RET
     ENDIF
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s1_data
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s1_data
     DEREF
     FIELD 1

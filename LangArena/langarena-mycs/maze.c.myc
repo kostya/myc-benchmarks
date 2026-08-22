@@ -563,7 +563,7 @@ FUNC :static_fn_maze_c_maze_cell_create
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :MazeCell
+    PUSH 56 :u64
     CALL :malloc
     AS :ptr<MazeCell>
     LOCAL :__s0_cell :ptr<MazeCell>
@@ -642,7 +642,8 @@ FUNC :static_fn_maze_c_maze_cell_is_walkable
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 1
+    PUSH 1 :u32
+    AS :i32
     PARAM 0
     DEREF
     FIELD 0
@@ -653,7 +654,8 @@ FUNC :static_fn_maze_c_maze_cell_is_walkable
     IF
       THEN
       ELSE
-        PUSH 2
+        PUSH 2 :u32
+        AS :i32
         PARAM 0
         DEREF
         FIELD 0
@@ -668,7 +670,8 @@ FUNC :static_fn_maze_c_maze_cell_is_walkable
     IF
       THEN
       ELSE
-        PUSH 3
+        PUSH 3 :u32
+        AS :i32
         PARAM 0
         DEREF
         FIELD 0
@@ -686,7 +689,8 @@ FUNC :static_fn_maze_c_maze_cell_reset
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 1
+    PUSH 1 :u32
+    AS :i32
     PARAM 0
     DEREF
     FIELD 0
@@ -710,7 +714,7 @@ FUNC :static_fn_maze_c_maze_create
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :Maze
+    PUSH 32 :u64
     CALL :malloc
     AS :ptr<Maze>
     LOCAL :__s0_maze :ptr<Maze>
@@ -725,7 +729,7 @@ FUNC :static_fn_maze_c_maze_create
     DEREF
     FIELD 1
     STORE
-    SIZEOF :ptr<MazeCell>
+    PUSH 8 :u64
     PARAM 1
     AS :u64
     BINARY :mul
@@ -744,7 +748,7 @@ FUNC :static_fn_maze_c_maze_create
         LOCAL :__s0_y
         BINARY :less
       BODY
-        SIZEOF :MazeCell
+        PUSH 56 :u64
         PARAM 0
         AS :u64
         BINARY :mul
@@ -1020,14 +1024,12 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                     LOCAL :__s3_t
                     BINARY :less
                   BODY
-                    PUSH 4
-                    AS :u32
+                    PUSH 4 :u32
                     CALL :Helper_next_int
                     AS :i32
                     LOCAL :__s4_i :i32
                     STORE
-                    PUSH 4
-                    AS :u32
+                    PUSH 4 :u32
                     CALL :Helper_next_int
                     AS :i32
                     LOCAL :__s4_j :i32
@@ -1197,7 +1199,7 @@ FUNC :static_fn_maze_c_maze_dig
     AS :u64
     LOCAL :__s0_max_size :u64
     STORE
-    SIZEOF :ptr<MazeCell>
+    PUSH 8 :u64
     LOCAL :__s0_max_size
     BINARY :mul
     CALL :malloc
@@ -1231,8 +1233,7 @@ FUNC :static_fn_maze_c_maze_dig
     STORE
     LOOP
       COND
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         LOCAL :__s1_stack_size
         BINARY :more
       BODY
@@ -1320,7 +1321,8 @@ FUNC :static_fn_maze_c_maze_dig
             DEREF
             LOCAL :__s6_n :ptr<MazeCell>
             STORE
-            PUSH 0
+            PUSH 0 :u32
+            AS :i32
             LOCAL :__s6_n
             DEREF
             FIELD 0
@@ -1332,13 +1334,12 @@ FUNC :static_fn_maze_c_maze_dig
                 BINARY :more_eq
                 IF
                   THEN
-                    PUSH 2
-                    AS :u64
+                    PUSH 2 :u64
                     LOCAL :__s0_max_size
                     BINARY :mul
                     LOCAL :__s0_max_size
                     STORE
-                    SIZEOF :ptr<MazeCell>
+                    PUSH 8 :u64
                     LOCAL :__s0_max_size
                     BINARY :mul
                     LOCAL :__s0_stack
@@ -1397,7 +1398,7 @@ FUNC :static_fn_maze_c_maze_ensure_open_finish
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :ptr<MazeCell>
+    PUSH 8 :u64
     PARAM 0
     DEREF
     FIELD 1
@@ -1520,7 +1521,8 @@ FUNC :static_fn_maze_c_maze_ensure_open_finish
             DEREF
             LOCAL :__s5_n :ptr<MazeCell>
             STORE
-            PUSH 0
+            PUSH 0 :u32
+            AS :i32
             LOCAL :__s5_n
             DEREF
             FIELD 0
@@ -1588,7 +1590,8 @@ FUNC :static_fn_maze_c_maze_generate
         DEREF
         LOCAL :__s1_n :ptr<MazeCell>
         STORE
-        PUSH 0
+        PUSH 0 :u32
+        AS :i32
         LOCAL :__s1_n
         DEREF
         FIELD 0
@@ -1632,7 +1635,8 @@ FUNC :static_fn_maze_c_maze_generate
         DEREF
         LOCAL :__s3_n :ptr<MazeCell>
         STORE
-        PUSH 0
+        PUSH 0 :u32
+        AS :i32
         LOCAL :__s3_n
         DEREF
         FIELD 0
@@ -1719,7 +1723,8 @@ FUNC :static_fn_maze_c_maze_checksum
             LOCAL :__s1_x
             BINARY :less
           BODY
-            PUSH 1
+            PUSH 1 :u32
+            AS :i32
             LOCAL :__s1_x
             AS :u64
             LOCAL :__s0_y
@@ -1889,8 +1894,7 @@ FUNC :MazeGenerator_prepare
     DEREF
     FIELD 3
     CALL :static_fn_maze_c_maze_update_neighbors
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1998,9 +2002,8 @@ FUNC :MazeGenerator_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MazeGeneratorData
-    PUSH 1
-    AS :u64
+    PUSH 24 :u64
+    PUSH 1 :u64
     CALL :calloc
     AS :ptr<MazeGeneratorData>
     LOCAL :__s0_data :ptr<MazeGeneratorData>
@@ -2110,8 +2113,7 @@ FUNC :MazeBFS_prepare
     DEREF
     FIELD 3
     CALL :static_fn_maze_c_maze_generate
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -2152,7 +2154,7 @@ FUNC :static_fn_maze_c_maze_bfs
         PARAM 3
         DEREF
         STORE
-        SIZEOF :ptr<MazeCell>
+        PUSH 8 :u64
         CALL :malloc
         AS :ptr<ptr<MazeCell>>
         LOCAL :__s1_result :ptr<ptr<MazeCell>>
@@ -2177,7 +2179,7 @@ FUNC :static_fn_maze_c_maze_bfs
     FIELD 1
     LOCAL :__s1_height :i32
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     LOCAL :__s1_height
     LOCAL :__s1_width
     BINARY :mul
@@ -2193,7 +2195,7 @@ FUNC :static_fn_maze_c_maze_bfs
     PUSH 0
     LOCAL :__s1_queue_tail :i32
     STORE
-    SIZEOF :ptr<bool>
+    PUSH 8 :u64
     LOCAL :__s1_height
     AS :u64
     BINARY :mul
@@ -2210,7 +2212,7 @@ FUNC :static_fn_maze_c_maze_bfs
         LOCAL :__s1_y
         BINARY :less
       BODY
-        SIZEOF :bool
+        PUSH 1 :u64
         LOCAL :__s1_width
         AS :u64
         CALL :calloc
@@ -2228,7 +2230,7 @@ FUNC :static_fn_maze_c_maze_bfs
         LOCAL :__s1_y
         STORE
     ENDLOOP
-    SIZEOF :PathNode
+    PUSH 16 :u64
     LOCAL :__s1_height
     LOCAL :__s1_width
     BINARY :mul
@@ -2241,9 +2243,7 @@ FUNC :static_fn_maze_c_maze_bfs
     PUSH 0
     LOCAL :__s2_path_count :i32
     STORE
-    PUSH 0
-    PUSH 1
-    BINARY :not_eq
+    PUSH 1 :bool
     PARAM 1
     DEREF
     FIELD 3
@@ -2266,8 +2266,7 @@ FUNC :static_fn_maze_c_maze_bfs
     DEREF
     FIELD 0
     STORE
-    PUSH 1
-    UNARY :neg
+    PUSH -1
     LOCAL :__s2_path_count
     AS :u64
     LOCAL :__s2_path_nodes
@@ -2379,7 +2378,7 @@ FUNC :static_fn_maze_c_maze_bfs
                     LOCAL :__s5_cur
                     STORE
                 ENDLOOP
-                SIZEOF :ptr<MazeCell>
+                PUSH 8 :u64
                 LOCAL :__s5_length
                 AS :u64
                 BINARY :mul
@@ -2511,9 +2510,7 @@ FUNC :static_fn_maze_c_maze_bfs
             LOCAL :__sc_and_23
             IF
               THEN
-                PUSH 0
-                PUSH 1
-                BINARY :not_eq
+                PUSH 1 :bool
                 LOCAL :__s4_neighbor
                 DEREF
                 FIELD 3
@@ -2629,8 +2626,7 @@ FUNC :static_fn_maze_c_mid_cell_checksum
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :u32
+        PUSH 0 :u32
         RET
     ENDIF
     PUSH 2
@@ -2799,9 +2795,8 @@ FUNC :MazeBFS_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MazeBFSData
-    PUSH 1
-    AS :u64
+    PUSH 40 :u64
+    PUSH 1 :u64
     CALL :calloc
     AS :ptr<MazeBFSData>
     LOCAL :__s0_data :ptr<MazeBFSData>
@@ -2844,12 +2839,12 @@ FUNC :static_fn_maze_c_astar_pq_create
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :AStarPriorityQueue
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<AStarPriorityQueue>
     LOCAL :__s0_pq :ptr<AStarPriorityQueue>
     STORE
-    SIZEOF :AStarPriorityQueueEntry
+    PUSH 8 :u64
     PARAM 0
     AS :u64
     BINARY :mul
@@ -2859,7 +2854,7 @@ FUNC :static_fn_maze_c_astar_pq_create
     DEREF
     FIELD 0
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 0
     AS :u64
     BINARY :mul
@@ -2956,7 +2951,7 @@ FUNC :static_fn_maze_c_astar_pq_push
         DEREF
         FIELD 3
         STORE
-        SIZEOF :AStarPriorityQueueEntry
+        PUSH 8 :u64
         PARAM 0
         DEREF
         FIELD 3
@@ -3348,7 +3343,7 @@ FUNC :static_fn_maze_c_maze_astar
         PARAM 3
         DEREF
         STORE
-        SIZEOF :ptr<MazeCell>
+        PUSH 8 :u64
         CALL :malloc
         AS :ptr<ptr<MazeCell>>
         LOCAL :__s1_result :ptr<ptr<MazeCell>>
@@ -3378,7 +3373,7 @@ FUNC :static_fn_maze_c_maze_astar
     BINARY :mul
     LOCAL :__s1_size :i32
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     LOCAL :__s1_size
     AS :u64
     BINARY :mul
@@ -3386,7 +3381,7 @@ FUNC :static_fn_maze_c_maze_astar
     AS :ptr<i32>
     LOCAL :__s1_came_from :ptr<i32>
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     LOCAL :__s1_size
     AS :u64
     BINARY :mul
@@ -3403,8 +3398,7 @@ FUNC :static_fn_maze_c_maze_astar
         LOCAL :__s1_i
         BINARY :less
       BODY
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         LOCAL :__s1_i
         AS :u64
         LOCAL :__s1_came_from
@@ -3489,8 +3483,7 @@ FUNC :static_fn_maze_c_maze_astar
             STORE
             LOOP
               COND
-                PUSH 1
-                UNARY :neg
+                PUSH -1
                 LOCAL :__s4_cur
                 BINARY :not_eq
               BODY
@@ -3507,7 +3500,7 @@ FUNC :static_fn_maze_c_maze_astar
                 LOCAL :__s4_cur
                 STORE
             ENDLOOP
-            SIZEOF :ptr<MazeCell>
+            PUSH 8 :u64
             LOCAL :__s4_length
             AS :u64
             BINARY :mul
@@ -3797,8 +3790,7 @@ FUNC :MazeAStar_prepare
     DEREF
     FIELD 3
     CALL :static_fn_maze_c_maze_generate
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -3989,9 +3981,8 @@ FUNC :MazeAStar_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MazeAStarData
-    PUSH 1
-    AS :u64
+    PUSH 40 :u64
+    PUSH 1 :u64
     CALL :calloc
     AS :ptr<MazeAStarData>
     LOCAL :__s0_data :ptr<MazeAStarData>

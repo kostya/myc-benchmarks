@@ -585,7 +585,7 @@ FUNC :static_fn_matmul1t_c_matgen
     BINARY :div
     LOCAL :__s0_tmp :f64
     STORE
-    SIZEOF :ptr<f64>
+    PUSH 8 :u64
     PARAM 0
     AS :u64
     BINARY :mul
@@ -602,7 +602,7 @@ FUNC :static_fn_matmul1t_c_matgen
         LOCAL :__s0_i
         BINARY :less
       BODY
-        SIZEOF :f64
+        PUSH 8 :u64
         PARAM 0
         AS :u64
         BINARY :mul
@@ -714,7 +714,7 @@ FUNC :static_fn_matmul1t_c_transpose
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :ptr<f64>
+    PUSH 8 :u64
     PARAM 1
     AS :u64
     BINARY :mul
@@ -731,7 +731,7 @@ FUNC :static_fn_matmul1t_c_transpose
         LOCAL :__s0_j
         BINARY :less
       BODY
-        SIZEOF :f64
+        PUSH 8 :u64
         PARAM 1
         AS :u64
         BINARY :mul
@@ -839,8 +839,7 @@ FUNC :static_fn_matmul1t_c_MatmulBase_prepare
     DEREF
     FIELD 3
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -924,7 +923,7 @@ FUNC :static_fn_matmul1t_c_matmul_sequential
     CALL :static_fn_matmul1t_c_transpose
     LOCAL :__s0_b_t :ptr<ptr<f64>>
     STORE
-    SIZEOF :ptr<f64>
+    PUSH 8 :u64
     PARAM 2
     AS :u64
     BINARY :mul
@@ -941,7 +940,7 @@ FUNC :static_fn_matmul1t_c_matmul_sequential
         LOCAL :__s0_i
         BINARY :less
       BODY
-        SIZEOF :f64
+        PUSH 8 :u64
         PARAM 2
         AS :u64
         BINARY :mul
@@ -1114,7 +1113,7 @@ FUNC :Matmul_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MatmulBaseData
+    PUSH 32 :u64
     CALL :malloc
     AS :ptr<MatmulBaseData>
     LOCAL :__s0_data :ptr<MatmulBaseData>
@@ -1126,23 +1125,20 @@ FUNC :Matmul_create
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     BINARY :eq
     IF
       THEN
-        PUSH 100
-        AS :i64
+        PUSH 100 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         STORE
     ENDIF
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -1340,7 +1336,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
     CALL :static_fn_matmul1t_c_transpose
     LOCAL :__s0_b_t :ptr<ptr<f64>>
     STORE
-    SIZEOF :ptr<f64>
+    PUSH 8 :u64
     PARAM 2
     AS :u64
     BINARY :mul
@@ -1357,7 +1353,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         LOCAL :__s0_i
         BINARY :less
       BODY
-        SIZEOF :f64
+        PUSH 8 :u64
         PARAM 2
         AS :u64
         CALL :calloc
@@ -1523,8 +1519,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
             AS :ptr<void>
             CALL :static_fn_matmul1t_c_thread_func
             STACK :drop
-            PUSH 0
-            AS :u64
+            PUSH 0 :u64
             LOCAL :__s1_t
             AS :u64
             LOCAL :__s0_threads
@@ -1548,8 +1543,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         LOCAL :__s4_t
         BINARY :less
       BODY
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         LOCAL :__s4_t
         AS :u64
         LOCAL :__s0_threads
@@ -1663,7 +1657,7 @@ FUNC :Matmul4T_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MatmulParallelData
+    PUSH 40 :u64
     CALL :malloc
     AS :ptr<MatmulParallelData>
     LOCAL :__s0_data :ptr<MatmulParallelData>
@@ -1676,8 +1670,7 @@ FUNC :Matmul4T_create
     FIELD 0
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1685,16 +1678,14 @@ FUNC :Matmul4T_create
     BINARY :eq
     IF
       THEN
-        PUSH 100
-        AS :i64
+        PUSH 100 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         FIELD 0
         STORE
     ENDIF
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1759,7 +1750,7 @@ FUNC :Matmul8T_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MatmulParallelData
+    PUSH 40 :u64
     CALL :malloc
     AS :ptr<MatmulParallelData>
     LOCAL :__s0_data :ptr<MatmulParallelData>
@@ -1772,8 +1763,7 @@ FUNC :Matmul8T_create
     FIELD 0
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1781,16 +1771,14 @@ FUNC :Matmul8T_create
     BINARY :eq
     IF
       THEN
-        PUSH 100
-        AS :i64
+        PUSH 100 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         FIELD 0
         STORE
     ENDIF
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1855,7 +1843,7 @@ FUNC :Matmul16T_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :MatmulParallelData
+    PUSH 40 :u64
     CALL :malloc
     AS :ptr<MatmulParallelData>
     LOCAL :__s0_data :ptr<MatmulParallelData>
@@ -1868,8 +1856,7 @@ FUNC :Matmul16T_create
     FIELD 0
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1877,16 +1864,14 @@ FUNC :Matmul16T_create
     BINARY :eq
     IF
       THEN
-        PUSH 100
-        AS :i64
+        PUSH 100 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         FIELD 0
         STORE
     ENDIF
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0

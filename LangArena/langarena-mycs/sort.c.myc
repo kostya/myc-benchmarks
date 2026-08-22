@@ -540,22 +540,20 @@ FUNC :static_fn_sort_c_sort_base_prepare
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     BINARY :less_eq
     IF
       THEN
-        PUSH 100000
-        AS :i64
+        PUSH 100000 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         STORE
     ENDIF
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     LOCAL :__s0_data
     DEREF
@@ -579,8 +577,7 @@ FUNC :static_fn_sort_c_sort_base_prepare
         LOCAL :__s1_i
         BINARY :less
       BODY
-        PUSH 1000000
-        AS :u32
+        PUSH 1000000 :u32
         CALL :Helper_next_int
         AS :i32
         LOCAL :__s1_i
@@ -598,8 +595,7 @@ FUNC :static_fn_sort_c_sort_base_prepare
         LOCAL :__s1_i
         STORE
     ENDLOOP
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 2
@@ -650,8 +646,7 @@ FUNC :static_fn_sort_c_sort_quick_quick_sort
       THEN
         RET
     ENDIF
-    PUSH 2
-    AS :i64
+    PUSH 2 :i64
     PARAM 2
     PARAM 1
     BINARY :add
@@ -778,7 +773,7 @@ FUNC :static_fn_sort_c_sort_quick_test
         AS :ptr<void>
         CALL :free
     ENDIF
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     PARAM 0
     DEREF
@@ -792,7 +787,7 @@ FUNC :static_fn_sort_c_sort_quick_test
     DEREF
     FIELD 1
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     PARAM 0
     DEREF
@@ -811,15 +806,13 @@ FUNC :static_fn_sort_c_sort_quick_test
     AS :ptr<void>
     CALL :memcpy
     STACK :drop
-    PUSH 1
-    AS :i64
+    PUSH 1 :i64
     PARAM 0
     DEREF
     FIELD 0
     FIELD 0
     BINARY :sub
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     PARAM 0
     DEREF
     FIELD 1
@@ -979,12 +972,12 @@ FUNC :SortQuick_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :SortQuickData
+    PUSH 32 :u64
     CALL :malloc
     AS :ptr<SortQuickData>
     LOCAL :__s0_data :ptr<SortQuickData>
     STORE
-    SIZEOF :SortQuickData
+    PUSH 32 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>
@@ -1060,8 +1053,7 @@ FUNC :static_fn_sort_c_sort_merge_merge
     PARAM 2
     LOCAL :__s1_i :i64
     STORE
-    PUSH 1
-    AS :i64
+    PUSH 1 :i64
     PARAM 3
     BINARY :add
     LOCAL :__s1_j :i64
@@ -1186,8 +1178,7 @@ FUNC :static_fn_sort_c_sort_merge_merge_sort_helper
       THEN
         RET
     ENDIF
-    PUSH 2
-    AS :i64
+    PUSH 2 :i64
     PARAM 3
     PARAM 2
     BINARY :add
@@ -1200,8 +1191,7 @@ FUNC :static_fn_sort_c_sort_merge_merge_sort_helper
     PARAM 0
     CALL :static_fn_sort_c_sort_merge_merge_sort_helper
     PARAM 3
-    PUSH 1
-    AS :i64
+    PUSH 1 :i64
     LOCAL :__s1_mid
     BINARY :add
     PARAM 1
@@ -1222,7 +1212,7 @@ FUNC :static_fn_sort_c_sort_merge_merge_sort_inplace
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     PARAM 1
     BINARY :mul
@@ -1231,12 +1221,10 @@ FUNC :static_fn_sort_c_sort_merge_merge_sort_inplace
     AS :ptr<i32>
     LOCAL :__s0_temp :ptr<i32>
     STORE
-    PUSH 1
-    AS :i64
+    PUSH 1 :i64
     PARAM 1
     BINARY :sub
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_temp
     PARAM 0
     CALL :static_fn_sort_c_sort_merge_merge_sort_helper
@@ -1265,7 +1253,7 @@ FUNC :static_fn_sort_c_sort_merge_test
         AS :ptr<void>
         CALL :free
     ENDIF
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     PARAM 0
     DEREF
@@ -1279,7 +1267,7 @@ FUNC :static_fn_sort_c_sort_merge_test
     DEREF
     FIELD 1
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     PARAM 0
     DEREF
@@ -1461,12 +1449,12 @@ FUNC :SortMerge_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :SortMergeData
+    PUSH 32 :u64
     CALL :malloc
     AS :ptr<SortMergeData>
     LOCAL :__s0_data :ptr<SortMergeData>
     STORE
-    SIZEOF :SortMergeData
+    PUSH 32 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>
@@ -1553,7 +1541,7 @@ FUNC :static_fn_sort_c_sort_self_test
         AS :ptr<void>
         CALL :free
     ENDIF
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     PARAM 0
     DEREF
@@ -1567,7 +1555,7 @@ FUNC :static_fn_sort_c_sort_self_test
     DEREF
     FIELD 1
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     AS :i64
     PARAM 0
     DEREF
@@ -1587,7 +1575,7 @@ FUNC :static_fn_sort_c_sort_self_test
     CALL :memcpy
     STACK :drop
     ADDR :static_fn_sort_c_sort_self_compare
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 0
     DEREF
     FIELD 0
@@ -1753,12 +1741,12 @@ FUNC :SortSelf_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :SortSelfData
+    PUSH 32 :u64
     CALL :malloc
     AS :ptr<SortSelfData>
     LOCAL :__s0_data :ptr<SortSelfData>
     STORE
-    SIZEOF :SortSelfData
+    PUSH 32 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

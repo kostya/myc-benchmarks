@@ -551,10 +551,8 @@ FUNC :static_fn_csv_c_generate_csv_for_parsing
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 1
-    AS :i64
-    PUSH 100
-    AS :i64
+    PUSH 1 :i64
+    PUSH 100 :i64
     PARAM 0
     BINARY :mul
     BINARY :add
@@ -589,12 +587,10 @@ FUNC :static_fn_csv_c_generate_csv_for_parsing
         LOCAL :__s1_i
         BINARY :less
       BODY
-        PUSH 26
-        AS :i64
+        PUSH 26 :i64
         LOCAL :__s1_i
         BINARY :rem
-        PUSH 65
-        AS :i64
+        PUSH 65 :i64
         BINARY :add
         AS :u8
         LOCAL :__s2_c :u8
@@ -612,15 +608,12 @@ FUNC :static_fn_csv_c_generate_csv_for_parsing
         LOCAL :__s2_y :f64
         STORE
         LOCAL :__s2_y
-        PUSH 100
-        AS :i64
+        PUSH 100 :i64
         LOCAL :__s1_i
         BINARY :rem
         AS :i64
-        PUSH 0
-        AS :i64
-        PUSH 2
-        AS :i64
+        PUSH 0 :i64
+        PUSH 2 :i64
         LOCAL :__s1_i
         BINARY :rem
         BINARY :eq
@@ -637,8 +630,7 @@ FUNC :static_fn_csv_c_generate_csv_for_parsing
         LOCAL :__ternary_8
         LOCAL :__s2_z
         LOCAL :__s2_x
-        PUSH 100
-        AS :i64
+        PUSH 100 :i64
         LOCAL :__s1_i
         BINARY :rem
         AS :i64
@@ -694,8 +686,7 @@ FUNC :CsvParse_prepare
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -877,8 +868,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     BINARY :less
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         RET
     ENDIF
     PUSH 1
@@ -899,13 +889,12 @@ FUNC :static_fn_csv_c_parse_csv_line
     AS :u64
     LOCAL :__s6_len :u64
     STORE
-    SIZEOF "flat<u8, 64>"
+    PUSH 64 :u64
     LOCAL :__s6_len
     BINARY :more_eq
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         RET
     ENDIF
     LOCAL :__s6_len
@@ -923,8 +912,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     AS :ptr<void>
     CALL :memcpy
     STACK :drop
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s6_len
     LOCAL :__s6_buf
     ADDR
@@ -960,13 +948,12 @@ FUNC :static_fn_csv_c_parse_csv_line
     AS :u64
     LOCAL :__s6_len
     STORE
-    SIZEOF "flat<u8, 64>"
+    PUSH 64 :u64
     LOCAL :__s6_len
     BINARY :more_eq
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         RET
     ENDIF
     LOCAL :__s6_len
@@ -984,8 +971,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     AS :ptr<void>
     CALL :memcpy
     STACK :drop
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s6_len
     LOCAL :__s6_buf
     ADDR
@@ -1021,13 +1007,12 @@ FUNC :static_fn_csv_c_parse_csv_line
     AS :u64
     LOCAL :__s6_len
     STORE
-    SIZEOF "flat<u8, 64>"
+    PUSH 64 :u64
     LOCAL :__s6_len
     BINARY :more_eq
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         RET
     ENDIF
     LOCAL :__s6_len
@@ -1045,8 +1030,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     AS :ptr<void>
     CALL :memcpy
     STACK :drop
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s6_len
     LOCAL :__s6_buf
     ADDR
@@ -1091,7 +1075,7 @@ FUNC :CsvParse_run
       THEN
         RET
     ENDIF
-    SIZEOF :Point
+    PUSH 24 :u64
     AS :i64
     LOCAL :__s0_data
     DEREF
@@ -1164,7 +1148,7 @@ FUNC :CsvParse_run
         AS :u64
         LOCAL :__s4_len :u64
         STORE
-        SIZEOF "flat<u8, 512>"
+        PUSH 512 :u64
         LOCAL :__s4_len
         BINARY :less
         IF
@@ -1178,8 +1162,7 @@ FUNC :CsvParse_run
             AS :ptr<void>
             CALL :memcpy
             STACK :drop
-            PUSH 0
-            AS :u8
+            PUSH 0 :u8
             LOCAL :__s4_len
             LOCAL :__s4_line
             ADDR
@@ -1401,9 +1384,8 @@ FUNC :CsvParse_create
         AS :ptr<Benchmark>
         RET
     ENDIF
-    SIZEOF :CsvParseData
-    PUSH 1
-    AS :u64
+    PUSH 24 :u64
+    PUSH 1 :u64
     CALL :calloc
     AS :ptr<CsvParseData>
     LOCAL :__s1_data :ptr<CsvParseData>

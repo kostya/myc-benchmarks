@@ -659,12 +659,9 @@ FUNC :static_fn_text_raytracer_c_tr_vector_normalize
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :f64
-        PUSH 0
-        AS :f64
-        PUSH 0
-        AS :f64
+        PUSH 0.0 :f64
+        PUSH 0.0 :f64
+        PUSH 0.0 :f64
         CREATE :TRVector
         RET
     ENDIF
@@ -804,8 +801,7 @@ FUNC :static_fn_text_raytracer_c_tr_intersect_sphere
     BINARY :less
     IF
       THEN
-        PUSH 1.0 :f64
-        UNARY :neg
+        PUSH -1.0 :f64
         RET
     ENDIF
     LOCAL :__s0_tca
@@ -827,8 +823,7 @@ FUNC :static_fn_text_raytracer_c_tr_intersect_sphere
     BINARY :more
     IF
       THEN
-        PUSH 1.0 :f64
-        UNARY :neg
+        PUSH -1.0 :f64
         RET
     ENDIF
     LOCAL :__s1_d2
@@ -847,8 +842,7 @@ FUNC :static_fn_text_raytracer_c_tr_intersect_sphere
     BINARY :more
     IF
       THEN
-        PUSH 1.0 :f64
-        UNARY :neg
+        PUSH -1.0 :f64
         RET
     ENDIF
     LOCAL :__s2_t0
@@ -965,8 +959,7 @@ FUNC :TextRaytracer_prepare
         FIELD 1
         STORE
     ENDIF
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 2
@@ -1013,8 +1006,7 @@ FUNC :TextRaytracer_run
     PUSH 0.3 :f64
     PUSH 3.0 :f64
     PUSH 0.0 :f64
-    PUSH 1.0 :f64
-    UNARY :neg
+    PUSH -1.0 :f64
     CREATE :TRVector
     CREATE :TRSphere
     CREATE "flat<TRSphere, 3>"
@@ -1025,8 +1017,7 @@ FUNC :TextRaytracer_run
     PUSH 1.0 :f64
     CREATE :TRColor
     PUSH 1.7 :f64
-    PUSH 1.0 :f64
-    UNARY :neg
+    PUSH -1.0 :f64
     PUSH 0.7 :f64
     CREATE :TRVector
     CREATE :TRLight
@@ -1319,12 +1310,12 @@ FUNC :TextRaytracer_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :TextRaytracerData
+    PUSH 12 :u64
     CALL :malloc
     AS :ptr<TextRaytracerData>
     LOCAL :__s0_data :ptr<TextRaytracerData>
     STORE
-    SIZEOF :TextRaytracerData
+    PUSH 12 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

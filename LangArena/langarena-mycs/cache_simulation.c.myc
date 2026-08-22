@@ -556,7 +556,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_new
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :CacheSimulationCache
+    PUSH 48 :u64
     CALL :malloc
     AS :ptr<CacheSimulationCache>
     LOCAL :__s0_cache :ptr<CacheSimulationCache>
@@ -587,14 +587,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_new
     DEREF
     FIELD 3
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     LOCAL :__s0_cache
     DEREF
     FIELD 4
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_cache
     DEREF
     FIELD 5
@@ -1110,88 +1108,88 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s3__hf_hashv
                         STORE
                         LOCAL :__s5__hj_k
-                        LOCAL :__switch_val_4 :u32
+                        LOCAL :__switch_val_1 :u32
                         STORE
                         PUSH 11 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_0
+                            GOTO :__switch_0__case_0
                         ENDIF
                         PUSH 10 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_1
+                            GOTO :__switch_0__case_1
                         ENDIF
                         PUSH 9 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_2
+                            GOTO :__switch_0__case_2
                         ENDIF
                         PUSH 8 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_3
+                            GOTO :__switch_0__case_3
                         ENDIF
                         PUSH 7 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_4
+                            GOTO :__switch_0__case_4
                         ENDIF
                         PUSH 6 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_5
+                            GOTO :__switch_0__case_5
                         ENDIF
                         PUSH 5 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_6
+                            GOTO :__switch_0__case_6
                         ENDIF
                         PUSH 4 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_7
+                            GOTO :__switch_0__case_7
                         ENDIF
                         PUSH 3 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_8
+                            GOTO :__switch_0__case_8
                         ENDIF
                         PUSH 2 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_9
+                            GOTO :__switch_0__case_9
                         ENDIF
                         PUSH 1 :u32
-                        LOCAL :__switch_val_4
+                        LOCAL :__switch_val_1
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_3__case_10
+                            GOTO :__switch_0__case_10
                         ENDIF
-                        GOTO :__switch_3__case_11
-                        GOTO :__switch_3_end
-                        LABEL :__switch_3__case_0
+                        GOTO :__switch_0__case_11
+                        GOTO :__switch_0_end
+                        LABEL :__switch_0__case_0
                         PUSH 24
                         AS :u32
                         PUSH 10
@@ -1205,7 +1203,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_3__case_1
+                        LABEL :__switch_0__case_1
                         PUSH 16
                         AS :u32
                         PUSH 9
@@ -1219,7 +1217,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_3__case_2
+                        LABEL :__switch_0__case_2
                         PUSH 8
                         AS :u32
                         PUSH 8
@@ -1233,7 +1231,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_3__case_3
+                        LABEL :__switch_0__case_3
                         PUSH 24
                         AS :u32
                         PUSH 7
@@ -1247,7 +1245,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_3__case_4
+                        LABEL :__switch_0__case_4
                         PUSH 16
                         AS :u32
                         PUSH 6
@@ -1261,7 +1259,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_3__case_5
+                        LABEL :__switch_0__case_5
                         PUSH 8
                         AS :u32
                         PUSH 5
@@ -1275,7 +1273,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_3__case_6
+                        LABEL :__switch_0__case_6
                         PUSH 4
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -1286,7 +1284,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_3__case_7
+                        LABEL :__switch_0__case_7
                         PUSH 24
                         AS :u32
                         PUSH 3
@@ -1300,7 +1298,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_3__case_8
+                        LABEL :__switch_0__case_8
                         PUSH 16
                         AS :u32
                         PUSH 2
@@ -1314,7 +1312,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_3__case_9
+                        LABEL :__switch_0__case_9
                         PUSH 8
                         AS :u32
                         PUSH 1
@@ -1328,7 +1326,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_3__case_10
+                        LABEL :__switch_0__case_10
                         PUSH 0
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -1339,8 +1337,8 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_3__case_11
-                        LABEL :__switch_3_end
+                        LABEL :__switch_0__case_11
+                        LABEL :__switch_0_end
                         LOOP
                           COND
                             PUSH true
@@ -2057,7 +2055,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
                 DEREF
                 FIELD 7
                 BINARY :and
-                LOCAL :__s4__hd_bkt :u32
+                LOCAL :__s5__hd_bkt :u32
                 STORE
                 PUSH 0
                 PUSH 0
@@ -2072,7 +2070,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
               COND
                 PUSH true
               BODY
-                LOCAL :__s4__hd_bkt
+                LOCAL :__s5__hd_bkt
                 AS :u64
                 PARAM 0
                 DEREF
@@ -2085,20 +2083,20 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
                 BINARY :add
                 DEREF
                 ADDR
-                LOCAL :__s11__hd_head :ptr<UT_hash_bucket>
+                LOCAL :__s12__hd_head :ptr<UT_hash_bucket>
                 STORE
                 PUSH 1 :u32
-                LOCAL :__s11__hd_head
+                LOCAL :__s12__hd_head
                 DEREF
                 FIELD 1
                 BINARY :sub
-                LOCAL :__s11__hd_head
+                LOCAL :__s12__hd_head
                 DEREF
                 FIELD 1
                 STORE
                 LOCAL :__s2__hd_hh_del
                 AS :u64
-                LOCAL :__s11__hd_head
+                LOCAL :__s12__hd_head
                 DEREF
                 FIELD 0
                 AS :u64
@@ -2108,7 +2106,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
                     LOCAL :__s2__hd_hh_del
                     DEREF
                     FIELD 4
-                    LOCAL :__s11__hd_head
+                    LOCAL :__s12__hd_head
                     DEREF
                     FIELD 0
                     STORE
@@ -2665,88 +2663,88 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s3__hf_hashv
                         STORE
                         LOCAL :__s5__hj_k
-                        LOCAL :__switch_val_5 :u32
+                        LOCAL :__switch_val_2 :u32
                         STORE
                         PUSH 11 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_0
+                            GOTO :__switch_1__case_0
                         ENDIF
                         PUSH 10 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_1
+                            GOTO :__switch_1__case_1
                         ENDIF
                         PUSH 9 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_2
+                            GOTO :__switch_1__case_2
                         ENDIF
                         PUSH 8 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_3
+                            GOTO :__switch_1__case_3
                         ENDIF
                         PUSH 7 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_4
+                            GOTO :__switch_1__case_4
                         ENDIF
                         PUSH 6 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_5
+                            GOTO :__switch_1__case_5
                         ENDIF
                         PUSH 5 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_6
+                            GOTO :__switch_1__case_6
                         ENDIF
                         PUSH 4 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_7
+                            GOTO :__switch_1__case_7
                         ENDIF
                         PUSH 3 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_8
+                            GOTO :__switch_1__case_8
                         ENDIF
                         PUSH 2 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_9
+                            GOTO :__switch_1__case_9
                         ENDIF
                         PUSH 1 :u32
-                        LOCAL :__switch_val_5
+                        LOCAL :__switch_val_2
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_4__case_10
+                            GOTO :__switch_1__case_10
                         ENDIF
-                        GOTO :__switch_4__case_11
-                        GOTO :__switch_4_end
-                        LABEL :__switch_4__case_0
+                        GOTO :__switch_1__case_11
+                        GOTO :__switch_1_end
+                        LABEL :__switch_1__case_0
                         PUSH 24
                         AS :u32
                         PUSH 10
@@ -2760,7 +2758,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_4__case_1
+                        LABEL :__switch_1__case_1
                         PUSH 16
                         AS :u32
                         PUSH 9
@@ -2774,7 +2772,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_4__case_2
+                        LABEL :__switch_1__case_2
                         PUSH 8
                         AS :u32
                         PUSH 8
@@ -2788,7 +2786,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_4__case_3
+                        LABEL :__switch_1__case_3
                         PUSH 24
                         AS :u32
                         PUSH 7
@@ -2802,7 +2800,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_4__case_4
+                        LABEL :__switch_1__case_4
                         PUSH 16
                         AS :u32
                         PUSH 6
@@ -2816,7 +2814,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_4__case_5
+                        LABEL :__switch_1__case_5
                         PUSH 8
                         AS :u32
                         PUSH 5
@@ -2830,7 +2828,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_4__case_6
+                        LABEL :__switch_1__case_6
                         PUSH 4
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -2841,7 +2839,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_4__case_7
+                        LABEL :__switch_1__case_7
                         PUSH 24
                         AS :u32
                         PUSH 3
@@ -2855,7 +2853,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_4__case_8
+                        LABEL :__switch_1__case_8
                         PUSH 16
                         AS :u32
                         PUSH 2
@@ -2869,7 +2867,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_4__case_9
+                        LABEL :__switch_1__case_9
                         PUSH 8
                         AS :u32
                         PUSH 1
@@ -2883,7 +2881,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_4__case_10
+                        LABEL :__switch_1__case_10
                         PUSH 0
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -2894,8 +2892,8 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_4__case_11
-                        LABEL :__switch_4_end
+                        LABEL :__switch_1__case_11
+                        LABEL :__switch_1_end
                         LOOP
                           COND
                             PUSH true
@@ -3398,7 +3396,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
         PARAM 0
         CALL :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
     ENDIF
-    SIZEOF :CacheNode
+    PUSH 96 :u64
     CALL :malloc
     AS :ptr<CacheNode>
     LOCAL :__s0_node
@@ -3812,88 +3810,88 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s38__ha_hashv
                     STORE
                     LOCAL :__s40__hj_k
-                    LOCAL :__switch_val_6 :u32
+                    LOCAL :__switch_val_3 :u32
                     STORE
                     PUSH 11 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_0
+                        GOTO :__switch_2__case_0
                     ENDIF
                     PUSH 10 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_1
+                        GOTO :__switch_2__case_1
                     ENDIF
                     PUSH 9 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_2
+                        GOTO :__switch_2__case_2
                     ENDIF
                     PUSH 8 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_3
+                        GOTO :__switch_2__case_3
                     ENDIF
                     PUSH 7 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_4
+                        GOTO :__switch_2__case_4
                     ENDIF
                     PUSH 6 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_5
+                        GOTO :__switch_2__case_5
                     ENDIF
                     PUSH 5 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_6
+                        GOTO :__switch_2__case_6
                     ENDIF
                     PUSH 4 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_7
+                        GOTO :__switch_2__case_7
                     ENDIF
                     PUSH 3 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_8
+                        GOTO :__switch_2__case_8
                     ENDIF
                     PUSH 2 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_9
+                        GOTO :__switch_2__case_9
                     ENDIF
                     PUSH 1 :u32
-                    LOCAL :__switch_val_6
+                    LOCAL :__switch_val_3
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_5__case_10
+                        GOTO :__switch_2__case_10
                     ENDIF
-                    GOTO :__switch_5__case_11
-                    GOTO :__switch_5_end
-                    LABEL :__switch_5__case_0
+                    GOTO :__switch_2__case_11
+                    GOTO :__switch_2_end
+                    LABEL :__switch_2__case_0
                     PUSH 24
                     AS :u32
                     PUSH 10
@@ -3907,7 +3905,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s38__ha_hashv
                     STORE
-                    LABEL :__switch_5__case_1
+                    LABEL :__switch_2__case_1
                     PUSH 16
                     AS :u32
                     PUSH 9
@@ -3921,7 +3919,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s38__ha_hashv
                     STORE
-                    LABEL :__switch_5__case_2
+                    LABEL :__switch_2__case_2
                     PUSH 8
                     AS :u32
                     PUSH 8
@@ -3935,7 +3933,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s38__ha_hashv
                     STORE
-                    LABEL :__switch_5__case_3
+                    LABEL :__switch_2__case_3
                     PUSH 24
                     AS :u32
                     PUSH 7
@@ -3949,7 +3947,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_j
                     STORE
-                    LABEL :__switch_5__case_4
+                    LABEL :__switch_2__case_4
                     PUSH 16
                     AS :u32
                     PUSH 6
@@ -3963,7 +3961,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_j
                     STORE
-                    LABEL :__switch_5__case_5
+                    LABEL :__switch_2__case_5
                     PUSH 8
                     AS :u32
                     PUSH 5
@@ -3977,7 +3975,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_j
                     STORE
-                    LABEL :__switch_5__case_6
+                    LABEL :__switch_2__case_6
                     PUSH 4
                     AS :u64
                     LOCAL :__s40__hj_key
@@ -3988,7 +3986,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_j
                     STORE
-                    LABEL :__switch_5__case_7
+                    LABEL :__switch_2__case_7
                     PUSH 24
                     AS :u32
                     PUSH 3
@@ -4002,7 +4000,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_i
                     STORE
-                    LABEL :__switch_5__case_8
+                    LABEL :__switch_2__case_8
                     PUSH 16
                     AS :u32
                     PUSH 2
@@ -4016,7 +4014,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_i
                     STORE
-                    LABEL :__switch_5__case_9
+                    LABEL :__switch_2__case_9
                     PUSH 8
                     AS :u32
                     PUSH 1
@@ -4030,7 +4028,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_i
                     STORE
-                    LABEL :__switch_5__case_10
+                    LABEL :__switch_2__case_10
                     PUSH 0
                     AS :u64
                     LOCAL :__s40__hj_key
@@ -4041,8 +4039,8 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     BINARY :add
                     LOCAL :__s40__hj_i
                     STORE
-                    LABEL :__switch_5__case_11
-                    LABEL :__switch_5_end
+                    LABEL :__switch_2__case_11
+                    LABEL :__switch_2_end
                     LOOP
                       COND
                         PUSH true
@@ -4293,7 +4291,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                       COND
                         PUSH true
                       BODY
-                        SIZEOF :UT_hash_table
+                        PUSH 64 :u64
                         CALL :malloc
                         AS :ptr<UT_hash_table>
                         LOCAL :__s0_node
@@ -4310,11 +4308,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :eq
                         IF
                           THEN
-                            PUSH 1
-                            UNARY :neg
+                            PUSH -1
                             CALL :exit
                           ELSE
-                            SIZEOF :UT_hash_table
+                            PUSH 64 :u64
                             PUSH 0
                             LOCAL :__s0_node
                             DEREF
@@ -4365,10 +4362,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             DEREF
                             FIELD 5
                             STORE
-                            SIZEOF :UT_hash_bucket
-                            PUSH 32 :u32
-                            AS :u64
-                            BINARY :mul
+                            PUSH 512 :u64
                             CALL :malloc
                             AS :ptr<UT_hash_bucket>
                             LOCAL :__s0_node
@@ -4397,8 +4391,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             BINARY :eq
                             IF
                               THEN
-                                PUSH 1
-                                UNARY :neg
+                                PUSH -1
                                 CALL :exit
                                 LOCAL :__s0_node
                                 DEREF
@@ -4407,10 +4400,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                 AS :ptr<void>
                                 CALL :free
                               ELSE
-                                SIZEOF :UT_hash_bucket
-                                PUSH 32 :u32
-                                AS :u64
-                                BINARY :mul
+                                PUSH 512 :u64
                                 PUSH 0
                                 LOCAL :__s0_node
                                 DEREF
@@ -4560,7 +4550,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :sub
                         LOCAL :__s38__ha_hashv
                         BINARY :and
-                        LOCAL :__s65__ha_bkt :u32
+                        LOCAL :__s66__ha_bkt :u32
                         STORE
                         PUSH 0
                         PUSH 0
@@ -4575,7 +4565,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                       COND
                         PUSH true
                       BODY
-                        LOCAL :__s65__ha_bkt
+                        LOCAL :__s66__ha_bkt
                         AS :u64
                         PARAM 0
                         DEREF
@@ -4588,18 +4578,18 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         BINARY :add
                         DEREF
                         ADDR
-                        LOCAL :__s67__ha_head :ptr<UT_hash_bucket>
+                        LOCAL :__s68__ha_head :ptr<UT_hash_bucket>
                         STORE
                         PUSH 1 :u32
-                        LOCAL :__s67__ha_head
+                        LOCAL :__s68__ha_head
                         DEREF
                         FIELD 1
                         BINARY :add
-                        LOCAL :__s67__ha_head
+                        LOCAL :__s68__ha_head
                         DEREF
                         FIELD 1
                         STORE
-                        LOCAL :__s67__ha_head
+                        LOCAL :__s68__ha_head
                         DEREF
                         FIELD 0
                         LOCAL :__s0_node
@@ -4622,7 +4612,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 0
                         AS :ptr<void>
                         AS :u64
-                        LOCAL :__s67__ha_head
+                        LOCAL :__s68__ha_head
                         DEREF
                         FIELD 0
                         AS :u64
@@ -4633,7 +4623,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             DEREF
                             FIELD 5
                             ADDR
-                            LOCAL :__s67__ha_head
+                            LOCAL :__s68__ha_head
                             DEREF
                             FIELD 0
                             DEREF
@@ -4644,18 +4634,18 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         DEREF
                         FIELD 5
                         ADDR
-                        LOCAL :__s67__ha_head
+                        LOCAL :__s68__ha_head
                         DEREF
                         FIELD 0
                         STORE
                         PUSH 10 :u32
                         PUSH 1 :u32
-                        LOCAL :__s67__ha_head
+                        LOCAL :__s68__ha_head
                         DEREF
                         FIELD 2
                         BINARY :add
                         BINARY :mul
-                        LOCAL :__s67__ha_head
+                        LOCAL :__s68__ha_head
                         DEREF
                         FIELD 1
                         BINARY :more_eq
@@ -4684,8 +4674,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                               COND
                                 PUSH true
                               BODY
-                                PUSH 2 :u32
-                                AS :u64
+                                PUSH 2 :u64
                                 LOCAL :__s0_node
                                 DEREF
                                 FIELD 5
@@ -4695,25 +4684,23 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                 DEREF
                                 FIELD 1
                                 AS :u64
-                                SIZEOF :UT_hash_bucket
+                                PUSH 16 :u64
                                 BINARY :mul
                                 BINARY :mul
                                 CALL :malloc
                                 AS :ptr<UT_hash_bucket>
-                                LOCAL :__s70__he_new_buckets :ptr<UT_hash_bucket>
+                                LOCAL :__s71__he_new_buckets :ptr<UT_hash_bucket>
                                 STORE
                                 PUSH 0
                                 AS :ptr<UT_hash_bucket>
-                                LOCAL :__s70__he_new_buckets
+                                LOCAL :__s71__he_new_buckets
                                 BINARY :eq
                                 IF
                                   THEN
-                                    PUSH 1
-                                    UNARY :neg
+                                    PUSH -1
                                     CALL :exit
                                   ELSE
-                                    PUSH 2 :u32
-                                    AS :u64
+                                    PUSH 2 :u64
                                     LOCAL :__s0_node
                                     DEREF
                                     FIELD 5
@@ -4723,11 +4710,11 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                     DEREF
                                     FIELD 1
                                     AS :u64
-                                    SIZEOF :UT_hash_bucket
+                                    PUSH 16 :u64
                                     BINARY :mul
                                     BINARY :mul
                                     PUSH 0
-                                    LOCAL :__s70__he_new_buckets
+                                    LOCAL :__s71__he_new_buckets
                                     AS :ptr<void>
                                     CALL :memset
                                     STACK :drop
@@ -4794,8 +4781,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                     DEREF
                                     FIELD 6
                                     STORE
-                                    PUSH 0
-                                    AS :u32
+                                    PUSH 0 :u32
                                     LOCAL :__s0_node
                                     DEREF
                                     FIELD 5
@@ -4805,9 +4791,8 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                     DEREF
                                     FIELD 7
                                     STORE
-                                    PUSH 0
-                                    AS :u32
-                                    LOCAL :__s70__he_bkt_i :u32
+                                    PUSH 0 :u32
+                                    LOCAL :__s71__he_bkt_i :u32
                                     STORE
                                     LOOP
                                       COND
@@ -4819,10 +4804,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                         FIELD 0
                                         DEREF
                                         FIELD 1
-                                        LOCAL :__s70__he_bkt_i
+                                        LOCAL :__s71__he_bkt_i
                                         BINARY :less
                                       BODY
-                                        LOCAL :__s70__he_bkt_i
+                                        LOCAL :__s71__he_bkt_i
                                         AS :u64
                                         LOCAL :__s0_node
                                         DEREF
@@ -4835,21 +4820,21 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                         BINARY :add
                                         DEREF
                                         FIELD 0
-                                        LOCAL :__s70__he_thh :ptr<UT_hash_handle>
+                                        LOCAL :__s71__he_thh :ptr<UT_hash_handle>
                                         STORE
                                         LOOP
                                           COND
                                             PUSH 0
                                             AS :ptr<void>
                                             AS :u64
-                                            LOCAL :__s70__he_thh
+                                            LOCAL :__s71__he_thh
                                             AS :u64
                                             BINARY :not_eq
                                           BODY
-                                            LOCAL :__s70__he_thh
+                                            LOCAL :__s71__he_thh
                                             DEREF
                                             FIELD 4
-                                            LOCAL :__s70__he_hh_nxt :ptr<UT_hash_handle>
+                                            LOCAL :__s71__he_hh_nxt :ptr<UT_hash_handle>
                                             STORE
                                             LOOP
                                               COND
@@ -4867,11 +4852,11 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                                 FIELD 1
                                                 BINARY :mul
                                                 BINARY :sub
-                                                LOCAL :__s70__he_thh
+                                                LOCAL :__s71__he_thh
                                                 DEREF
                                                 FIELD 7
                                                 BINARY :and
-                                                LOCAL :__s70__he_bkt :u32
+                                                LOCAL :__s71__he_bkt :u32
                                                 STORE
                                                 PUSH 0
                                                 PUSH 0
@@ -4882,13 +4867,13 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                                     BREAK
                                                 ENDIF
                                             ENDLOOP
-                                            LOCAL :__s70__he_bkt
+                                            LOCAL :__s71__he_bkt
                                             AS :u64
-                                            LOCAL :__s70__he_new_buckets
+                                            LOCAL :__s71__he_new_buckets
                                             BINARY :add
                                             DEREF
                                             ADDR
-                                            LOCAL :__s70__he_newbkt :ptr<UT_hash_bucket>
+                                            LOCAL :__s71__he_newbkt :ptr<UT_hash_bucket>
                                             STORE
                                             LOCAL :__s0_node
                                             DEREF
@@ -4899,15 +4884,15 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                             DEREF
                                             FIELD 6
                                             PUSH 1 :u32
-                                            LOCAL :__s70__he_newbkt
+                                            LOCAL :__s71__he_newbkt
                                             DEREF
                                             FIELD 1
                                             BINARY :add
-                                            LOCAL :__s70__he_newbkt
+                                            LOCAL :__s71__he_newbkt
                                             DEREF
                                             FIELD 1
                                             STORE
-                                            LOCAL :__s70__he_newbkt
+                                            LOCAL :__s71__he_newbkt
                                             DEREF
                                             FIELD 1
                                             BINARY :more
@@ -4940,22 +4925,22 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                                 FIELD 0
                                                 DEREF
                                                 FIELD 6
-                                                LOCAL :__s70__he_newbkt
+                                                LOCAL :__s71__he_newbkt
                                                 DEREF
                                                 FIELD 2
                                                 BINARY :mul
-                                                LOCAL :__s70__he_newbkt
+                                                LOCAL :__s71__he_newbkt
                                                 DEREF
                                                 FIELD 1
                                                 BINARY :more
                                                 IF
                                                   THEN
                                                     PUSH 1 :u32
-                                                    LOCAL :__s70__he_newbkt
+                                                    LOCAL :__s71__he_newbkt
                                                     DEREF
                                                     FIELD 2
                                                     BINARY :add
-                                                    LOCAL :__s70__he_newbkt
+                                                    LOCAL :__s71__he_newbkt
                                                     DEREF
                                                     FIELD 2
                                                     STORE
@@ -4964,49 +4949,49 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                             PUSH 0
                                             AS :ptr<void>
                                             AS :ptr<UT_hash_handle>
-                                            LOCAL :__s70__he_thh
+                                            LOCAL :__s71__he_thh
                                             DEREF
                                             FIELD 3
                                             STORE
-                                            LOCAL :__s70__he_newbkt
+                                            LOCAL :__s71__he_newbkt
                                             DEREF
                                             FIELD 0
-                                            LOCAL :__s70__he_thh
+                                            LOCAL :__s71__he_thh
                                             DEREF
                                             FIELD 4
                                             STORE
                                             PUSH 0
                                             AS :ptr<void>
                                             AS :u64
-                                            LOCAL :__s70__he_newbkt
+                                            LOCAL :__s71__he_newbkt
                                             DEREF
                                             FIELD 0
                                             AS :u64
                                             BINARY :not_eq
                                             IF
                                               THEN
-                                                LOCAL :__s70__he_thh
-                                                LOCAL :__s70__he_newbkt
+                                                LOCAL :__s71__he_thh
+                                                LOCAL :__s71__he_newbkt
                                                 DEREF
                                                 FIELD 0
                                                 DEREF
                                                 FIELD 3
                                                 STORE
                                             ENDIF
-                                            LOCAL :__s70__he_thh
-                                            LOCAL :__s70__he_newbkt
+                                            LOCAL :__s71__he_thh
+                                            LOCAL :__s71__he_newbkt
                                             DEREF
                                             FIELD 0
                                             STORE
-                                            LOCAL :__s70__he_hh_nxt
-                                            LOCAL :__s70__he_thh
+                                            LOCAL :__s71__he_hh_nxt
+                                            LOCAL :__s71__he_thh
                                             STORE
                                         ENDLOOP
                                       STEP
                                         PUSH 1 :u32
-                                        LOCAL :__s70__he_bkt_i
+                                        LOCAL :__s71__he_bkt_i
                                         BINARY :add
-                                        LOCAL :__s70__he_bkt_i
+                                        LOCAL :__s71__he_bkt_i
                                         STORE
                                     ENDLOOP
                                     LOCAL :__s0_node
@@ -5057,7 +5042,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                     DEREF
                                     FIELD 2
                                     STORE
-                                    LOCAL :__s70__he_new_buckets
+                                    LOCAL :__s71__he_new_buckets
                                     LOCAL :__s0_node
                                     DEREF
                                     FIELD 5
@@ -5128,8 +5113,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                     BINARY :more
                                     IF
                                       THEN
-                                        PUSH 1
-                                        AS :u32
+                                        PUSH 1 :u32
                                         LOCAL :__s0_node
                                         DEREF
                                         FIELD 5
@@ -5506,7 +5490,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
                     DEREF
                     FIELD 7
                     BINARY :and
-                    LOCAL :__s5__hd_bkt :u32
+                    LOCAL :__s6__hd_bkt :u32
                     STORE
                     PUSH 0
                     PUSH 0
@@ -5521,7 +5505,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
                   COND
                     PUSH true
                   BODY
-                    LOCAL :__s5__hd_bkt
+                    LOCAL :__s6__hd_bkt
                     AS :u64
                     PARAM 0
                     DEREF
@@ -5534,20 +5518,20 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
                     BINARY :add
                     DEREF
                     ADDR
-                    LOCAL :__s12__hd_head :ptr<UT_hash_bucket>
+                    LOCAL :__s13__hd_head :ptr<UT_hash_bucket>
                     STORE
                     PUSH 1 :u32
-                    LOCAL :__s12__hd_head
+                    LOCAL :__s13__hd_head
                     DEREF
                     FIELD 1
                     BINARY :sub
-                    LOCAL :__s12__hd_head
+                    LOCAL :__s13__hd_head
                     DEREF
                     FIELD 1
                     STORE
                     LOCAL :__s3__hd_hh_del
                     AS :u64
-                    LOCAL :__s12__hd_head
+                    LOCAL :__s13__hd_head
                     DEREF
                     FIELD 0
                     AS :u64
@@ -5557,7 +5541,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
                         LOCAL :__s3__hd_hh_del
                         DEREF
                         FIELD 4
-                        LOCAL :__s12__hd_head
+                        LOCAL :__s13__hd_head
                         DEREF
                         FIELD 0
                         STORE
@@ -5702,16 +5686,14 @@ FUNC :CacheSimulation_prepare
     DEREF
     FIELD 1
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
     BINARY :less_eq
     IF
       THEN
-        PUSH 2000
-        AS :i64
+        PUSH 2000 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -5726,35 +5708,30 @@ FUNC :CacheSimulation_prepare
     DEREF
     FIELD 2
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 2
     BINARY :less_eq
     IF
       THEN
-        PUSH 1000
-        AS :i64
+        PUSH 1000 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 2
         STORE
     ENDIF
-    PUSH 5432
-    AS :u32
+    PUSH 5432 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 3
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 4
@@ -5796,7 +5773,7 @@ FUNC :CacheSimulation_run
         AS :u32
         CALL :Helper_next_int
         PUSH :item_%u
-        SIZEOF "flat<u8, 32>"
+        PUSH 32 :u64
         LOCAL :__s1_key_buf "flat<u8, 32>"
         ADDR
         AS :ptr<u8>
@@ -5825,7 +5802,7 @@ FUNC :CacheSimulation_run
             STORE
             PARAM 1
             PUSH :updated_%d
-            SIZEOF "flat<u8, 32>"
+            PUSH 32 :u64
             LOCAL :__s2_value_buf "flat<u8, 32>"
             ADDR
             AS :ptr<u8>
@@ -5853,7 +5830,7 @@ FUNC :CacheSimulation_run
             STORE
             PARAM 1
             PUSH :new_%d
-            SIZEOF "flat<u8, 32>"
+            PUSH 32 :u64
             LOCAL :__s3_value_buf "flat<u8, 32>"
             ADDR
             AS :ptr<u8>
@@ -5984,12 +5961,12 @@ FUNC :CacheSimulation_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :CacheSimulationData
+    PUSH 48 :u64
     CALL :malloc
     AS :ptr<CacheSimulationData>
     LOCAL :__s0_data :ptr<CacheSimulationData>
     STORE
-    SIZEOF :CacheSimulationData
+    PUSH 48 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

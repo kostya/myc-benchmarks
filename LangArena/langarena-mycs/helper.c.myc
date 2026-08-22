@@ -1037,8 +1037,7 @@ ENDFUNC
 
 FUNC :Helper_reset
   BODY
-    PUSH 42
-    AS :u32
+    PUSH 42 :u32
     GLOBAL :Helper_last
     STORE
 ENDFUNC
@@ -1049,20 +1048,16 @@ FUNC :Helper_next_int
   RETURN
     TYPE :u32
   BODY
-    PUSH 139968
-    AS :u32
-    PUSH 29573
-    AS :u32
-    PUSH 3877
-    AS :u32
+    PUSH 139968 :u32
+    PUSH 29573 :u32
+    PUSH 3877 :u32
     GLOBAL :Helper_last
     BINARY :mul
     BINARY :add
     BINARY :rem
     GLOBAL :Helper_last
     STORE
-    PUSH 139968
-    AS :i64
+    PUSH 139968 :i64
     PARAM 0
     AS :i64
     GLOBAL :Helper_last
@@ -1081,8 +1076,7 @@ FUNC :Helper_next_int_range
     TYPE :u32
   BODY
     PARAM 0
-    PUSH 1
-    AS :u32
+    PUSH 1 :u32
     PARAM 0
     PARAM 1
     BINARY :sub
@@ -1098,20 +1092,16 @@ FUNC :Helper_next_float
   RETURN
     TYPE :f64
   BODY
-    PUSH 139968
-    AS :u32
-    PUSH 29573
-    AS :u32
-    PUSH 3877
-    AS :u32
+    PUSH 139968 :u32
+    PUSH 29573 :u32
+    PUSH 3877 :u32
     GLOBAL :Helper_last
     BINARY :mul
     BINARY :add
     BINARY :rem
     GLOBAL :Helper_last
     STORE
-    PUSH 139968
-    AS :f64
+    PUSH 139968.0 :f64
     GLOBAL :Helper_last
     AS :f64
     PARAM 0
@@ -1217,7 +1207,7 @@ FUNC :Helper_checksum_f64
   BODY
     PARAM 0
     PUSH :%.7f
-    SIZEOF "flat<u8, 32>"
+    PUSH 32 :u64
     LOCAL :__s0_buffer "flat<u8, 32>"
     ADDR
     AS :ptr<u8>
@@ -1254,8 +1244,7 @@ FUNC :Helper_load_config
         CALL :exit
     ENDIF
     PUSH 2
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_file
     CALL :fseek
     STACK :drop
@@ -1264,13 +1253,11 @@ FUNC :Helper_load_config
     LOCAL :__s1_file_size :i64
     STORE
     PUSH 0
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_file
     CALL :fseek
     STACK :drop
-    PUSH 1
-    AS :i64
+    PUSH 1 :i64
     LOCAL :__s1_file_size
     BINARY :add
     AS :u64
@@ -1297,15 +1284,13 @@ FUNC :Helper_load_config
     LOCAL :__s0_file
     LOCAL :__s1_file_size
     AS :u64
-    PUSH 1
-    AS :u64
+    PUSH 1 :u64
     LOCAL :__s1_json_data
     AS :ptr<void>
     CALL :fread
     LOCAL :__s2_read_size :u64
     STORE
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s2_read_size
     LOCAL :__s1_json_data
     BINARY :add
@@ -1314,8 +1299,7 @@ FUNC :Helper_load_config
     LOCAL :__s0_file
     CALL :fclose
     STACK :drop
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s2_read_size
     LOCAL :__s1_json_data
     CALL :static_fn_helper_c_yyjson_read
@@ -1345,9 +1329,7 @@ FUNC :Helper_load_config
     CALL :static_fn_helper_c_yyjson_is_arr
     IF
       THEN
-        PUSH 0
-        PUSH 1
-        BINARY :not_eq
+        PUSH 1 :bool
         GLOBAL :global_config_is_array
         STORE
         LOCAL :__s2_doc
@@ -1356,8 +1338,7 @@ FUNC :Helper_load_config
         LOCAL :__s3_root
         GLOBAL :global_config_root
         STORE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         LOCAL :__s4_idx :u64
         STORE
         LOCAL :__s3_root
@@ -1400,11 +1381,10 @@ FUNC :Helper_load_config
                 CALL :static_fn_helper_c_yyjson_get_str
                 LOCAL :__s7_name :ptr<u8>
                 STORE
-                PUSH 1
-                AS :u64
+                PUSH 1 :u64
                 GLOBAL :global_order_count
                 BINARY :add
-                SIZEOF :ptr<u8>
+                PUSH 8 :u64
                 BINARY :mul
                 GLOBAL :global_order
                 AS :ptr<void>
@@ -1437,9 +1417,7 @@ FUNC :Helper_load_config
             STORE
         ENDLOOP
       ELSE
-        PUSH 0
-        PUSH 0
-        BINARY :not_eq
+        PUSH 0 :bool
         GLOBAL :global_config_is_array
         STORE
         LOCAL :__s2_doc
@@ -1508,8 +1486,7 @@ FUNC :Helper_free_config
         AS :ptr<ptr<u8>>
         GLOBAL :global_order
         STORE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         GLOBAL :global_order_count
         STORE
     ENDIF
@@ -1537,8 +1514,7 @@ FUNC :static_fn_helper_c_find_class_obj
     GLOBAL :global_config_is_array
     IF
       THEN
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         LOCAL :__s2_idx :u64
         STORE
         GLOBAL :global_config_root
@@ -1629,8 +1605,7 @@ FUNC :Helper_config_i64
         GLOBAL :stderr
         CALL :fprintf
         STACK :drop
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         RET
     ENDIF
     PARAM 0
@@ -1656,8 +1631,7 @@ FUNC :Helper_config_i64
     LOCAL :__sc_or_1
     IF
       THEN
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         RET
     ENDIF
     PARAM 1
@@ -1671,8 +1645,7 @@ FUNC :Helper_config_i64
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         RET
     ENDIF
     LOCAL :__s2_field
@@ -1693,8 +1666,7 @@ FUNC :Helper_config_i64
             CALL :atoll
             RET
           ELSE
-            PUSH 0
-            AS :i64
+            PUSH 0 :i64
             RET
         ENDIF
     ENDIF
@@ -1796,8 +1768,7 @@ FUNC :static_fn_helper_c_yyjson_read
     PARAM 2
     LOCAL :__s0_flg :u32
     STORE
-    GLOBAL :static_helper_c_YYJSON_READ_INSITU
-    UNARY :bnot
+    PUSH 4294967294 :u32
     LOCAL :__s0_flg
     BINARY :and
     LOCAL :__s0_flg
@@ -1867,7 +1838,7 @@ FUNC :static_fn_helper_c_yyjson_doc_free
         FIELD 1
         LOCAL :__s1_alc :yyjson_alc
         STORE
-        SIZEOF :yyjson_alc
+        PUSH 32 :u64
         PUSH 0
         PARAM 0
         DEREF
@@ -2098,8 +2069,7 @@ FUNC :static_fn_helper_c_yyjson_arr_size
         LOCAL :__ternary_0 :u64
         STORE
       ELSE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         LOCAL :__ternary_0
         STORE
     ENDIF
@@ -2125,8 +2095,7 @@ FUNC :static_fn_helper_c_yyjson_arr_get_first
     IF
       THEN
         PUSH 0 :i64
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_get_len
@@ -2168,8 +2137,7 @@ FUNC :static_fn_helper_c_yyjson_obj_get
         LOCAL :__ternary_0 :u64
         STORE
       ELSE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         LOCAL :__ternary_0
         STORE
     ENDIF
@@ -2207,7 +2175,7 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_next
         LOCAL :__ternary_2 :u64
         STORE
       ELSE
-        SIZEOF :yyjson_val
+        PUSH 16 :u64
         LOCAL :__ternary_2
         STORE
     ENDIF
@@ -2273,8 +2241,7 @@ FUNC :static_fn_helper_c_yyjson_obj_getn
         STORE
         LOOP
           COND
-            PUSH 0
-            AS :u64
+            PUSH 0 :u64
             LOCAL :__s1_len
             LOCAL :__tmp_3 :u64
             STORE
@@ -2323,9 +2290,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_is_num
     ATTR :private
   BODY
     PUSH 4
-    AS :u8
     PARAM 0
     CALL :static_fn_helper_c_unsafe_yyjson_get_type
+    AS :i32
     BINARY :eq
     RET
 ENDFUNC
@@ -2339,9 +2306,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_is_str
     ATTR :private
   BODY
     PUSH 5
-    AS :u8
     PARAM 0
     CALL :static_fn_helper_c_unsafe_yyjson_get_type
+    AS :i32
     BINARY :eq
     RET
 ENDFUNC
@@ -2355,9 +2322,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_is_arr
     ATTR :private
   BODY
     PUSH 6
-    AS :u8
     PARAM 0
     CALL :static_fn_helper_c_unsafe_yyjson_get_type
+    AS :i32
     BINARY :eq
     RET
 ENDFUNC
@@ -2371,9 +2338,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_is_obj
     ATTR :private
   BODY
     PUSH 7
-    AS :u8
     PARAM 0
     CALL :static_fn_helper_c_unsafe_yyjson_get_type
+    AS :i32
     BINARY :eq
     RET
 ENDFUNC
@@ -2410,14 +2377,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_num
     CALL :static_fn_helper_c_unsafe_yyjson_get_tag
     LOCAL :__s0_tag :u8
     STORE
-    PUSH 3
-    PUSH 2
-    BINARY :shl
-    AS :u8
-    PUSH 4
-    AS :u8
-    BINARY :or
+    PUSH 20
     LOCAL :__s0_tag
+    AS :i32
     BINARY :eq
     IF
       THEN
@@ -2429,14 +2391,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_num
         FIELD 1
         RET
       ELSE
-        PUSH 3
-        PUSH 1
-        BINARY :shl
-        AS :u8
-        PUSH 4
-        AS :u8
-        BINARY :or
+        PUSH 12
         LOCAL :__s0_tag
+        AS :i32
         BINARY :eq
         IF
           THEN
@@ -2449,14 +2406,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_num
             AS :f64
             RET
           ELSE
-            PUSH 3
-            PUSH 0
-            BINARY :shl
-            AS :u8
             PUSH 4
-            AS :u8
-            BINARY :or
             LOCAL :__s0_tag
+            AS :i32
             BINARY :eq
             IF
               THEN
@@ -2501,7 +2453,6 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_len
     ATTR :private
   BODY
     PUSH 8
-    AS :u8
     AS :u64
     PARAM 0
     AS :ptr<yyjson_val>
@@ -2561,8 +2512,8 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_type
     LOCAL :__s0_tag :u8
     STORE
     PUSH 7
-    AS :u8
     LOCAL :__s0_tag
+    AS :i32
     BINARY :and
     AS :u8
     RET
@@ -2584,8 +2535,8 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_tag
     LOCAL :__s0_tag :u8
     STORE
     PUSH 255
-    AS :u8
     LOCAL :__s0_tag
+    AS :i32
     BINARY :and
     AS :u8
     RET

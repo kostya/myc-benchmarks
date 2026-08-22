@@ -617,7 +617,7 @@ FUNC :static_fn_calculator_c_ast_node_new_number
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :AST_Node
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<AST_Node>
     LOCAL :__s0_node :ptr<AST_Node>
@@ -646,7 +646,7 @@ FUNC :static_fn_calculator_c_ast_node_new_variable
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :AST_Node
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<AST_Node>
     LOCAL :__s0_node :ptr<AST_Node>
@@ -678,7 +678,7 @@ FUNC :static_fn_calculator_c_ast_node_new_binary_op
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :AST_BinaryOp
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<AST_BinaryOp>
     LOCAL :__s0_binary_op :ptr<AST_BinaryOp>
@@ -698,7 +698,7 @@ FUNC :static_fn_calculator_c_ast_node_new_binary_op
     DEREF
     FIELD 2
     STORE
-    SIZEOF :AST_Node
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<AST_Node>
     LOCAL :__s0_node :ptr<AST_Node>
@@ -728,7 +728,7 @@ FUNC :static_fn_calculator_c_ast_node_new_assignment
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :AST_Assignment
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<AST_Assignment>
     LOCAL :__s0_assignment :ptr<AST_Assignment>
@@ -744,7 +744,7 @@ FUNC :static_fn_calculator_c_ast_node_new_assignment
     DEREF
     FIELD 1
     STORE
-    SIZEOF :AST_Node
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<AST_Node>
     LOCAL :__s0_node :ptr<AST_Node>
@@ -782,32 +782,32 @@ FUNC :static_fn_calculator_c_ast_node_free
     PARAM 0
     DEREF
     FIELD 0
-    LOCAL :__switch_val_8 :i32
+    LOCAL :__switch_val_1 :i32
     STORE
     PUSH 1 :i32
-    LOCAL :__switch_val_8
+    LOCAL :__switch_val_1
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_7__case_0
+        GOTO :__switch_0__case_0
     ENDIF
     PUSH 2 :i32
-    LOCAL :__switch_val_8
+    LOCAL :__switch_val_1
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_7__case_1
+        GOTO :__switch_0__case_1
     ENDIF
     PUSH 3 :i32
-    LOCAL :__switch_val_8
+    LOCAL :__switch_val_1
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_7__case_2
+        GOTO :__switch_0__case_2
     ENDIF
-    GOTO :__switch_7__case_3
-    GOTO :__switch_7_end
-    LABEL :__switch_7__case_0
+    GOTO :__switch_0__case_3
+    GOTO :__switch_0_end
+    LABEL :__switch_0__case_0
     PARAM 0
     DEREF
     FIELD 1
@@ -815,8 +815,8 @@ FUNC :static_fn_calculator_c_ast_node_free
     FIELD 1
     AS :ptr<void>
     CALL :free
-    GOTO :__switch_7_end
-    LABEL :__switch_7__case_1
+    GOTO :__switch_0_end
+    LABEL :__switch_0__case_1
     PUSH 0
     AS :ptr<AST_BinaryOp>
     PARAM 0
@@ -851,8 +851,8 @@ FUNC :static_fn_calculator_c_ast_node_free
         AS :ptr<void>
         CALL :free
     ENDIF
-    GOTO :__switch_7_end
-    LABEL :__switch_7__case_2
+    GOTO :__switch_0_end
+    LABEL :__switch_0__case_2
     PUSH 0
     AS :ptr<AST_Assignment>
     PARAM 0
@@ -888,10 +888,10 @@ FUNC :static_fn_calculator_c_ast_node_free
         AS :ptr<void>
         CALL :free
     ENDIF
-    GOTO :__switch_7_end
-    LABEL :__switch_7__case_3
-    GOTO :__switch_7_end
-    LABEL :__switch_7_end
+    GOTO :__switch_0_end
+    LABEL :__switch_0__case_3
+    GOTO :__switch_0_end
+    LABEL :__switch_0_end
     PARAM 0
     AS :ptr<void>
     CALL :free
@@ -987,8 +987,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_init
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     PARAM 0
     DEREF
     FIELD 1
@@ -1051,9 +1050,8 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_skip_whitespace
         LOCAL :__sc_and_0
         IF
           THEN
-            PUSH 0 :u16
+            PUSH 0
             PUSH 8192
-            AS :u16
             PARAM 0
             DEREF
             FIELD 2
@@ -1064,6 +1062,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_skip_whitespace
             DEREF
             BINARY :add
             DEREF
+            AS :i32
             BINARY :and
             BINARY :not_eq
             LOCAL :__sc_and_0
@@ -1099,9 +1098,8 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_number
         LOCAL :__sc_and_1
         IF
           THEN
-            PUSH 0 :u16
+            PUSH 0
             PUSH 2048
-            AS :u16
             PARAM 0
             DEREF
             FIELD 2
@@ -1112,6 +1110,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_number
             DEREF
             BINARY :add
             DEREF
+            AS :i32
             BINARY :and
             BINARY :not_eq
             LOCAL :__sc_and_1
@@ -1126,8 +1125,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_number
         AS :i32
         BINARY :sub
         AS :i64
-        PUSH 10
-        AS :i64
+        PUSH 10 :i64
         LOCAL :__s0_value
         BINARY :mul
         BINARY :add
@@ -1166,9 +1164,8 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_variable
         LOCAL :__sc_and_1
         IF
           THEN
-            PUSH 0 :u16
+            PUSH 0
             PUSH 1024
-            AS :u16
             PARAM 0
             DEREF
             FIELD 2
@@ -1179,6 +1176,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_variable
             DEREF
             BINARY :add
             DEREF
+            AS :i32
             BINARY :and
             BINARY :not_eq
             LOCAL :__sc_or_2 :bool
@@ -1187,9 +1185,8 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_variable
             IF
               THEN
               ELSE
-                PUSH 0 :u16
+                PUSH 0
                 PUSH 2048
-                AS :u16
                 PARAM 0
                 DEREF
                 FIELD 2
@@ -1200,6 +1197,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_variable
                 DEREF
                 BINARY :add
                 DEREF
+                AS :i32
                 BINARY :and
                 BINARY :not_eq
                 LOCAL :__sc_or_2
@@ -1221,8 +1219,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_variable
     BINARY :sub
     LOCAL :__s1_len :u64
     STORE
-    PUSH 1
-    AS :u64
+    PUSH 1 :u64
     LOCAL :__s1_len
     BINARY :add
     CALL :malloc
@@ -1238,8 +1235,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_variable
     LOCAL :__s1_var_name
     CALL :strncpy
     STACK :drop
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s1_len
     LOCAL :__s1_var_name
     BINARY :add
@@ -1300,14 +1296,12 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_factor
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         CALL :static_fn_calculator_c_ast_node_new_number
         RET
     ENDIF
-    PUSH 0 :u16
+    PUSH 0
     PUSH 2048
-    AS :u16
     PARAM 0
     DEREF
     FIELD 2
@@ -1318,6 +1312,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_factor
     DEREF
     BINARY :add
     DEREF
+    AS :i32
     BINARY :and
     BINARY :not_eq
     IF
@@ -1326,9 +1321,8 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_factor
         CALL :static_fn_calculator_c_calculator_ast_parser_parse_number
         RET
     ENDIF
-    PUSH 0 :u16
+    PUSH 0
     PUSH 1024
-    AS :u16
     PARAM 0
     DEREF
     FIELD 2
@@ -1339,6 +1333,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_factor
     DEREF
     BINARY :add
     DEREF
+    AS :i32
     BINARY :and
     BINARY :not_eq
     IF
@@ -1377,8 +1372,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_factor
         LOCAL :__s4_node
         RET
     ENDIF
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     CALL :static_fn_calculator_c_ast_node_new_number
     RET
 ENDFUNC
@@ -1484,8 +1478,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_all
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     PARAM 1
     DEREF
     FIELD 1
@@ -1525,8 +1518,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_all
             BINARY :not_eq
             IF
               THEN
-                PUSH 2
-                AS :i64
+                PUSH 2 :i64
                 PARAM 1
                 DEREF
                 FIELD 2
@@ -1534,8 +1526,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_all
                 LOCAL :__ternary_0 :i64
                 STORE
               ELSE
-                PUSH 16
-                AS :i64
+                PUSH 16 :i64
                 LOCAL :__ternary_0
                 STORE
             ENDIF
@@ -1544,7 +1535,7 @@ FUNC :static_fn_calculator_c_calculator_ast_parser_parse_all
             DEREF
             FIELD 2
             STORE
-            SIZEOF :ptr<AST_Node>
+            PUSH 8 :u64
             AS :i64
             PARAM 1
             DEREF
@@ -1597,8 +1588,7 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 100
-    AS :i64
+    PUSH 100 :i64
     PARAM 0
     BINARY :mul
     AS :u64
@@ -1670,8 +1660,7 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         LOCAL :__s1_i
         BINARY :less
       BODY
-        PUSH 10
-        AS :i64
+        PUSH 10 :i64
         LOCAL :__s1_i
         BINARY :add
         AS :i32
@@ -1694,83 +1683,82 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        PUSH 10
-        AS :u32
+        PUSH 10 :u32
         CALL :Helper_next_int
-        LOCAL :__switch_val_9 :u32
+        LOCAL :__switch_val_2 :u32
         STORE
         PUSH 0 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_0
+            GOTO :__switch_1__case_0
         ENDIF
         PUSH 1 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_1
+            GOTO :__switch_1__case_1
         ENDIF
         PUSH 2 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_2
+            GOTO :__switch_1__case_2
         ENDIF
         PUSH 3 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_3
+            GOTO :__switch_1__case_3
         ENDIF
         PUSH 4 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_4
+            GOTO :__switch_1__case_4
         ENDIF
         PUSH 5 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_5
+            GOTO :__switch_1__case_5
         ENDIF
         PUSH 6 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_6
+            GOTO :__switch_1__case_6
         ENDIF
         PUSH 7 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_7
+            GOTO :__switch_1__case_7
         ENDIF
         PUSH 8 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_8
+            GOTO :__switch_1__case_8
         ENDIF
         PUSH 9 :u32
-        LOCAL :__switch_val_9
+        LOCAL :__switch_val_2
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_8__case_9
+            GOTO :__switch_1__case_9
         ENDIF
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_0
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_0
         PUSH 5
         LOCAL :__s2_v
         BINARY :sub
@@ -1801,8 +1789,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_1
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_1
         PUSH 6
         LOCAL :__s2_v
         BINARY :sub
@@ -1834,8 +1822,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_2
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_2
         PUSH 7
         LOCAL :__s2_v
         BINARY :sub
@@ -1852,8 +1840,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_3
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_3
         PUSH 5
         LOCAL :__s2_v
         BINARY :sub
@@ -1873,8 +1861,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_4
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_4
         PUSH 1
         LOCAL :__s2_v
         BINARY :sub
@@ -1891,8 +1879,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_5
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_5
         PUSH 3
         LOCAL :__s2_v
         BINARY :sub
@@ -1909,8 +1897,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_6
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_6
         PUSH 8
         LOCAL :__s2_v
         BINARY :sub
@@ -1927,8 +1915,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_7
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_7
         PUSH 6
         LOCAL :__s2_v
         BINARY :sub
@@ -1945,8 +1933,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_8
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_8
         PUSH 1
         LOCAL :__s2_v
         BINARY :sub
@@ -1965,8 +1953,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8__case_9
+        GOTO :__switch_1_end
+        LABEL :__switch_1__case_9
         PUSH 7
         LOCAL :__s2_v
         BINARY :sub
@@ -1986,8 +1974,8 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         BINARY :add
         LOCAL :__s0_len
         STORE
-        GOTO :__switch_8_end
-        LABEL :__switch_8_end
+        GOTO :__switch_1_end
+        LABEL :__switch_1_end
         PUSH "\n"
         LOCAL :__s0_len
         LOCAL :__s0_capacity
@@ -2008,8 +1996,7 @@ FUNC :static_fn_calculator_c_calculator_ast_generate_random_program
         LOCAL :__s1_i
         STORE
     ENDLOOP
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s0_len
     LOCAL :__s0_result
     BINARY :add
@@ -2038,16 +2025,14 @@ FUNC :CalculatorAst_prepare
     DEREF
     FIELD 5
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 5
     BINARY :less_eq
     IF
       THEN
-        PUSH 1000
-        AS :i64
+        PUSH 1000 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 5
@@ -2068,20 +2053,17 @@ FUNC :CalculatorAst_prepare
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 2
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 3
@@ -2147,14 +2129,12 @@ FUNC :CalculatorAst_run
         DEREF
         FIELD 0
         STORE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
         STORE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 2
@@ -2212,14 +2192,12 @@ FUNC :CalculatorAst_run
         DEREF
         FIELD 0
         STORE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
         STORE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 2
@@ -2235,8 +2213,7 @@ FUNC :CalculatorAst_run
     AS :u32
     LOCAL :__s4_iteration_result :u32
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -2246,9 +2223,9 @@ FUNC :CalculatorAst_run
     LOCAL :__sc_and_5
     IF
       THEN
-        PUSH 3
-        PUSH 1
-        AS :i64
+        PUSH 3 :u32
+        AS :i32
+        PUSH 1 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -2268,8 +2245,7 @@ FUNC :CalculatorAst_run
     LOCAL :__sc_and_5
     IF
       THEN
-        PUSH 1
-        AS :i64
+        PUSH 1 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -2412,12 +2388,12 @@ FUNC :CalculatorAst_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :CalculatorAstData
+    PUSH 48 :u64
     CALL :malloc
     AS :ptr<CalculatorAstData>
     LOCAL :__s0_data :ptr<CalculatorAstData>
     STORE
-    SIZEOF :CalculatorAstData
+    PUSH 48 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>
@@ -2459,7 +2435,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_new
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :CalculatorInterpreterContext
+    PUSH 8 :u64
     CALL :malloc
     AS :ptr<CalculatorInterpreterContext>
     LOCAL :__s0_ctx :ptr<CalculatorInterpreterContext>
@@ -2737,7 +2713,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_free
                     DEREF
                     FIELD 7
                     BINARY :and
-                    LOCAL :__s5__hd_bkt :u32
+                    LOCAL :__s6__hd_bkt :u32
                     STORE
                     PUSH 0
                     PUSH 0
@@ -2752,7 +2728,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_free
                   COND
                     PUSH true
                   BODY
-                    LOCAL :__s5__hd_bkt
+                    LOCAL :__s6__hd_bkt
                     AS :u64
                     PARAM 0
                     DEREF
@@ -2765,20 +2741,20 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_free
                     BINARY :add
                     DEREF
                     ADDR
-                    LOCAL :__s12__hd_head :ptr<UT_hash_bucket>
+                    LOCAL :__s13__hd_head :ptr<UT_hash_bucket>
                     STORE
                     PUSH 1 :u32
-                    LOCAL :__s12__hd_head
+                    LOCAL :__s13__hd_head
                     DEREF
                     FIELD 1
                     BINARY :sub
-                    LOCAL :__s12__hd_head
+                    LOCAL :__s13__hd_head
                     DEREF
                     FIELD 1
                     STORE
                     LOCAL :__s3__hd_hh_del
                     AS :u64
-                    LOCAL :__s12__hd_head
+                    LOCAL :__s13__hd_head
                     DEREF
                     FIELD 0
                     AS :u64
@@ -2788,7 +2764,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_free
                         LOCAL :__s3__hd_hh_del
                         DEREF
                         FIELD 4
-                        LOCAL :__s12__hd_head
+                        LOCAL :__s13__hd_head
                         DEREF
                         FIELD 0
                         STORE
@@ -3289,88 +3265,88 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         LOCAL :__s3__hf_hashv
                         STORE
                         LOCAL :__s5__hj_k
-                        LOCAL :__switch_val_10 :u32
+                        LOCAL :__switch_val_3 :u32
                         STORE
                         PUSH 11 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_0
+                            GOTO :__switch_2__case_0
                         ENDIF
                         PUSH 10 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_1
+                            GOTO :__switch_2__case_1
                         ENDIF
                         PUSH 9 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_2
+                            GOTO :__switch_2__case_2
                         ENDIF
                         PUSH 8 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_3
+                            GOTO :__switch_2__case_3
                         ENDIF
                         PUSH 7 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_4
+                            GOTO :__switch_2__case_4
                         ENDIF
                         PUSH 6 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_5
+                            GOTO :__switch_2__case_5
                         ENDIF
                         PUSH 5 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_6
+                            GOTO :__switch_2__case_6
                         ENDIF
                         PUSH 4 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_7
+                            GOTO :__switch_2__case_7
                         ENDIF
                         PUSH 3 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_8
+                            GOTO :__switch_2__case_8
                         ENDIF
                         PUSH 2 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_9
+                            GOTO :__switch_2__case_9
                         ENDIF
                         PUSH 1 :u32
-                        LOCAL :__switch_val_10
+                        LOCAL :__switch_val_3
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_9__case_10
+                            GOTO :__switch_2__case_10
                         ENDIF
-                        GOTO :__switch_9__case_11
-                        GOTO :__switch_9_end
-                        LABEL :__switch_9__case_0
+                        GOTO :__switch_2__case_11
+                        GOTO :__switch_2_end
+                        LABEL :__switch_2__case_0
                         PUSH 24
                         AS :u32
                         PUSH 10
@@ -3384,7 +3360,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_9__case_1
+                        LABEL :__switch_2__case_1
                         PUSH 16
                         AS :u32
                         PUSH 9
@@ -3398,7 +3374,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_9__case_2
+                        LABEL :__switch_2__case_2
                         PUSH 8
                         AS :u32
                         PUSH 8
@@ -3412,7 +3388,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_9__case_3
+                        LABEL :__switch_2__case_3
                         PUSH 24
                         AS :u32
                         PUSH 7
@@ -3426,7 +3402,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_9__case_4
+                        LABEL :__switch_2__case_4
                         PUSH 16
                         AS :u32
                         PUSH 6
@@ -3440,7 +3416,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_9__case_5
+                        LABEL :__switch_2__case_5
                         PUSH 8
                         AS :u32
                         PUSH 5
@@ -3454,7 +3430,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_9__case_6
+                        LABEL :__switch_2__case_6
                         PUSH 4
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -3465,7 +3441,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_9__case_7
+                        LABEL :__switch_2__case_7
                         PUSH 24
                         AS :u32
                         PUSH 3
@@ -3479,7 +3455,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_9__case_8
+                        LABEL :__switch_2__case_8
                         PUSH 16
                         AS :u32
                         PUSH 2
@@ -3493,7 +3469,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_9__case_9
+                        LABEL :__switch_2__case_9
                         PUSH 8
                         AS :u32
                         PUSH 1
@@ -3507,7 +3483,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_9__case_10
+                        LABEL :__switch_2__case_10
                         PUSH 0
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -3518,8 +3494,8 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_get
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_9__case_11
-                        LABEL :__switch_9_end
+                        LABEL :__switch_2__case_11
+                        LABEL :__switch_2_end
                         LOOP
                           COND
                             PUSH true
@@ -4379,88 +4355,88 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         LOCAL :__s3__hf_hashv
                         STORE
                         LOCAL :__s5__hj_k
-                        LOCAL :__switch_val_11 :u32
+                        LOCAL :__switch_val_4 :u32
                         STORE
                         PUSH 11 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_0
+                            GOTO :__switch_3__case_0
                         ENDIF
                         PUSH 10 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_1
+                            GOTO :__switch_3__case_1
                         ENDIF
                         PUSH 9 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_2
+                            GOTO :__switch_3__case_2
                         ENDIF
                         PUSH 8 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_3
+                            GOTO :__switch_3__case_3
                         ENDIF
                         PUSH 7 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_4
+                            GOTO :__switch_3__case_4
                         ENDIF
                         PUSH 6 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_5
+                            GOTO :__switch_3__case_5
                         ENDIF
                         PUSH 5 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_6
+                            GOTO :__switch_3__case_6
                         ENDIF
                         PUSH 4 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_7
+                            GOTO :__switch_3__case_7
                         ENDIF
                         PUSH 3 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_8
+                            GOTO :__switch_3__case_8
                         ENDIF
                         PUSH 2 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_9
+                            GOTO :__switch_3__case_9
                         ENDIF
                         PUSH 1 :u32
-                        LOCAL :__switch_val_11
+                        LOCAL :__switch_val_4
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_10__case_10
+                            GOTO :__switch_3__case_10
                         ENDIF
-                        GOTO :__switch_10__case_11
-                        GOTO :__switch_10_end
-                        LABEL :__switch_10__case_0
+                        GOTO :__switch_3__case_11
+                        GOTO :__switch_3_end
+                        LABEL :__switch_3__case_0
                         PUSH 24
                         AS :u32
                         PUSH 10
@@ -4474,7 +4450,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_10__case_1
+                        LABEL :__switch_3__case_1
                         PUSH 16
                         AS :u32
                         PUSH 9
@@ -4488,7 +4464,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_10__case_2
+                        LABEL :__switch_3__case_2
                         PUSH 8
                         AS :u32
                         PUSH 8
@@ -4502,7 +4478,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_10__case_3
+                        LABEL :__switch_3__case_3
                         PUSH 24
                         AS :u32
                         PUSH 7
@@ -4516,7 +4492,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_10__case_4
+                        LABEL :__switch_3__case_4
                         PUSH 16
                         AS :u32
                         PUSH 6
@@ -4530,7 +4506,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_10__case_5
+                        LABEL :__switch_3__case_5
                         PUSH 8
                         AS :u32
                         PUSH 5
@@ -4544,7 +4520,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_10__case_6
+                        LABEL :__switch_3__case_6
                         PUSH 4
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -4555,7 +4531,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_10__case_7
+                        LABEL :__switch_3__case_7
                         PUSH 24
                         AS :u32
                         PUSH 3
@@ -4569,7 +4545,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_10__case_8
+                        LABEL :__switch_3__case_8
                         PUSH 16
                         AS :u32
                         PUSH 2
@@ -4583,7 +4559,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_10__case_9
+                        LABEL :__switch_3__case_9
                         PUSH 8
                         AS :u32
                         PUSH 1
@@ -4597,7 +4573,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_10__case_10
+                        LABEL :__switch_3__case_10
                         PUSH 0
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -4608,8 +4584,8 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_10__case_11
-                        LABEL :__switch_10_end
+                        LABEL :__switch_3__case_11
+                        LABEL :__switch_3_end
                         LOOP
                           COND
                             PUSH true
@@ -5074,7 +5050,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
         FIELD 1
         STORE
       ELSE
-        SIZEOF :VariableEntry
+        PUSH 72 :u64
         CALL :malloc
         AS :ptr<VariableEntry>
         LOCAL :__s0_entry
@@ -5447,88 +5423,88 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     LOCAL :__s37__ha_hashv
                     STORE
                     LOCAL :__s39__hj_k
-                    LOCAL :__switch_val_12 :u32
+                    LOCAL :__switch_val_5 :u32
                     STORE
                     PUSH 11 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_0
+                        GOTO :__switch_4__case_0
                     ENDIF
                     PUSH 10 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_1
+                        GOTO :__switch_4__case_1
                     ENDIF
                     PUSH 9 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_2
+                        GOTO :__switch_4__case_2
                     ENDIF
                     PUSH 8 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_3
+                        GOTO :__switch_4__case_3
                     ENDIF
                     PUSH 7 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_4
+                        GOTO :__switch_4__case_4
                     ENDIF
                     PUSH 6 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_5
+                        GOTO :__switch_4__case_5
                     ENDIF
                     PUSH 5 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_6
+                        GOTO :__switch_4__case_6
                     ENDIF
                     PUSH 4 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_7
+                        GOTO :__switch_4__case_7
                     ENDIF
                     PUSH 3 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_8
+                        GOTO :__switch_4__case_8
                     ENDIF
                     PUSH 2 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_9
+                        GOTO :__switch_4__case_9
                     ENDIF
                     PUSH 1 :u32
-                    LOCAL :__switch_val_12
+                    LOCAL :__switch_val_5
                     BINARY :eq
                     IF
                       THEN
-                        GOTO :__switch_11__case_10
+                        GOTO :__switch_4__case_10
                     ENDIF
-                    GOTO :__switch_11__case_11
-                    GOTO :__switch_11_end
-                    LABEL :__switch_11__case_0
+                    GOTO :__switch_4__case_11
+                    GOTO :__switch_4_end
+                    LABEL :__switch_4__case_0
                     PUSH 24
                     AS :u32
                     PUSH 10
@@ -5542,7 +5518,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s37__ha_hashv
                     STORE
-                    LABEL :__switch_11__case_1
+                    LABEL :__switch_4__case_1
                     PUSH 16
                     AS :u32
                     PUSH 9
@@ -5556,7 +5532,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s37__ha_hashv
                     STORE
-                    LABEL :__switch_11__case_2
+                    LABEL :__switch_4__case_2
                     PUSH 8
                     AS :u32
                     PUSH 8
@@ -5570,7 +5546,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s37__ha_hashv
                     STORE
-                    LABEL :__switch_11__case_3
+                    LABEL :__switch_4__case_3
                     PUSH 24
                     AS :u32
                     PUSH 7
@@ -5584,7 +5560,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_j
                     STORE
-                    LABEL :__switch_11__case_4
+                    LABEL :__switch_4__case_4
                     PUSH 16
                     AS :u32
                     PUSH 6
@@ -5598,7 +5574,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_j
                     STORE
-                    LABEL :__switch_11__case_5
+                    LABEL :__switch_4__case_5
                     PUSH 8
                     AS :u32
                     PUSH 5
@@ -5612,7 +5588,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_j
                     STORE
-                    LABEL :__switch_11__case_6
+                    LABEL :__switch_4__case_6
                     PUSH 4
                     AS :u64
                     LOCAL :__s39__hj_key
@@ -5623,7 +5599,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_j
                     STORE
-                    LABEL :__switch_11__case_7
+                    LABEL :__switch_4__case_7
                     PUSH 24
                     AS :u32
                     PUSH 3
@@ -5637,7 +5613,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_i
                     STORE
-                    LABEL :__switch_11__case_8
+                    LABEL :__switch_4__case_8
                     PUSH 16
                     AS :u32
                     PUSH 2
@@ -5651,7 +5627,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_i
                     STORE
-                    LABEL :__switch_11__case_9
+                    LABEL :__switch_4__case_9
                     PUSH 8
                     AS :u32
                     PUSH 1
@@ -5665,7 +5641,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_i
                     STORE
-                    LABEL :__switch_11__case_10
+                    LABEL :__switch_4__case_10
                     PUSH 0
                     AS :u64
                     LOCAL :__s39__hj_key
@@ -5676,8 +5652,8 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                     BINARY :add
                     LOCAL :__s39__hj_i
                     STORE
-                    LABEL :__switch_11__case_11
-                    LABEL :__switch_11_end
+                    LABEL :__switch_4__case_11
+                    LABEL :__switch_4_end
                     LOOP
                       COND
                         PUSH true
@@ -5926,7 +5902,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                       COND
                         PUSH true
                       BODY
-                        SIZEOF :UT_hash_table
+                        PUSH 64 :u64
                         CALL :malloc
                         AS :ptr<UT_hash_table>
                         LOCAL :__s0_entry
@@ -5943,11 +5919,10 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :eq
                         IF
                           THEN
-                            PUSH 1
-                            UNARY :neg
+                            PUSH -1
                             CALL :exit
                           ELSE
-                            SIZEOF :UT_hash_table
+                            PUSH 64 :u64
                             PUSH 0
                             LOCAL :__s0_entry
                             DEREF
@@ -5998,10 +5973,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                             DEREF
                             FIELD 5
                             STORE
-                            SIZEOF :UT_hash_bucket
-                            PUSH 32 :u32
-                            AS :u64
-                            BINARY :mul
+                            PUSH 512 :u64
                             CALL :malloc
                             AS :ptr<UT_hash_bucket>
                             LOCAL :__s0_entry
@@ -6030,8 +6002,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                             BINARY :eq
                             IF
                               THEN
-                                PUSH 1
-                                UNARY :neg
+                                PUSH -1
                                 CALL :exit
                                 LOCAL :__s0_entry
                                 DEREF
@@ -6040,10 +6011,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                 AS :ptr<void>
                                 CALL :free
                               ELSE
-                                SIZEOF :UT_hash_bucket
-                                PUSH 32 :u32
-                                AS :u64
-                                BINARY :mul
+                                PUSH 512 :u64
                                 PUSH 0
                                 LOCAL :__s0_entry
                                 DEREF
@@ -6193,7 +6161,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :sub
                         LOCAL :__s37__ha_hashv
                         BINARY :and
-                        LOCAL :__s64__ha_bkt :u32
+                        LOCAL :__s65__ha_bkt :u32
                         STORE
                         PUSH 0
                         PUSH 0
@@ -6208,7 +6176,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                       COND
                         PUSH true
                       BODY
-                        LOCAL :__s64__ha_bkt
+                        LOCAL :__s65__ha_bkt
                         AS :u64
                         PARAM 0
                         DEREF
@@ -6221,18 +6189,18 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         BINARY :add
                         DEREF
                         ADDR
-                        LOCAL :__s66__ha_head :ptr<UT_hash_bucket>
+                        LOCAL :__s67__ha_head :ptr<UT_hash_bucket>
                         STORE
                         PUSH 1 :u32
-                        LOCAL :__s66__ha_head
+                        LOCAL :__s67__ha_head
                         DEREF
                         FIELD 1
                         BINARY :add
-                        LOCAL :__s66__ha_head
+                        LOCAL :__s67__ha_head
                         DEREF
                         FIELD 1
                         STORE
-                        LOCAL :__s66__ha_head
+                        LOCAL :__s67__ha_head
                         DEREF
                         FIELD 0
                         LOCAL :__s0_entry
@@ -6255,7 +6223,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         PUSH 0
                         AS :ptr<void>
                         AS :u64
-                        LOCAL :__s66__ha_head
+                        LOCAL :__s67__ha_head
                         DEREF
                         FIELD 0
                         AS :u64
@@ -6266,7 +6234,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                             DEREF
                             FIELD 2
                             ADDR
-                            LOCAL :__s66__ha_head
+                            LOCAL :__s67__ha_head
                             DEREF
                             FIELD 0
                             DEREF
@@ -6277,18 +6245,18 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                         DEREF
                         FIELD 2
                         ADDR
-                        LOCAL :__s66__ha_head
+                        LOCAL :__s67__ha_head
                         DEREF
                         FIELD 0
                         STORE
                         PUSH 10 :u32
                         PUSH 1 :u32
-                        LOCAL :__s66__ha_head
+                        LOCAL :__s67__ha_head
                         DEREF
                         FIELD 2
                         BINARY :add
                         BINARY :mul
-                        LOCAL :__s66__ha_head
+                        LOCAL :__s67__ha_head
                         DEREF
                         FIELD 1
                         BINARY :more_eq
@@ -6317,8 +6285,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                               COND
                                 PUSH true
                               BODY
-                                PUSH 2 :u32
-                                AS :u64
+                                PUSH 2 :u64
                                 LOCAL :__s0_entry
                                 DEREF
                                 FIELD 2
@@ -6328,25 +6295,23 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                 DEREF
                                 FIELD 1
                                 AS :u64
-                                SIZEOF :UT_hash_bucket
+                                PUSH 16 :u64
                                 BINARY :mul
                                 BINARY :mul
                                 CALL :malloc
                                 AS :ptr<UT_hash_bucket>
-                                LOCAL :__s69__he_new_buckets :ptr<UT_hash_bucket>
+                                LOCAL :__s70__he_new_buckets :ptr<UT_hash_bucket>
                                 STORE
                                 PUSH 0
                                 AS :ptr<UT_hash_bucket>
-                                LOCAL :__s69__he_new_buckets
+                                LOCAL :__s70__he_new_buckets
                                 BINARY :eq
                                 IF
                                   THEN
-                                    PUSH 1
-                                    UNARY :neg
+                                    PUSH -1
                                     CALL :exit
                                   ELSE
-                                    PUSH 2 :u32
-                                    AS :u64
+                                    PUSH 2 :u64
                                     LOCAL :__s0_entry
                                     DEREF
                                     FIELD 2
@@ -6356,11 +6321,11 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                     DEREF
                                     FIELD 1
                                     AS :u64
-                                    SIZEOF :UT_hash_bucket
+                                    PUSH 16 :u64
                                     BINARY :mul
                                     BINARY :mul
                                     PUSH 0
-                                    LOCAL :__s69__he_new_buckets
+                                    LOCAL :__s70__he_new_buckets
                                     AS :ptr<void>
                                     CALL :memset
                                     STACK :drop
@@ -6427,8 +6392,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                     DEREF
                                     FIELD 6
                                     STORE
-                                    PUSH 0
-                                    AS :u32
+                                    PUSH 0 :u32
                                     LOCAL :__s0_entry
                                     DEREF
                                     FIELD 2
@@ -6438,9 +6402,8 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                     DEREF
                                     FIELD 7
                                     STORE
-                                    PUSH 0
-                                    AS :u32
-                                    LOCAL :__s69__he_bkt_i :u32
+                                    PUSH 0 :u32
+                                    LOCAL :__s70__he_bkt_i :u32
                                     STORE
                                     LOOP
                                       COND
@@ -6452,10 +6415,10 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                         FIELD 0
                                         DEREF
                                         FIELD 1
-                                        LOCAL :__s69__he_bkt_i
+                                        LOCAL :__s70__he_bkt_i
                                         BINARY :less
                                       BODY
-                                        LOCAL :__s69__he_bkt_i
+                                        LOCAL :__s70__he_bkt_i
                                         AS :u64
                                         LOCAL :__s0_entry
                                         DEREF
@@ -6468,21 +6431,21 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                         BINARY :add
                                         DEREF
                                         FIELD 0
-                                        LOCAL :__s69__he_thh :ptr<UT_hash_handle>
+                                        LOCAL :__s70__he_thh :ptr<UT_hash_handle>
                                         STORE
                                         LOOP
                                           COND
                                             PUSH 0
                                             AS :ptr<void>
                                             AS :u64
-                                            LOCAL :__s69__he_thh
+                                            LOCAL :__s70__he_thh
                                             AS :u64
                                             BINARY :not_eq
                                           BODY
-                                            LOCAL :__s69__he_thh
+                                            LOCAL :__s70__he_thh
                                             DEREF
                                             FIELD 4
-                                            LOCAL :__s69__he_hh_nxt :ptr<UT_hash_handle>
+                                            LOCAL :__s70__he_hh_nxt :ptr<UT_hash_handle>
                                             STORE
                                             LOOP
                                               COND
@@ -6500,11 +6463,11 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                                 FIELD 1
                                                 BINARY :mul
                                                 BINARY :sub
-                                                LOCAL :__s69__he_thh
+                                                LOCAL :__s70__he_thh
                                                 DEREF
                                                 FIELD 7
                                                 BINARY :and
-                                                LOCAL :__s69__he_bkt :u32
+                                                LOCAL :__s70__he_bkt :u32
                                                 STORE
                                                 PUSH 0
                                                 PUSH 0
@@ -6515,13 +6478,13 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                                     BREAK
                                                 ENDIF
                                             ENDLOOP
-                                            LOCAL :__s69__he_bkt
+                                            LOCAL :__s70__he_bkt
                                             AS :u64
-                                            LOCAL :__s69__he_new_buckets
+                                            LOCAL :__s70__he_new_buckets
                                             BINARY :add
                                             DEREF
                                             ADDR
-                                            LOCAL :__s69__he_newbkt :ptr<UT_hash_bucket>
+                                            LOCAL :__s70__he_newbkt :ptr<UT_hash_bucket>
                                             STORE
                                             LOCAL :__s0_entry
                                             DEREF
@@ -6532,15 +6495,15 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                             DEREF
                                             FIELD 6
                                             PUSH 1 :u32
-                                            LOCAL :__s69__he_newbkt
+                                            LOCAL :__s70__he_newbkt
                                             DEREF
                                             FIELD 1
                                             BINARY :add
-                                            LOCAL :__s69__he_newbkt
+                                            LOCAL :__s70__he_newbkt
                                             DEREF
                                             FIELD 1
                                             STORE
-                                            LOCAL :__s69__he_newbkt
+                                            LOCAL :__s70__he_newbkt
                                             DEREF
                                             FIELD 1
                                             BINARY :more
@@ -6573,22 +6536,22 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                                 FIELD 0
                                                 DEREF
                                                 FIELD 6
-                                                LOCAL :__s69__he_newbkt
+                                                LOCAL :__s70__he_newbkt
                                                 DEREF
                                                 FIELD 2
                                                 BINARY :mul
-                                                LOCAL :__s69__he_newbkt
+                                                LOCAL :__s70__he_newbkt
                                                 DEREF
                                                 FIELD 1
                                                 BINARY :more
                                                 IF
                                                   THEN
                                                     PUSH 1 :u32
-                                                    LOCAL :__s69__he_newbkt
+                                                    LOCAL :__s70__he_newbkt
                                                     DEREF
                                                     FIELD 2
                                                     BINARY :add
-                                                    LOCAL :__s69__he_newbkt
+                                                    LOCAL :__s70__he_newbkt
                                                     DEREF
                                                     FIELD 2
                                                     STORE
@@ -6597,49 +6560,49 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                             PUSH 0
                                             AS :ptr<void>
                                             AS :ptr<UT_hash_handle>
-                                            LOCAL :__s69__he_thh
+                                            LOCAL :__s70__he_thh
                                             DEREF
                                             FIELD 3
                                             STORE
-                                            LOCAL :__s69__he_newbkt
+                                            LOCAL :__s70__he_newbkt
                                             DEREF
                                             FIELD 0
-                                            LOCAL :__s69__he_thh
+                                            LOCAL :__s70__he_thh
                                             DEREF
                                             FIELD 4
                                             STORE
                                             PUSH 0
                                             AS :ptr<void>
                                             AS :u64
-                                            LOCAL :__s69__he_newbkt
+                                            LOCAL :__s70__he_newbkt
                                             DEREF
                                             FIELD 0
                                             AS :u64
                                             BINARY :not_eq
                                             IF
                                               THEN
-                                                LOCAL :__s69__he_thh
-                                                LOCAL :__s69__he_newbkt
+                                                LOCAL :__s70__he_thh
+                                                LOCAL :__s70__he_newbkt
                                                 DEREF
                                                 FIELD 0
                                                 DEREF
                                                 FIELD 3
                                                 STORE
                                             ENDIF
-                                            LOCAL :__s69__he_thh
-                                            LOCAL :__s69__he_newbkt
+                                            LOCAL :__s70__he_thh
+                                            LOCAL :__s70__he_newbkt
                                             DEREF
                                             FIELD 0
                                             STORE
-                                            LOCAL :__s69__he_hh_nxt
-                                            LOCAL :__s69__he_thh
+                                            LOCAL :__s70__he_hh_nxt
+                                            LOCAL :__s70__he_thh
                                             STORE
                                         ENDLOOP
                                       STEP
                                         PUSH 1 :u32
-                                        LOCAL :__s69__he_bkt_i
+                                        LOCAL :__s70__he_bkt_i
                                         BINARY :add
-                                        LOCAL :__s69__he_bkt_i
+                                        LOCAL :__s70__he_bkt_i
                                         STORE
                                     ENDLOOP
                                     LOCAL :__s0_entry
@@ -6690,7 +6653,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                     DEREF
                                     FIELD 2
                                     STORE
-                                    LOCAL :__s69__he_new_buckets
+                                    LOCAL :__s70__he_new_buckets
                                     LOCAL :__s0_entry
                                     DEREF
                                     FIELD 2
@@ -6761,8 +6724,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_context_set
                                     BINARY :more
                                     IF
                                       THEN
-                                        PUSH 1
-                                        AS :u32
+                                        PUSH 1 :u32
                                         LOCAL :__s0_entry
                                         DEREF
                                         FIELD 2
@@ -6832,18 +6794,15 @@ FUNC :static_fn_calculator_c_calculator_interpreter_simple_div
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     PARAM 1
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         RET
     ENDIF
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     PARAM 0
     BINARY :more_eq
     LOCAL :__sc_and_0 :bool
@@ -6851,8 +6810,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_simple_div
     LOCAL :__sc_and_0
     IF
       THEN
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         PARAM 1
         BINARY :more
         LOCAL :__sc_and_0
@@ -6865,8 +6823,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_simple_div
     IF
       THEN
       ELSE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         PARAM 0
         BINARY :less
         LOCAL :__sc_and_2 :bool
@@ -6874,8 +6831,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_simple_div
         LOCAL :__sc_and_2
         IF
           THEN
-            PUSH 0
-            AS :i64
+            PUSH 0 :i64
             PARAM 1
             BINARY :less
             LOCAL :__sc_and_2
@@ -6893,8 +6849,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_simple_div
         BINARY :div
         RET
       ELSE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         PARAM 0
         BINARY :more_eq
         IF
@@ -6911,8 +6866,7 @@ FUNC :static_fn_calculator_c_calculator_interpreter_simple_div
         LOCAL :__ternary_3
         LOCAL :__s3_abs_a :i64
         STORE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         PARAM 1
         BINARY :more_eq
         IF
@@ -6946,14 +6900,12 @@ FUNC :static_fn_calculator_c_calculator_interpreter_simple_mod
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     PARAM 1
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         RET
     ENDIF
     PARAM 1
@@ -6978,45 +6930,45 @@ FUNC :static_fn_calculator_c_calculator_interpreter_evaluate
     PARAM 0
     DEREF
     FIELD 0
-    LOCAL :__switch_val_13 :i32
+    LOCAL :__switch_val_6 :i32
     STORE
     PUSH 0 :i32
-    LOCAL :__switch_val_13
+    LOCAL :__switch_val_6
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_12__case_0
+        GOTO :__switch_5__case_0
     ENDIF
     PUSH 1 :i32
-    LOCAL :__switch_val_13
+    LOCAL :__switch_val_6
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_12__case_1
+        GOTO :__switch_5__case_1
     ENDIF
     PUSH 2 :i32
-    LOCAL :__switch_val_13
+    LOCAL :__switch_val_6
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_12__case_2
+        GOTO :__switch_5__case_2
     ENDIF
     PUSH 3 :i32
-    LOCAL :__switch_val_13
+    LOCAL :__switch_val_6
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_12__case_3
+        GOTO :__switch_5__case_3
     ENDIF
-    GOTO :__switch_12_end
-    LABEL :__switch_12__case_0
+    GOTO :__switch_5_end
+    LABEL :__switch_5__case_0
     PARAM 0
     DEREF
     FIELD 1
     AS :__inline_type_calculator_c_3::number_value
     FIELD 1
     RET
-    LABEL :__switch_12__case_1
+    LABEL :__switch_5__case_1
     PARAM 0
     DEREF
     FIELD 1
@@ -7037,14 +6989,13 @@ FUNC :static_fn_calculator_c_calculator_interpreter_evaluate
         LOCAL :__ternary_2 :i64
         STORE
       ELSE
-        PUSH 0
-        AS :i64
+        PUSH 0 :i64
         LOCAL :__ternary_2
         STORE
     ENDIF
     LOCAL :__ternary_2
     RET
-    LABEL :__switch_12__case_2
+    LABEL :__switch_5__case_2
     PARAM 0
     DEREF
     FIELD 1
@@ -7069,76 +7020,75 @@ FUNC :static_fn_calculator_c_calculator_interpreter_evaluate
     LOCAL :__s3_binop
     DEREF
     FIELD 0
-    LOCAL :__switch_val_14 :u8
+    LOCAL :__switch_val_7 :u8
     STORE
     PUSH 43 :u8
-    LOCAL :__switch_val_14
+    LOCAL :__switch_val_7
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_13__case_0
+        GOTO :__switch_6__case_0
     ENDIF
     PUSH 45 :u8
-    LOCAL :__switch_val_14
+    LOCAL :__switch_val_7
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_13__case_1
+        GOTO :__switch_6__case_1
     ENDIF
     PUSH 42 :u8
-    LOCAL :__switch_val_14
+    LOCAL :__switch_val_7
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_13__case_2
+        GOTO :__switch_6__case_2
     ENDIF
     PUSH 47 :u8
-    LOCAL :__switch_val_14
+    LOCAL :__switch_val_7
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_13__case_3
+        GOTO :__switch_6__case_3
     ENDIF
     PUSH 37 :u8
-    LOCAL :__switch_val_14
+    LOCAL :__switch_val_7
     BINARY :eq
     IF
       THEN
-        GOTO :__switch_13__case_4
+        GOTO :__switch_6__case_4
     ENDIF
-    GOTO :__switch_13__case_5
-    GOTO :__switch_13_end
-    LABEL :__switch_13__case_0
+    GOTO :__switch_6__case_5
+    GOTO :__switch_6_end
+    LABEL :__switch_6__case_0
     LOCAL :__s3_right
     LOCAL :__s3_left
     BINARY :add
     RET
-    LABEL :__switch_13__case_1
+    LABEL :__switch_6__case_1
     LOCAL :__s3_right
     LOCAL :__s3_left
     BINARY :sub
     RET
-    LABEL :__switch_13__case_2
+    LABEL :__switch_6__case_2
     LOCAL :__s3_right
     LOCAL :__s3_left
     BINARY :mul
     RET
-    LABEL :__switch_13__case_3
+    LABEL :__switch_6__case_3
     LOCAL :__s3_right
     LOCAL :__s3_left
     CALL :static_fn_calculator_c_calculator_interpreter_simple_div
     RET
-    LABEL :__switch_13__case_4
+    LABEL :__switch_6__case_4
     LOCAL :__s3_right
     LOCAL :__s3_left
     CALL :static_fn_calculator_c_calculator_interpreter_simple_mod
     RET
-    LABEL :__switch_13__case_5
-    PUSH 0
-    AS :i64
+    LABEL :__switch_6__case_5
+    PUSH 0 :i64
     RET
-    LABEL :__switch_13_end
-    LABEL :__switch_12__case_3
+    LABEL :__switch_6_end
+    LABEL :__switch_5__case_3
     PARAM 0
     DEREF
     FIELD 1
@@ -7161,9 +7111,8 @@ FUNC :static_fn_calculator_c_calculator_interpreter_evaluate
     CALL :static_fn_calculator_c_calculator_interpreter_context_set
     LOCAL :__s10_value
     RET
-    LABEL :__switch_12_end
-    PUSH 0
-    AS :i64
+    LABEL :__switch_5_end
+    PUSH 0 :i64
     RET
 ENDFUNC
 
@@ -7187,8 +7136,7 @@ FUNC :CalculatorInterpreter_prepare
     FIELD 0
     FIELD 5
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -7196,8 +7144,7 @@ FUNC :CalculatorInterpreter_prepare
     BINARY :less_eq
     IF
       THEN
-        PUSH 1000
-        AS :i64
+        PUSH 1000 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -7222,15 +7169,13 @@ FUNC :CalculatorInterpreter_prepare
     FIELD 0
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     FIELD 1
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -7250,8 +7195,7 @@ FUNC :CalculatorInterpreter_prepare
     LOCAL :__s1_parser
     ADDR
     CALL :static_fn_calculator_c_calculator_ast_parser_parse_all
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -7436,12 +7380,12 @@ FUNC :CalculatorInterpreter_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :CalculatorInterpreterData
+    PUSH 56 :u64
     CALL :malloc
     AS :ptr<CalculatorInterpreterData>
     LOCAL :__s0_data :ptr<CalculatorInterpreterData>
     STORE
-    SIZEOF :CalculatorInterpreterData
+    PUSH 56 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

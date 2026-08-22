@@ -921,13 +921,11 @@ FUNC :main
     PUSH 0
     CALL :clock_gettime
     STACK :drop
-    PUSH 1000000
-    AS :i64
+    PUSH 1000000 :i64
     LOCAL :__s0_start_time
     FIELD 1
     BINARY :div
-    PUSH 1000
-    AS :i64
+    PUSH 1000 :i64
     LOCAL :__s0_start_time
     FIELD 0
     BINARY :mul
@@ -997,12 +995,10 @@ FUNC :main
         AS :ptr<BenchmarkFactory>
         GLOBAL :benchmark_factories
         STORE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         GLOBAL :benchmark_factories_count
         STORE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         GLOBAL :benchmark_factories_capacity
         STORE
     ENDIF

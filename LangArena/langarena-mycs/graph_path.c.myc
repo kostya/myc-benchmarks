@@ -545,7 +545,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :GraphPathGraph
+    PUSH 40 :u64
     CALL :malloc
     AS :ptr<GraphPathGraph>
     LOCAL :__s0_graph :ptr<GraphPathGraph>
@@ -565,7 +565,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
     DEREF
     FIELD 2
     STORE
-    SIZEOF :ptr<i32>
+    PUSH 8 :u64
     PARAM 0
     AS :u64
     BINARY :mul
@@ -575,7 +575,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
     DEREF
     FIELD 3
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 0
     AS :u64
     BINARY :mul
@@ -585,7 +585,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
     DEREF
     FIELD 4
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 0
     AS :u64
     BINARY :mul
@@ -613,7 +613,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
         BINARY :add
         DEREF
         STORE
-        SIZEOF :i32
+        PUSH 4 :u64
         LOCAL :__s0_i
         AS :u64
         LOCAL :__s0_graph
@@ -796,7 +796,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         BINARY :add
         DEREF
         STORE
-        SIZEOF :i32
+        PUSH 4 :u64
         PARAM 1
         AS :u64
         PARAM 0
@@ -898,7 +898,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         BINARY :add
         DEREF
         STORE
-        SIZEOF :i32
+        PUSH 4 :u64
         PARAM 2
         AS :u64
         PARAM 0
@@ -1138,8 +1138,7 @@ FUNC :static_fn_graph_path_c_graph_path_base_prepare
     DEREF
     FIELD 0
     CALL :static_fn_graph_path_c_graph_path_graph_generate_random
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     PARAM 2
     DEREF
     FIELD 1
@@ -1192,7 +1191,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
         PUSH 0
         RET
     ENDIF
-    SIZEOF :u8
+    PUSH 1 :u64
     PARAM 0
     DEREF
     FIELD 0
@@ -1201,7 +1200,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
     AS :ptr<u8>
     LOCAL :__s1_visited :ptr<u8>
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PUSH 2
     PARAM 0
     DEREF
@@ -1219,8 +1218,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
     PUSH 0
     LOCAL :__s1_rear :i32
     STORE
-    PUSH 1
-    AS :u8
+    PUSH 1 :u8
     PARAM 1
     AS :u64
     LOCAL :__s1_visited
@@ -1346,8 +1344,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
             BINARY :eq
             IF
               THEN
-                PUSH 1
-                AS :u8
+                PUSH 1 :u8
                 LOCAL :__s3_neighbor
                 AS :u64
                 LOCAL :__s1_visited
@@ -1401,8 +1398,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
     LOCAL :__s1_queue
     AS :ptr<void>
     CALL :free
-    PUSH 1
-    UNARY :neg
+    PUSH -1
     RET
 ENDFUNC
 
@@ -1512,12 +1508,12 @@ FUNC :GraphPathBFS_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :GraphPathBFSData
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<GraphPathBFSData>
     LOCAL :__s0_data :ptr<GraphPathBFSData>
     STORE
-    SIZEOF :GraphPathBFSData
+    PUSH 16 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>
@@ -1571,7 +1567,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
         PUSH 0
         RET
     ENDIF
-    SIZEOF :u8
+    PUSH 1 :u64
     PARAM 0
     DEREF
     FIELD 0
@@ -1580,7 +1576,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
     AS :ptr<u8>
     LOCAL :__s1_visited :ptr<u8>
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PUSH 2
     PARAM 0
     DEREF
@@ -1682,8 +1678,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
           THEN
             NEXT
         ENDIF
-        PUSH 1
-        AS :u8
+        PUSH 1 :u8
         LOCAL :__s2_v
         AS :u64
         LOCAL :__s1_visited
@@ -1793,8 +1788,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
     BINARY :eq
     IF
       THEN
-        PUSH 1
-        UNARY :neg
+        PUSH -1
         LOCAL :__ternary_11 :i32
         STORE
       ELSE
@@ -1912,12 +1906,12 @@ FUNC :GraphPathDFS_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :GraphPathDFSData
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<GraphPathDFSData>
     LOCAL :__s0_data :ptr<GraphPathDFSData>
     STORE
-    SIZEOF :GraphPathDFSData
+    PUSH 16 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>
@@ -1994,7 +1988,7 @@ FUNC :static_fn_graph_path_c_priority_queue_push
         DEREF
         FIELD 2
         STORE
-        SIZEOF :PriorityQueueItem
+        PUSH 8 :u64
         PARAM 0
         DEREF
         FIELD 2
@@ -2304,7 +2298,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
         PUSH 0
         RET
     ENDIF
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 0
     DEREF
     FIELD 0
@@ -2314,7 +2308,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     AS :ptr<i32>
     LOCAL :__s1_g_score :ptr<i32>
     STORE
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 0
     DEREF
     FIELD 0
@@ -2324,7 +2318,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     AS :ptr<i32>
     LOCAL :__s1_f_score :ptr<i32>
     STORE
-    SIZEOF :u8
+    PUSH 1 :u64
     PARAM 0
     DEREF
     FIELD 0
@@ -2396,7 +2390,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     LOCAL :__s2_open_set
     ADDR
     CALL :static_fn_graph_path_c_priority_queue_push
-    SIZEOF :u8
+    PUSH 1 :u64
     PARAM 0
     DEREF
     FIELD 0
@@ -2405,8 +2399,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     AS :ptr<u8>
     LOCAL :__s2_in_open_set :ptr<u8>
     STORE
-    PUSH 1
-    AS :u8
+    PUSH 1 :u8
     PARAM 1
     AS :u64
     LOCAL :__s2_in_open_set
@@ -2429,8 +2422,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
         FIELD 0
         LOCAL :__s3_current :i32
         STORE
-        PUSH 0
-        AS :u8
+        PUSH 0 :u8
         LOCAL :__s3_current
         AS :u64
         LOCAL :__s2_in_open_set
@@ -2468,8 +2460,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
             LOCAL :__s4_result
             RET
         ENDIF
-        PUSH 1
-        AS :u8
+        PUSH 1 :u8
         LOCAL :__s3_current
         AS :u64
         LOCAL :__s1_visited
@@ -2568,8 +2559,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
                     LOCAL :__s2_open_set
                     ADDR
                     CALL :static_fn_graph_path_c_priority_queue_push
-                    PUSH 1
-                    AS :u8
+                    PUSH 1 :u8
                     LOCAL :__s5_neighbor
                     AS :u64
                     LOCAL :__s2_in_open_set
@@ -2602,8 +2592,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     FIELD 0
     AS :ptr<void>
     CALL :free
-    PUSH 1
-    UNARY :neg
+    PUSH -1
     RET
 ENDFUNC
 
@@ -2713,12 +2702,12 @@ FUNC :GraphPathAStar_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :GraphPathAStarData
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<GraphPathAStarData>
     LOCAL :__s0_data :ptr<GraphPathAStarData>
     STORE
-    SIZEOF :GraphPathAStarData
+    PUSH 16 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

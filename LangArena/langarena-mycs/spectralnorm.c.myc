@@ -514,22 +514,20 @@ FUNC :Spectralnorm_prepare
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     BINARY :less_eq
     IF
       THEN
-        PUSH 100
-        AS :i64
+        PUSH 100 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         STORE
     ENDIF
-    SIZEOF :f64
+    PUSH 8 :u64
     AS :i64
     LOCAL :__s0_data
     DEREF
@@ -542,7 +540,7 @@ FUNC :Spectralnorm_prepare
     DEREF
     FIELD 1
     STORE
-    SIZEOF :f64
+    PUSH 8 :u64
     AS :i64
     LOCAL :__s0_data
     DEREF
@@ -634,7 +632,7 @@ FUNC :static_fn_spectralnorm_c_eval_A_times_u
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :f64
+    PUSH 8 :u64
     AS :i64
     PARAM 1
     BINARY :mul
@@ -711,7 +709,7 @@ FUNC :static_fn_spectralnorm_c_eval_At_times_u
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :f64
+    PUSH 8 :u64
     AS :i64
     PARAM 1
     BINARY :mul
@@ -989,12 +987,12 @@ FUNC :Spectralnorm_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :SpectralnormData
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<SpectralnormData>
     LOCAL :__s0_data :ptr<SpectralnormData>
     STORE
-    SIZEOF :SpectralnormData
+    PUSH 24 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

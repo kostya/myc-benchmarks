@@ -513,22 +513,20 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_base_prepare
     DEREF
     FIELD 1
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     PARAM 2
     DEREF
     FIELD 1
     BINARY :less_eq
     IF
       THEN
-        PUSH 1000000
-        AS :i64
+        PUSH 1000000 :i64
         PARAM 2
         DEREF
         FIELD 1
         STORE
     ENDIF
-    SIZEOF :u8
+    PUSH 1 :u64
     AS :i64
     PARAM 2
     DEREF
@@ -552,8 +550,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_base_prepare
         LOCAL :__s1_i
         BINARY :less
       BODY
-        PUSH 256
-        AS :u32
+        PUSH 256 :u32
         CALL :Helper_next_int
         AS :u8
         LOCAL :__s1_i
@@ -571,8 +568,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_base_prepare
         LOCAL :__s1_i
         STORE
     ENDLOOP
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     PARAM 2
     DEREF
     FIELD 2
@@ -617,19 +613,14 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 1541459225
-    AS :u32
-    PUSH 528734635
-    AS :u32
+    PUSH 1541459225 :u32
+    PUSH 528734635 :u32
     PUSH 2600822924 :u32
-    PUSH 1359893119
-    AS :u32
+    PUSH 1359893119 :u32
     PUSH 2773480762 :u32
-    PUSH 1013904242
-    AS :u32
+    PUSH 1013904242 :u32
     PUSH 3144134277 :u32
-    PUSH 1779033703
-    AS :u32
+    PUSH 1779033703 :u32
     CREATE "flat<u32, 8>"
     LOCAL :__s0_hashes "flat<u32, 8>"
     STORE
@@ -642,8 +633,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         LOCAL :__s0_i
         BINARY :less
       BODY
-        PUSH 7
-        AS :i64
+        PUSH 7 :i64
         LOCAL :__s0_i
         BINARY :and
         AS :u32
@@ -719,8 +709,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         LOCAL :__s1_i
         BINARY :less
       BODY
-        PUSH 255
-        AS :u32
+        PUSH 255 :u32
         PUSH 24
         AS :u32
         LOCAL :__s1_i
@@ -743,8 +732,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         BINARY :add
         DEREF
         STORE
-        PUSH 255
-        AS :u32
+        PUSH 255 :u32
         PUSH 16
         AS :u32
         LOCAL :__s1_i
@@ -769,8 +757,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         BINARY :add
         DEREF
         STORE
-        PUSH 255
-        AS :u32
+        PUSH 255 :u32
         PUSH 8
         AS :u32
         LOCAL :__s1_i
@@ -795,8 +782,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         BINARY :add
         DEREF
         STORE
-        PUSH 255
-        AS :u32
+        PUSH 255 :u32
         LOCAL :__s1_i
         AS :u64
         LOCAL :__s0_hashes
@@ -974,12 +960,12 @@ FUNC :BufferHashSHA256_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :BufferHashSHA256Data
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<BufferHashSHA256Data>
     LOCAL :__s0_data :ptr<BufferHashSHA256Data>
     STORE
-    SIZEOF :BufferHashSHA256Data
+    PUSH 24 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>
@@ -1056,8 +1042,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_crc32_digest
             BINARY :less
           BODY
             PUSH 0 :u32
-            PUSH 1
-            AS :u32
+            PUSH 1 :u32
             LOCAL :__s0_crc
             BINARY :and
             BINARY :not_eq
@@ -1199,12 +1184,12 @@ FUNC :BufferHashCRC32_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :BufferHashCRC32Data
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<BufferHashCRC32Data>
     LOCAL :__s0_data :ptr<BufferHashCRC32Data>
     STORE
-    SIZEOF :BufferHashCRC32Data
+    PUSH 24 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

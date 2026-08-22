@@ -585,7 +585,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
             LOCAL :__s2_r
             STORE
         ENDLOOP
-        SIZEOF :i32
+        PUSH 4 :u64
         LOCAL :__s0_n
         AS :u64
         BINARY :mul
@@ -838,23 +838,20 @@ FUNC :Fannkuchredux_prepare
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     BINARY :eq
     IF
       THEN
-        PUSH 12
-        AS :i64
+        PUSH 12 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
         STORE
     ENDIF
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -935,19 +932,17 @@ FUNC :Fannkuchredux_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :FannkuchreduxData
+    PUSH 16 :u64
     CALL :malloc
     AS :ptr<FannkuchreduxData>
     LOCAL :__s0_data :ptr<FannkuchreduxData>
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 1

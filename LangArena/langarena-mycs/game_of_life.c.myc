@@ -520,13 +520,12 @@ FUNC :static_fn_game_of_life_c_fnv1a_hash
     PUSH 16777619 :u32
     LOCAL :__s0_FNV_PRIME :u32
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_hash
     BINARY :eq
     IF
       THEN
-        LOCAL :__s0_FNV_OFFSET_BASIS
+        PUSH 2166136261 :u32
         LOCAL :__s0_hash
         STORE
     ENDIF
@@ -535,7 +534,7 @@ FUNC :static_fn_game_of_life_c_fnv1a_hash
     BINARY :xor
     LOCAL :__s0_hash
     STORE
-    LOCAL :__s0_FNV_PRIME
+    PUSH 16777619 :u32
     LOCAL :__s0_hash
     BINARY :mul
     LOCAL :__s0_hash
@@ -550,29 +549,22 @@ FUNC :static_fn_game_of_life_c_cell_create
   ATTRIBUTES
     ATTR :private
   BODY
-    SIZEOF :Cell
+    PUSH 24 :u64
     CALL :malloc
     AS :ptr<Cell>
     LOCAL :__s0_cell :ptr<Cell>
     STORE
-    PUSH 0
-    PUSH 0
-    BINARY :not_eq
+    PUSH 0 :bool
     LOCAL :__s0_cell
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    PUSH 0
-    BINARY :not_eq
+    PUSH 0 :bool
     LOCAL :__s0_cell
     DEREF
     FIELD 1
     STORE
-    SIZEOF :ptr<Cell>
-    PUSH 8
-    AS :u64
-    BINARY :mul
+    PUSH 64 :u64
     CALL :malloc
     AS :ptr<ptr<Cell>>
     LOCAL :__s0_cell
@@ -749,7 +741,7 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_init
     DEREF
     FIELD 1
     STORE
-    SIZEOF :ptr<ptr<Cell>>
+    PUSH 8 :u64
     PARAM 2
     AS :u64
     BINARY :mul
@@ -768,7 +760,7 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_init
         LOCAL :__s0_y
         BINARY :less
       BODY
-        SIZEOF :ptr<Cell>
+        PUSH 8 :u64
         PARAM 1
         AS :u64
         BINARY :mul
@@ -1304,31 +1296,27 @@ FUNC :GameOfLife_prepare
     DEREF
     FIELD 2
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
     BINARY :less_eq
     IF
       THEN
-        PUSH 256
-        AS :i64
+        PUSH 256 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
         STORE
     ENDIF
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s0_data
     DEREF
     FIELD 2
     BINARY :less_eq
     IF
       THEN
-        PUSH 256
-        AS :i64
+        PUSH 256 :i64
         LOCAL :__s0_data
         DEREF
         FIELD 2
@@ -1377,9 +1365,7 @@ FUNC :GameOfLife_prepare
             BINARY :less
             IF
               THEN
-                PUSH 0
-                PUSH 1
-                BINARY :not_eq
+                PUSH 1 :bool
                 LOCAL :__s3_x
                 AS :u64
                 LOCAL :__s2_y
@@ -1410,8 +1396,7 @@ FUNC :GameOfLife_prepare
         LOCAL :__s2_y
         STORE
     ENDLOOP
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1493,12 +1478,12 @@ FUNC :GameOfLife_create
     CALL :Benchmark_create
     LOCAL :__s0_bench :ptr<Benchmark>
     STORE
-    SIZEOF :GameOfLifeData
+    PUSH 40 :u64
     CALL :malloc
     AS :ptr<GameOfLifeData>
     LOCAL :__s0_data :ptr<GameOfLifeData>
     STORE
-    SIZEOF :GameOfLifeData
+    PUSH 40 :u64
     PUSH 0
     LOCAL :__s0_data
     AS :ptr<void>

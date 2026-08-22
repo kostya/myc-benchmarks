@@ -527,13 +527,12 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_init
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 30000
-    AS :u64
+    PUSH 30000 :u64
     PARAM 0
     DEREF
     FIELD 1
     STORE
-    SIZEOF :u8
+    PUSH 1 :u64
     PARAM 0
     DEREF
     FIELD 1
@@ -543,8 +542,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_init
     DEREF
     FIELD 0
     STORE
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     PARAM 0
     DEREF
     FIELD 2
@@ -590,14 +588,12 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_destroy
         DEREF
         FIELD 0
         STORE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         PARAM 0
         DEREF
         FIELD 1
         STORE
-        PUSH 0
-        AS :u64
+        PUSH 0 :u64
         PARAM 0
         DEREF
         FIELD 2
@@ -702,8 +698,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_advance
     BINARY :more_eq
     IF
       THEN
-        PUSH 1
-        AS :u64
+        PUSH 1 :u64
         PARAM 0
         DEREF
         FIELD 1
@@ -730,8 +725,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_advance
             DEREF
             FIELD 0
             STORE
-            PUSH 0
-            AS :u8
+            PUSH 0 :u8
             PARAM 0
             DEREF
             FIELD 1
@@ -756,8 +750,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_devance
   ATTRIBUTES
     ATTR :private
   BODY
-    PUSH 0
-    AS :u64
+    PUSH 0 :u64
     PARAM 0
     DEREF
     FIELD 2
@@ -804,8 +797,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_filter_commands
     CALL :strlen
     LOCAL :__s1_input_len :u64
     STORE
-    PUSH 1
-    AS :u64
+    PUSH 1 :u64
     LOCAL :__s1_input_len
     BINARY :add
     CALL :malloc
@@ -877,8 +869,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_filter_commands
         LOCAL :__s2_i
         STORE
     ENDLOOP
-    PUSH 0
-    AS :u8
+    PUSH 0 :u8
     LOCAL :__s2_program_pos
     AS :u64
     LOCAL :__s1_program
@@ -926,7 +917,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_build_jumps
         AS :ptr<i32>
         RET
     ENDIF
-    SIZEOF :i32
+    PUSH 4 :u64
     PARAM 1
     AS :u64
     CALL :calloc
@@ -950,7 +941,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_build_jumps
     BINARY :div
     BINARY :add
     AS :u64
-    SIZEOF :i32
+    PUSH 4 :u64
     BINARY :mul
     CALL :malloc
     AS :ptr<i32>
@@ -1108,8 +1099,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
     LOCAL :__sc_or_0
     IF
       THEN
-        PUSH 0
-        AS :u32
+        PUSH 0 :u32
         RET
     ENDIF
     LOCAL :__s1_tape :BrainfuckArray_Tape
@@ -1135,80 +1125,80 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         LOCAL :__s2_c :u8
         STORE
         LOCAL :__s2_c
-        LOCAL :__switch_val_2 :u8
+        LOCAL :__switch_val_1 :u8
         STORE
         PUSH 43 :u8
-        LOCAL :__switch_val_2
+        LOCAL :__switch_val_1
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_0
+            GOTO :__switch_0__case_0
         ENDIF
         PUSH 45 :u8
-        LOCAL :__switch_val_2
+        LOCAL :__switch_val_1
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_1
+            GOTO :__switch_0__case_1
         ENDIF
         PUSH 62 :u8
-        LOCAL :__switch_val_2
+        LOCAL :__switch_val_1
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_2
+            GOTO :__switch_0__case_2
         ENDIF
         PUSH 60 :u8
-        LOCAL :__switch_val_2
+        LOCAL :__switch_val_1
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_3
+            GOTO :__switch_0__case_3
         ENDIF
         PUSH 91 :u8
-        LOCAL :__switch_val_2
+        LOCAL :__switch_val_1
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_4
+            GOTO :__switch_0__case_4
         ENDIF
         PUSH 93 :u8
-        LOCAL :__switch_val_2
+        LOCAL :__switch_val_1
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_5
+            GOTO :__switch_0__case_5
         ENDIF
         PUSH 46 :u8
-        LOCAL :__switch_val_2
+        LOCAL :__switch_val_1
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_6
+            GOTO :__switch_0__case_6
         ENDIF
-        GOTO :__switch_1__case_7
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_0
+        GOTO :__switch_0__case_7
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_0
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_inc
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_1
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_1
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_dec
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_2
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_2
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_advance
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_3
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_3
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_devance
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_4
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_4
         PUSH 0
         LOCAL :__s1_tape
         ADDR
@@ -1225,8 +1215,8 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
             LOCAL :__s1_pc
             STORE
         ENDIF
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_5
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_5
         PUSH 0
         LOCAL :__s1_tape
         ADDR
@@ -1243,8 +1233,8 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
             LOCAL :__s1_pc
             STORE
         ENDIF
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_6
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_6
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_get
@@ -1256,10 +1246,10 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         BINARY :add
         LOCAL :__s1_result
         STORE
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_7
-        GOTO :__switch_1_end
-        LABEL :__switch_1_end
+        GOTO :__switch_0_end
+        LABEL :__switch_0__case_7
+        GOTO :__switch_0_end
+        LABEL :__switch_0_end
         PUSH 1 :i32
         LOCAL :__s1_pc
         BINARY :add
@@ -1339,8 +1329,7 @@ FUNC :BrainfuckArray_prepare
     DEREF
     FIELD 5
     STORE
-    PUSH 0
-    AS :u32
+    PUSH 0 :u32
     LOCAL :__s0_data
     DEREF
     FIELD 6
@@ -1389,14 +1378,12 @@ FUNC :BrainfuckArray_warmup
     CALL :Helper_config_i64
     LOCAL :__s1_warmup_iters :i64
     STORE
-    PUSH 0
-    AS :i64
+    PUSH 0 :i64
     LOCAL :__s1_warmup_iters
     BINARY :eq
     IF
       THEN
-        PUSH 5
-        AS :i64
+        PUSH 5 :i64
         PARAM 0
         PARAM 0
         DEREF
@@ -1405,14 +1392,12 @@ FUNC :BrainfuckArray_warmup
         BINARY :div
         LOCAL :__s1_warmup_iters
         STORE
-        PUSH 1
-        AS :i64
+        PUSH 1 :i64
         LOCAL :__s1_warmup_iters
         BINARY :less
         IF
           THEN
-            PUSH 1
-            AS :i64
+            PUSH 1 :i64
             LOCAL :__s1_warmup_iters
             STORE
         ENDIF
@@ -1462,8 +1447,7 @@ FUNC :BrainfuckArray_run
     BINARY :eq
     IF
       THEN
-        PUSH 0
-        AS :u32
+        PUSH 0 :u32
         LOCAL :__s0_data
         DEREF
         FIELD 6
@@ -1632,9 +1616,8 @@ FUNC :BrainfuckArray_create
         AS :ptr<Benchmark>
         RET
     ENDIF
-    SIZEOF :BrainfuckArrayData
-    PUSH 1
-    AS :u64
+    PUSH 48 :u64
+    PUSH 1 :u64
     CALL :calloc
     AS :ptr<BrainfuckArrayData>
     LOCAL :__s1_data :ptr<BrainfuckArrayData>
