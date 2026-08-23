@@ -1279,88 +1279,88 @@ FUNC :Words_run
                                 LOCAL :__s5__hf_hashv
                                 STORE
                                 LOCAL :__s7__hj_k
-                                LOCAL :__switch_val_1 :u32
+                                LOCAL :__switch_0_val :u32
                                 STORE
                                 PUSH 11 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_0
+                                    GOTO :__switch_0_0
                                 ENDIF
                                 PUSH 10 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_1
+                                    GOTO :__switch_0_1
                                 ENDIF
                                 PUSH 9 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_2
+                                    GOTO :__switch_0_2
                                 ENDIF
                                 PUSH 8 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_3
+                                    GOTO :__switch_0_3
                                 ENDIF
                                 PUSH 7 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_4
+                                    GOTO :__switch_0_4
                                 ENDIF
                                 PUSH 6 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_5
+                                    GOTO :__switch_0_5
                                 ENDIF
                                 PUSH 5 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_6
+                                    GOTO :__switch_0_6
                                 ENDIF
                                 PUSH 4 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_7
+                                    GOTO :__switch_0_7
                                 ENDIF
                                 PUSH 3 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_8
+                                    GOTO :__switch_0_8
                                 ENDIF
                                 PUSH 2 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_9
+                                    GOTO :__switch_0_9
                                 ENDIF
                                 PUSH 1 :u32
-                                LOCAL :__switch_val_1
+                                LOCAL :__switch_0_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_0__case_10
+                                    GOTO :__switch_0_10
                                 ENDIF
-                                GOTO :__switch_0__case_11
+                                GOTO :__switch_0_11
                                 GOTO :__switch_0_end
-                                LABEL :__switch_0__case_0
+                                LABEL :__switch_0_0
                                 PUSH 24
                                 AS :u32
                                 PUSH 10
@@ -1374,7 +1374,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s5__hf_hashv
                                 STORE
-                                LABEL :__switch_0__case_1
+                                LABEL :__switch_0_1
                                 PUSH 16
                                 AS :u32
                                 PUSH 9
@@ -1388,7 +1388,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s5__hf_hashv
                                 STORE
-                                LABEL :__switch_0__case_2
+                                LABEL :__switch_0_2
                                 PUSH 8
                                 AS :u32
                                 PUSH 8
@@ -1402,7 +1402,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s5__hf_hashv
                                 STORE
-                                LABEL :__switch_0__case_3
+                                LABEL :__switch_0_3
                                 PUSH 24
                                 AS :u32
                                 PUSH 7
@@ -1416,7 +1416,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_j
                                 STORE
-                                LABEL :__switch_0__case_4
+                                LABEL :__switch_0_4
                                 PUSH 16
                                 AS :u32
                                 PUSH 6
@@ -1430,7 +1430,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_j
                                 STORE
-                                LABEL :__switch_0__case_5
+                                LABEL :__switch_0_5
                                 PUSH 8
                                 AS :u32
                                 PUSH 5
@@ -1444,7 +1444,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_j
                                 STORE
-                                LABEL :__switch_0__case_6
+                                LABEL :__switch_0_6
                                 PUSH 4
                                 AS :u64
                                 LOCAL :__s7__hj_key
@@ -1455,7 +1455,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_j
                                 STORE
-                                LABEL :__switch_0__case_7
+                                LABEL :__switch_0_7
                                 PUSH 24
                                 AS :u32
                                 PUSH 3
@@ -1469,7 +1469,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_i
                                 STORE
-                                LABEL :__switch_0__case_8
+                                LABEL :__switch_0_8
                                 PUSH 16
                                 AS :u32
                                 PUSH 2
@@ -1483,7 +1483,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_i
                                 STORE
-                                LABEL :__switch_0__case_9
+                                LABEL :__switch_0_9
                                 PUSH 8
                                 AS :u32
                                 PUSH 1
@@ -1497,7 +1497,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_i
                                 STORE
-                                LABEL :__switch_0__case_10
+                                LABEL :__switch_0_10
                                 PUSH 0
                                 AS :u64
                                 LOCAL :__s7__hj_key
@@ -1508,7 +1508,7 @@ FUNC :Words_run
                                 BINARY :add
                                 LOCAL :__s7__hj_i
                                 STORE
-                                LABEL :__switch_0__case_11
+                                LABEL :__switch_0_11
                                 LABEL :__switch_0_end
                                 LOOP
                                   COND
@@ -1732,7 +1732,7 @@ FUNC :Words_run
                                     BINARY :sub
                                     LOCAL :__s5__hf_hashv
                                     BINARY :and
-                                    LOCAL :__s24__hf_bkt :u32
+                                    LOCAL :__s25__hf_bkt :u32
                                     STORE
                                     PUSH 0
                                     PUSH 0
@@ -1755,7 +1755,7 @@ FUNC :Words_run
                                         PUSH 0
                                         AS :ptr<void>
                                         AS :u64
-                                        LOCAL :__s24__hf_bkt
+                                        LOCAL :__s25__hf_bkt
                                         AS :u64
                                         LOCAL :__s0_frequencies
                                         DEREF
@@ -1781,7 +1781,7 @@ FUNC :Words_run
                                                 DEREF
                                                 FIELD 5
                                                 AS :u64
-                                                LOCAL :__s24__hf_bkt
+                                                LOCAL :__s25__hf_bkt
                                                 AS :u64
                                                 LOCAL :__s0_frequencies
                                                 DEREF
@@ -1991,7 +1991,7 @@ FUNC :Words_run
                     FIELD 0
                     CALL :strlen
                     AS :u32
-                    LOCAL :__s39__uthash_hastr_keylen :u32
+                    LOCAL :__s40__uthash_hastr_keylen :u32
                     STORE
                     LOOP
                       COND
@@ -2014,33 +2014,33 @@ FUNC :Words_run
                                 DEREF
                                 ADDR
                                 AS :ptr<u8>
-                                LOCAL :__s42__hj_key :ptr<u8>
+                                LOCAL :__s43__hj_key :ptr<u8>
                                 STORE
                                 PUSH 4276993775 :u32
-                                LOCAL :__s40__ha_hashv :u32
+                                LOCAL :__s41__ha_hashv :u32
                                 STORE
-                                LOCAL :__s42__hj_j :u32
+                                LOCAL :__s43__hj_j :u32
                                 PUSH 2654435769 :u32
                                 STACK :swap2
                                 STORE
-                                LOCAL :__s42__hj_j
-                                LOCAL :__s42__hj_i :u32
+                                LOCAL :__s43__hj_j
+                                LOCAL :__s43__hj_i :u32
                                 STORE
-                                LOCAL :__s39__uthash_hastr_keylen
+                                LOCAL :__s40__uthash_hastr_keylen
                                 AS :u32
-                                LOCAL :__s42__hj_k :u32
+                                LOCAL :__s43__hj_k :u32
                                 STORE
                                 LOOP
                                   COND
                                     PUSH 12 :u32
-                                    LOCAL :__s42__hj_k
+                                    LOCAL :__s43__hj_k
                                     BINARY :more_eq
                                   BODY
                                     PUSH 24
                                     AS :u32
                                     PUSH 3
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
@@ -2049,7 +2049,7 @@ FUNC :Words_run
                                     AS :u32
                                     PUSH 2
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
@@ -2058,29 +2058,29 @@ FUNC :Words_run
                                     AS :u32
                                     PUSH 1
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
                                     BINARY :shl
                                     PUSH 0
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
                                     BINARY :add
                                     BINARY :add
                                     BINARY :add
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     BINARY :add
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
                                     PUSH 24
                                     AS :u32
                                     PUSH 7
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
@@ -2089,7 +2089,7 @@ FUNC :Words_run
                                     AS :u32
                                     PUSH 6
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
@@ -2098,29 +2098,29 @@ FUNC :Words_run
                                     AS :u32
                                     PUSH 5
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
                                     BINARY :shl
                                     PUSH 4
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
                                     BINARY :add
                                     BINARY :add
                                     BINARY :add
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     BINARY :add
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
                                     PUSH 24
                                     AS :u32
                                     PUSH 11
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
@@ -2129,7 +2129,7 @@ FUNC :Words_run
                                     AS :u32
                                     PUSH 10
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
@@ -2138,189 +2138,189 @@ FUNC :Words_run
                                     AS :u32
                                     PUSH 9
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
                                     BINARY :shl
                                     PUSH 8
                                     AS :u64
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
                                     DEREF
                                     AS :u32
                                     BINARY :add
                                     BINARY :add
                                     BINARY :add
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :add
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
                                     LOOP
                                       COND
                                         PUSH true
                                       BODY
-                                        LOCAL :__s42__hj_j
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_j
+                                        LOCAL :__s43__hj_i
                                         BINARY :sub
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
-                                        LOCAL :__s40__ha_hashv
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s41__ha_hashv
+                                        LOCAL :__s43__hj_i
                                         BINARY :sub
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
                                         PUSH 13
                                         AS :u32
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :shr
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         BINARY :xor
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
-                                        LOCAL :__s40__ha_hashv
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s41__ha_hashv
+                                        LOCAL :__s43__hj_j
                                         BINARY :sub
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
-                                        LOCAL :__s42__hj_i
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_i
+                                        LOCAL :__s43__hj_j
                                         BINARY :sub
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
                                         PUSH 8
                                         AS :u32
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         BINARY :shl
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         BINARY :xor
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
-                                        LOCAL :__s42__hj_i
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s43__hj_i
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :sub
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
-                                        LOCAL :__s42__hj_j
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s43__hj_j
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :sub
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
                                         PUSH 13
                                         AS :u32
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         BINARY :shr
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :xor
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
-                                        LOCAL :__s42__hj_j
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_j
+                                        LOCAL :__s43__hj_i
                                         BINARY :sub
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
-                                        LOCAL :__s40__ha_hashv
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s41__ha_hashv
+                                        LOCAL :__s43__hj_i
                                         BINARY :sub
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
                                         PUSH 12
                                         AS :u32
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :shr
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         BINARY :xor
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
-                                        LOCAL :__s40__ha_hashv
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s41__ha_hashv
+                                        LOCAL :__s43__hj_j
                                         BINARY :sub
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
-                                        LOCAL :__s42__hj_i
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_i
+                                        LOCAL :__s43__hj_j
                                         BINARY :sub
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
                                         PUSH 16
                                         AS :u32
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         BINARY :shl
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         BINARY :xor
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
-                                        LOCAL :__s42__hj_i
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s43__hj_i
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :sub
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
-                                        LOCAL :__s42__hj_j
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s43__hj_j
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :sub
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
                                         PUSH 5
                                         AS :u32
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         BINARY :shr
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :xor
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
-                                        LOCAL :__s42__hj_j
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_j
+                                        LOCAL :__s43__hj_i
                                         BINARY :sub
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
-                                        LOCAL :__s40__ha_hashv
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s41__ha_hashv
+                                        LOCAL :__s43__hj_i
                                         BINARY :sub
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
                                         PUSH 3
                                         AS :u32
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :shr
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         BINARY :xor
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         STORE
-                                        LOCAL :__s40__ha_hashv
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s41__ha_hashv
+                                        LOCAL :__s43__hj_j
                                         BINARY :sub
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
-                                        LOCAL :__s42__hj_i
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_i
+                                        LOCAL :__s43__hj_j
                                         BINARY :sub
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
                                         PUSH 10
                                         AS :u32
-                                        LOCAL :__s42__hj_i
+                                        LOCAL :__s43__hj_i
                                         BINARY :shl
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         BINARY :xor
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         STORE
-                                        LOCAL :__s42__hj_i
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s43__hj_i
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :sub
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
-                                        LOCAL :__s42__hj_j
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s43__hj_j
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :sub
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
                                         PUSH 15
                                         AS :u32
-                                        LOCAL :__s42__hj_j
+                                        LOCAL :__s43__hj_j
                                         BINARY :shr
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         BINARY :xor
-                                        LOCAL :__s40__ha_hashv
+                                        LOCAL :__s41__ha_hashv
                                         STORE
                                         PUSH 0
                                         PUSH 0
@@ -2332,419 +2332,419 @@ FUNC :Words_run
                                         ENDIF
                                     ENDLOOP
                                     PUSH 12
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     BINARY :add
-                                    LOCAL :__s42__hj_key
+                                    LOCAL :__s43__hj_key
                                     STORE
                                     PUSH 12 :u32
-                                    LOCAL :__s42__hj_k
+                                    LOCAL :__s43__hj_k
                                     BINARY :sub
-                                    LOCAL :__s42__hj_k
+                                    LOCAL :__s43__hj_k
                                     STORE
                                 ENDLOOP
-                                LOCAL :__s39__uthash_hastr_keylen
+                                LOCAL :__s40__uthash_hastr_keylen
                                 AS :u32
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 BINARY :add
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 STORE
-                                LOCAL :__s42__hj_k
-                                LOCAL :__switch_val_2 :u32
+                                LOCAL :__s43__hj_k
+                                LOCAL :__switch_1_val :u32
                                 STORE
                                 PUSH 11 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_0
+                                    GOTO :__switch_1_0
                                 ENDIF
                                 PUSH 10 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_1
+                                    GOTO :__switch_1_1
                                 ENDIF
                                 PUSH 9 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_2
+                                    GOTO :__switch_1_2
                                 ENDIF
                                 PUSH 8 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_3
+                                    GOTO :__switch_1_3
                                 ENDIF
                                 PUSH 7 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_4
+                                    GOTO :__switch_1_4
                                 ENDIF
                                 PUSH 6 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_5
+                                    GOTO :__switch_1_5
                                 ENDIF
                                 PUSH 5 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_6
+                                    GOTO :__switch_1_6
                                 ENDIF
                                 PUSH 4 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_7
+                                    GOTO :__switch_1_7
                                 ENDIF
                                 PUSH 3 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_8
+                                    GOTO :__switch_1_8
                                 ENDIF
                                 PUSH 2 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_9
+                                    GOTO :__switch_1_9
                                 ENDIF
                                 PUSH 1 :u32
-                                LOCAL :__switch_val_2
+                                LOCAL :__switch_1_val
                                 BINARY :eq
                                 IF
                                   THEN
-                                    GOTO :__switch_1__case_10
+                                    GOTO :__switch_1_10
                                 ENDIF
-                                GOTO :__switch_1__case_11
+                                GOTO :__switch_1_11
                                 GOTO :__switch_1_end
-                                LABEL :__switch_1__case_0
+                                LABEL :__switch_1_0
                                 PUSH 24
                                 AS :u32
                                 PUSH 10
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 BINARY :add
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 STORE
-                                LABEL :__switch_1__case_1
+                                LABEL :__switch_1_1
                                 PUSH 16
                                 AS :u32
                                 PUSH 9
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 BINARY :add
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 STORE
-                                LABEL :__switch_1__case_2
+                                LABEL :__switch_1_2
                                 PUSH 8
                                 AS :u32
                                 PUSH 8
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 BINARY :add
-                                LOCAL :__s40__ha_hashv
+                                LOCAL :__s41__ha_hashv
                                 STORE
-                                LABEL :__switch_1__case_3
+                                LABEL :__switch_1_3
                                 PUSH 24
                                 AS :u32
                                 PUSH 7
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 BINARY :add
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 STORE
-                                LABEL :__switch_1__case_4
+                                LABEL :__switch_1_4
                                 PUSH 16
                                 AS :u32
                                 PUSH 6
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 BINARY :add
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 STORE
-                                LABEL :__switch_1__case_5
+                                LABEL :__switch_1_5
                                 PUSH 8
                                 AS :u32
                                 PUSH 5
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 BINARY :add
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 STORE
-                                LABEL :__switch_1__case_6
+                                LABEL :__switch_1_6
                                 PUSH 4
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 BINARY :add
-                                LOCAL :__s42__hj_j
+                                LOCAL :__s43__hj_j
                                 STORE
-                                LABEL :__switch_1__case_7
+                                LABEL :__switch_1_7
                                 PUSH 24
                                 AS :u32
                                 PUSH 3
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 BINARY :add
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 STORE
-                                LABEL :__switch_1__case_8
+                                LABEL :__switch_1_8
                                 PUSH 16
                                 AS :u32
                                 PUSH 2
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 BINARY :add
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 STORE
-                                LABEL :__switch_1__case_9
+                                LABEL :__switch_1_9
                                 PUSH 8
                                 AS :u32
                                 PUSH 1
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
                                 BINARY :shl
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 BINARY :add
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 STORE
-                                LABEL :__switch_1__case_10
+                                LABEL :__switch_1_10
                                 PUSH 0
                                 AS :u64
-                                LOCAL :__s42__hj_key
+                                LOCAL :__s43__hj_key
                                 BINARY :add
                                 DEREF
                                 AS :u32
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 BINARY :add
-                                LOCAL :__s42__hj_i
+                                LOCAL :__s43__hj_i
                                 STORE
-                                LABEL :__switch_1__case_11
+                                LABEL :__switch_1_11
                                 LABEL :__switch_1_end
                                 LOOP
                                   COND
                                     PUSH true
                                   BODY
-                                    LOCAL :__s42__hj_j
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_j
+                                    LOCAL :__s43__hj_i
                                     BINARY :sub
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
-                                    LOCAL :__s40__ha_hashv
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s41__ha_hashv
+                                    LOCAL :__s43__hj_i
                                     BINARY :sub
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
                                     PUSH 13
                                     AS :u32
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :shr
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     BINARY :xor
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
-                                    LOCAL :__s40__ha_hashv
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s41__ha_hashv
+                                    LOCAL :__s43__hj_j
                                     BINARY :sub
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
-                                    LOCAL :__s42__hj_i
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_i
+                                    LOCAL :__s43__hj_j
                                     BINARY :sub
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
                                     PUSH 8
                                     AS :u32
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     BINARY :shl
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     BINARY :xor
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
-                                    LOCAL :__s42__hj_i
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s43__hj_i
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :sub
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
-                                    LOCAL :__s42__hj_j
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s43__hj_j
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :sub
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
                                     PUSH 13
                                     AS :u32
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     BINARY :shr
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :xor
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
-                                    LOCAL :__s42__hj_j
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_j
+                                    LOCAL :__s43__hj_i
                                     BINARY :sub
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
-                                    LOCAL :__s40__ha_hashv
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s41__ha_hashv
+                                    LOCAL :__s43__hj_i
                                     BINARY :sub
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
                                     PUSH 12
                                     AS :u32
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :shr
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     BINARY :xor
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
-                                    LOCAL :__s40__ha_hashv
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s41__ha_hashv
+                                    LOCAL :__s43__hj_j
                                     BINARY :sub
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
-                                    LOCAL :__s42__hj_i
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_i
+                                    LOCAL :__s43__hj_j
                                     BINARY :sub
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
                                     PUSH 16
                                     AS :u32
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     BINARY :shl
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     BINARY :xor
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
-                                    LOCAL :__s42__hj_i
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s43__hj_i
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :sub
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
-                                    LOCAL :__s42__hj_j
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s43__hj_j
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :sub
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
                                     PUSH 5
                                     AS :u32
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     BINARY :shr
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :xor
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
-                                    LOCAL :__s42__hj_j
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_j
+                                    LOCAL :__s43__hj_i
                                     BINARY :sub
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
-                                    LOCAL :__s40__ha_hashv
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s41__ha_hashv
+                                    LOCAL :__s43__hj_i
                                     BINARY :sub
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
                                     PUSH 3
                                     AS :u32
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :shr
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     BINARY :xor
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     STORE
-                                    LOCAL :__s40__ha_hashv
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s41__ha_hashv
+                                    LOCAL :__s43__hj_j
                                     BINARY :sub
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
-                                    LOCAL :__s42__hj_i
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_i
+                                    LOCAL :__s43__hj_j
                                     BINARY :sub
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
                                     PUSH 10
                                     AS :u32
-                                    LOCAL :__s42__hj_i
+                                    LOCAL :__s43__hj_i
                                     BINARY :shl
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     BINARY :xor
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     STORE
-                                    LOCAL :__s42__hj_i
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s43__hj_i
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :sub
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
-                                    LOCAL :__s42__hj_j
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s43__hj_j
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :sub
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
                                     PUSH 15
                                     AS :u32
-                                    LOCAL :__s42__hj_j
+                                    LOCAL :__s43__hj_j
                                     BINARY :shr
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :xor
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     STORE
                                     PUSH 0
                                     PUSH 0
@@ -2777,7 +2777,7 @@ FUNC :Words_run
                           COND
                             PUSH true
                           BODY
-                            LOCAL :__s40__ha_hashv
+                            LOCAL :__s41__ha_hashv
                             LOCAL :__s2_entry
                             DEREF
                             FIELD 2
@@ -2797,7 +2797,7 @@ FUNC :Words_run
                             FIELD 2
                             FIELD 5
                             STORE
-                            LOCAL :__s39__uthash_hastr_keylen
+                            LOCAL :__s40__uthash_hastr_keylen
                             AS :u32
                             LOCAL :__s2_entry
                             DEREF
@@ -3067,9 +3067,9 @@ FUNC :Words_run
                                     DEREF
                                     FIELD 1
                                     BINARY :sub
-                                    LOCAL :__s40__ha_hashv
+                                    LOCAL :__s41__ha_hashv
                                     BINARY :and
-                                    LOCAL :__s68__ha_bkt :u32
+                                    LOCAL :__s70__ha_bkt :u32
                                     STORE
                                     PUSH 0
                                     PUSH 0
@@ -3084,7 +3084,7 @@ FUNC :Words_run
                                   COND
                                     PUSH true
                                   BODY
-                                    LOCAL :__s68__ha_bkt
+                                    LOCAL :__s70__ha_bkt
                                     AS :u64
                                     LOCAL :__s0_frequencies
                                     DEREF
@@ -3095,18 +3095,18 @@ FUNC :Words_run
                                     BINARY :add
                                     DEREF
                                     ADDR
-                                    LOCAL :__s70__ha_head :ptr<UT_hash_bucket>
+                                    LOCAL :__s72__ha_head :ptr<UT_hash_bucket>
                                     STORE
                                     PUSH 1 :u32
-                                    LOCAL :__s70__ha_head
+                                    LOCAL :__s72__ha_head
                                     DEREF
                                     FIELD 1
                                     BINARY :add
-                                    LOCAL :__s70__ha_head
+                                    LOCAL :__s72__ha_head
                                     DEREF
                                     FIELD 1
                                     STORE
-                                    LOCAL :__s70__ha_head
+                                    LOCAL :__s72__ha_head
                                     DEREF
                                     FIELD 0
                                     LOCAL :__s2_entry
@@ -3129,7 +3129,7 @@ FUNC :Words_run
                                     PUSH 0
                                     AS :ptr<void>
                                     AS :u64
-                                    LOCAL :__s70__ha_head
+                                    LOCAL :__s72__ha_head
                                     DEREF
                                     FIELD 0
                                     AS :u64
@@ -3140,7 +3140,7 @@ FUNC :Words_run
                                         DEREF
                                         FIELD 2
                                         ADDR
-                                        LOCAL :__s70__ha_head
+                                        LOCAL :__s72__ha_head
                                         DEREF
                                         FIELD 0
                                         DEREF
@@ -3151,18 +3151,18 @@ FUNC :Words_run
                                     DEREF
                                     FIELD 2
                                     ADDR
-                                    LOCAL :__s70__ha_head
+                                    LOCAL :__s72__ha_head
                                     DEREF
                                     FIELD 0
                                     STORE
                                     PUSH 10 :u32
                                     PUSH 1 :u32
-                                    LOCAL :__s70__ha_head
+                                    LOCAL :__s72__ha_head
                                     DEREF
                                     FIELD 2
                                     BINARY :add
                                     BINARY :mul
-                                    LOCAL :__s70__ha_head
+                                    LOCAL :__s72__ha_head
                                     DEREF
                                     FIELD 1
                                     BINARY :more_eq
@@ -3206,11 +3206,11 @@ FUNC :Words_run
                                             BINARY :mul
                                             CALL :malloc
                                             AS :ptr<UT_hash_bucket>
-                                            LOCAL :__s73__he_new_buckets :ptr<UT_hash_bucket>
+                                            LOCAL :__s75__he_new_buckets :ptr<UT_hash_bucket>
                                             STORE
                                             PUSH 0
                                             AS :ptr<UT_hash_bucket>
-                                            LOCAL :__s73__he_new_buckets
+                                            LOCAL :__s75__he_new_buckets
                                             BINARY :eq
                                             IF
                                               THEN
@@ -3231,7 +3231,7 @@ FUNC :Words_run
                                                 BINARY :mul
                                                 BINARY :mul
                                                 PUSH 0
-                                                LOCAL :__s73__he_new_buckets
+                                                LOCAL :__s75__he_new_buckets
                                                 AS :ptr<void>
                                                 CALL :memset
                                                 STACK :drop
@@ -3309,7 +3309,7 @@ FUNC :Words_run
                                                 FIELD 7
                                                 STORE
                                                 PUSH 0 :u32
-                                                LOCAL :__s73__he_bkt_i :u32
+                                                LOCAL :__s75__he_bkt_i :u32
                                                 STORE
                                                 LOOP
                                                   COND
@@ -3321,10 +3321,10 @@ FUNC :Words_run
                                                     FIELD 0
                                                     DEREF
                                                     FIELD 1
-                                                    LOCAL :__s73__he_bkt_i
+                                                    LOCAL :__s75__he_bkt_i
                                                     BINARY :less
                                                   BODY
-                                                    LOCAL :__s73__he_bkt_i
+                                                    LOCAL :__s75__he_bkt_i
                                                     AS :u64
                                                     LOCAL :__s2_entry
                                                     DEREF
@@ -3337,21 +3337,21 @@ FUNC :Words_run
                                                     BINARY :add
                                                     DEREF
                                                     FIELD 0
-                                                    LOCAL :__s73__he_thh :ptr<UT_hash_handle>
+                                                    LOCAL :__s75__he_thh :ptr<UT_hash_handle>
                                                     STORE
                                                     LOOP
                                                       COND
                                                         PUSH 0
                                                         AS :ptr<void>
                                                         AS :u64
-                                                        LOCAL :__s73__he_thh
+                                                        LOCAL :__s75__he_thh
                                                         AS :u64
                                                         BINARY :not_eq
                                                       BODY
-                                                        LOCAL :__s73__he_thh
+                                                        LOCAL :__s75__he_thh
                                                         DEREF
                                                         FIELD 4
-                                                        LOCAL :__s73__he_hh_nxt :ptr<UT_hash_handle>
+                                                        LOCAL :__s75__he_hh_nxt :ptr<UT_hash_handle>
                                                         STORE
                                                         LOOP
                                                           COND
@@ -3369,11 +3369,11 @@ FUNC :Words_run
                                                             FIELD 1
                                                             BINARY :mul
                                                             BINARY :sub
-                                                            LOCAL :__s73__he_thh
+                                                            LOCAL :__s75__he_thh
                                                             DEREF
                                                             FIELD 7
                                                             BINARY :and
-                                                            LOCAL :__s73__he_bkt :u32
+                                                            LOCAL :__s75__he_bkt :u32
                                                             STORE
                                                             PUSH 0
                                                             PUSH 0
@@ -3384,13 +3384,13 @@ FUNC :Words_run
                                                                 BREAK
                                                             ENDIF
                                                         ENDLOOP
-                                                        LOCAL :__s73__he_bkt
+                                                        LOCAL :__s75__he_bkt
                                                         AS :u64
-                                                        LOCAL :__s73__he_new_buckets
+                                                        LOCAL :__s75__he_new_buckets
                                                         BINARY :add
                                                         DEREF
                                                         ADDR
-                                                        LOCAL :__s73__he_newbkt :ptr<UT_hash_bucket>
+                                                        LOCAL :__s75__he_newbkt :ptr<UT_hash_bucket>
                                                         STORE
                                                         LOCAL :__s2_entry
                                                         DEREF
@@ -3401,15 +3401,15 @@ FUNC :Words_run
                                                         DEREF
                                                         FIELD 6
                                                         PUSH 1 :u32
-                                                        LOCAL :__s73__he_newbkt
+                                                        LOCAL :__s75__he_newbkt
                                                         DEREF
                                                         FIELD 1
                                                         BINARY :add
-                                                        LOCAL :__s73__he_newbkt
+                                                        LOCAL :__s75__he_newbkt
                                                         DEREF
                                                         FIELD 1
                                                         STORE
-                                                        LOCAL :__s73__he_newbkt
+                                                        LOCAL :__s75__he_newbkt
                                                         DEREF
                                                         FIELD 1
                                                         BINARY :more
@@ -3442,22 +3442,22 @@ FUNC :Words_run
                                                             FIELD 0
                                                             DEREF
                                                             FIELD 6
-                                                            LOCAL :__s73__he_newbkt
+                                                            LOCAL :__s75__he_newbkt
                                                             DEREF
                                                             FIELD 2
                                                             BINARY :mul
-                                                            LOCAL :__s73__he_newbkt
+                                                            LOCAL :__s75__he_newbkt
                                                             DEREF
                                                             FIELD 1
                                                             BINARY :more
                                                             IF
                                                               THEN
                                                                 PUSH 1 :u32
-                                                                LOCAL :__s73__he_newbkt
+                                                                LOCAL :__s75__he_newbkt
                                                                 DEREF
                                                                 FIELD 2
                                                                 BINARY :add
-                                                                LOCAL :__s73__he_newbkt
+                                                                LOCAL :__s75__he_newbkt
                                                                 DEREF
                                                                 FIELD 2
                                                                 STORE
@@ -3466,49 +3466,49 @@ FUNC :Words_run
                                                         PUSH 0
                                                         AS :ptr<void>
                                                         AS :ptr<UT_hash_handle>
-                                                        LOCAL :__s73__he_thh
+                                                        LOCAL :__s75__he_thh
                                                         DEREF
                                                         FIELD 3
                                                         STORE
-                                                        LOCAL :__s73__he_newbkt
+                                                        LOCAL :__s75__he_newbkt
                                                         DEREF
                                                         FIELD 0
-                                                        LOCAL :__s73__he_thh
+                                                        LOCAL :__s75__he_thh
                                                         DEREF
                                                         FIELD 4
                                                         STORE
                                                         PUSH 0
                                                         AS :ptr<void>
                                                         AS :u64
-                                                        LOCAL :__s73__he_newbkt
+                                                        LOCAL :__s75__he_newbkt
                                                         DEREF
                                                         FIELD 0
                                                         AS :u64
                                                         BINARY :not_eq
                                                         IF
                                                           THEN
-                                                            LOCAL :__s73__he_thh
-                                                            LOCAL :__s73__he_newbkt
+                                                            LOCAL :__s75__he_thh
+                                                            LOCAL :__s75__he_newbkt
                                                             DEREF
                                                             FIELD 0
                                                             DEREF
                                                             FIELD 3
                                                             STORE
                                                         ENDIF
-                                                        LOCAL :__s73__he_thh
-                                                        LOCAL :__s73__he_newbkt
+                                                        LOCAL :__s75__he_thh
+                                                        LOCAL :__s75__he_newbkt
                                                         DEREF
                                                         FIELD 0
                                                         STORE
-                                                        LOCAL :__s73__he_hh_nxt
-                                                        LOCAL :__s73__he_thh
+                                                        LOCAL :__s75__he_hh_nxt
+                                                        LOCAL :__s75__he_thh
                                                         STORE
                                                     ENDLOOP
                                                   STEP
                                                     PUSH 1 :u32
-                                                    LOCAL :__s73__he_bkt_i
+                                                    LOCAL :__s75__he_bkt_i
                                                     BINARY :add
-                                                    LOCAL :__s73__he_bkt_i
+                                                    LOCAL :__s75__he_bkt_i
                                                     STORE
                                                 ENDLOOP
                                                 LOCAL :__s2_entry
@@ -3559,7 +3559,7 @@ FUNC :Words_run
                                                 DEREF
                                                 FIELD 2
                                                 STORE
-                                                LOCAL :__s73__he_new_buckets
+                                                LOCAL :__s75__he_new_buckets
                                                 LOCAL :__s2_entry
                                                 DEREF
                                                 FIELD 2
@@ -3969,13 +3969,13 @@ FUNC :Words_run
     PUSH 0 :u8
     PUSH 0 :u8
     CREATE "flat<u8, 256>"
-    LOCAL :__s87_max_word "flat<u8, 256>"
+    LOCAL :__s89_max_word "flat<u8, 256>"
     STORE
     PUSH 0
-    LOCAL :__s87_max_count :i32
+    LOCAL :__s89_max_count :i32
     STORE
     LOCAL :__s0_frequencies
-    LOCAL :__s87_entry :ptr<WordEntry>
+    LOCAL :__s89_entry :ptr<WordEntry>
     STORE
     PUSH 0
     AS :ptr<void>
@@ -3999,34 +3999,34 @@ FUNC :Words_run
     ENDIF
     LOCAL :__ternary_36
     AS :ptr<WordEntry>
-    LOCAL :__s87_tmp :ptr<WordEntry>
+    LOCAL :__s89_tmp :ptr<WordEntry>
     STORE
     LOOP
       COND
         PUSH 0
         AS :ptr<void>
         AS :u64
-        LOCAL :__s87_entry
+        LOCAL :__s89_entry
         AS :u64
         BINARY :not_eq
       BODY
-        LOCAL :__s87_max_count
-        LOCAL :__s87_entry
+        LOCAL :__s89_max_count
+        LOCAL :__s89_entry
         DEREF
         FIELD 1
         BINARY :more
         IF
           THEN
-            LOCAL :__s87_entry
+            LOCAL :__s89_entry
             DEREF
             FIELD 1
-            LOCAL :__s87_max_count
+            LOCAL :__s89_max_count
             STORE
             PUSH 255 :u64
-            LOCAL :__s87_entry
+            LOCAL :__s89_entry
             DEREF
             FIELD 0
-            LOCAL :__s87_max_word
+            LOCAL :__s89_max_word
             ADDR
             AS :ptr<u8>
             CALL :strncpy
@@ -4034,7 +4034,7 @@ FUNC :Words_run
             PUSH 0 :u8
             PUSH 255
             AS :u64
-            LOCAL :__s87_max_word
+            LOCAL :__s89_max_word
             ADDR
             AS :ptr<u8>
             BINARY :add
@@ -4042,18 +4042,18 @@ FUNC :Words_run
             STORE
         ENDIF
       STEP
-        LOCAL :__s87_tmp
-        LOCAL :__s87_entry
+        LOCAL :__s89_tmp
+        LOCAL :__s89_entry
         STORE
         PUSH 0
         AS :ptr<void>
         AS :u64
-        LOCAL :__s87_tmp
+        LOCAL :__s89_tmp
         AS :u64
         BINARY :not_eq
         IF
           THEN
-            LOCAL :__s87_tmp
+            LOCAL :__s89_tmp
             DEREF
             FIELD 2
             FIELD 2
@@ -4067,7 +4067,7 @@ FUNC :Words_run
         ENDIF
         LOCAL :__ternary_38
         AS :ptr<WordEntry>
-        LOCAL :__s87_tmp
+        LOCAL :__s89_tmp
         STORE
     ENDLOOP
     PUSH 0
@@ -4093,18 +4093,18 @@ FUNC :Words_run
     ENDIF
     LOCAL :__ternary_39
     AS :i32
-    LOCAL :__s91_freq_size :i32
+    LOCAL :__s93_freq_size :i32
     STORE
-    LOCAL :__s87_max_word
+    LOCAL :__s89_max_word
     ADDR
     AS :ptr<u8>
     CALL :Helper_checksum_string
-    LOCAL :__s91_word_checksum :u32
+    LOCAL :__s93_word_checksum :u32
     STORE
-    LOCAL :__s91_freq_size
+    LOCAL :__s93_freq_size
     AS :u32
-    LOCAL :__s91_word_checksum
-    LOCAL :__s87_max_count
+    LOCAL :__s93_word_checksum
+    LOCAL :__s89_max_count
     AS :u32
     BINARY :add
     BINARY :add
@@ -4117,7 +4117,7 @@ FUNC :Words_run
     FIELD 4
     STORE
     LOCAL :__s0_frequencies
-    LOCAL :__s87_entry
+    LOCAL :__s89_entry
     STORE
     PUSH 0
     AS :ptr<void>
@@ -4141,14 +4141,14 @@ FUNC :Words_run
     ENDIF
     LOCAL :__ternary_42
     AS :ptr<WordEntry>
-    LOCAL :__s87_tmp
+    LOCAL :__s89_tmp
     STORE
     LOOP
       COND
         PUSH 0
         AS :ptr<void>
         AS :u64
-        LOCAL :__s87_entry
+        LOCAL :__s89_entry
         AS :u64
         BINARY :not_eq
       BODY
@@ -4156,16 +4156,16 @@ FUNC :Words_run
           COND
             PUSH true
           BODY
-            LOCAL :__s87_entry
+            LOCAL :__s89_entry
             DEREF
             FIELD 2
             ADDR
-            LOCAL :__s94__hd_hh_del :ptr<UT_hash_handle>
+            LOCAL :__s96__hd_hh_del :ptr<UT_hash_handle>
             STORE
             PUSH 0
             AS :ptr<void>
             AS :u64
-            LOCAL :__s94__hd_hh_del
+            LOCAL :__s96__hd_hh_del
             DEREF
             FIELD 1
             AS :u64
@@ -4178,7 +4178,7 @@ FUNC :Words_run
                 PUSH 0
                 AS :ptr<void>
                 AS :u64
-                LOCAL :__s94__hd_hh_del
+                LOCAL :__s96__hd_hh_del
                 DEREF
                 FIELD 2
                 AS :u64
@@ -4216,7 +4216,7 @@ FUNC :Words_run
                 DEREF
                 FIELD 4
                 AS :u64
-                LOCAL :__s94__hd_hh_del
+                LOCAL :__s96__hd_hh_del
                 AS :u64
                 BINARY :eq
                 IF
@@ -4228,7 +4228,7 @@ FUNC :Words_run
                     DEREF
                     FIELD 5
                     AS :u64
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 1
                     AS :ptr<u8>
@@ -4246,14 +4246,14 @@ FUNC :Words_run
                 PUSH 0
                 AS :ptr<void>
                 AS :u64
-                LOCAL :__s94__hd_hh_del
+                LOCAL :__s96__hd_hh_del
                 DEREF
                 FIELD 1
                 AS :u64
                 BINARY :not_eq
                 IF
                   THEN
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 2
                     LOCAL :__s0_frequencies
@@ -4263,7 +4263,7 @@ FUNC :Words_run
                     DEREF
                     FIELD 5
                     AS :u64
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 1
                     AS :ptr<u8>
@@ -4278,7 +4278,7 @@ FUNC :Words_run
                       COND
                         PUSH true
                       BODY
-                        LOCAL :__s94__hd_hh_del
+                        LOCAL :__s96__hd_hh_del
                         DEREF
                         FIELD 2
                         AS :ptr<WordEntry>
@@ -4297,14 +4297,14 @@ FUNC :Words_run
                 PUSH 0
                 AS :ptr<void>
                 AS :u64
-                LOCAL :__s94__hd_hh_del
+                LOCAL :__s96__hd_hh_del
                 DEREF
                 FIELD 2
                 AS :u64
                 BINARY :not_eq
                 IF
                   THEN
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 1
                     LOCAL :__s0_frequencies
@@ -4314,7 +4314,7 @@ FUNC :Words_run
                     DEREF
                     FIELD 5
                     AS :u64
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 2
                     AS :ptr<u8>
@@ -4337,11 +4337,11 @@ FUNC :Words_run
                     DEREF
                     FIELD 1
                     BINARY :sub
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 7
                     BINARY :and
-                    LOCAL :__s97__hd_bkt :u32
+                    LOCAL :__s99__hd_bkt :u32
                     STORE
                     PUSH 0
                     PUSH 0
@@ -4356,7 +4356,7 @@ FUNC :Words_run
                   COND
                     PUSH true
                   BODY
-                    LOCAL :__s97__hd_bkt
+                    LOCAL :__s99__hd_bkt
                     AS :u64
                     LOCAL :__s0_frequencies
                     DEREF
@@ -4367,46 +4367,46 @@ FUNC :Words_run
                     BINARY :add
                     DEREF
                     ADDR
-                    LOCAL :__s104__hd_head :ptr<UT_hash_bucket>
+                    LOCAL :__s106__hd_head :ptr<UT_hash_bucket>
                     STORE
                     PUSH 1 :u32
-                    LOCAL :__s104__hd_head
+                    LOCAL :__s106__hd_head
                     DEREF
                     FIELD 1
                     BINARY :sub
-                    LOCAL :__s104__hd_head
+                    LOCAL :__s106__hd_head
                     DEREF
                     FIELD 1
                     STORE
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     AS :u64
-                    LOCAL :__s104__hd_head
+                    LOCAL :__s106__hd_head
                     DEREF
                     FIELD 0
                     AS :u64
                     BINARY :eq
                     IF
                       THEN
-                        LOCAL :__s94__hd_hh_del
+                        LOCAL :__s96__hd_hh_del
                         DEREF
                         FIELD 4
-                        LOCAL :__s104__hd_head
+                        LOCAL :__s106__hd_head
                         DEREF
                         FIELD 0
                         STORE
                     ENDIF
                     PUSH 0
                     AS :ptr<UT_hash_handle>
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 3
                     BINARY :not_eq
                     IF
                       THEN
-                        LOCAL :__s94__hd_hh_del
+                        LOCAL :__s96__hd_hh_del
                         DEREF
                         FIELD 4
-                        LOCAL :__s94__hd_hh_del
+                        LOCAL :__s96__hd_hh_del
                         DEREF
                         FIELD 3
                         DEREF
@@ -4415,16 +4415,16 @@ FUNC :Words_run
                     ENDIF
                     PUSH 0
                     AS :ptr<UT_hash_handle>
-                    LOCAL :__s94__hd_hh_del
+                    LOCAL :__s96__hd_hh_del
                     DEREF
                     FIELD 4
                     BINARY :not_eq
                     IF
                       THEN
-                        LOCAL :__s94__hd_hh_del
+                        LOCAL :__s96__hd_hh_del
                         DEREF
                         FIELD 3
-                        LOCAL :__s94__hd_hh_del
+                        LOCAL :__s96__hd_hh_del
                         DEREF
                         FIELD 4
                         DEREF
@@ -4465,27 +4465,27 @@ FUNC :Words_run
                 BREAK
             ENDIF
         ENDLOOP
-        LOCAL :__s87_entry
+        LOCAL :__s89_entry
         DEREF
         FIELD 0
         AS :ptr<void>
         CALL :free
-        LOCAL :__s87_entry
+        LOCAL :__s89_entry
         AS :ptr<void>
         CALL :free
       STEP
-        LOCAL :__s87_tmp
-        LOCAL :__s87_entry
+        LOCAL :__s89_tmp
+        LOCAL :__s89_entry
         STORE
         PUSH 0
         AS :ptr<void>
         AS :u64
-        LOCAL :__s87_tmp
+        LOCAL :__s89_tmp
         AS :u64
         BINARY :not_eq
         IF
           THEN
-            LOCAL :__s87_tmp
+            LOCAL :__s89_tmp
             DEREF
             FIELD 2
             FIELD 2
@@ -4499,7 +4499,7 @@ FUNC :Words_run
         ENDIF
         LOCAL :__ternary_47
         AS :ptr<WordEntry>
-        LOCAL :__s87_tmp
+        LOCAL :__s89_tmp
         STORE
     ENDLOOP
 ENDFUNC

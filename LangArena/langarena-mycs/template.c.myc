@@ -1218,88 +1218,88 @@ FUNC :static_fn_template_c_add_var
                 LOCAL :__s1__ha_hashv
                 STORE
                 LOCAL :__s3__hj_k
-                LOCAL :__switch_val_1 :u32
+                LOCAL :__switch_2_val :u32
                 STORE
                 PUSH 11 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_0
+                    GOTO :__switch_2_0
                 ENDIF
                 PUSH 10 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_1
+                    GOTO :__switch_2_1
                 ENDIF
                 PUSH 9 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_2
+                    GOTO :__switch_2_2
                 ENDIF
                 PUSH 8 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_3
+                    GOTO :__switch_2_3
                 ENDIF
                 PUSH 7 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_4
+                    GOTO :__switch_2_4
                 ENDIF
                 PUSH 6 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_5
+                    GOTO :__switch_2_5
                 ENDIF
                 PUSH 5 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_6
+                    GOTO :__switch_2_6
                 ENDIF
                 PUSH 4 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_7
+                    GOTO :__switch_2_7
                 ENDIF
                 PUSH 3 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_8
+                    GOTO :__switch_2_8
                 ENDIF
                 PUSH 2 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_9
+                    GOTO :__switch_2_9
                 ENDIF
                 PUSH 1 :u32
-                LOCAL :__switch_val_1
+                LOCAL :__switch_2_val
                 BINARY :eq
                 IF
                   THEN
-                    GOTO :__switch_0__case_10
+                    GOTO :__switch_2_10
                 ENDIF
-                GOTO :__switch_0__case_11
-                GOTO :__switch_0_end
-                LABEL :__switch_0__case_0
+                GOTO :__switch_2_11
+                GOTO :__switch_2_end
+                LABEL :__switch_2_0
                 PUSH 24
                 AS :u32
                 PUSH 10
@@ -1313,7 +1313,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s1__ha_hashv
                 STORE
-                LABEL :__switch_0__case_1
+                LABEL :__switch_2_1
                 PUSH 16
                 AS :u32
                 PUSH 9
@@ -1327,7 +1327,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s1__ha_hashv
                 STORE
-                LABEL :__switch_0__case_2
+                LABEL :__switch_2_2
                 PUSH 8
                 AS :u32
                 PUSH 8
@@ -1341,7 +1341,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s1__ha_hashv
                 STORE
-                LABEL :__switch_0__case_3
+                LABEL :__switch_2_3
                 PUSH 24
                 AS :u32
                 PUSH 7
@@ -1355,7 +1355,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_j
                 STORE
-                LABEL :__switch_0__case_4
+                LABEL :__switch_2_4
                 PUSH 16
                 AS :u32
                 PUSH 6
@@ -1369,7 +1369,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_j
                 STORE
-                LABEL :__switch_0__case_5
+                LABEL :__switch_2_5
                 PUSH 8
                 AS :u32
                 PUSH 5
@@ -1383,7 +1383,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_j
                 STORE
-                LABEL :__switch_0__case_6
+                LABEL :__switch_2_6
                 PUSH 4
                 AS :u64
                 LOCAL :__s3__hj_key
@@ -1394,7 +1394,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_j
                 STORE
-                LABEL :__switch_0__case_7
+                LABEL :__switch_2_7
                 PUSH 24
                 AS :u32
                 PUSH 3
@@ -1408,7 +1408,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_i
                 STORE
-                LABEL :__switch_0__case_8
+                LABEL :__switch_2_8
                 PUSH 16
                 AS :u32
                 PUSH 2
@@ -1422,7 +1422,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_i
                 STORE
-                LABEL :__switch_0__case_9
+                LABEL :__switch_2_9
                 PUSH 8
                 AS :u32
                 PUSH 1
@@ -1436,7 +1436,7 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_i
                 STORE
-                LABEL :__switch_0__case_10
+                LABEL :__switch_2_10
                 PUSH 0
                 AS :u64
                 LOCAL :__s3__hj_key
@@ -1447,8 +1447,8 @@ FUNC :static_fn_template_c_add_var
                 BINARY :add
                 LOCAL :__s3__hj_i
                 STORE
-                LABEL :__switch_0__case_11
-                LABEL :__switch_0_end
+                LABEL :__switch_2_11
+                LABEL :__switch_2_end
                 LOOP
                   COND
                     PUSH true
@@ -1956,7 +1956,7 @@ FUNC :static_fn_template_c_add_var
                     BINARY :sub
                     LOCAL :__s1__ha_hashv
                     BINARY :and
-                    LOCAL :__s29__ha_bkt :u32
+                    LOCAL :__s30__ha_bkt :u32
                     STORE
                     PUSH 0
                     PUSH 0
@@ -1971,7 +1971,7 @@ FUNC :static_fn_template_c_add_var
                   COND
                     PUSH true
                   BODY
-                    LOCAL :__s29__ha_bkt
+                    LOCAL :__s30__ha_bkt
                     AS :u64
                     PARAM 0
                     DEREF
@@ -1984,18 +1984,18 @@ FUNC :static_fn_template_c_add_var
                     BINARY :add
                     DEREF
                     ADDR
-                    LOCAL :__s31__ha_head :ptr<UT_hash_bucket>
+                    LOCAL :__s32__ha_head :ptr<UT_hash_bucket>
                     STORE
                     PUSH 1 :u32
-                    LOCAL :__s31__ha_head
+                    LOCAL :__s32__ha_head
                     DEREF
                     FIELD 1
                     BINARY :add
-                    LOCAL :__s31__ha_head
+                    LOCAL :__s32__ha_head
                     DEREF
                     FIELD 1
                     STORE
-                    LOCAL :__s31__ha_head
+                    LOCAL :__s32__ha_head
                     DEREF
                     FIELD 0
                     LOCAL :__s0_entry
@@ -2018,7 +2018,7 @@ FUNC :static_fn_template_c_add_var
                     PUSH 0
                     AS :ptr<void>
                     AS :u64
-                    LOCAL :__s31__ha_head
+                    LOCAL :__s32__ha_head
                     DEREF
                     FIELD 0
                     AS :u64
@@ -2029,7 +2029,7 @@ FUNC :static_fn_template_c_add_var
                         DEREF
                         FIELD 2
                         ADDR
-                        LOCAL :__s31__ha_head
+                        LOCAL :__s32__ha_head
                         DEREF
                         FIELD 0
                         DEREF
@@ -2040,18 +2040,18 @@ FUNC :static_fn_template_c_add_var
                     DEREF
                     FIELD 2
                     ADDR
-                    LOCAL :__s31__ha_head
+                    LOCAL :__s32__ha_head
                     DEREF
                     FIELD 0
                     STORE
                     PUSH 10 :u32
                     PUSH 1 :u32
-                    LOCAL :__s31__ha_head
+                    LOCAL :__s32__ha_head
                     DEREF
                     FIELD 2
                     BINARY :add
                     BINARY :mul
-                    LOCAL :__s31__ha_head
+                    LOCAL :__s32__ha_head
                     DEREF
                     FIELD 1
                     BINARY :more_eq
@@ -2095,11 +2095,11 @@ FUNC :static_fn_template_c_add_var
                             BINARY :mul
                             CALL :malloc
                             AS :ptr<UT_hash_bucket>
-                            LOCAL :__s34__he_new_buckets :ptr<UT_hash_bucket>
+                            LOCAL :__s35__he_new_buckets :ptr<UT_hash_bucket>
                             STORE
                             PUSH 0
                             AS :ptr<UT_hash_bucket>
-                            LOCAL :__s34__he_new_buckets
+                            LOCAL :__s35__he_new_buckets
                             BINARY :eq
                             IF
                               THEN
@@ -2120,7 +2120,7 @@ FUNC :static_fn_template_c_add_var
                                 BINARY :mul
                                 BINARY :mul
                                 PUSH 0
-                                LOCAL :__s34__he_new_buckets
+                                LOCAL :__s35__he_new_buckets
                                 AS :ptr<void>
                                 CALL :memset
                                 STACK :drop
@@ -2198,7 +2198,7 @@ FUNC :static_fn_template_c_add_var
                                 FIELD 7
                                 STORE
                                 PUSH 0 :u32
-                                LOCAL :__s34__he_bkt_i :u32
+                                LOCAL :__s35__he_bkt_i :u32
                                 STORE
                                 LOOP
                                   COND
@@ -2210,10 +2210,10 @@ FUNC :static_fn_template_c_add_var
                                     FIELD 0
                                     DEREF
                                     FIELD 1
-                                    LOCAL :__s34__he_bkt_i
+                                    LOCAL :__s35__he_bkt_i
                                     BINARY :less
                                   BODY
-                                    LOCAL :__s34__he_bkt_i
+                                    LOCAL :__s35__he_bkt_i
                                     AS :u64
                                     LOCAL :__s0_entry
                                     DEREF
@@ -2226,21 +2226,21 @@ FUNC :static_fn_template_c_add_var
                                     BINARY :add
                                     DEREF
                                     FIELD 0
-                                    LOCAL :__s34__he_thh :ptr<UT_hash_handle>
+                                    LOCAL :__s35__he_thh :ptr<UT_hash_handle>
                                     STORE
                                     LOOP
                                       COND
                                         PUSH 0
                                         AS :ptr<void>
                                         AS :u64
-                                        LOCAL :__s34__he_thh
+                                        LOCAL :__s35__he_thh
                                         AS :u64
                                         BINARY :not_eq
                                       BODY
-                                        LOCAL :__s34__he_thh
+                                        LOCAL :__s35__he_thh
                                         DEREF
                                         FIELD 4
-                                        LOCAL :__s34__he_hh_nxt :ptr<UT_hash_handle>
+                                        LOCAL :__s35__he_hh_nxt :ptr<UT_hash_handle>
                                         STORE
                                         LOOP
                                           COND
@@ -2258,11 +2258,11 @@ FUNC :static_fn_template_c_add_var
                                             FIELD 1
                                             BINARY :mul
                                             BINARY :sub
-                                            LOCAL :__s34__he_thh
+                                            LOCAL :__s35__he_thh
                                             DEREF
                                             FIELD 7
                                             BINARY :and
-                                            LOCAL :__s34__he_bkt :u32
+                                            LOCAL :__s35__he_bkt :u32
                                             STORE
                                             PUSH 0
                                             PUSH 0
@@ -2273,13 +2273,13 @@ FUNC :static_fn_template_c_add_var
                                                 BREAK
                                             ENDIF
                                         ENDLOOP
-                                        LOCAL :__s34__he_bkt
+                                        LOCAL :__s35__he_bkt
                                         AS :u64
-                                        LOCAL :__s34__he_new_buckets
+                                        LOCAL :__s35__he_new_buckets
                                         BINARY :add
                                         DEREF
                                         ADDR
-                                        LOCAL :__s34__he_newbkt :ptr<UT_hash_bucket>
+                                        LOCAL :__s35__he_newbkt :ptr<UT_hash_bucket>
                                         STORE
                                         LOCAL :__s0_entry
                                         DEREF
@@ -2290,15 +2290,15 @@ FUNC :static_fn_template_c_add_var
                                         DEREF
                                         FIELD 6
                                         PUSH 1 :u32
-                                        LOCAL :__s34__he_newbkt
+                                        LOCAL :__s35__he_newbkt
                                         DEREF
                                         FIELD 1
                                         BINARY :add
-                                        LOCAL :__s34__he_newbkt
+                                        LOCAL :__s35__he_newbkt
                                         DEREF
                                         FIELD 1
                                         STORE
-                                        LOCAL :__s34__he_newbkt
+                                        LOCAL :__s35__he_newbkt
                                         DEREF
                                         FIELD 1
                                         BINARY :more
@@ -2331,22 +2331,22 @@ FUNC :static_fn_template_c_add_var
                                             FIELD 0
                                             DEREF
                                             FIELD 6
-                                            LOCAL :__s34__he_newbkt
+                                            LOCAL :__s35__he_newbkt
                                             DEREF
                                             FIELD 2
                                             BINARY :mul
-                                            LOCAL :__s34__he_newbkt
+                                            LOCAL :__s35__he_newbkt
                                             DEREF
                                             FIELD 1
                                             BINARY :more
                                             IF
                                               THEN
                                                 PUSH 1 :u32
-                                                LOCAL :__s34__he_newbkt
+                                                LOCAL :__s35__he_newbkt
                                                 DEREF
                                                 FIELD 2
                                                 BINARY :add
-                                                LOCAL :__s34__he_newbkt
+                                                LOCAL :__s35__he_newbkt
                                                 DEREF
                                                 FIELD 2
                                                 STORE
@@ -2355,49 +2355,49 @@ FUNC :static_fn_template_c_add_var
                                         PUSH 0
                                         AS :ptr<void>
                                         AS :ptr<UT_hash_handle>
-                                        LOCAL :__s34__he_thh
+                                        LOCAL :__s35__he_thh
                                         DEREF
                                         FIELD 3
                                         STORE
-                                        LOCAL :__s34__he_newbkt
+                                        LOCAL :__s35__he_newbkt
                                         DEREF
                                         FIELD 0
-                                        LOCAL :__s34__he_thh
+                                        LOCAL :__s35__he_thh
                                         DEREF
                                         FIELD 4
                                         STORE
                                         PUSH 0
                                         AS :ptr<void>
                                         AS :u64
-                                        LOCAL :__s34__he_newbkt
+                                        LOCAL :__s35__he_newbkt
                                         DEREF
                                         FIELD 0
                                         AS :u64
                                         BINARY :not_eq
                                         IF
                                           THEN
-                                            LOCAL :__s34__he_thh
-                                            LOCAL :__s34__he_newbkt
+                                            LOCAL :__s35__he_thh
+                                            LOCAL :__s35__he_newbkt
                                             DEREF
                                             FIELD 0
                                             DEREF
                                             FIELD 3
                                             STORE
                                         ENDIF
-                                        LOCAL :__s34__he_thh
-                                        LOCAL :__s34__he_newbkt
+                                        LOCAL :__s35__he_thh
+                                        LOCAL :__s35__he_newbkt
                                         DEREF
                                         FIELD 0
                                         STORE
-                                        LOCAL :__s34__he_hh_nxt
-                                        LOCAL :__s34__he_thh
+                                        LOCAL :__s35__he_hh_nxt
+                                        LOCAL :__s35__he_thh
                                         STORE
                                     ENDLOOP
                                   STEP
                                     PUSH 1 :u32
-                                    LOCAL :__s34__he_bkt_i
+                                    LOCAL :__s35__he_bkt_i
                                     BINARY :add
-                                    LOCAL :__s34__he_bkt_i
+                                    LOCAL :__s35__he_bkt_i
                                     STORE
                                 ENDLOOP
                                 LOCAL :__s0_entry
@@ -2448,7 +2448,7 @@ FUNC :static_fn_template_c_add_var
                                 DEREF
                                 FIELD 2
                                 STORE
-                                LOCAL :__s34__he_new_buckets
+                                LOCAL :__s35__he_new_buckets
                                 LOCAL :__s0_entry
                                 DEREF
                                 FIELD 2
@@ -2964,88 +2964,88 @@ FUNC :static_fn_template_c_get_var
                         LOCAL :__s3__hf_hashv
                         STORE
                         LOCAL :__s5__hj_k
-                        LOCAL :__switch_val_2 :u32
+                        LOCAL :__switch_3_val :u32
                         STORE
                         PUSH 11 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_0
+                            GOTO :__switch_3_0
                         ENDIF
                         PUSH 10 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_1
+                            GOTO :__switch_3_1
                         ENDIF
                         PUSH 9 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_2
+                            GOTO :__switch_3_2
                         ENDIF
                         PUSH 8 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_3
+                            GOTO :__switch_3_3
                         ENDIF
                         PUSH 7 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_4
+                            GOTO :__switch_3_4
                         ENDIF
                         PUSH 6 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_5
+                            GOTO :__switch_3_5
                         ENDIF
                         PUSH 5 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_6
+                            GOTO :__switch_3_6
                         ENDIF
                         PUSH 4 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_7
+                            GOTO :__switch_3_7
                         ENDIF
                         PUSH 3 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_8
+                            GOTO :__switch_3_8
                         ENDIF
                         PUSH 2 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_9
+                            GOTO :__switch_3_9
                         ENDIF
                         PUSH 1 :u32
-                        LOCAL :__switch_val_2
+                        LOCAL :__switch_3_val
                         BINARY :eq
                         IF
                           THEN
-                            GOTO :__switch_1__case_10
+                            GOTO :__switch_3_10
                         ENDIF
-                        GOTO :__switch_1__case_11
-                        GOTO :__switch_1_end
-                        LABEL :__switch_1__case_0
+                        GOTO :__switch_3_11
+                        GOTO :__switch_3_end
+                        LABEL :__switch_3_0
                         PUSH 24
                         AS :u32
                         PUSH 10
@@ -3059,7 +3059,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_1__case_1
+                        LABEL :__switch_3_1
                         PUSH 16
                         AS :u32
                         PUSH 9
@@ -3073,7 +3073,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_1__case_2
+                        LABEL :__switch_3_2
                         PUSH 8
                         AS :u32
                         PUSH 8
@@ -3087,7 +3087,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s3__hf_hashv
                         STORE
-                        LABEL :__switch_1__case_3
+                        LABEL :__switch_3_3
                         PUSH 24
                         AS :u32
                         PUSH 7
@@ -3101,7 +3101,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_1__case_4
+                        LABEL :__switch_3_4
                         PUSH 16
                         AS :u32
                         PUSH 6
@@ -3115,7 +3115,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_1__case_5
+                        LABEL :__switch_3_5
                         PUSH 8
                         AS :u32
                         PUSH 5
@@ -3129,7 +3129,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_1__case_6
+                        LABEL :__switch_3_6
                         PUSH 4
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -3140,7 +3140,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_j
                         STORE
-                        LABEL :__switch_1__case_7
+                        LABEL :__switch_3_7
                         PUSH 24
                         AS :u32
                         PUSH 3
@@ -3154,7 +3154,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_1__case_8
+                        LABEL :__switch_3_8
                         PUSH 16
                         AS :u32
                         PUSH 2
@@ -3168,7 +3168,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_1__case_9
+                        LABEL :__switch_3_9
                         PUSH 8
                         AS :u32
                         PUSH 1
@@ -3182,7 +3182,7 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_1__case_10
+                        LABEL :__switch_3_10
                         PUSH 0
                         AS :u64
                         LOCAL :__s5__hj_key
@@ -3193,8 +3193,8 @@ FUNC :static_fn_template_c_get_var
                         BINARY :add
                         LOCAL :__s5__hj_i
                         STORE
-                        LABEL :__switch_1__case_11
-                        LABEL :__switch_1_end
+                        LABEL :__switch_3_11
+                        LABEL :__switch_3_end
                         LOOP
                           COND
                             PUSH true
@@ -3421,7 +3421,7 @@ FUNC :static_fn_template_c_get_var
                             BINARY :sub
                             LOCAL :__s3__hf_hashv
                             BINARY :and
-                            LOCAL :__s22__hf_bkt :u32
+                            LOCAL :__s23__hf_bkt :u32
                             STORE
                             PUSH 0
                             PUSH 0
@@ -3444,7 +3444,7 @@ FUNC :static_fn_template_c_get_var
                                 PUSH 0
                                 AS :ptr<void>
                                 AS :u64
-                                LOCAL :__s22__hf_bkt
+                                LOCAL :__s23__hf_bkt
                                 AS :u64
                                 PARAM 0
                                 DEREF
@@ -3474,7 +3474,7 @@ FUNC :static_fn_template_c_get_var
                                         DEREF
                                         FIELD 5
                                         AS :u64
-                                        LOCAL :__s22__hf_bkt
+                                        LOCAL :__s23__hf_bkt
                                         AS :u64
                                         PARAM 0
                                         DEREF

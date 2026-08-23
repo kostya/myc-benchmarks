@@ -781,60 +781,60 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         PARAM 0
         DEREF
         DEREF
-        LOCAL :__switch_val_1 :u8
+        LOCAL :__switch_2_val :u8
         STORE
         PUSH 43 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_2_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_0
+            GOTO :__switch_2_0
         ENDIF
         PUSH 45 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_2_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_1
+            GOTO :__switch_2_1
         ENDIF
         PUSH 62 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_2_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_2
+            GOTO :__switch_2_2
         ENDIF
         PUSH 60 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_2_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_3
+            GOTO :__switch_2_3
         ENDIF
         PUSH 46 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_2_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_4
+            GOTO :__switch_2_4
         ENDIF
         PUSH 91 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_2_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_5
+            GOTO :__switch_2_5
         ENDIF
         PUSH 93 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_2_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_6
+            GOTO :__switch_2_6
         ENDIF
-        GOTO :__switch_0__case_7
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_0
+        GOTO :__switch_2_7
+        GOTO :__switch_2_end
+        LABEL :__switch_2_0
         PUSH 0
         LOCAL :__s0_count
         AS :u64
@@ -866,8 +866,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         BINARY :add
         LOCAL :__s0_count
         STORE
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_1
+        GOTO :__switch_2_end
+        LABEL :__switch_2_1
         PUSH 1
         LOCAL :__s0_count
         AS :u64
@@ -899,8 +899,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         BINARY :add
         LOCAL :__s0_count
         STORE
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_2
+        GOTO :__switch_2_end
+        LABEL :__switch_2_2
         PUSH 2
         LOCAL :__s0_count
         AS :u64
@@ -932,8 +932,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         BINARY :add
         LOCAL :__s0_count
         STORE
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_3
+        GOTO :__switch_2_end
+        LABEL :__switch_2_3
         PUSH 3
         LOCAL :__s0_count
         AS :u64
@@ -965,8 +965,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         BINARY :add
         LOCAL :__s0_count
         STORE
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_4
+        GOTO :__switch_2_end
+        LABEL :__switch_2_4
         PUSH 4
         LOCAL :__s0_count
         AS :u64
@@ -998,8 +998,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         BINARY :add
         LOCAL :__s0_count
         STORE
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_5
+        GOTO :__switch_2_end
+        LABEL :__switch_2_5
         PUSH 1 :u64
         PARAM 0
         DEREF
@@ -1061,7 +1061,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         LOCAL :__s0_count
         STORE
         NEXT
-        LABEL :__switch_0__case_6
+        LABEL :__switch_2_6
         LOCAL :__s0_count
         PARAM 1
         DEREF
@@ -1075,9 +1075,9 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         LOCAL :__s0_ops
         RET
-        LABEL :__switch_0__case_7
-        GOTO :__switch_0_end
-        LABEL :__switch_0_end
+        LABEL :__switch_2_7
+        GOTO :__switch_2_end
+        LABEL :__switch_2_end
         PUSH 1 :u64
         PARAM 0
         DEREF
@@ -1202,68 +1202,68 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_ops
         LOCAL :__s1_op
         DEREF
         FIELD 0
-        LOCAL :__switch_val_2 :i32
+        LOCAL :__switch_3_val :i32
         STORE
         PUSH 0 :i32
-        LOCAL :__switch_val_2
+        LOCAL :__switch_3_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_0
+            GOTO :__switch_3_0
         ENDIF
         PUSH 1 :i32
-        LOCAL :__switch_val_2
+        LOCAL :__switch_3_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_1
+            GOTO :__switch_3_1
         ENDIF
         PUSH 2 :i32
-        LOCAL :__switch_val_2
+        LOCAL :__switch_3_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_2
+            GOTO :__switch_3_2
         ENDIF
         PUSH 3 :i32
-        LOCAL :__switch_val_2
+        LOCAL :__switch_3_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_3
+            GOTO :__switch_3_3
         ENDIF
         PUSH 4 :i32
-        LOCAL :__switch_val_2
+        LOCAL :__switch_3_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_4
+            GOTO :__switch_3_4
         ENDIF
         PUSH 5 :i32
-        LOCAL :__switch_val_2
+        LOCAL :__switch_3_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_1__case_5
+            GOTO :__switch_3_5
         ENDIF
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_0
+        GOTO :__switch_3_end
+        LABEL :__switch_3_0
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_inc
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_1
+        GOTO :__switch_3_end
+        LABEL :__switch_3_1
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_dec
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_2
+        GOTO :__switch_3_end
+        LABEL :__switch_3_2
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_right
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_3
+        GOTO :__switch_3_end
+        LABEL :__switch_3_3
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_left
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_4
+        GOTO :__switch_3_end
+        LABEL :__switch_3_4
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_get
         LOCAL :__s6_value :u8
@@ -1279,8 +1279,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_ops
         PARAM 3
         DEREF
         STORE
-        GOTO :__switch_1_end
-        LABEL :__switch_1__case_5
+        GOTO :__switch_3_end
+        LABEL :__switch_3_5
         LOOP
           COND
             PUSH 0
@@ -1299,8 +1299,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_ops
             FIELD 1
             CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_ops
         ENDLOOP
-        GOTO :__switch_1_end
-        LABEL :__switch_1_end
+        GOTO :__switch_3_end
+        LABEL :__switch_3_end
       STEP
         PUSH 1 :i32
         LOCAL :__s0_i

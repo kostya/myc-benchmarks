@@ -1125,80 +1125,80 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         LOCAL :__s2_c :u8
         STORE
         LOCAL :__s2_c
-        LOCAL :__switch_val_1 :u8
+        LOCAL :__switch_1_val :u8
         STORE
         PUSH 43 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_1_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_0
+            GOTO :__switch_1_0
         ENDIF
         PUSH 45 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_1_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_1
+            GOTO :__switch_1_1
         ENDIF
         PUSH 62 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_1_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_2
+            GOTO :__switch_1_2
         ENDIF
         PUSH 60 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_1_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_3
+            GOTO :__switch_1_3
         ENDIF
         PUSH 91 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_1_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_4
+            GOTO :__switch_1_4
         ENDIF
         PUSH 93 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_1_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_5
+            GOTO :__switch_1_5
         ENDIF
         PUSH 46 :u8
-        LOCAL :__switch_val_1
+        LOCAL :__switch_1_val
         BINARY :eq
         IF
           THEN
-            GOTO :__switch_0__case_6
+            GOTO :__switch_1_6
         ENDIF
-        GOTO :__switch_0__case_7
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_0
+        GOTO :__switch_1_7
+        GOTO :__switch_1_end
+        LABEL :__switch_1_0
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_inc
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_1
+        GOTO :__switch_1_end
+        LABEL :__switch_1_1
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_dec
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_2
+        GOTO :__switch_1_end
+        LABEL :__switch_1_2
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_advance
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_3
+        GOTO :__switch_1_end
+        LABEL :__switch_1_3
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_devance
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_4
+        GOTO :__switch_1_end
+        LABEL :__switch_1_4
         PUSH 0
         LOCAL :__s1_tape
         ADDR
@@ -1215,8 +1215,8 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
             LOCAL :__s1_pc
             STORE
         ENDIF
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_5
+        GOTO :__switch_1_end
+        LABEL :__switch_1_5
         PUSH 0
         LOCAL :__s1_tape
         ADDR
@@ -1233,8 +1233,8 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
             LOCAL :__s1_pc
             STORE
         ENDIF
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_6
+        GOTO :__switch_1_end
+        LABEL :__switch_1_6
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_get
@@ -1246,10 +1246,10 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         BINARY :add
         LOCAL :__s1_result
         STORE
-        GOTO :__switch_0_end
-        LABEL :__switch_0__case_7
-        GOTO :__switch_0_end
-        LABEL :__switch_0_end
+        GOTO :__switch_1_end
+        LABEL :__switch_1_7
+        GOTO :__switch_1_end
+        LABEL :__switch_1_end
         PUSH 1 :i32
         LOCAL :__s1_pc
         BINARY :add
