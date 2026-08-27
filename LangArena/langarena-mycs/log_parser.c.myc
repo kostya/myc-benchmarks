@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_log_parser_c_1
+  TYPE :__inline_type_log_parser_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_log_parser_c_2
+STRUCT :__inline_type_log_parser_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -448,7 +448,7 @@ STRUCT :LogParserData
   TYPE "flat<ptr<pcre2_real_match_data_8>, 13>"
 ENDSTRUCT
 
-ENUM :__inline_type_log_parser_c_1
+ENUM :__inline_type_log_parser_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -463,7 +463,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_log_parser_c_2
+    TYPE :__inline_type_log_parser_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -850,7 +850,7 @@ FUNC :static_fn_log_parser_c_init_ips
         STACK :drop
         LOCAL :__s2_ip
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_IPS
         ADDR
         AS :ptr<ptr<u8>>
@@ -887,7 +887,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
         PUSH 4
         PARAM 2
         BINARY :rem
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_AGENTS
         ADDR
         AS :ptr<ptr<u8>>
@@ -896,7 +896,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
         PUSH 6
         PARAM 2
         BINARY :rem
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_DOMAINS
         ADDR
         AS :ptr<ptr<u8>>
@@ -905,7 +905,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
         PUSH 11
         PARAM 2
         BINARY :rem
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_STATUSES
         ADDR
         AS :ptr<i32>
@@ -917,7 +917,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
         PUSH 6
         PARAM 2
         BINARY :rem
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_DOMAINS
         ADDR
         AS :ptr<ptr<u8>>
@@ -929,7 +929,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
         PUSH 8
         PARAM 2
         BINARY :rem
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_USERS
         ADDR
         AS :ptr<ptr<u8>>
@@ -938,7 +938,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
         PUSH 4
         PARAM 2
         BINARY :rem
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_METHODS
         ADDR
         AS :ptr<ptr<u8>>
@@ -953,7 +953,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
         PUSH 255
         PARAM 2
         BINARY :rem
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_IPS
         ADDR
         AS :ptr<ptr<u8>>
@@ -1212,7 +1212,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
             PUSH 4
             PARAM 2
             BINARY :rem
-            AS :u64
+            AS :i64
             GLOBAL :static_log_parser_c_AGENTS
             ADDR
             AS :ptr<ptr<u8>>
@@ -1221,7 +1221,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
             PUSH 6
             PARAM 2
             BINARY :rem
-            AS :u64
+            AS :i64
             GLOBAL :static_log_parser_c_DOMAINS
             ADDR
             AS :ptr<ptr<u8>>
@@ -1230,7 +1230,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
             PUSH 11
             PARAM 2
             BINARY :rem
-            AS :u64
+            AS :i64
             GLOBAL :static_log_parser_c_STATUSES
             ADDR
             AS :ptr<i32>
@@ -1242,7 +1242,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
             PUSH 4
             PARAM 2
             BINARY :rem
-            AS :u64
+            AS :i64
             GLOBAL :static_log_parser_c_METHODS
             ADDR
             AS :ptr<ptr<u8>>
@@ -1257,7 +1257,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
             PUSH 255
             PARAM 2
             BINARY :rem
-            AS :u64
+            AS :i64
             GLOBAL :static_log_parser_c_IPS
             ADDR
             AS :ptr<ptr<u8>>
@@ -1287,7 +1287,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 4
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_AGENTS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1296,7 +1296,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 6
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_DOMAINS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1305,7 +1305,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 11
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_STATUSES
                 ADDR
                 AS :ptr<i32>
@@ -1317,7 +1317,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 4
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_METHODS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1332,7 +1332,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 255
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_IPS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1355,7 +1355,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 4
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_AGENTS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1364,7 +1364,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 6
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_DOMAINS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1373,7 +1373,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 11
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_STATUSES
                 ADDR
                 AS :ptr<i32>
@@ -1382,7 +1382,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 6
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_PATHS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1391,7 +1391,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 4
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_METHODS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1406,7 +1406,7 @@ FUNC :static_fn_log_parser_c_generate_log_line
                 PUSH 255
                 PARAM 2
                 BINARY :rem
-                AS :u64
+                AS :i64
                 GLOBAL :static_log_parser_c_IPS
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -1523,6 +1523,7 @@ FUNC :LogParser_prepare
     ENDLOOP
     PUSH 0 :u8
     LOCAL :__s2_pos
+    AS :i64
     LOCAL :__s1_log_buf
     BINARY :add
     DEREF
@@ -1556,7 +1557,7 @@ FUNC :LogParser_prepare
         PUSH 1074266112 :u32
         PUSH -1 :u64
         LOCAL :__s3_i
-        AS :u64
+        AS :i64
         GLOBAL :static_log_parser_c_PATTERNS
         ADDR
         AS :ptr<ptr<u8>>
@@ -1565,7 +1566,7 @@ FUNC :LogParser_prepare
         AS :ptr<u8>
         CALL :pcre2_compile_8
         LOCAL :__s3_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 4
@@ -1577,7 +1578,7 @@ FUNC :LogParser_prepare
         PUSH 0
         AS :ptr<pcre2_real_code_8>
         LOCAL :__s3_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 4
@@ -1590,7 +1591,7 @@ FUNC :LogParser_prepare
           THEN
             PUSH 1 :u32
             LOCAL :__s3_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 4
@@ -1604,7 +1605,7 @@ FUNC :LogParser_prepare
             AS :ptr<void>
             AS :ptr<pcre2_real_general_context_8>
             LOCAL :__s3_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 4
@@ -1614,7 +1615,7 @@ FUNC :LogParser_prepare
             DEREF
             CALL :pcre2_match_data_create_from_pattern_8
             LOCAL :__s3_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 5
@@ -1666,7 +1667,7 @@ FUNC :LogParser_run
         PUSH 0
         AS :ptr<pcre2_real_code_8>
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 4
@@ -1703,7 +1704,7 @@ FUNC :LogParser_run
             AS :ptr<void>
             AS :ptr<pcre2_real_match_context_8>
             LOCAL :__s0_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 5
@@ -1716,7 +1717,7 @@ FUNC :LogParser_run
             LOCAL :__s2_subject_len
             LOCAL :__s2_subject
             LOCAL :__s0_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 4
@@ -1736,7 +1737,7 @@ FUNC :LogParser_run
             ENDIF
             PUSH 1 :i32
             LOCAL :__s0_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_matches
             ADDR
             AS :ptr<i32>
@@ -1744,7 +1745,7 @@ FUNC :LogParser_run
             DEREF
             BINARY :add
             LOCAL :__s0_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_matches
             ADDR
             AS :ptr<i32>
@@ -1752,7 +1753,7 @@ FUNC :LogParser_run
             DEREF
             STORE
             LOCAL :__s0_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 5
@@ -1764,7 +1765,7 @@ FUNC :LogParser_run
             LOCAL :__s4_ovector :ptr<u64>
             STORE
             PUSH 1
-            AS :u64
+            AS :i64
             LOCAL :__s4_ovector
             BINARY :add
             DEREF
@@ -1798,7 +1799,7 @@ FUNC :LogParser_run
         BINARY :less
       BODY
         LOCAL :__s5_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_matches
         ADDR
         AS :ptr<i32>
@@ -1888,7 +1889,7 @@ FUNC :LogParser_cleanup
         PUSH 0
         AS :ptr<pcre2_real_code_8>
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 4
@@ -1900,7 +1901,7 @@ FUNC :LogParser_cleanup
         IF
           THEN
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 4
@@ -1913,7 +1914,7 @@ FUNC :LogParser_cleanup
             AS :ptr<void>
             AS :ptr<pcre2_real_code_8>
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 4
@@ -1926,7 +1927,7 @@ FUNC :LogParser_cleanup
         PUSH 0
         AS :ptr<pcre2_real_match_data_8>
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 5
@@ -1938,7 +1939,7 @@ FUNC :LogParser_cleanup
         IF
           THEN
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 5
@@ -1951,7 +1952,7 @@ FUNC :LogParser_cleanup
             AS :ptr<void>
             AS :ptr<pcre2_real_match_data_8>
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 5
@@ -2007,7 +2008,7 @@ FUNC :LogParser_create
         AS :ptr<void>
         AS :ptr<pcre2_real_code_8>
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 4
@@ -2020,7 +2021,7 @@ FUNC :LogParser_create
         AS :ptr<void>
         AS :ptr<pcre2_real_match_data_8>
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 5

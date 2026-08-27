@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_sort_c_1
+  TYPE :__inline_type_sort_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_sort_c_2
+STRUCT :__inline_type_sort_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -275,7 +275,7 @@ STRUCT :SortSelfData
   TYPE :ptr<i32>
 ENDSTRUCT
 
-ENUM :__inline_type_sort_c_1
+ENUM :__inline_type_sort_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -290,7 +290,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_sort_c_2
+    TYPE :__inline_type_sort_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -581,7 +581,6 @@ FUNC :static_fn_sort_c_sort_base_prepare
         CALL :Helper_next_int
         AS :i32
         LOCAL :__s1_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -651,7 +650,6 @@ FUNC :static_fn_sort_c_sort_quick_quick_sort
     PARAM 1
     BINARY :add
     BINARY :div
-    AS :u64
     PARAM 0
     BINARY :add
     DEREF
@@ -673,7 +671,6 @@ FUNC :static_fn_sort_c_sort_quick_quick_sort
           COND
             LOCAL :__s1_pivot
             LOCAL :__s1_i
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -689,7 +686,6 @@ FUNC :static_fn_sort_c_sort_quick_quick_sort
           COND
             LOCAL :__s1_pivot
             LOCAL :__s1_j
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -707,26 +703,22 @@ FUNC :static_fn_sort_c_sort_quick_quick_sort
         IF
           THEN
             LOCAL :__s1_i
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
             LOCAL :__s5_temp :i32
             STORE
             LOCAL :__s1_j
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
             LOCAL :__s1_i
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
             STORE
             LOCAL :__s5_temp
             LOCAL :__s1_j
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -875,7 +867,7 @@ FUNC :SortQuick_run
     LOCAL :__s0_random_index2 :i32
     STORE
     LOCAL :__s0_random_index2
-    AS :u64
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -883,7 +875,7 @@ FUNC :SortQuick_run
     DEREF
     AS :u32
     LOCAL :__s0_random_index1
-    AS :u64
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1033,12 +1025,10 @@ FUNC :static_fn_sort_c_sort_merge_merge
         BINARY :less_eq
       BODY
         LOCAL :__s0_i
-        AS :u64
         PARAM 0
         BINARY :add
         DEREF
         LOCAL :__s0_i
-        AS :u64
         PARAM 1
         BINARY :add
         DEREF
@@ -1066,26 +1056,24 @@ FUNC :static_fn_sort_c_sort_merge_merge
         PARAM 3
         LOCAL :__s1_i
         BINARY :less_eq
-        LOCAL :__sc_and_4 :bool
+        LOCAL :__sc_and_0 :bool
         STORE
-        LOCAL :__sc_and_4
+        LOCAL :__sc_and_0
         IF
           THEN
             PARAM 4
             LOCAL :__s1_j
             BINARY :less_eq
-            LOCAL :__sc_and_4
+            LOCAL :__sc_and_0
             STORE
         ENDIF
-        LOCAL :__sc_and_4
+        LOCAL :__sc_and_0
       BODY
         LOCAL :__s1_j
-        AS :u64
         PARAM 1
         BINARY :add
         DEREF
         LOCAL :__s1_i
-        AS :u64
         PARAM 1
         BINARY :add
         DEREF
@@ -1093,12 +1081,10 @@ FUNC :static_fn_sort_c_sort_merge_merge
         IF
           THEN
             LOCAL :__s1_i
-            AS :u64
             PARAM 1
             BINARY :add
             DEREF
             LOCAL :__s1_k
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -1110,12 +1096,10 @@ FUNC :static_fn_sort_c_sort_merge_merge
             STORE
           ELSE
             LOCAL :__s1_j
-            AS :u64
             PARAM 1
             BINARY :add
             DEREF
             LOCAL :__s1_k
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -1139,12 +1123,10 @@ FUNC :static_fn_sort_c_sort_merge_merge
         BINARY :less_eq
       BODY
         LOCAL :__s1_i
-        AS :u64
         PARAM 1
         BINARY :add
         DEREF
         LOCAL :__s1_k
-        AS :u64
         PARAM 0
         BINARY :add
         DEREF
@@ -1352,7 +1334,7 @@ FUNC :SortMerge_run
     LOCAL :__s0_random_index2 :i32
     STORE
     LOCAL :__s0_random_index2
-    AS :u64
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -1360,7 +1342,7 @@ FUNC :SortMerge_run
     DEREF
     AS :u32
     LOCAL :__s0_random_index1
-    AS :u64
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -1644,7 +1626,7 @@ FUNC :SortSelf_run
     LOCAL :__s0_random_index2 :i32
     STORE
     LOCAL :__s0_random_index2
-    AS :u64
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 1
@@ -1652,7 +1634,7 @@ FUNC :SortSelf_run
     DEREF
     AS :u32
     LOCAL :__s0_random_index1
-    AS :u64
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0

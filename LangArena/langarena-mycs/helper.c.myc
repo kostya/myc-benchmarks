@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_helper_c_1
+  TYPE :__inline_type_helper_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_helper_c_2
+STRUCT :__inline_type_helper_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -302,7 +302,7 @@ STRUCT :yyjson_val_pool
   TYPE :ptr<yyjson_val_chunk>
 ENDSTRUCT
 
-ENUM :__inline_type_helper_c_1
+ENUM :__inline_type_helper_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -317,7 +317,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_helper_c_2
+    TYPE :__inline_type_helper_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -1175,6 +1175,7 @@ FUNC :Helper_checksum_bytes
         BINARY :less
       BODY
         LOCAL :__s0_i
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -1292,6 +1293,7 @@ FUNC :Helper_load_config
     STORE
     PUSH 0 :u8
     LOCAL :__s2_read_size
+    AS :i64
     LOCAL :__s1_json_data
     BINARY :add
     DEREF
@@ -1364,17 +1366,17 @@ FUNC :Helper_load_config
             AS :ptr<yyjson_val>
             LOCAL :__s6_name_val
             BINARY :not_eq
-            LOCAL :__sc_and_10 :bool
+            LOCAL :__sc_and_0 :bool
             STORE
-            LOCAL :__sc_and_10
+            LOCAL :__sc_and_0
             IF
               THEN
                 LOCAL :__s6_name_val
                 CALL :static_fn_helper_c_yyjson_is_str
-                LOCAL :__sc_and_10
+                LOCAL :__sc_and_0
                 STORE
             ENDIF
-            LOCAL :__sc_and_10
+            LOCAL :__sc_and_0
             IF
               THEN
                 LOCAL :__s6_name_val
@@ -1395,6 +1397,7 @@ FUNC :Helper_load_config
                 LOCAL :__s7_name
                 CALL :strdup
                 GLOBAL :global_order_count
+                AS :i64
                 GLOBAL :global_order
                 BINARY :add
                 DEREF
@@ -1466,6 +1469,7 @@ FUNC :Helper_free_config
             BINARY :less
           BODY
             LOCAL :__s2_i
+            AS :i64
             GLOBAL :global_order
             BINARY :add
             DEREF
@@ -1540,17 +1544,17 @@ FUNC :static_fn_helper_c_find_class_obj
             AS :ptr<yyjson_val>
             LOCAL :__s4_name_val
             BINARY :not_eq
-            LOCAL :__sc_and_4 :bool
+            LOCAL :__sc_and_1 :bool
             STORE
-            LOCAL :__sc_and_4
+            LOCAL :__sc_and_1
             IF
               THEN
                 LOCAL :__s4_name_val
                 CALL :static_fn_helper_c_yyjson_is_str
-                LOCAL :__sc_and_4
+                LOCAL :__sc_and_1
                 STORE
             ENDIF
-            LOCAL :__sc_and_4
+            LOCAL :__sc_and_1
             IF
               THEN
                 PUSH 0
@@ -1616,19 +1620,19 @@ FUNC :Helper_config_i64
     AS :ptr<yyjson_val>
     LOCAL :__s1_class_obj
     BINARY :eq
-    LOCAL :__sc_or_1 :bool
+    LOCAL :__sc_or_2 :bool
     STORE
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_2
     IF
       THEN
       ELSE
         LOCAL :__s1_class_obj
         CALL :static_fn_helper_c_yyjson_is_obj
         UNARY :lnot
-        LOCAL :__sc_or_1
+        LOCAL :__sc_or_2
         STORE
     ENDIF
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_2
     IF
       THEN
         PUSH 0 :i64
@@ -1700,19 +1704,19 @@ FUNC :Helper_config_s
     AS :ptr<yyjson_val>
     LOCAL :__s1_class_obj
     BINARY :eq
-    LOCAL :__sc_or_1 :bool
+    LOCAL :__sc_or_3 :bool
     STORE
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_3
     IF
       THEN
       ELSE
         LOCAL :__s1_class_obj
         CALL :static_fn_helper_c_yyjson_is_obj
         UNARY :lnot
-        LOCAL :__sc_or_1
+        LOCAL :__sc_or_3
         STORE
     ENDIF
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_3
     IF
       THEN
         PARAM 0
@@ -1732,19 +1736,19 @@ FUNC :Helper_config_s
     AS :ptr<yyjson_val>
     LOCAL :__s2_field
     BINARY :eq
-    LOCAL :__sc_or_3 :bool
+    LOCAL :__sc_or_4 :bool
     STORE
-    LOCAL :__sc_or_3
+    LOCAL :__sc_or_4
     IF
       THEN
       ELSE
         LOCAL :__s2_field
         CALL :static_fn_helper_c_yyjson_is_str
         UNARY :lnot
-        LOCAL :__sc_or_3
+        LOCAL :__sc_or_4
         STORE
     ENDIF
-    LOCAL :__sc_or_3
+    LOCAL :__sc_or_4
     IF
       THEN
         PUSH ""
@@ -1808,16 +1812,16 @@ FUNC :static_fn_helper_c_yyjson_doc_get_root
         PARAM 0
         DEREF
         FIELD 0
-        LOCAL :__ternary_0 :ptr<yyjson_val>
+        LOCAL :__ternary_5 :ptr<yyjson_val>
         STORE
       ELSE
         PUSH 0
         AS :ptr<void>
         AS :ptr<yyjson_val>
-        LOCAL :__ternary_0
+        LOCAL :__ternary_5
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_5
     RET
 ENDFUNC
 
@@ -1892,16 +1896,16 @@ FUNC :static_fn_helper_c_yyjson_is_num
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_is_num
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_6 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_6
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_6
     RET
 ENDFUNC
 
@@ -1922,16 +1926,16 @@ FUNC :static_fn_helper_c_yyjson_is_str
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_is_str
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_7 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_7
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_7
     RET
 ENDFUNC
 
@@ -1952,16 +1956,16 @@ FUNC :static_fn_helper_c_yyjson_is_arr
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_is_arr
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_8 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_8
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_8
     RET
 ENDFUNC
 
@@ -1982,16 +1986,16 @@ FUNC :static_fn_helper_c_yyjson_is_obj
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_is_obj
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_9 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_9
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_9
     RET
 ENDFUNC
 
@@ -2012,14 +2016,14 @@ FUNC :static_fn_helper_c_yyjson_get_num
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_get_num
-        LOCAL :__ternary_0 :f64
+        LOCAL :__ternary_10 :f64
         STORE
       ELSE
         PUSH 0.0 :f64
-        LOCAL :__ternary_0
+        LOCAL :__ternary_10
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_10
     RET
 ENDFUNC
 
@@ -2038,16 +2042,16 @@ FUNC :static_fn_helper_c_yyjson_get_str
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_get_str
-        LOCAL :__ternary_0 :ptr<u8>
+        LOCAL :__ternary_11 :ptr<u8>
         STORE
       ELSE
         PUSH 0
         AS :ptr<void>
         AS :ptr<u8>
-        LOCAL :__ternary_0
+        LOCAL :__ternary_11
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_11
     RET
 ENDFUNC
 
@@ -2066,14 +2070,14 @@ FUNC :static_fn_helper_c_yyjson_arr_size
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_helper_c_unsafe_yyjson_get_len
-        LOCAL :__ternary_0 :u64
+        LOCAL :__ternary_12 :u64
         STORE
       ELSE
         PUSH 0 :u64
-        LOCAL :__ternary_0
+        LOCAL :__ternary_12
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_12
     RET
 ENDFUNC
 
@@ -2134,14 +2138,14 @@ FUNC :static_fn_helper_c_yyjson_obj_get
       THEN
         PARAM 1
         CALL :strlen
-        LOCAL :__ternary_0 :u64
+        LOCAL :__ternary_13 :u64
         STORE
       ELSE
         PUSH 0 :u64
-        LOCAL :__ternary_0
+        LOCAL :__ternary_13
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_13
     PARAM 1
     PARAM 0
     CALL :static_fn_helper_c_yyjson_obj_getn
@@ -2172,14 +2176,14 @@ FUNC :static_fn_helper_c_unsafe_yyjson_get_next
     IF
       THEN
         LOCAL :__s0_ctn_ofs
-        LOCAL :__ternary_2 :u64
+        LOCAL :__ternary_14 :u64
         STORE
       ELSE
         PUSH 16 :u64
-        LOCAL :__ternary_2
+        LOCAL :__ternary_14
         STORE
     ENDIF
-    LOCAL :__ternary_2
+    LOCAL :__ternary_14
     LOCAL :__s0_ofs :u64
     STORE
     PARAM 0
@@ -2211,19 +2215,19 @@ FUNC :static_fn_helper_c_yyjson_obj_getn
     PUSH 0 :i64
     PARAM 0
     CALL :static_fn_helper_c_yyjson_is_obj
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_15 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_15
     IF
       THEN
         PUSH 0
         AS :ptr<u8>
         PARAM 1
         BINARY :not_eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_15
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_15
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -2243,14 +2247,14 @@ FUNC :static_fn_helper_c_yyjson_obj_getn
           COND
             PUSH 0 :u64
             LOCAL :__s1_len
-            LOCAL :__tmp_3 :u64
+            LOCAL :__tmp_16 :u64
             STORE
             PUSH 1 :u64
             LOCAL :__s1_len
             BINARY :sub
             LOCAL :__s1_len
             STORE
-            LOCAL :__tmp_3
+            LOCAL :__tmp_16
             BINARY :more
           BODY
             PARAM 2
@@ -2556,9 +2560,9 @@ FUNC :static_fn_helper_c_unsafe_yyjson_equals_strn
     PARAM 0
     CALL :static_fn_helper_c_unsafe_yyjson_get_len
     BINARY :eq
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_17 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_17
     IF
       THEN
         PUSH 0
@@ -2574,10 +2578,10 @@ FUNC :static_fn_helper_c_unsafe_yyjson_equals_strn
         AS :ptr<void>
         CALL :memcmp
         BINARY :eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_17
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_17
     RET
 ENDFUNC
 

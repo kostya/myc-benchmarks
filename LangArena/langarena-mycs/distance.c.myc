@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_distance_c_1
+  TYPE :__inline_type_distance_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_distance_c_2
+STRUCT :__inline_type_distance_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -280,7 +280,7 @@ STRUCT :NGramData
   TYPE :i64
 ENDSTRUCT
 
-ENUM :__inline_type_distance_c_1
+ENUM :__inline_type_distance_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -295,7 +295,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_distance_c_2
+    TYPE :__inline_type_distance_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -609,7 +609,6 @@ FUNC :generate_pair_strings
         CALL :malloc
         AS :ptr<u8>
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_pairs
         DEREF
         FIELD 0
@@ -623,7 +622,6 @@ FUNC :generate_pair_strings
         CALL :malloc
         AS :ptr<u8>
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_pairs
         DEREF
         FIELD 1
@@ -645,9 +643,8 @@ FUNC :generate_pair_strings
             BINARY :add
             AS :u8
             LOCAL :__s1_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_i
-            AS :u64
             LOCAL :__s0_pairs
             DEREF
             FIELD 0
@@ -665,9 +662,8 @@ FUNC :generate_pair_strings
         ENDLOOP
         PUSH 0 :u8
         LOCAL :__s1_len1
-        AS :u64
+        AS :i64
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_pairs
         DEREF
         FIELD 0
@@ -691,9 +687,8 @@ FUNC :generate_pair_strings
             BINARY :add
             AS :u8
             LOCAL :__s2_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_i
-            AS :u64
             LOCAL :__s0_pairs
             DEREF
             FIELD 1
@@ -711,9 +706,8 @@ FUNC :generate_pair_strings
         ENDLOOP
         PUSH 0 :u8
         LOCAL :__s1_len2
-        AS :u64
+        AS :i64
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_pairs
         DEREF
         FIELD 1
@@ -759,6 +753,7 @@ FUNC :free_string_pairs
         PUSH 0
         AS :ptr<u8>
         LOCAL :__s1_i
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -768,6 +763,7 @@ FUNC :free_string_pairs
         IF
           THEN
             LOCAL :__s1_i
+            AS :i64
             PARAM 0
             DEREF
             FIELD 0
@@ -779,6 +775,7 @@ FUNC :free_string_pairs
         PUSH 0
         AS :ptr<u8>
         LOCAL :__s1_i
+        AS :i64
         PARAM 0
         DEREF
         FIELD 1
@@ -788,6 +785,7 @@ FUNC :free_string_pairs
         IF
           THEN
             LOCAL :__s1_i
+            AS :i64
             PARAM 0
             DEREF
             FIELD 1
@@ -882,19 +880,19 @@ FUNC :Jaro_calc
     PUSH 0 :u64
     LOCAL :__s0_len1
     BINARY :eq
-    LOCAL :__sc_or_2 :bool
+    LOCAL :__sc_or_0 :bool
     STORE
-    LOCAL :__sc_or_2
+    LOCAL :__sc_or_0
     IF
       THEN
       ELSE
         PUSH 0 :u64
         LOCAL :__s0_len2
         BINARY :eq
-        LOCAL :__sc_or_2
+        LOCAL :__sc_or_0
         STORE
     ENDIF
-    LOCAL :__sc_or_2
+    LOCAL :__sc_or_0
     IF
       THEN
         PUSH 0.0 :f64
@@ -908,14 +906,14 @@ FUNC :Jaro_calc
     IF
       THEN
         LOCAL :__s0_len1
-        LOCAL :__ternary_3 :u64
+        LOCAL :__ternary_1 :u64
         STORE
       ELSE
         LOCAL :__s0_len2
-        LOCAL :__ternary_3
+        LOCAL :__ternary_1
         STORE
     ENDIF
-    LOCAL :__ternary_3
+    LOCAL :__ternary_1
     BINARY :div
     BINARY :sub
     AS :i64
@@ -964,14 +962,14 @@ FUNC :Jaro_calc
             AS :u64
             LOCAL :__s2_i
             BINARY :sub
-            LOCAL :__ternary_9 :u64
+            LOCAL :__ternary_2 :u64
             STORE
           ELSE
             PUSH 0 :u64
-            LOCAL :__ternary_9
+            LOCAL :__ternary_2
             STORE
         ENDIF
-        LOCAL :__ternary_9
+        LOCAL :__ternary_2
         LOCAL :__s3_start :u64
         STORE
         LOCAL :__s1_match_dist
@@ -987,17 +985,17 @@ FUNC :Jaro_calc
             PUSH 1 :u64
             LOCAL :__s0_len2
             BINARY :sub
-            LOCAL :__ternary_11 :u64
+            LOCAL :__ternary_3 :u64
             STORE
           ELSE
             LOCAL :__s1_match_dist
             AS :u64
             LOCAL :__s2_i
             BINARY :add
-            LOCAL :__ternary_11
+            LOCAL :__ternary_3
             STORE
         ENDIF
-        LOCAL :__ternary_11
+        LOCAL :__ternary_3
         LOCAL :__s3_end :u64
         STORE
         LOCAL :__s3_start
@@ -1010,38 +1008,43 @@ FUNC :Jaro_calc
             BINARY :less_eq
           BODY
             LOCAL :__s3_j
+            AS :i64
             LOCAL :__s2_s2_matches
             BINARY :add
             DEREF
             UNARY :lnot
-            LOCAL :__sc_and_14 :bool
+            LOCAL :__sc_and_4 :bool
             STORE
-            LOCAL :__sc_and_14
+            LOCAL :__sc_and_4
             IF
               THEN
                 LOCAL :__s3_j
+                AS :i64
                 PARAM 1
                 BINARY :add
                 DEREF
                 LOCAL :__s2_i
+                AS :i64
                 PARAM 0
                 BINARY :add
                 DEREF
                 BINARY :eq
-                LOCAL :__sc_and_14
+                LOCAL :__sc_and_4
                 STORE
             ENDIF
-            LOCAL :__sc_and_14
+            LOCAL :__sc_and_4
             IF
               THEN
                 PUSH 1 :bool
                 LOCAL :__s2_i
+                AS :i64
                 LOCAL :__s2_s1_matches
                 BINARY :add
                 DEREF
                 STORE
                 PUSH 1 :bool
                 LOCAL :__s3_j
+                AS :i64
                 LOCAL :__s2_s2_matches
                 BINARY :add
                 DEREF
@@ -1091,6 +1094,7 @@ FUNC :Jaro_calc
             BINARY :less
           BODY
             LOCAL :__s6_i
+            AS :i64
             LOCAL :__s2_s1_matches
             BINARY :add
             DEREF
@@ -1101,20 +1105,21 @@ FUNC :Jaro_calc
                     LOCAL :__s0_len2
                     LOCAL :__s6_k
                     BINARY :less
-                    LOCAL :__sc_and_19 :bool
+                    LOCAL :__sc_and_5 :bool
                     STORE
-                    LOCAL :__sc_and_19
+                    LOCAL :__sc_and_5
                     IF
                       THEN
                         LOCAL :__s6_k
+                        AS :i64
                         LOCAL :__s2_s2_matches
                         BINARY :add
                         DEREF
                         UNARY :lnot
-                        LOCAL :__sc_and_19
+                        LOCAL :__sc_and_5
                         STORE
                     ENDIF
-                    LOCAL :__sc_and_19
+                    LOCAL :__sc_and_5
                   BODY
                     PUSH 1 :u64
                     LOCAL :__s6_k
@@ -1128,10 +1133,12 @@ FUNC :Jaro_calc
                 IF
                   THEN
                     LOCAL :__s6_k
+                    AS :i64
                     PARAM 1
                     BINARY :add
                     DEREF
                     LOCAL :__s6_i
+                    AS :i64
                     PARAM 0
                     BINARY :add
                     DEREF
@@ -1228,12 +1235,14 @@ FUNC :Jaro_run
         BINARY :less
       BODY
         LOCAL :__s0_i
+        AS :i64
         LOCAL :__s0_pairs
         DEREF
         FIELD 1
         BINARY :add
         DEREF
         LOCAL :__s0_i
+        AS :i64
         LOCAL :__s0_pairs
         DEREF
         FIELD 0
@@ -1426,19 +1435,19 @@ FUNC :NGram_calc
     PUSH 4 :u64
     LOCAL :__s0_len1
     BINARY :less
-    LOCAL :__sc_or_2 :bool
+    LOCAL :__sc_or_6 :bool
     STORE
-    LOCAL :__sc_or_2
+    LOCAL :__sc_or_6
     IF
       THEN
       ELSE
         PUSH 4 :u64
         LOCAL :__s0_len2
         BINARY :less
-        LOCAL :__sc_or_2
+        LOCAL :__sc_or_6
         STORE
     ENDIF
-    LOCAL :__sc_or_2
+    LOCAL :__sc_or_6
     IF
       THEN
         PUSH 0.0 :f64
@@ -1463,6 +1472,7 @@ FUNC :NGram_calc
         PUSH 3 :u64
         LOCAL :__s1_i
         BINARY :add
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -1473,6 +1483,7 @@ FUNC :NGram_calc
         PUSH 2 :u64
         LOCAL :__s1_i
         BINARY :add
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -1484,6 +1495,7 @@ FUNC :NGram_calc
         PUSH 1 :u64
         LOCAL :__s1_i
         BINARY :add
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -1493,6 +1505,7 @@ FUNC :NGram_calc
         PUSH 24
         AS :u32
         LOCAL :__s1_i
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -1555,7 +1568,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 3
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1564,7 +1577,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 2
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1573,14 +1586,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 1
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 0
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1595,7 +1608,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 7
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1604,7 +1617,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 6
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1613,14 +1626,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 5
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 4
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1635,7 +1648,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 11
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1644,7 +1657,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 10
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1653,14 +1666,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 9
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 8
-                            AS :u64
+                            AS :i64
                             LOCAL :__s6__hj_key
                             BINARY :add
                             DEREF
@@ -1947,10 +1960,12 @@ FUNC :NGram_calc
                         GOTO :__switch_0_11
                         GOTO :__switch_0_end
                         LABEL :__switch_0_0
+                        PUSH 11
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -1961,10 +1976,12 @@ FUNC :NGram_calc
                         LOCAL :__s4__hf_hashv
                         STORE
                         LABEL :__switch_0_1
+                        PUSH 10
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -1975,10 +1992,12 @@ FUNC :NGram_calc
                         LOCAL :__s4__hf_hashv
                         STORE
                         LABEL :__switch_0_2
+                        PUSH 9
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -1989,10 +2008,12 @@ FUNC :NGram_calc
                         LOCAL :__s4__hf_hashv
                         STORE
                         LABEL :__switch_0_3
+                        PUSH 8
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2003,10 +2024,12 @@ FUNC :NGram_calc
                         LOCAL :__s6__hj_j
                         STORE
                         LABEL :__switch_0_4
+                        PUSH 7
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2017,10 +2040,12 @@ FUNC :NGram_calc
                         LOCAL :__s6__hj_j
                         STORE
                         LABEL :__switch_0_5
+                        PUSH 6
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2031,8 +2056,10 @@ FUNC :NGram_calc
                         LOCAL :__s6__hj_j
                         STORE
                         LABEL :__switch_0_6
+                        PUSH 5
+                        STACK :drop
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2042,10 +2069,12 @@ FUNC :NGram_calc
                         LOCAL :__s6__hj_j
                         STORE
                         LABEL :__switch_0_7
+                        PUSH 4
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2056,10 +2085,12 @@ FUNC :NGram_calc
                         LOCAL :__s6__hj_i
                         STORE
                         LABEL :__switch_0_8
+                        PUSH 3
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2070,10 +2101,12 @@ FUNC :NGram_calc
                         LOCAL :__s6__hj_i
                         STORE
                         LABEL :__switch_0_9
+                        PUSH 2
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2084,8 +2117,10 @@ FUNC :NGram_calc
                         LOCAL :__s6__hj_i
                         STORE
                         LABEL :__switch_0_10
+                        PUSH 1
+                        STACK :drop
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s6__hj_key
                         BINARY :add
                         DEREF
@@ -2342,7 +2377,7 @@ FUNC :NGram_calc
                                 AS :ptr<void>
                                 AS :u64
                                 LOCAL :__s24__hf_bkt
-                                AS :u64
+                                AS :i64
                                 LOCAL :__s1_grams1
                                 DEREF
                                 FIELD 2
@@ -2368,7 +2403,7 @@ FUNC :NGram_calc
                                         FIELD 5
                                         AS :u64
                                         LOCAL :__s24__hf_bkt
-                                        AS :u64
+                                        AS :i64
                                         LOCAL :__s1_grams1
                                         DEREF
                                         FIELD 2
@@ -2415,9 +2450,9 @@ FUNC :NGram_calc
                                     FIELD 2
                                     FIELD 7
                                     BINARY :eq
-                                    LOCAL :__sc_and_14 :bool
+                                    LOCAL :__sc_and_7 :bool
                                     STORE
-                                    LOCAL :__sc_and_14
+                                    LOCAL :__sc_and_7
                                     IF
                                       THEN
                                         PUSH 4 :u64
@@ -2427,10 +2462,10 @@ FUNC :NGram_calc
                                         FIELD 6
                                         AS :u64
                                         BINARY :eq
-                                        LOCAL :__sc_and_14
+                                        LOCAL :__sc_and_7
                                         STORE
                                     ENDIF
-                                    LOCAL :__sc_and_14
+                                    LOCAL :__sc_and_7
                                     IF
                                       THEN
                                         PUSH 0
@@ -2601,7 +2636,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 3
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2610,7 +2645,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 2
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2619,14 +2654,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 1
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 0
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2641,7 +2676,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 7
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2650,7 +2685,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 6
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2659,14 +2694,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 5
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 4
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2681,7 +2716,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 11
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2690,7 +2725,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 10
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2699,14 +2734,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 9
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 8
-                            AS :u64
+                            AS :i64
                             LOCAL :__s41__hj_key
                             BINARY :add
                             DEREF
@@ -2993,10 +3028,12 @@ FUNC :NGram_calc
                         GOTO :__switch_1_11
                         GOTO :__switch_1_end
                         LABEL :__switch_1_0
+                        PUSH 11
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3007,10 +3044,12 @@ FUNC :NGram_calc
                         LOCAL :__s39__ha_hashv
                         STORE
                         LABEL :__switch_1_1
+                        PUSH 10
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3021,10 +3060,12 @@ FUNC :NGram_calc
                         LOCAL :__s39__ha_hashv
                         STORE
                         LABEL :__switch_1_2
+                        PUSH 9
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3035,10 +3076,12 @@ FUNC :NGram_calc
                         LOCAL :__s39__ha_hashv
                         STORE
                         LABEL :__switch_1_3
+                        PUSH 8
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3049,10 +3092,12 @@ FUNC :NGram_calc
                         LOCAL :__s41__hj_j
                         STORE
                         LABEL :__switch_1_4
+                        PUSH 7
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3063,10 +3108,12 @@ FUNC :NGram_calc
                         LOCAL :__s41__hj_j
                         STORE
                         LABEL :__switch_1_5
+                        PUSH 6
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3077,8 +3124,10 @@ FUNC :NGram_calc
                         LOCAL :__s41__hj_j
                         STORE
                         LABEL :__switch_1_6
+                        PUSH 5
+                        STACK :drop
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3088,10 +3137,12 @@ FUNC :NGram_calc
                         LOCAL :__s41__hj_j
                         STORE
                         LABEL :__switch_1_7
+                        PUSH 4
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3102,10 +3153,12 @@ FUNC :NGram_calc
                         LOCAL :__s41__hj_i
                         STORE
                         LABEL :__switch_1_8
+                        PUSH 3
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3116,10 +3169,12 @@ FUNC :NGram_calc
                         LOCAL :__s41__hj_i
                         STORE
                         LABEL :__switch_1_9
+                        PUSH 2
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3130,8 +3185,10 @@ FUNC :NGram_calc
                         LOCAL :__s41__hj_i
                         STORE
                         LABEL :__switch_1_10
+                        PUSH 1
+                        STACK :drop
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3643,7 +3700,7 @@ FUNC :NGram_calc
                             PUSH true
                           BODY
                             LOCAL :__s68__ha_bkt
-                            AS :u64
+                            AS :i64
                             LOCAL :__s1_grams1
                             DEREF
                             FIELD 2
@@ -3724,9 +3781,9 @@ FUNC :NGram_calc
                             DEREF
                             FIELD 1
                             BINARY :more_eq
-                            LOCAL :__sc_and_23 :bool
+                            LOCAL :__sc_and_8 :bool
                             STORE
-                            LOCAL :__sc_and_23
+                            LOCAL :__sc_and_8
                             IF
                               THEN
                                 PUSH 0 :u32
@@ -3739,10 +3796,10 @@ FUNC :NGram_calc
                                 DEREF
                                 FIELD 9
                                 BINARY :eq
-                                LOCAL :__sc_and_23
+                                LOCAL :__sc_and_8
                                 STORE
                             ENDIF
-                            LOCAL :__sc_and_23
+                            LOCAL :__sc_and_8
                             IF
                               THEN
                                 LOOP
@@ -3819,14 +3876,14 @@ FUNC :NGram_calc
                                         IF
                                           THEN
                                             PUSH 1 :u32
-                                            LOCAL :__ternary_25 :u32
+                                            LOCAL :__ternary_9 :u32
                                             STORE
                                           ELSE
                                             PUSH 0 :u32
-                                            LOCAL :__ternary_25
+                                            LOCAL :__ternary_9
                                             STORE
                                         ENDIF
-                                        LOCAL :__ternary_25
+                                        LOCAL :__ternary_9
                                         PUSH 1 :u32
                                         LOCAL :__s2_g
                                         DEREF
@@ -3883,7 +3940,7 @@ FUNC :NGram_calc
                                             BINARY :less
                                           BODY
                                             LOCAL :__s73__he_bkt_i
-                                            AS :u64
+                                            AS :i64
                                             LOCAL :__s2_g
                                             DEREF
                                             FIELD 2
@@ -3943,7 +4000,7 @@ FUNC :NGram_calc
                                                     ENDIF
                                                 ENDLOOP
                                                 LOCAL :__s73__he_bkt
-                                                AS :u64
+                                                AS :i64
                                                 LOCAL :__s73__he_new_buckets
                                                 BINARY :add
                                                 DEREF
@@ -4159,14 +4216,14 @@ FUNC :NGram_calc
                                             DEREF
                                             FIELD 8
                                             BINARY :add
-                                            LOCAL :__ternary_31 :u32
+                                            LOCAL :__ternary_10 :u32
                                             STORE
                                           ELSE
                                             PUSH 0 :u32
-                                            LOCAL :__ternary_31
+                                            LOCAL :__ternary_10
                                             STORE
                                         ENDIF
-                                        LOCAL :__ternary_31
+                                        LOCAL :__ternary_10
                                         LOCAL :__s2_g
                                         DEREF
                                         FIELD 2
@@ -4276,6 +4333,7 @@ FUNC :NGram_calc
         PUSH 3 :u64
         LOCAL :__s87_i
         BINARY :add
+        AS :i64
         PARAM 1
         BINARY :add
         DEREF
@@ -4286,6 +4344,7 @@ FUNC :NGram_calc
         PUSH 2 :u64
         LOCAL :__s87_i
         BINARY :add
+        AS :i64
         PARAM 1
         BINARY :add
         DEREF
@@ -4297,6 +4356,7 @@ FUNC :NGram_calc
         PUSH 1 :u64
         LOCAL :__s87_i
         BINARY :add
+        AS :i64
         PARAM 1
         BINARY :add
         DEREF
@@ -4306,6 +4366,7 @@ FUNC :NGram_calc
         PUSH 24
         AS :u32
         LOCAL :__s87_i
+        AS :i64
         PARAM 1
         BINARY :add
         DEREF
@@ -4368,7 +4429,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 3
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4377,7 +4438,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 2
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4386,14 +4447,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 1
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 0
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4408,7 +4469,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 7
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4417,7 +4478,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 6
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4426,14 +4487,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 5
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 4
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4448,7 +4509,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 11
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4457,7 +4518,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 10
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4466,14 +4527,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 9
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 8
-                            AS :u64
+                            AS :i64
                             LOCAL :__s92__hj_key
                             BINARY :add
                             DEREF
@@ -4760,10 +4821,12 @@ FUNC :NGram_calc
                         GOTO :__switch_2_11
                         GOTO :__switch_2_end
                         LABEL :__switch_2_0
+                        PUSH 11
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4774,10 +4837,12 @@ FUNC :NGram_calc
                         LOCAL :__s90__hf_hashv
                         STORE
                         LABEL :__switch_2_1
+                        PUSH 10
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4788,10 +4853,12 @@ FUNC :NGram_calc
                         LOCAL :__s90__hf_hashv
                         STORE
                         LABEL :__switch_2_2
+                        PUSH 9
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4802,10 +4869,12 @@ FUNC :NGram_calc
                         LOCAL :__s90__hf_hashv
                         STORE
                         LABEL :__switch_2_3
+                        PUSH 8
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4816,10 +4885,12 @@ FUNC :NGram_calc
                         LOCAL :__s92__hj_j
                         STORE
                         LABEL :__switch_2_4
+                        PUSH 7
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4830,10 +4901,12 @@ FUNC :NGram_calc
                         LOCAL :__s92__hj_j
                         STORE
                         LABEL :__switch_2_5
+                        PUSH 6
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4844,8 +4917,10 @@ FUNC :NGram_calc
                         LOCAL :__s92__hj_j
                         STORE
                         LABEL :__switch_2_6
+                        PUSH 5
+                        STACK :drop
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4855,10 +4930,12 @@ FUNC :NGram_calc
                         LOCAL :__s92__hj_j
                         STORE
                         LABEL :__switch_2_7
+                        PUSH 4
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4869,10 +4946,12 @@ FUNC :NGram_calc
                         LOCAL :__s92__hj_i
                         STORE
                         LABEL :__switch_2_8
+                        PUSH 3
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4883,10 +4962,12 @@ FUNC :NGram_calc
                         LOCAL :__s92__hj_i
                         STORE
                         LABEL :__switch_2_9
+                        PUSH 2
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -4897,8 +4978,10 @@ FUNC :NGram_calc
                         LOCAL :__s92__hj_i
                         STORE
                         LABEL :__switch_2_10
+                        PUSH 1
+                        STACK :drop
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s92__hj_key
                         BINARY :add
                         DEREF
@@ -5155,7 +5238,7 @@ FUNC :NGram_calc
                                 AS :ptr<void>
                                 AS :u64
                                 LOCAL :__s110__hf_bkt
-                                AS :u64
+                                AS :i64
                                 LOCAL :__s87_grams2
                                 DEREF
                                 FIELD 2
@@ -5181,7 +5264,7 @@ FUNC :NGram_calc
                                         FIELD 5
                                         AS :u64
                                         LOCAL :__s110__hf_bkt
-                                        AS :u64
+                                        AS :i64
                                         LOCAL :__s87_grams2
                                         DEREF
                                         FIELD 2
@@ -5228,9 +5311,9 @@ FUNC :NGram_calc
                                     FIELD 2
                                     FIELD 7
                                     BINARY :eq
-                                    LOCAL :__sc_and_44 :bool
+                                    LOCAL :__sc_and_11 :bool
                                     STORE
-                                    LOCAL :__sc_and_44
+                                    LOCAL :__sc_and_11
                                     IF
                                       THEN
                                         PUSH 4 :u64
@@ -5240,10 +5323,10 @@ FUNC :NGram_calc
                                         FIELD 6
                                         AS :u64
                                         BINARY :eq
-                                        LOCAL :__sc_and_44
+                                        LOCAL :__sc_and_11
                                         STORE
                                     ENDIF
-                                    LOCAL :__sc_and_44
+                                    LOCAL :__sc_and_11
                                     IF
                                       THEN
                                         PUSH 0
@@ -5414,7 +5497,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 3
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5423,7 +5506,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 2
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5432,14 +5515,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 1
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 0
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5454,7 +5537,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 7
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5463,7 +5546,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 6
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5472,14 +5555,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 5
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 4
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5494,7 +5577,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 11
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5503,7 +5586,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 10
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5512,14 +5595,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 9
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 8
-                            AS :u64
+                            AS :i64
                             LOCAL :__s127__hj_key
                             BINARY :add
                             DEREF
@@ -5806,10 +5889,12 @@ FUNC :NGram_calc
                         GOTO :__switch_3_11
                         GOTO :__switch_3_end
                         LABEL :__switch_3_0
+                        PUSH 11
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5820,10 +5905,12 @@ FUNC :NGram_calc
                         LOCAL :__s125__ha_hashv
                         STORE
                         LABEL :__switch_3_1
+                        PUSH 10
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5834,10 +5921,12 @@ FUNC :NGram_calc
                         LOCAL :__s125__ha_hashv
                         STORE
                         LABEL :__switch_3_2
+                        PUSH 9
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5848,10 +5937,12 @@ FUNC :NGram_calc
                         LOCAL :__s125__ha_hashv
                         STORE
                         LABEL :__switch_3_3
+                        PUSH 8
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5862,10 +5953,12 @@ FUNC :NGram_calc
                         LOCAL :__s127__hj_j
                         STORE
                         LABEL :__switch_3_4
+                        PUSH 7
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5876,10 +5969,12 @@ FUNC :NGram_calc
                         LOCAL :__s127__hj_j
                         STORE
                         LABEL :__switch_3_5
+                        PUSH 6
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5890,8 +5985,10 @@ FUNC :NGram_calc
                         LOCAL :__s127__hj_j
                         STORE
                         LABEL :__switch_3_6
+                        PUSH 5
+                        STACK :drop
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5901,10 +5998,12 @@ FUNC :NGram_calc
                         LOCAL :__s127__hj_j
                         STORE
                         LABEL :__switch_3_7
+                        PUSH 4
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5915,10 +6014,12 @@ FUNC :NGram_calc
                         LOCAL :__s127__hj_i
                         STORE
                         LABEL :__switch_3_8
+                        PUSH 3
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5929,10 +6030,12 @@ FUNC :NGram_calc
                         LOCAL :__s127__hj_i
                         STORE
                         LABEL :__switch_3_9
+                        PUSH 2
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -5943,8 +6046,10 @@ FUNC :NGram_calc
                         LOCAL :__s127__hj_i
                         STORE
                         LABEL :__switch_3_10
+                        PUSH 1
+                        STACK :drop
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s127__hj_key
                         BINARY :add
                         DEREF
@@ -6456,7 +6561,7 @@ FUNC :NGram_calc
                             PUSH true
                           BODY
                             LOCAL :__s154__ha_bkt
-                            AS :u64
+                            AS :i64
                             LOCAL :__s87_grams2
                             DEREF
                             FIELD 2
@@ -6537,9 +6642,9 @@ FUNC :NGram_calc
                             DEREF
                             FIELD 1
                             BINARY :more_eq
-                            LOCAL :__sc_and_53 :bool
+                            LOCAL :__sc_and_12 :bool
                             STORE
-                            LOCAL :__sc_and_53
+                            LOCAL :__sc_and_12
                             IF
                               THEN
                                 PUSH 0 :u32
@@ -6552,10 +6657,10 @@ FUNC :NGram_calc
                                 DEREF
                                 FIELD 9
                                 BINARY :eq
-                                LOCAL :__sc_and_53
+                                LOCAL :__sc_and_12
                                 STORE
                             ENDIF
-                            LOCAL :__sc_and_53
+                            LOCAL :__sc_and_12
                             IF
                               THEN
                                 LOOP
@@ -6632,14 +6737,14 @@ FUNC :NGram_calc
                                         IF
                                           THEN
                                             PUSH 1 :u32
-                                            LOCAL :__ternary_55 :u32
+                                            LOCAL :__ternary_13 :u32
                                             STORE
                                           ELSE
                                             PUSH 0 :u32
-                                            LOCAL :__ternary_55
+                                            LOCAL :__ternary_13
                                             STORE
                                         ENDIF
-                                        LOCAL :__ternary_55
+                                        LOCAL :__ternary_13
                                         PUSH 1 :u32
                                         LOCAL :__s88_g2
                                         DEREF
@@ -6696,7 +6801,7 @@ FUNC :NGram_calc
                                             BINARY :less
                                           BODY
                                             LOCAL :__s159__he_bkt_i
-                                            AS :u64
+                                            AS :i64
                                             LOCAL :__s88_g2
                                             DEREF
                                             FIELD 2
@@ -6756,7 +6861,7 @@ FUNC :NGram_calc
                                                     ENDIF
                                                 ENDLOOP
                                                 LOCAL :__s159__he_bkt
-                                                AS :u64
+                                                AS :i64
                                                 LOCAL :__s159__he_new_buckets
                                                 BINARY :add
                                                 DEREF
@@ -6972,14 +7077,14 @@ FUNC :NGram_calc
                                             DEREF
                                             FIELD 8
                                             BINARY :add
-                                            LOCAL :__ternary_61 :u32
+                                            LOCAL :__ternary_14 :u32
                                             STORE
                                           ELSE
                                             PUSH 0 :u32
-                                            LOCAL :__ternary_61
+                                            LOCAL :__ternary_14
                                             STORE
                                         ENDIF
-                                        LOCAL :__ternary_61
+                                        LOCAL :__ternary_14
                                         LOCAL :__s88_g2
                                         DEREF
                                         FIELD 2
@@ -7111,7 +7216,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 3
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7120,7 +7225,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 2
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7129,14 +7234,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 1
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 0
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7151,7 +7256,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 7
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7160,7 +7265,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 6
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7169,14 +7274,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 5
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 4
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7191,7 +7296,7 @@ FUNC :NGram_calc
                             PUSH 24
                             AS :u32
                             PUSH 11
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7200,7 +7305,7 @@ FUNC :NGram_calc
                             PUSH 16
                             AS :u32
                             PUSH 10
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7209,14 +7314,14 @@ FUNC :NGram_calc
                             PUSH 8
                             AS :u32
                             PUSH 9
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 8
-                            AS :u64
+                            AS :i64
                             LOCAL :__s177__hj_key
                             BINARY :add
                             DEREF
@@ -7503,10 +7608,12 @@ FUNC :NGram_calc
                         GOTO :__switch_4_11
                         GOTO :__switch_4_end
                         LABEL :__switch_4_0
+                        PUSH 11
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7517,10 +7624,12 @@ FUNC :NGram_calc
                         LOCAL :__s175__hf_hashv
                         STORE
                         LABEL :__switch_4_1
+                        PUSH 10
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7531,10 +7640,12 @@ FUNC :NGram_calc
                         LOCAL :__s175__hf_hashv
                         STORE
                         LABEL :__switch_4_2
+                        PUSH 9
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7545,10 +7656,12 @@ FUNC :NGram_calc
                         LOCAL :__s175__hf_hashv
                         STORE
                         LABEL :__switch_4_3
+                        PUSH 8
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7559,10 +7672,12 @@ FUNC :NGram_calc
                         LOCAL :__s177__hj_j
                         STORE
                         LABEL :__switch_4_4
+                        PUSH 7
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7573,10 +7688,12 @@ FUNC :NGram_calc
                         LOCAL :__s177__hj_j
                         STORE
                         LABEL :__switch_4_5
+                        PUSH 6
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7587,8 +7704,10 @@ FUNC :NGram_calc
                         LOCAL :__s177__hj_j
                         STORE
                         LABEL :__switch_4_6
+                        PUSH 5
+                        STACK :drop
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7598,10 +7717,12 @@ FUNC :NGram_calc
                         LOCAL :__s177__hj_j
                         STORE
                         LABEL :__switch_4_7
+                        PUSH 4
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7612,10 +7733,12 @@ FUNC :NGram_calc
                         LOCAL :__s177__hj_i
                         STORE
                         LABEL :__switch_4_8
+                        PUSH 3
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7626,10 +7749,12 @@ FUNC :NGram_calc
                         LOCAL :__s177__hj_i
                         STORE
                         LABEL :__switch_4_9
+                        PUSH 2
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7640,8 +7765,10 @@ FUNC :NGram_calc
                         LOCAL :__s177__hj_i
                         STORE
                         LABEL :__switch_4_10
+                        PUSH 1
+                        STACK :drop
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s177__hj_key
                         BINARY :add
                         DEREF
@@ -7898,7 +8025,7 @@ FUNC :NGram_calc
                                 AS :ptr<void>
                                 AS :u64
                                 LOCAL :__s195__hf_bkt
-                                AS :u64
+                                AS :i64
                                 LOCAL :__s1_grams1
                                 DEREF
                                 FIELD 2
@@ -7924,7 +8051,7 @@ FUNC :NGram_calc
                                         FIELD 5
                                         AS :u64
                                         LOCAL :__s195__hf_bkt
-                                        AS :u64
+                                        AS :i64
                                         LOCAL :__s1_grams1
                                         DEREF
                                         FIELD 2
@@ -7971,9 +8098,9 @@ FUNC :NGram_calc
                                     FIELD 2
                                     FIELD 7
                                     BINARY :eq
-                                    LOCAL :__sc_and_70 :bool
+                                    LOCAL :__sc_and_15 :bool
                                     STORE
-                                    LOCAL :__sc_and_70
+                                    LOCAL :__sc_and_15
                                     IF
                                       THEN
                                         PUSH 4 :u64
@@ -7983,10 +8110,10 @@ FUNC :NGram_calc
                                         FIELD 6
                                         AS :u64
                                         BINARY :eq
-                                        LOCAL :__sc_and_70
+                                        LOCAL :__sc_and_15
                                         STORE
                                     ENDIF
-                                    LOCAL :__sc_and_70
+                                    LOCAL :__sc_and_15
                                     IF
                                       THEN
                                         PUSH 0
@@ -8088,9 +8215,9 @@ FUNC :NGram_calc
         AS :ptr<GramHash>
         LOCAL :__s173_g1
         BINARY :not_eq
-        LOCAL :__sc_and_71 :bool
+        LOCAL :__sc_and_16 :bool
         STORE
-        LOCAL :__sc_and_71
+        LOCAL :__sc_and_16
         IF
           THEN
             LOCAL :__s173_g1
@@ -8100,10 +8227,10 @@ FUNC :NGram_calc
             DEREF
             FIELD 1
             BINARY :less_eq
-            LOCAL :__sc_and_71
+            LOCAL :__sc_and_16
             STORE
         ENDIF
-        LOCAL :__sc_and_71
+        LOCAL :__sc_and_16
         IF
           THEN
             PUSH 1 :i32
@@ -8133,14 +8260,14 @@ FUNC :NGram_calc
         FIELD 0
         DEREF
         FIELD 3
-        LOCAL :__ternary_72 :u32
+        LOCAL :__ternary_17 :u32
         STORE
       ELSE
         PUSH 0 :u32
-        LOCAL :__ternary_72
+        LOCAL :__ternary_17
         STORE
     ENDIF
-    LOCAL :__ternary_72
+    LOCAL :__ternary_17
     PUSH 0
     AS :ptr<void>
     AS :u64
@@ -8155,14 +8282,14 @@ FUNC :NGram_calc
         FIELD 0
         DEREF
         FIELD 3
-        LOCAL :__ternary_73 :u32
+        LOCAL :__ternary_18 :u32
         STORE
       ELSE
         PUSH 0 :u32
-        LOCAL :__ternary_73
+        LOCAL :__ternary_18
         STORE
     ENDIF
-    LOCAL :__ternary_73
+    LOCAL :__ternary_18
     BINARY :add
     AS :i32
     LOCAL :__s208_total :i32
@@ -8182,15 +8309,15 @@ FUNC :NGram_calc
         DEREF
         FIELD 2
         FIELD 2
-        LOCAL :__ternary_76 :ptr<void>
+        LOCAL :__ternary_19 :ptr<void>
         STORE
       ELSE
         PUSH 0
         AS :ptr<void>
-        LOCAL :__ternary_76
+        LOCAL :__ternary_19
         STORE
     ENDIF
-    LOCAL :__ternary_76
+    LOCAL :__ternary_19
     AS :ptr<GramHash>
     LOCAL :__s208_tmp :ptr<GramHash>
     STORE
@@ -8221,9 +8348,9 @@ FUNC :NGram_calc
             FIELD 1
             AS :u64
             BINARY :eq
-            LOCAL :__sc_and_79 :bool
+            LOCAL :__sc_and_20 :bool
             STORE
-            LOCAL :__sc_and_79
+            LOCAL :__sc_and_20
             IF
               THEN
                 PUSH 0
@@ -8234,10 +8361,10 @@ FUNC :NGram_calc
                 FIELD 2
                 AS :u64
                 BINARY :eq
-                LOCAL :__sc_and_79
+                LOCAL :__sc_and_20
                 STORE
             ENDIF
-            LOCAL :__sc_and_79
+            LOCAL :__sc_and_20
             IF
               THEN
                 LOCAL :__s1_grams1
@@ -8408,7 +8535,7 @@ FUNC :NGram_calc
                     PUSH true
                   BODY
                     LOCAL :__s214__hd_bkt
-                    AS :u64
+                    AS :i64
                     LOCAL :__s1_grams1
                     DEREF
                     FIELD 2
@@ -8535,15 +8662,15 @@ FUNC :NGram_calc
             DEREF
             FIELD 2
             FIELD 2
-            LOCAL :__ternary_82 :ptr<void>
+            LOCAL :__ternary_21 :ptr<void>
             STORE
           ELSE
             PUSH 0
             AS :ptr<void>
-            LOCAL :__ternary_82
+            LOCAL :__ternary_21
             STORE
         ENDIF
-        LOCAL :__ternary_82
+        LOCAL :__ternary_21
         AS :ptr<GramHash>
         LOCAL :__s208_tmp
         STORE
@@ -8563,15 +8690,15 @@ FUNC :NGram_calc
         DEREF
         FIELD 2
         FIELD 2
-        LOCAL :__ternary_83 :ptr<void>
+        LOCAL :__ternary_22 :ptr<void>
         STORE
       ELSE
         PUSH 0
         AS :ptr<void>
-        LOCAL :__ternary_83
+        LOCAL :__ternary_22
         STORE
     ENDIF
-    LOCAL :__ternary_83
+    LOCAL :__ternary_22
     AS :ptr<GramHash>
     LOCAL :__s208_tmp
     STORE
@@ -8602,9 +8729,9 @@ FUNC :NGram_calc
             FIELD 1
             AS :u64
             BINARY :eq
-            LOCAL :__sc_and_85 :bool
+            LOCAL :__sc_and_23 :bool
             STORE
-            LOCAL :__sc_and_85
+            LOCAL :__sc_and_23
             IF
               THEN
                 PUSH 0
@@ -8615,10 +8742,10 @@ FUNC :NGram_calc
                 FIELD 2
                 AS :u64
                 BINARY :eq
-                LOCAL :__sc_and_85
+                LOCAL :__sc_and_23
                 STORE
             ENDIF
-            LOCAL :__sc_and_85
+            LOCAL :__sc_and_23
             IF
               THEN
                 LOCAL :__s87_grams2
@@ -8789,7 +8916,7 @@ FUNC :NGram_calc
                     PUSH true
                   BODY
                     LOCAL :__s232__hd_bkt
-                    AS :u64
+                    AS :i64
                     LOCAL :__s87_grams2
                     DEREF
                     FIELD 2
@@ -8916,15 +9043,15 @@ FUNC :NGram_calc
             DEREF
             FIELD 2
             FIELD 2
-            LOCAL :__ternary_88 :ptr<void>
+            LOCAL :__ternary_24 :ptr<void>
             STORE
           ELSE
             PUSH 0
             AS :ptr<void>
-            LOCAL :__ternary_88
+            LOCAL :__ternary_24
             STORE
         ENDIF
-        LOCAL :__ternary_88
+        LOCAL :__ternary_24
         AS :ptr<GramHash>
         LOCAL :__s208_tmp
         STORE
@@ -8939,14 +9066,14 @@ FUNC :NGram_calc
         LOCAL :__s87_intersection
         AS :f64
         BINARY :div
-        LOCAL :__ternary_89 :f64
+        LOCAL :__ternary_25 :f64
         STORE
       ELSE
         PUSH 0.0 :f64
-        LOCAL :__ternary_89
+        LOCAL :__ternary_25
         STORE
     ENDIF
-    LOCAL :__ternary_89
+    LOCAL :__ternary_25
     RET
 ENDFUNC
 
@@ -8980,12 +9107,14 @@ FUNC :NGram_run
         BINARY :less
       BODY
         LOCAL :__s0_i
+        AS :i64
         LOCAL :__s0_pairs
         DEREF
         FIELD 1
         BINARY :add
         DEREF
         LOCAL :__s0_i
+        AS :i64
         LOCAL :__s0_pairs
         DEREF
         FIELD 0

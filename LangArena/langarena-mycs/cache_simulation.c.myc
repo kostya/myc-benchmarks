@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_cache_simulation_c_1
+  TYPE :__inline_type_cache_simulation_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_cache_simulation_c_2
+STRUCT :__inline_type_cache_simulation_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -281,7 +281,7 @@ STRUCT :CacheSimulationData
   TYPE :ptr<CacheSimulationCache>
 ENDSTRUCT
 
-ENUM :__inline_type_cache_simulation_c_1
+ENUM :__inline_type_cache_simulation_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -296,7 +296,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_cache_simulation_c_2
+    TYPE :__inline_type_cache_simulation_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -798,7 +798,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 24
                             AS :u32
                             PUSH 3
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -807,7 +807,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 16
                             AS :u32
                             PUSH 2
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -816,14 +816,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 8
                             AS :u32
                             PUSH 1
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 0
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -838,7 +838,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 24
                             AS :u32
                             PUSH 7
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -847,7 +847,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 16
                             AS :u32
                             PUSH 6
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -856,14 +856,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 8
                             AS :u32
                             PUSH 5
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 4
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -878,7 +878,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 24
                             AS :u32
                             PUSH 11
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -887,7 +887,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 16
                             AS :u32
                             PUSH 10
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -896,14 +896,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                             PUSH 8
                             AS :u32
                             PUSH 9
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 8
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -1190,10 +1190,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         GOTO :__switch_3_11
                         GOTO :__switch_3_end
                         LABEL :__switch_3_0
+                        PUSH 11
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1204,10 +1206,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s3__hf_hashv
                         STORE
                         LABEL :__switch_3_1
+                        PUSH 10
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1218,10 +1222,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s3__hf_hashv
                         STORE
                         LABEL :__switch_3_2
+                        PUSH 9
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1232,10 +1238,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s3__hf_hashv
                         STORE
                         LABEL :__switch_3_3
+                        PUSH 8
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1246,10 +1254,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_3_4
+                        PUSH 7
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1260,10 +1270,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_3_5
+                        PUSH 6
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1274,8 +1286,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_3_6
+                        PUSH 5
+                        STACK :drop
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1285,10 +1299,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_3_7
+                        PUSH 4
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1299,10 +1315,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s5__hj_i
                         STORE
                         LABEL :__switch_3_8
+                        PUSH 3
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1313,10 +1331,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s5__hj_i
                         STORE
                         LABEL :__switch_3_9
+                        PUSH 2
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1327,8 +1347,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                         LOCAL :__s5__hj_i
                         STORE
                         LABEL :__switch_3_10
+                        PUSH 1
+                        STACK :drop
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -1589,7 +1611,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                                 AS :ptr<void>
                                 AS :u64
                                 LOCAL :__s23__hf_bkt
-                                AS :u64
+                                AS :i64
                                 PARAM 0
                                 DEREF
                                 FIELD 2
@@ -1619,7 +1641,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                                         FIELD 5
                                         AS :u64
                                         LOCAL :__s23__hf_bkt
-                                        AS :u64
+                                        AS :i64
                                         PARAM 0
                                         DEREF
                                         FIELD 2
@@ -1668,9 +1690,9 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                                     FIELD 5
                                     FIELD 7
                                     BINARY :eq
-                                    LOCAL :__sc_and_9 :bool
+                                    LOCAL :__sc_and_0 :bool
                                     STORE
-                                    LOCAL :__sc_and_9
+                                    LOCAL :__sc_and_0
                                     IF
                                       THEN
                                         LOCAL :__s1__uthash_hfstr_keylen
@@ -1679,10 +1701,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_get
                                         FIELD 5
                                         FIELD 6
                                         BINARY :eq
-                                        LOCAL :__sc_and_9
+                                        LOCAL :__sc_and_0
                                         STORE
                                     ENDIF
-                                    LOCAL :__sc_and_9
+                                    LOCAL :__sc_and_0
                                     IF
                                       THEN
                                         PUSH 0
@@ -1864,9 +1886,9 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
         FIELD 1
         AS :u64
         BINARY :eq
-        LOCAL :__sc_and_2 :bool
+        LOCAL :__sc_and_1 :bool
         STORE
-        LOCAL :__sc_and_2
+        LOCAL :__sc_and_1
         IF
           THEN
             PUSH 0
@@ -1877,10 +1899,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
             FIELD 2
             AS :u64
             BINARY :eq
-            LOCAL :__sc_and_2
+            LOCAL :__sc_and_1
             STORE
         ENDIF
-        LOCAL :__sc_and_2
+        LOCAL :__sc_and_1
         IF
           THEN
             PARAM 0
@@ -2071,7 +2093,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_remove_oldest
                 PUSH true
               BODY
                 LOCAL :__s5__hd_bkt
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 2
@@ -2353,7 +2375,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 24
                             AS :u32
                             PUSH 3
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2362,7 +2384,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 16
                             AS :u32
                             PUSH 2
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2371,14 +2393,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 8
                             AS :u32
                             PUSH 1
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 0
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2393,7 +2415,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 24
                             AS :u32
                             PUSH 7
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2402,7 +2424,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 16
                             AS :u32
                             PUSH 6
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2411,14 +2433,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 8
                             AS :u32
                             PUSH 5
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 4
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2433,7 +2455,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 24
                             AS :u32
                             PUSH 11
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2442,7 +2464,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 16
                             AS :u32
                             PUSH 10
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2451,14 +2473,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             PUSH 8
                             AS :u32
                             PUSH 9
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
                             AS :u32
                             BINARY :shl
                             PUSH 8
-                            AS :u64
+                            AS :i64
                             LOCAL :__s5__hj_key
                             BINARY :add
                             DEREF
@@ -2745,10 +2767,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         GOTO :__switch_4_11
                         GOTO :__switch_4_end
                         LABEL :__switch_4_0
+                        PUSH 11
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2759,10 +2783,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s3__hf_hashv
                         STORE
                         LABEL :__switch_4_1
+                        PUSH 10
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2773,10 +2799,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s3__hf_hashv
                         STORE
                         LABEL :__switch_4_2
+                        PUSH 9
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2787,10 +2815,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s3__hf_hashv
                         STORE
                         LABEL :__switch_4_3
+                        PUSH 8
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2801,10 +2831,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_4_4
+                        PUSH 7
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2815,10 +2847,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_4_5
+                        PUSH 6
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2829,8 +2863,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_4_6
+                        PUSH 5
+                        STACK :drop
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2840,10 +2876,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s5__hj_j
                         STORE
                         LABEL :__switch_4_7
+                        PUSH 4
+                        STACK :drop
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2854,10 +2892,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s5__hj_i
                         STORE
                         LABEL :__switch_4_8
+                        PUSH 3
+                        STACK :drop
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2868,10 +2908,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s5__hj_i
                         STORE
                         LABEL :__switch_4_9
+                        PUSH 2
+                        STACK :drop
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -2882,8 +2924,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         LOCAL :__s5__hj_i
                         STORE
                         LABEL :__switch_4_10
+                        PUSH 1
+                        STACK :drop
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s5__hj_key
                         BINARY :add
                         DEREF
@@ -3144,7 +3188,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                 AS :ptr<void>
                                 AS :u64
                                 LOCAL :__s23__hf_bkt
-                                AS :u64
+                                AS :i64
                                 PARAM 0
                                 DEREF
                                 FIELD 2
@@ -3174,7 +3218,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                         FIELD 5
                                         AS :u64
                                         LOCAL :__s23__hf_bkt
-                                        AS :u64
+                                        AS :i64
                                         PARAM 0
                                         DEREF
                                         FIELD 2
@@ -3223,9 +3267,9 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                     FIELD 5
                                     FIELD 7
                                     BINARY :eq
-                                    LOCAL :__sc_and_9 :bool
+                                    LOCAL :__sc_and_2 :bool
                                     STORE
-                                    LOCAL :__sc_and_9
+                                    LOCAL :__sc_and_2
                                     IF
                                       THEN
                                         LOCAL :__s1__uthash_hfstr_keylen
@@ -3234,10 +3278,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                         FIELD 5
                                         FIELD 6
                                         BINARY :eq
-                                        LOCAL :__sc_and_9
+                                        LOCAL :__sc_and_2
                                         STORE
                                     ENDIF
-                                    LOCAL :__sc_and_9
+                                    LOCAL :__sc_and_2
                                     IF
                                       THEN
                                         PUSH 0
@@ -3467,7 +3511,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     PUSH true
                   BODY
                     PUSH 0
-                    AS :u64
+                    AS :i64
                     LOCAL :__s0_node
                     DEREF
                     FIELD 0
@@ -3500,7 +3544,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 24
                         AS :u32
                         PUSH 3
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3509,7 +3553,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 16
                         AS :u32
                         PUSH 2
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3518,14 +3562,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 8
                         AS :u32
                         PUSH 1
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
                         AS :u32
                         BINARY :shl
                         PUSH 0
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3540,7 +3584,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 24
                         AS :u32
                         PUSH 7
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3549,7 +3593,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 16
                         AS :u32
                         PUSH 6
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3558,14 +3602,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 8
                         AS :u32
                         PUSH 5
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
                         AS :u32
                         BINARY :shl
                         PUSH 4
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3580,7 +3624,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 24
                         AS :u32
                         PUSH 11
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3589,7 +3633,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 16
                         AS :u32
                         PUSH 10
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3598,14 +3642,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH 8
                         AS :u32
                         PUSH 9
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
                         AS :u32
                         BINARY :shl
                         PUSH 8
-                        AS :u64
+                        AS :i64
                         LOCAL :__s41__hj_key
                         BINARY :add
                         DEREF
@@ -3892,10 +3936,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     GOTO :__switch_5_11
                     GOTO :__switch_5_end
                     LABEL :__switch_5_0
+                    PUSH 11
+                    STACK :drop
                     PUSH 24
                     AS :u32
                     PUSH 10
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -3906,10 +3952,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s39__ha_hashv
                     STORE
                     LABEL :__switch_5_1
+                    PUSH 10
+                    STACK :drop
                     PUSH 16
                     AS :u32
                     PUSH 9
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -3920,10 +3968,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s39__ha_hashv
                     STORE
                     LABEL :__switch_5_2
+                    PUSH 9
+                    STACK :drop
                     PUSH 8
                     AS :u32
                     PUSH 8
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -3934,10 +3984,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s39__ha_hashv
                     STORE
                     LABEL :__switch_5_3
+                    PUSH 8
+                    STACK :drop
                     PUSH 24
                     AS :u32
                     PUSH 7
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -3948,10 +4000,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s41__hj_j
                     STORE
                     LABEL :__switch_5_4
+                    PUSH 7
+                    STACK :drop
                     PUSH 16
                     AS :u32
                     PUSH 6
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -3962,10 +4016,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s41__hj_j
                     STORE
                     LABEL :__switch_5_5
+                    PUSH 6
+                    STACK :drop
                     PUSH 8
                     AS :u32
                     PUSH 5
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -3976,8 +4032,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s41__hj_j
                     STORE
                     LABEL :__switch_5_6
+                    PUSH 5
+                    STACK :drop
                     PUSH 4
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -3987,10 +4045,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s41__hj_j
                     STORE
                     LABEL :__switch_5_7
+                    PUSH 4
+                    STACK :drop
                     PUSH 24
                     AS :u32
                     PUSH 3
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -4001,10 +4061,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s41__hj_i
                     STORE
                     LABEL :__switch_5_8
+                    PUSH 3
+                    STACK :drop
                     PUSH 16
                     AS :u32
                     PUSH 2
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -4015,10 +4077,12 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s41__hj_i
                     STORE
                     LABEL :__switch_5_9
+                    PUSH 2
+                    STACK :drop
                     PUSH 8
                     AS :u32
                     PUSH 1
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -4029,8 +4093,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                     LOCAL :__s41__hj_i
                     STORE
                     LABEL :__switch_5_10
+                    PUSH 1
+                    STACK :drop
                     PUSH 0
-                    AS :u64
+                    AS :i64
                     LOCAL :__s41__hj_key
                     BINARY :add
                     DEREF
@@ -4245,7 +4311,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                 FIELD 7
                 STORE
                 PUSH 0
-                AS :u64
+                AS :i64
                 LOCAL :__s0_node
                 DEREF
                 FIELD 0
@@ -4566,7 +4632,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         PUSH true
                       BODY
                         LOCAL :__s68__ha_bkt
-                        AS :u64
+                        AS :i64
                         PARAM 0
                         DEREF
                         FIELD 2
@@ -4649,9 +4715,9 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                         DEREF
                         FIELD 1
                         BINARY :more_eq
-                        LOCAL :__sc_and_19 :bool
+                        LOCAL :__sc_and_3 :bool
                         STORE
-                        LOCAL :__sc_and_19
+                        LOCAL :__sc_and_3
                         IF
                           THEN
                             PUSH 0 :u32
@@ -4664,10 +4730,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                             DEREF
                             FIELD 9
                             BINARY :eq
-                            LOCAL :__sc_and_19
+                            LOCAL :__sc_and_3
                             STORE
                         ENDIF
-                        LOCAL :__sc_and_19
+                        LOCAL :__sc_and_3
                         IF
                           THEN
                             LOOP
@@ -4744,14 +4810,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                     IF
                                       THEN
                                         PUSH 1 :u32
-                                        LOCAL :__ternary_21 :u32
+                                        LOCAL :__ternary_4 :u32
                                         STORE
                                       ELSE
                                         PUSH 0 :u32
-                                        LOCAL :__ternary_21
+                                        LOCAL :__ternary_4
                                         STORE
                                     ENDIF
-                                    LOCAL :__ternary_21
+                                    LOCAL :__ternary_4
                                     PUSH 1 :u32
                                     LOCAL :__s0_node
                                     DEREF
@@ -4808,7 +4874,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                         BINARY :less
                                       BODY
                                         LOCAL :__s73__he_bkt_i
-                                        AS :u64
+                                        AS :i64
                                         LOCAL :__s0_node
                                         DEREF
                                         FIELD 5
@@ -4868,7 +4934,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                                 ENDIF
                                             ENDLOOP
                                             LOCAL :__s73__he_bkt
-                                            AS :u64
+                                            AS :i64
                                             LOCAL :__s73__he_new_buckets
                                             BINARY :add
                                             DEREF
@@ -5084,14 +5150,14 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_put
                                         DEREF
                                         FIELD 8
                                         BINARY :add
-                                        LOCAL :__ternary_27 :u32
+                                        LOCAL :__ternary_5 :u32
                                         STORE
                                       ELSE
                                         PUSH 0 :u32
-                                        LOCAL :__ternary_27
+                                        LOCAL :__ternary_5
                                         STORE
                                     ENDIF
-                                    LOCAL :__ternary_27
+                                    LOCAL :__ternary_5
                                     LOCAL :__s0_node
                                     DEREF
                                     FIELD 5
@@ -5260,15 +5326,15 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
         DEREF
         FIELD 5
         FIELD 2
-        LOCAL :__ternary_1 :ptr<void>
+        LOCAL :__ternary_6 :ptr<void>
         STORE
       ELSE
         PUSH 0
         AS :ptr<void>
-        LOCAL :__ternary_1
+        LOCAL :__ternary_6
         STORE
     ENDIF
-    LOCAL :__ternary_1
+    LOCAL :__ternary_6
     AS :ptr<CacheNode>
     LOCAL :__s0_tmp :ptr<CacheNode>
     STORE
@@ -5299,9 +5365,9 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
             FIELD 1
             AS :u64
             BINARY :eq
-            LOCAL :__sc_and_4 :bool
+            LOCAL :__sc_and_7 :bool
             STORE
-            LOCAL :__sc_and_4
+            LOCAL :__sc_and_7
             IF
               THEN
                 PUSH 0
@@ -5312,10 +5378,10 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
                 FIELD 2
                 AS :u64
                 BINARY :eq
-                LOCAL :__sc_and_4
+                LOCAL :__sc_and_7
                 STORE
             ENDIF
-            LOCAL :__sc_and_4
+            LOCAL :__sc_and_7
             IF
               THEN
                 PARAM 0
@@ -5506,7 +5572,7 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
                     PUSH true
                   BODY
                     LOCAL :__s6__hd_bkt
-                    AS :u64
+                    AS :i64
                     PARAM 0
                     DEREF
                     FIELD 2
@@ -5649,15 +5715,15 @@ FUNC :static_fn_cache_simulation_c_cache_simulation_cache_free
             DEREF
             FIELD 5
             FIELD 2
-            LOCAL :__ternary_7 :ptr<void>
+            LOCAL :__ternary_8 :ptr<void>
             STORE
           ELSE
             PUSH 0
             AS :ptr<void>
-            LOCAL :__ternary_7
+            LOCAL :__ternary_8
             STORE
         ENDIF
-        LOCAL :__ternary_7
+        LOCAL :__ternary_8
         AS :ptr<CacheNode>
         LOCAL :__s0_tmp
         STORE

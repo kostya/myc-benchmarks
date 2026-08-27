@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_benchmark_c_1
+  TYPE :__inline_type_benchmark_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_benchmark_c_2
+STRUCT :__inline_type_benchmark_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -254,7 +254,7 @@ STRUCT :BenchmarkFactory
   TYPE :fn<ptr<Benchmark>>
 ENDSTRUCT
 
-ENUM :__inline_type_benchmark_c_1
+ENUM :__inline_type_benchmark_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -269,7 +269,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_benchmark_c_2
+    TYPE :__inline_type_benchmark_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -836,6 +836,7 @@ FUNC :Benchmark_register
     PUSH 99 :u64
     PARAM 0
     GLOBAL :benchmark_factories_count
+    AS :i64
     GLOBAL :benchmark_factories
     BINARY :add
     DEREF
@@ -846,7 +847,9 @@ FUNC :Benchmark_register
     STACK :drop
     PUSH 0 :u8
     PUSH 99 :u64
+    AS :i64
     GLOBAL :benchmark_factories_count
+    AS :i64
     GLOBAL :benchmark_factories
     BINARY :add
     DEREF
@@ -858,6 +861,7 @@ FUNC :Benchmark_register
     STORE
     PARAM 1
     GLOBAL :benchmark_factories_count
+    AS :i64
     GLOBAL :benchmark_factories
     BINARY :add
     DEREF
@@ -893,6 +897,7 @@ FUNC :Benchmark_all
         BINARY :less
       BODY
         LOCAL :__s0_i
+        AS :i64
         GLOBAL :global_order
         BINARY :add
         DEREF
@@ -902,19 +907,19 @@ FUNC :Benchmark_all
         AS :ptr<u8>
         PARAM 0
         BINARY :not_eq
-        LOCAL :__sc_and_5 :bool
+        LOCAL :__sc_and_1 :bool
         STORE
-        LOCAL :__sc_and_5
+        LOCAL :__sc_and_1
         IF
           THEN
             PUSH 0 :u64
             PARAM 0
             CALL :strlen
             BINARY :more
-            LOCAL :__sc_and_5
+            LOCAL :__sc_and_1
             STORE
         ENDIF
-        LOCAL :__sc_and_5
+        LOCAL :__sc_and_1
         IF
           THEN
             LOCAL :__s1_bench_name
@@ -932,6 +937,7 @@ FUNC :Benchmark_all
             STACK :drop
             PUSH 0 :u8
             PUSH 99 :u64
+            AS :i64
             LOCAL :__s2_haystack_lower
             ADDR
             AS :ptr<u8>
@@ -947,6 +953,7 @@ FUNC :Benchmark_all
             STACK :drop
             PUSH 0 :u8
             PUSH 99 :u64
+            AS :i64
             LOCAL :__s2_needle_lower
             ADDR
             AS :ptr<u8>
@@ -1041,6 +1048,7 @@ FUNC :Benchmark_all
             PUSH 0
             LOCAL :__s1_bench_name
             LOCAL :__s5_j
+            AS :i64
             GLOBAL :benchmark_factories
             BINARY :add
             DEREF
@@ -1052,6 +1060,7 @@ FUNC :Benchmark_all
             IF
               THEN
                 LOCAL :__s5_j
+                AS :i64
                 GLOBAL :benchmark_factories
                 BINARY :add
                 DEREF

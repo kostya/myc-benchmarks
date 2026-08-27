@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_text_raytracer_c_1
+  TYPE :__inline_type_text_raytracer_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_text_raytracer_c_2
+STRUCT :__inline_type_text_raytracer_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -288,7 +288,7 @@ STRUCT :TextRaytracerData
   TYPE :u32
 ENDSTRUCT
 
-ENUM :__inline_type_text_raytracer_c_1
+ENUM :__inline_type_text_raytracer_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -303,7 +303,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_text_raytracer_c_2
+    TYPE :__inline_type_text_raytracer_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -1116,7 +1116,7 @@ FUNC :TextRaytracer_run
                 BINARY :less
               BODY
                 LOCAL :__s2_k
-                AS :u64
+                AS :i64
                 LOCAL :__s0_scene
                 ADDR
                 AS :ptr<TRSphere>
@@ -1124,7 +1124,7 @@ FUNC :TextRaytracer_run
                 DEREF
                 FIELD 1
                 LOCAL :__s2_k
-                AS :u64
+                AS :i64
                 LOCAL :__s0_scene
                 ADDR
                 AS :ptr<TRSphere>
@@ -1144,7 +1144,7 @@ FUNC :TextRaytracer_run
                     LOCAL :__s2_tval
                     STORE
                     LOCAL :__s2_k
-                    AS :u64
+                    AS :i64
                     LOCAL :__s0_scene
                     ADDR
                     AS :ptr<TRSphere>
@@ -1169,18 +1169,18 @@ FUNC :TextRaytracer_run
             AS :ptr<TRSphere>
             LOCAL :__s2_hit_obj
             BINARY :not_eq
-            LOCAL :__sc_and_17 :bool
+            LOCAL :__sc_and_0 :bool
             STORE
-            LOCAL :__sc_and_17
+            LOCAL :__sc_and_0
             IF
               THEN
                 PUSH 0.0 :f64
                 LOCAL :__s2_tval
                 BINARY :more_eq
-                LOCAL :__sc_and_17
+                LOCAL :__sc_and_0
                 STORE
             ENDIF
-            LOCAL :__sc_and_17
+            LOCAL :__sc_and_0
             IF
               THEN
                 LOCAL :__s2_tval
@@ -1235,7 +1235,7 @@ FUNC :TextRaytracer_run
                     STORE
                 ENDIF
                 LOCAL :__s5_idx
-                AS :u64
+                AS :i64
                 GLOBAL :static_text_raytracer_c_LUT
                 ADDR
                 AS :ptr<u8>

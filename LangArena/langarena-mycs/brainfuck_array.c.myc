@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_brainfuck_array_c_1
+  TYPE :__inline_type_brainfuck_array_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_brainfuck_array_c_2
+STRUCT :__inline_type_brainfuck_array_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -270,7 +270,7 @@ STRUCT :BrainfuckArrayData
   TYPE :u32
 ENDSTRUCT
 
-ENUM :__inline_type_brainfuck_array_c_1
+ENUM :__inline_type_brainfuck_array_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -285,7 +285,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_brainfuck_array_c_2
+    TYPE :__inline_type_brainfuck_array_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -612,6 +612,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_get
     PARAM 0
     DEREF
     FIELD 2
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -630,6 +631,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_inc
     PARAM 0
     DEREF
     FIELD 2
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -639,6 +641,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_inc
     PARAM 0
     DEREF
     FIELD 2
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -657,6 +660,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_dec
     PARAM 0
     DEREF
     FIELD 2
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -666,6 +670,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_dec
     PARAM 0
     DEREF
     FIELD 2
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -729,6 +734,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_Tape_advance
             PARAM 0
             DEREF
             FIELD 1
+            AS :i64
             PARAM 0
             DEREF
             FIELD 0
@@ -832,6 +838,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_filter_commands
         BINARY :less
       BODY
         LOCAL :__s2_i
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -848,15 +855,15 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_filter_commands
           THEN
             LOCAL :__s3_c
             LOCAL :__s2_program_pos
-            LOCAL :__tmp_5 :i32
+            LOCAL :__tmp_1 :i32
             STORE
             PUSH 1 :i32
             LOCAL :__s2_program_pos
             BINARY :add
             LOCAL :__s2_program_pos
             STORE
-            LOCAL :__tmp_5
-            AS :u64
+            LOCAL :__tmp_1
+            AS :i64
             LOCAL :__s1_program
             BINARY :add
             DEREF
@@ -871,7 +878,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_filter_commands
     ENDLOOP
     PUSH 0 :u8
     LOCAL :__s2_program_pos
-    AS :u64
+    AS :i64
     LOCAL :__s1_program
     BINARY :add
     DEREF
@@ -897,19 +904,19 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_build_jumps
     AS :ptr<u8>
     PARAM 0
     BINARY :eq
-    LOCAL :__sc_or_0 :bool
+    LOCAL :__sc_or_2 :bool
     STORE
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_2
     IF
       THEN
       ELSE
         PUSH 0
         PARAM 1
         BINARY :eq
-        LOCAL :__sc_or_0
+        LOCAL :__sc_or_2
         STORE
     ENDIF
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_2
     IF
       THEN
         PUSH 0
@@ -974,7 +981,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_build_jumps
         BINARY :less
       BODY
         LOCAL :__s3_pc
-        AS :u64
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -993,7 +1000,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_build_jumps
             LOCAL :__s3_stack_top
             STORE
             LOCAL :__s3_stack_top
-            AS :u64
+            AS :i64
             LOCAL :__s2_stack
             BINARY :add
             DEREF
@@ -1011,15 +1018,15 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_build_jumps
                 IF
                   THEN
                     LOCAL :__s3_stack_top
-                    LOCAL :__tmp_6 :i32
+                    LOCAL :__tmp_3 :i32
                     STORE
                     PUSH 1 :i32
                     LOCAL :__s3_stack_top
                     BINARY :sub
                     LOCAL :__s3_stack_top
                     STORE
-                    LOCAL :__tmp_6
-                    AS :u64
+                    LOCAL :__tmp_3
+                    AS :i64
                     LOCAL :__s2_stack
                     BINARY :add
                     DEREF
@@ -1027,14 +1034,14 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_build_jumps
                     STORE
                     LOCAL :__s3_pc
                     LOCAL :__s8_left
-                    AS :u64
+                    AS :i64
                     LOCAL :__s1_jumps
                     BINARY :add
                     DEREF
                     STORE
                     LOCAL :__s8_left
                     LOCAL :__s3_pc
-                    AS :u64
+                    AS :i64
                     LOCAL :__s1_jumps
                     BINARY :add
                     DEREF
@@ -1070,22 +1077,22 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
     AS :ptr<u8>
     PARAM 0
     BINARY :eq
-    LOCAL :__sc_or_0 :bool
+    LOCAL :__sc_or_5 :bool
     STORE
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_5
     IF
       THEN
       ELSE
         PUSH 0
         PARAM 1
         BINARY :eq
-        LOCAL :__sc_or_0
+        LOCAL :__sc_or_5
         STORE
     ENDIF
-    LOCAL :__sc_or_0
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_5
+    LOCAL :__sc_or_4 :bool
     STORE
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_4
     IF
       THEN
       ELSE
@@ -1093,10 +1100,10 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         AS :ptr<i32>
         PARAM 2
         BINARY :eq
-        LOCAL :__sc_or_0
+        LOCAL :__sc_or_4
         STORE
     ENDIF
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_4
     IF
       THEN
         PUSH 0 :u32
@@ -1118,7 +1125,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         BINARY :less
       BODY
         LOCAL :__s1_pc
-        AS :u64
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -1179,26 +1186,36 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         GOTO :__switch_1_7
         GOTO :__switch_1_end
         LABEL :__switch_1_0
+        PUSH 43
+        STACK :drop
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_inc
         GOTO :__switch_1_end
         LABEL :__switch_1_1
+        PUSH 45
+        STACK :drop
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_dec
         GOTO :__switch_1_end
         LABEL :__switch_1_2
+        PUSH 62
+        STACK :drop
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_advance
         GOTO :__switch_1_end
         LABEL :__switch_1_3
+        PUSH 60
+        STACK :drop
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_devance
         GOTO :__switch_1_end
         LABEL :__switch_1_4
+        PUSH 91
+        STACK :drop
         PUSH 0
         LOCAL :__s1_tape
         ADDR
@@ -1208,7 +1225,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         IF
           THEN
             LOCAL :__s1_pc
-            AS :u64
+            AS :i64
             PARAM 2
             BINARY :add
             DEREF
@@ -1217,6 +1234,8 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         ENDIF
         GOTO :__switch_1_end
         LABEL :__switch_1_5
+        PUSH 93
+        STACK :drop
         PUSH 0
         LOCAL :__s1_tape
         ADDR
@@ -1226,7 +1245,7 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         IF
           THEN
             LOCAL :__s1_pc
-            AS :u64
+            AS :i64
             PARAM 2
             BINARY :add
             DEREF
@@ -1235,6 +1254,8 @@ FUNC :static_fn_brainfuck_array_c_BrainfuckArray_execute_program
         ENDIF
         GOTO :__switch_1_end
         LABEL :__switch_1_6
+        PUSH 46
+        STACK :drop
         LOCAL :__s1_tape
         ADDR
         CALL :static_fn_brainfuck_array_c_BrainfuckArray_Tape_get
@@ -1352,9 +1373,9 @@ FUNC :BrainfuckArray_warmup
     DEREF
     FIELD 1
     BINARY :eq
-    LOCAL :__sc_or_1 :bool
+    LOCAL :__sc_or_6 :bool
     STORE
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_6
     IF
       THEN
       ELSE
@@ -1363,10 +1384,10 @@ FUNC :BrainfuckArray_warmup
         DEREF
         FIELD 3
         BINARY :eq
-        LOCAL :__sc_or_1
+        LOCAL :__sc_or_6
         STORE
     ENDIF
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_6
     IF
       THEN
         RET
@@ -1459,9 +1480,9 @@ FUNC :BrainfuckArray_run
     DEREF
     FIELD 0
     BINARY :not_eq
-    LOCAL :__sc_and_1 :bool
+    LOCAL :__sc_and_8 :bool
     STORE
-    LOCAL :__sc_and_1
+    LOCAL :__sc_and_8
     IF
       THEN
         PUSH 0
@@ -1469,13 +1490,13 @@ FUNC :BrainfuckArray_run
         DEREF
         FIELD 2
         BINARY :more
-        LOCAL :__sc_and_1
+        LOCAL :__sc_and_8
         STORE
     ENDIF
-    LOCAL :__sc_and_1
-    LOCAL :__sc_and_1
+    LOCAL :__sc_and_8
+    LOCAL :__sc_and_7 :bool
     STORE
-    LOCAL :__sc_and_1
+    LOCAL :__sc_and_7
     IF
       THEN
         PUSH 0
@@ -1484,10 +1505,10 @@ FUNC :BrainfuckArray_run
         DEREF
         FIELD 4
         BINARY :not_eq
-        LOCAL :__sc_and_1
+        LOCAL :__sc_and_7
         STORE
     ENDIF
-    LOCAL :__sc_and_1
+    LOCAL :__sc_and_7
     IF
       THEN
         LOCAL :__s0_data
@@ -1540,9 +1561,9 @@ FUNC :BrainfuckArray_cleanup
     AS :ptr<Benchmark>
     PARAM 0
     BINARY :eq
-    LOCAL :__sc_or_0 :bool
+    LOCAL :__sc_or_9 :bool
     STORE
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_9
     IF
       THEN
       ELSE
@@ -1552,10 +1573,10 @@ FUNC :BrainfuckArray_cleanup
         DEREF
         FIELD 11
         BINARY :eq
-        LOCAL :__sc_or_0
+        LOCAL :__sc_or_9
         STORE
     ENDIF
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_9
     IF
       THEN
         RET

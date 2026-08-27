@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_buffer_hash_c_1
+  TYPE :__inline_type_buffer_hash_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_buffer_hash_c_2
+STRUCT :__inline_type_buffer_hash_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -268,7 +268,7 @@ STRUCT :BufferHashCRC32Data
   TYPE :BufferHashBaseData
 ENDSTRUCT
 
-ENUM :__inline_type_buffer_hash_c_1
+ENUM :__inline_type_buffer_hash_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -283,7 +283,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_buffer_hash_c_2
+    TYPE :__inline_type_buffer_hash_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -554,7 +554,6 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_base_prepare
         CALL :Helper_next_int
         AS :u8
         LOCAL :__s1_i
-        AS :u64
         PARAM 2
         DEREF
         FIELD 0
@@ -640,7 +639,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         LOCAL :__s1_hash_idx :u32
         STORE
         LOCAL :__s1_hash_idx
-        AS :u64
+        AS :i64
         LOCAL :__s0_hashes
         ADDR
         AS :ptr<u32>
@@ -660,7 +659,6 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         LOCAL :__s1_temp :u32
         STORE
         LOCAL :__s0_i
-        AS :u64
         PARAM 0
         BINARY :add
         DEREF
@@ -713,7 +711,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         PUSH 24
         AS :u32
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_hashes
         ADDR
         AS :ptr<u32>
@@ -725,7 +723,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         PUSH 4
         LOCAL :__s1_i
         BINARY :mul
-        AS :u64
+        AS :i64
         LOCAL :__s1_result "flat<u8, 32>"
         ADDR
         AS :ptr<u8>
@@ -736,7 +734,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         PUSH 16
         AS :u32
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_hashes
         ADDR
         AS :ptr<u32>
@@ -750,7 +748,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         LOCAL :__s1_i
         BINARY :mul
         BINARY :add
-        AS :u64
+        AS :i64
         LOCAL :__s1_result
         ADDR
         AS :ptr<u8>
@@ -761,7 +759,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         PUSH 8
         AS :u32
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_hashes
         ADDR
         AS :ptr<u32>
@@ -775,7 +773,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         LOCAL :__s1_i
         BINARY :mul
         BINARY :add
-        AS :u64
+        AS :i64
         LOCAL :__s1_result
         ADDR
         AS :ptr<u8>
@@ -784,7 +782,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         STORE
         PUSH 255 :u32
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_hashes
         ADDR
         AS :ptr<u32>
@@ -797,7 +795,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
         LOCAL :__s1_i
         BINARY :mul
         BINARY :add
-        AS :u64
+        AS :i64
         LOCAL :__s1_result
         ADDR
         AS :ptr<u8>
@@ -814,7 +812,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
     PUSH 24
     AS :u32
     PUSH 3
-    AS :u64
+    AS :i64
     LOCAL :__s1_result
     ADDR
     AS :ptr<u8>
@@ -825,7 +823,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
     PUSH 16
     AS :u32
     PUSH 2
-    AS :u64
+    AS :i64
     LOCAL :__s1_result
     ADDR
     AS :ptr<u8>
@@ -836,7 +834,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
     PUSH 8
     AS :u32
     PUSH 1
-    AS :u64
+    AS :i64
     LOCAL :__s1_result
     ADDR
     AS :ptr<u8>
@@ -845,7 +843,7 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_sha256_digest
     AS :u32
     BINARY :shl
     PUSH 0
-    AS :u64
+    AS :i64
     LOCAL :__s1_result
     ADDR
     AS :ptr<u8>
@@ -1023,7 +1021,6 @@ FUNC :static_fn_buffer_hash_c_buffer_hash_crc32_digest
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
         PARAM 0
         BINARY :add
         DEREF

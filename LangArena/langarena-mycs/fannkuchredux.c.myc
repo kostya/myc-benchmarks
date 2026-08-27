@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_fannkuchredux_c_1
+  TYPE :__inline_type_fannkuchredux_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_fannkuchredux_c_2
+STRUCT :__inline_type_fannkuchredux_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -259,7 +259,7 @@ STRUCT :FannkuchreduxData
   TYPE :u32
 ENDSTRUCT
 
-ENUM :__inline_type_fannkuchredux_c_1
+ENUM :__inline_type_fannkuchredux_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -274,7 +274,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_fannkuchredux_c_2
+    TYPE :__inline_type_fannkuchredux_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -528,7 +528,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
       BODY
         LOCAL :__s1_i
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_perm1 "flat<i32, 32>"
         ADDR
         AS :ptr<i32>
@@ -572,7 +572,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
             PUSH 1
             LOCAL :__s2_r
             BINARY :sub
-            AS :u64
+            AS :i64
             LOCAL :__s0_count "flat<i32, 32>"
             ADDR
             AS :ptr<i32>
@@ -603,7 +603,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
         LOCAL :__s4_flipsCount :i32
         STORE
         PUSH 0
-        AS :u64
+        AS :i64
         LOCAL :__s0_perm
         ADDR
         AS :ptr<i32>
@@ -639,7 +639,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
                 LOCAL :__s6_j :i32
                 STORE
                 LOCAL :__s6_j
-                AS :u64
+                AS :i64
                 LOCAL :__s0_perm
                 ADDR
                 AS :ptr<i32>
@@ -647,7 +647,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
                 DEREF
                 ADDR
                 LOCAL :__s5_i
-                AS :u64
+                AS :i64
                 LOCAL :__s0_perm
                 ADDR
                 AS :ptr<i32>
@@ -668,7 +668,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
             LOCAL :__s4_flipsCount
             STORE
             PUSH 0
-            AS :u64
+            AS :i64
             LOCAL :__s0_perm
             ADDR
             AS :ptr<i32>
@@ -696,15 +696,15 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
         IF
           THEN
             LOCAL :__s4_flipsCount
-            LOCAL :__ternary_12 :i32
+            LOCAL :__ternary_0 :i32
             STORE
           ELSE
             LOCAL :__s4_flipsCount
             UNARY :neg
-            LOCAL :__ternary_12
+            LOCAL :__ternary_0
             STORE
         ENDIF
-        LOCAL :__ternary_12
+        LOCAL :__ternary_0
         PARAM 1
         DEREF
         BINARY :add
@@ -725,7 +725,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
                 RET
             ENDIF
             PUSH 0
-            AS :u64
+            AS :i64
             LOCAL :__s0_perm1
             ADDR
             AS :ptr<i32>
@@ -745,14 +745,14 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
                 PUSH 1
                 LOCAL :__s9_i
                 BINARY :add
-                AS :u64
+                AS :i64
                 LOCAL :__s0_perm1
                 ADDR
                 AS :ptr<i32>
                 BINARY :add
                 DEREF
                 LOCAL :__s9_i
-                AS :u64
+                AS :i64
                 LOCAL :__s0_perm1
                 ADDR
                 AS :ptr<i32>
@@ -768,7 +768,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
             ENDLOOP
             LOCAL :__s9_perm0
             LOCAL :__s2_r
-            AS :u64
+            AS :i64
             LOCAL :__s0_perm1
             ADDR
             AS :ptr<i32>
@@ -777,7 +777,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
             STORE
             PUSH 1 :i32
             LOCAL :__s2_r
-            AS :u64
+            AS :i64
             LOCAL :__s0_count
             ADDR
             AS :ptr<i32>
@@ -785,7 +785,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
             DEREF
             BINARY :sub
             LOCAL :__s2_r
-            AS :u64
+            AS :i64
             LOCAL :__s0_count
             ADDR
             AS :ptr<i32>
@@ -794,7 +794,7 @@ FUNC :static_fn_fannkuchredux_c_fannkuchredux_calculate
             STORE
             PUSH 0
             LOCAL :__s2_r
-            AS :u64
+            AS :i64
             LOCAL :__s0_count
             ADDR
             AS :ptr<i32>

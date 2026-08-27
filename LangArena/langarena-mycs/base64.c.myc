@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_base64_c_1
+  TYPE :__inline_type_base64_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_base64_c_2
+STRUCT :__inline_type_base64_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -278,7 +278,7 @@ STRUCT :Base64DecodeData
   TYPE :u64
 ENDSTRUCT
 
-ENUM :__inline_type_base64_c_1
+ENUM :__inline_type_base64_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -293,7 +293,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_base64_c_2
+    TYPE :__inline_type_base64_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -644,6 +644,7 @@ FUNC :Base64Encode_prepare
     LOCAL :__s0_data
     DEREF
     FIELD 1
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 0
@@ -767,7 +768,7 @@ FUNC :Base64Encode_checksum
         STACK :drop
         PUSH 46 :u8
         PUSH 4
-        AS :u64
+        AS :i64
         LOCAL :__s0_input_preview
         ADDR
         AS :ptr<u8>
@@ -776,7 +777,7 @@ FUNC :Base64Encode_checksum
         STORE
         PUSH 46 :u8
         PUSH 5
-        AS :u64
+        AS :i64
         LOCAL :__s0_input_preview
         ADDR
         AS :ptr<u8>
@@ -785,7 +786,7 @@ FUNC :Base64Encode_checksum
         STORE
         PUSH 46 :u8
         PUSH 6
-        AS :u64
+        AS :i64
         LOCAL :__s0_input_preview
         ADDR
         AS :ptr<u8>
@@ -794,7 +795,7 @@ FUNC :Base64Encode_checksum
         STORE
         PUSH 0 :u8
         PUSH 7
-        AS :u64
+        AS :i64
         LOCAL :__s0_input_preview
         ADDR
         AS :ptr<u8>
@@ -817,6 +818,7 @@ FUNC :Base64Encode_checksum
         LOCAL :__s0_data
         DEREF
         FIELD 1
+        AS :i64
         LOCAL :__s0_input_preview
         ADDR
         AS :ptr<u8>
@@ -842,7 +844,7 @@ FUNC :Base64Encode_checksum
         STACK :drop
         PUSH 46 :u8
         PUSH 4
-        AS :u64
+        AS :i64
         LOCAL :__s2_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -851,7 +853,7 @@ FUNC :Base64Encode_checksum
         STORE
         PUSH 46 :u8
         PUSH 5
-        AS :u64
+        AS :i64
         LOCAL :__s2_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -860,7 +862,7 @@ FUNC :Base64Encode_checksum
         STORE
         PUSH 46 :u8
         PUSH 6
-        AS :u64
+        AS :i64
         LOCAL :__s2_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -869,7 +871,7 @@ FUNC :Base64Encode_checksum
         STORE
         PUSH 0 :u8
         PUSH 7
-        AS :u64
+        AS :i64
         LOCAL :__s2_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -892,6 +894,7 @@ FUNC :Base64Encode_checksum
         LOCAL :__s0_data
         DEREF
         FIELD 3
+        AS :i64
         LOCAL :__s2_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -1104,6 +1107,7 @@ FUNC :Base64Decode_prepare
     STACK :drop
     PUSH 0 :u8
     LOCAL :__s1_input_len
+    AS :i64
     LOCAL :__s1_input_str
     BINARY :add
     DEREF
@@ -1252,7 +1256,7 @@ FUNC :Base64Decode_checksum
         STACK :drop
         PUSH 46 :u8
         PUSH 4
-        AS :u64
+        AS :i64
         LOCAL :__s0_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -1261,7 +1265,7 @@ FUNC :Base64Decode_checksum
         STORE
         PUSH 46 :u8
         PUSH 5
-        AS :u64
+        AS :i64
         LOCAL :__s0_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -1270,7 +1274,7 @@ FUNC :Base64Decode_checksum
         STORE
         PUSH 46 :u8
         PUSH 6
-        AS :u64
+        AS :i64
         LOCAL :__s0_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -1279,7 +1283,7 @@ FUNC :Base64Decode_checksum
         STORE
         PUSH 0 :u8
         PUSH 7
-        AS :u64
+        AS :i64
         LOCAL :__s0_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -1302,6 +1306,7 @@ FUNC :Base64Decode_checksum
         LOCAL :__s0_data
         DEREF
         FIELD 1
+        AS :i64
         LOCAL :__s0_encoded_preview
         ADDR
         AS :ptr<u8>
@@ -1327,7 +1332,7 @@ FUNC :Base64Decode_checksum
         STACK :drop
         PUSH 46 :u8
         PUSH 4
-        AS :u64
+        AS :i64
         LOCAL :__s2_decoded_preview
         ADDR
         AS :ptr<u8>
@@ -1336,7 +1341,7 @@ FUNC :Base64Decode_checksum
         STORE
         PUSH 46 :u8
         PUSH 5
-        AS :u64
+        AS :i64
         LOCAL :__s2_decoded_preview
         ADDR
         AS :ptr<u8>
@@ -1345,7 +1350,7 @@ FUNC :Base64Decode_checksum
         STORE
         PUSH 46 :u8
         PUSH 6
-        AS :u64
+        AS :i64
         LOCAL :__s2_decoded_preview
         ADDR
         AS :ptr<u8>
@@ -1354,7 +1359,7 @@ FUNC :Base64Decode_checksum
         STORE
         PUSH 0 :u8
         PUSH 7
-        AS :u64
+        AS :i64
         LOCAL :__s2_decoded_preview
         ADDR
         AS :ptr<u8>
@@ -1377,6 +1382,7 @@ FUNC :Base64Decode_checksum
         LOCAL :__s0_data
         DEREF
         FIELD 3
+        AS :i64
         LOCAL :__s2_decoded_preview
         ADDR
         AS :ptr<u8>

@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_spectralnorm_c_1
+  TYPE :__inline_type_spectralnorm_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_spectralnorm_c_2
+STRUCT :__inline_type_spectralnorm_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -260,7 +260,7 @@ STRUCT :SpectralnormData
   TYPE :ptr<f64>
 ENDSTRUCT
 
-ENUM :__inline_type_spectralnorm_c_1
+ENUM :__inline_type_spectralnorm_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -275,7 +275,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_spectralnorm_c_2
+    TYPE :__inline_type_spectralnorm_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -566,7 +566,6 @@ FUNC :Spectralnorm_prepare
       BODY
         PUSH 1.0 :f64
         LOCAL :__s1_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -575,7 +574,6 @@ FUNC :Spectralnorm_prepare
         STORE
         PUSH 1.0 :f64
         LOCAL :__s1_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 2
@@ -663,7 +661,6 @@ FUNC :static_fn_spectralnorm_c_eval_A_times_u
             BINARY :less
           BODY
             LOCAL :__s1_j
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -684,7 +681,6 @@ FUNC :static_fn_spectralnorm_c_eval_A_times_u
         ENDLOOP
         LOCAL :__s1_sum
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_result
         BINARY :add
         DEREF
@@ -740,7 +736,6 @@ FUNC :static_fn_spectralnorm_c_eval_At_times_u
             BINARY :less
           BODY
             LOCAL :__s1_j
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -761,7 +756,6 @@ FUNC :static_fn_spectralnorm_c_eval_At_times_u
         ENDLOOP
         LOCAL :__s1_sum
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_result
         BINARY :add
         DEREF
@@ -884,14 +878,12 @@ FUNC :Spectralnorm_checksum
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 2
         BINARY :add
         DEREF
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -903,14 +895,12 @@ FUNC :Spectralnorm_checksum
         LOCAL :__s0_vBv
         STORE
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 2
         BINARY :add
         DEREF
         LOCAL :__s0_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 2

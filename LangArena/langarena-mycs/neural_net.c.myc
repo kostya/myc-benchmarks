@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_neural_net_c_1
+  TYPE :__inline_type_neural_net_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_neural_net_c_2
+STRUCT :__inline_type_neural_net_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -294,7 +294,7 @@ STRUCT :NeuralNetData
   TYPE :ptr<NeuralNetwork>
 ENDSTRUCT
 
-ENUM :__inline_type_neural_net_c_1
+ENUM :__inline_type_neural_net_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -309,7 +309,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_neural_net_c_2
+    TYPE :__inline_type_neural_net_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -557,7 +557,7 @@ FUNC :static_fn_neural_net_c_neuron_update_weights
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -789,7 +789,7 @@ FUNC :static_fn_neural_net_c_neuron_add_synapse_in
     FIELD 1
     STORE
     LOCAL :__tmp_0
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -844,7 +844,7 @@ FUNC :static_fn_neural_net_c_neuron_add_synapse_out
     PARAM 0
     DEREF
     FIELD 4
-    LOCAL :__tmp_0 :i32
+    LOCAL :__tmp_1 :i32
     STORE
     PUSH 1 :i32
     PARAM 0
@@ -855,8 +855,8 @@ FUNC :static_fn_neural_net_c_neuron_add_synapse_out
     DEREF
     FIELD 4
     STORE
-    LOCAL :__tmp_0
-    AS :u64
+    LOCAL :__tmp_1
+    AS :i64
     PARAM 0
     DEREF
     FIELD 3
@@ -906,7 +906,7 @@ FUNC :static_fn_neural_net_c_neuron_calculate_output
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -998,7 +998,7 @@ FUNC :static_fn_neural_net_c_neuron_hidden_train
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 3
@@ -1086,7 +1086,7 @@ FUNC :static_fn_neural_net_c_network_new
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 0
@@ -1157,7 +1157,7 @@ FUNC :static_fn_neural_net_c_network_new
       BODY
         LOCAL :__s1_i
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 2
@@ -1184,7 +1184,7 @@ FUNC :static_fn_neural_net_c_network_new
         PARAM 0
         BINARY :add
         LOCAL :__s2_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 4
@@ -1213,7 +1213,7 @@ FUNC :static_fn_neural_net_c_network_new
         BINARY :add
         BINARY :add
         LOCAL :__s3_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 6
@@ -1265,13 +1265,13 @@ FUNC :static_fn_neural_net_c_network_new
         BINARY :less
       BODY
         LOCAL :__s4_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 2
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 0
@@ -1290,13 +1290,13 @@ FUNC :static_fn_neural_net_c_network_new
             BINARY :less
           BODY
             LOCAL :__s5_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_net
             DEREF
             FIELD 4
             BINARY :add
             DEREF
-            AS :u64
+            AS :i64
             LOCAL :__s0_net
             DEREF
             FIELD 0
@@ -1308,7 +1308,7 @@ FUNC :static_fn_neural_net_c_network_new
             LOCAL :__s0_net
             DEREF
             FIELD 9
-            LOCAL :__tmp_9 :i32
+            LOCAL :__tmp_2 :i32
             STORE
             PUSH 1 :i32
             LOCAL :__s0_net
@@ -1319,8 +1319,8 @@ FUNC :static_fn_neural_net_c_network_new
             DEREF
             FIELD 9
             STORE
-            LOCAL :__tmp_9
-            AS :u64
+            LOCAL :__tmp_2
+            AS :i64
             LOCAL :__s0_net
             DEREF
             FIELD 8
@@ -1390,13 +1390,13 @@ FUNC :static_fn_neural_net_c_network_new
         BINARY :less
       BODY
         LOCAL :__s6_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 4
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         LOCAL :__s0_net
         DEREF
         FIELD 0
@@ -1415,13 +1415,13 @@ FUNC :static_fn_neural_net_c_network_new
             BINARY :less
           BODY
             LOCAL :__s7_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_net
             DEREF
             FIELD 6
             BINARY :add
             DEREF
-            AS :u64
+            AS :i64
             LOCAL :__s0_net
             DEREF
             FIELD 0
@@ -1433,7 +1433,7 @@ FUNC :static_fn_neural_net_c_network_new
             LOCAL :__s0_net
             DEREF
             FIELD 9
-            LOCAL :__tmp_16 :i32
+            LOCAL :__tmp_3 :i32
             STORE
             PUSH 1 :i32
             LOCAL :__s0_net
@@ -1444,8 +1444,8 @@ FUNC :static_fn_neural_net_c_network_new
             DEREF
             FIELD 9
             STORE
-            LOCAL :__tmp_16
-            AS :u64
+            LOCAL :__tmp_3
+            AS :i64
             LOCAL :__s0_net
             DEREF
             FIELD 8
@@ -1535,7 +1535,7 @@ FUNC :static_fn_neural_net_c_network_free
         BINARY :less
       BODY
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1545,7 +1545,7 @@ FUNC :static_fn_neural_net_c_network_free
         AS :ptr<void>
         CALL :free
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1611,18 +1611,18 @@ FUNC :static_fn_neural_net_c_network_train
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 1
         BINARY :add
         DEREF
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 2
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1649,13 +1649,13 @@ FUNC :static_fn_neural_net_c_network_train
         BINARY :less
       BODY
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 4
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1682,13 +1682,13 @@ FUNC :static_fn_neural_net_c_network_train
         BINARY :less
       BODY
         LOCAL :__s2_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 6
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1715,18 +1715,18 @@ FUNC :static_fn_neural_net_c_network_train
         BINARY :less
       BODY
         LOCAL :__s3_i
-        AS :u64
+        AS :i64
         PARAM 2
         BINARY :add
         DEREF
         LOCAL :__s3_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 6
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1753,13 +1753,13 @@ FUNC :static_fn_neural_net_c_network_train
         BINARY :less
       BODY
         LOCAL :__s4_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 4
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1795,18 +1795,18 @@ FUNC :static_fn_neural_net_c_network_feed_forward
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 1
         BINARY :add
         DEREF
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 2
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1833,13 +1833,13 @@ FUNC :static_fn_neural_net_c_network_feed_forward
         BINARY :less
       BODY
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 4
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1866,13 +1866,13 @@ FUNC :static_fn_neural_net_c_network_feed_forward
         BINARY :less
       BODY
         LOCAL :__s2_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 6
         BINARY :add
         DEREF
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -1898,13 +1898,13 @@ FUNC :static_fn_neural_net_c_network_get_output
     ATTR :private
   BODY
     PUSH 0
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 6
     BINARY :add
     DEREF
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0

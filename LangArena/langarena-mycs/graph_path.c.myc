@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_graph_path_c_1
+  TYPE :__inline_type_graph_path_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_graph_path_c_2
+STRUCT :__inline_type_graph_path_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -291,7 +291,7 @@ STRUCT :PriorityQueue
   TYPE :i32
 ENDSTRUCT
 
-ENUM :__inline_type_graph_path_c_1
+ENUM :__inline_type_graph_path_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -306,7 +306,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_graph_path_c_2
+    TYPE :__inline_type_graph_path_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -606,7 +606,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
       BODY
         PUSH 4
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_graph
         DEREF
         FIELD 5
@@ -615,7 +615,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
         STORE
         PUSH 4 :u64
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_graph
         DEREF
         FIELD 5
@@ -626,7 +626,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
         CALL :malloc
         AS :ptr<i32>
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_graph
         DEREF
         FIELD 3
@@ -635,7 +635,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_new
         STORE
         PUSH 0
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_graph
         DEREF
         FIELD 4
@@ -689,7 +689,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_free
             PUSH 0
             AS :ptr<i32>
             LOCAL :__s2_i
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 3
@@ -699,7 +699,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_free
             IF
               THEN
                 LOCAL :__s2_i
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 3
@@ -763,14 +763,14 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     ATTR :private
   BODY
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 5
     BINARY :add
     DEREF
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -781,7 +781,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
       THEN
         PUSH 2
         PARAM 1
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 5
@@ -789,7 +789,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         DEREF
         BINARY :mul
         PARAM 1
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 5
@@ -798,7 +798,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         STORE
         PUSH 4 :u64
         PARAM 1
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 5
@@ -807,7 +807,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         AS :u64
         BINARY :mul
         PARAM 1
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 3
@@ -817,7 +817,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         CALL :realloc
         AS :ptr<i32>
         PARAM 1
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 3
@@ -827,7 +827,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     ENDIF
     PARAM 2
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -837,7 +837,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     STORE
     PUSH 1 :i32
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -845,7 +845,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     DEREF
     BINARY :add
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -853,9 +853,9 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     DEREF
     STORE
     LOCAL :__tmp_0
-    AS :u64
+    AS :i64
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 3
@@ -865,14 +865,14 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     DEREF
     STORE
     PARAM 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 5
     BINARY :add
     DEREF
     PARAM 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -883,7 +883,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
       THEN
         PUSH 2
         PARAM 2
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 5
@@ -891,7 +891,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         DEREF
         BINARY :mul
         PARAM 2
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 5
@@ -900,7 +900,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         STORE
         PUSH 4 :u64
         PARAM 2
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 5
@@ -909,7 +909,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         AS :u64
         BINARY :mul
         PARAM 2
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 3
@@ -919,7 +919,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
         CALL :realloc
         AS :ptr<i32>
         PARAM 2
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 3
@@ -929,7 +929,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     ENDIF
     PARAM 1
     PARAM 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -939,7 +939,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     STORE
     PUSH 1 :i32
     PARAM 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -947,7 +947,7 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     DEREF
     BINARY :add
     PARAM 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 4
@@ -955,9 +955,9 @@ FUNC :static_fn_graph_path_c_graph_path_graph_add_edge
     DEREF
     STORE
     LOCAL :__tmp_1
-    AS :u64
+    AS :i64
     PARAM 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 3
@@ -1049,9 +1049,9 @@ FUNC :static_fn_graph_path_c_graph_path_graph_generate_random
             PUSH 0
             LOCAL :__s3_u
             BINARY :more_eq
-            LOCAL :__sc_and_6 :bool
+            LOCAL :__sc_and_3 :bool
             STORE
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_3
             IF
               THEN
                 PARAM 0
@@ -1059,22 +1059,22 @@ FUNC :static_fn_graph_path_c_graph_path_graph_generate_random
                 FIELD 0
                 LOCAL :__s3_u
                 BINARY :less
-                LOCAL :__sc_and_6
+                LOCAL :__sc_and_3
                 STORE
             ENDIF
-            LOCAL :__sc_and_6
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_3
+            LOCAL :__sc_and_2 :bool
             STORE
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_2
             IF
               THEN
                 LOCAL :__s1_v
                 LOCAL :__s3_u
                 BINARY :not_eq
-                LOCAL :__sc_and_6
+                LOCAL :__sc_and_2
                 STORE
             ENDIF
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_2
             IF
               THEN
                 LOCAL :__s3_u
@@ -1220,7 +1220,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
     STORE
     PUSH 1 :u8
     PARAM 1
-    AS :u64
+    AS :i64
     LOCAL :__s1_visited
     BINARY :add
     DEREF
@@ -1235,7 +1235,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
     LOCAL :__s1_rear
     STORE
     LOCAL :__tmp_4
-    AS :u64
+    AS :i64
     LOCAL :__s1_queue
     BINARY :add
     DEREF
@@ -1250,7 +1250,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
     LOCAL :__s1_rear
     STORE
     LOCAL :__tmp_5
-    AS :u64
+    AS :i64
     LOCAL :__s1_queue
     BINARY :add
     DEREF
@@ -1270,22 +1270,22 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
         LOCAL :__s1_front
         STORE
         LOCAL :__tmp_6
-        AS :u64
+        AS :i64
         LOCAL :__s1_queue
         BINARY :add
         DEREF
         LOCAL :__s2_v :i32
         STORE
         LOCAL :__s1_front
-        LOCAL :__tmp_8 :i32
+        LOCAL :__tmp_7 :i32
         STORE
         PUSH 1 :i32
         LOCAL :__s1_front
         BINARY :add
         LOCAL :__s1_front
         STORE
-        LOCAL :__tmp_8
-        AS :u64
+        LOCAL :__tmp_7
+        AS :i64
         LOCAL :__s1_queue
         BINARY :add
         DEREF
@@ -1297,7 +1297,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
         LOOP
           COND
             LOCAL :__s2_v
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 4
@@ -1307,9 +1307,9 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
             BINARY :less
           BODY
             LOCAL :__s2_i
-            AS :u64
+            AS :i64
             LOCAL :__s2_v
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 3
@@ -1337,7 +1337,7 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
             ENDIF
             PUSH 0 :u8
             LOCAL :__s3_neighbor
-            AS :u64
+            AS :i64
             LOCAL :__s1_visited
             BINARY :add
             DEREF
@@ -1346,22 +1346,22 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
               THEN
                 PUSH 1 :u8
                 LOCAL :__s3_neighbor
-                AS :u64
+                AS :i64
                 LOCAL :__s1_visited
                 BINARY :add
                 DEREF
                 STORE
                 LOCAL :__s3_neighbor
                 LOCAL :__s1_rear
-                LOCAL :__tmp_12 :i32
+                LOCAL :__tmp_8 :i32
                 STORE
                 PUSH 1 :i32
                 LOCAL :__s1_rear
                 BINARY :add
                 LOCAL :__s1_rear
                 STORE
-                LOCAL :__tmp_12
-                AS :u64
+                LOCAL :__tmp_8
+                AS :i64
                 LOCAL :__s1_queue
                 BINARY :add
                 DEREF
@@ -1370,15 +1370,15 @@ FUNC :static_fn_graph_path_c_graph_path_bfs_search
                 LOCAL :__s2_dist
                 BINARY :add
                 LOCAL :__s1_rear
-                LOCAL :__tmp_13 :i32
+                LOCAL :__tmp_9 :i32
                 STORE
                 PUSH 1 :i32
                 LOCAL :__s1_rear
                 BINARY :add
                 LOCAL :__s1_rear
                 STORE
-                LOCAL :__tmp_13
-                AS :u64
+                LOCAL :__tmp_9
+                AS :i64
                 LOCAL :__s1_queue
                 BINARY :add
                 DEREF
@@ -1601,7 +1601,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
     LOCAL :__s1_stack_top
     STORE
     LOCAL :__s1_stack_top
-    AS :u64
+    AS :i64
     LOCAL :__s1_stack
     BINARY :add
     DEREF
@@ -1613,7 +1613,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
     LOCAL :__s1_stack_top
     STORE
     LOCAL :__s1_stack_top
-    AS :u64
+    AS :i64
     LOCAL :__s1_stack
     BINARY :add
     DEREF
@@ -1625,30 +1625,30 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
         BINARY :more_eq
       BODY
         LOCAL :__s1_stack_top
-        LOCAL :__tmp_4 :i32
+        LOCAL :__tmp_10 :i32
         STORE
         PUSH 1 :i32
         LOCAL :__s1_stack_top
         BINARY :sub
         LOCAL :__s1_stack_top
         STORE
-        LOCAL :__tmp_4
-        AS :u64
+        LOCAL :__tmp_10
+        AS :i64
         LOCAL :__s1_stack
         BINARY :add
         DEREF
         LOCAL :__s2_dist :i32
         STORE
         LOCAL :__s1_stack_top
-        LOCAL :__tmp_6 :i32
+        LOCAL :__tmp_11 :i32
         STORE
         PUSH 1 :i32
         LOCAL :__s1_stack_top
         BINARY :sub
         LOCAL :__s1_stack_top
         STORE
-        LOCAL :__tmp_6
-        AS :u64
+        LOCAL :__tmp_11
+        AS :i64
         LOCAL :__s1_stack
         BINARY :add
         DEREF
@@ -1656,31 +1656,31 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
         STORE
         PUSH 0 :u8
         LOCAL :__s2_v
-        AS :u64
+        AS :i64
         LOCAL :__s1_visited
         BINARY :add
         DEREF
         BINARY :not_eq
-        LOCAL :__sc_or_8 :bool
+        LOCAL :__sc_or_12 :bool
         STORE
-        LOCAL :__sc_or_8
+        LOCAL :__sc_or_12
         IF
           THEN
           ELSE
             LOCAL :__s1_best_path
             LOCAL :__s2_dist
             BINARY :more_eq
-            LOCAL :__sc_or_8
+            LOCAL :__sc_or_12
             STORE
         ENDIF
-        LOCAL :__sc_or_8
+        LOCAL :__sc_or_12
         IF
           THEN
             NEXT
         ENDIF
         PUSH 1 :u8
         LOCAL :__s2_v
-        AS :u64
+        AS :i64
         LOCAL :__s1_visited
         BINARY :add
         DEREF
@@ -1691,7 +1691,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
         LOOP
           COND
             LOCAL :__s2_v
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 4
@@ -1701,9 +1701,9 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
             BINARY :less
           BODY
             LOCAL :__s3_i
-            AS :u64
+            AS :i64
             LOCAL :__s2_v
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 3
@@ -1734,7 +1734,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
               ELSE
                 PUSH 0 :u8
                 LOCAL :__s4_neighbor
-                AS :u64
+                AS :i64
                 LOCAL :__s1_visited
                 BINARY :add
                 DEREF
@@ -1748,7 +1748,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
                     LOCAL :__s1_stack_top
                     STORE
                     LOCAL :__s1_stack_top
-                    AS :u64
+                    AS :i64
                     LOCAL :__s1_stack
                     BINARY :add
                     DEREF
@@ -1762,7 +1762,7 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
                     LOCAL :__s1_stack_top
                     STORE
                     LOCAL :__s1_stack_top
-                    AS :u64
+                    AS :i64
                     LOCAL :__s1_stack
                     BINARY :add
                     DEREF
@@ -1789,14 +1789,14 @@ FUNC :static_fn_graph_path_c_graph_path_dfs_search
     IF
       THEN
         PUSH -1
-        LOCAL :__ternary_11 :i32
+        LOCAL :__ternary_13 :i32
         STORE
       ELSE
         LOCAL :__s1_best_path
-        LOCAL :__ternary_11
+        LOCAL :__ternary_13
         STORE
     ENDIF
-    LOCAL :__ternary_11
+    LOCAL :__ternary_13
     RET
 ENDFUNC
 
@@ -1972,7 +1972,7 @@ FUNC :static_fn_graph_path_c_priority_queue_push
         IF
           THEN
             PUSH 16
-            LOCAL :__ternary_0 :i32
+            LOCAL :__ternary_14 :i32
             STORE
           ELSE
             PUSH 2
@@ -1980,10 +1980,10 @@ FUNC :static_fn_graph_path_c_priority_queue_push
             DEREF
             FIELD 2
             BINARY :mul
-            LOCAL :__ternary_0
+            LOCAL :__ternary_14
             STORE
         ENDIF
-        LOCAL :__ternary_0
+        LOCAL :__ternary_14
         PARAM 0
         DEREF
         FIELD 2
@@ -2008,7 +2008,7 @@ FUNC :static_fn_graph_path_c_priority_queue_push
     PARAM 0
     DEREF
     FIELD 1
-    LOCAL :__tmp_1 :i32
+    LOCAL :__tmp_15 :i32
     STORE
     PUSH 1 :i32
     PARAM 0
@@ -2019,7 +2019,7 @@ FUNC :static_fn_graph_path_c_priority_queue_push
     DEREF
     FIELD 1
     STORE
-    LOCAL :__tmp_1
+    LOCAL :__tmp_15
     LOCAL :__s1_i :i32
     STORE
     LOOP
@@ -2037,7 +2037,7 @@ FUNC :static_fn_graph_path_c_priority_queue_push
         STORE
         PARAM 2
         LOCAL :__s2_parent
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -2050,14 +2050,14 @@ FUNC :static_fn_graph_path_c_priority_queue_push
             BREAK
         ENDIF
         LOCAL :__s2_parent
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
         BINARY :add
         DEREF
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -2072,7 +2072,7 @@ FUNC :static_fn_graph_path_c_priority_queue_push
     PARAM 1
     CREATE :PriorityQueueItem
     LOCAL :__s1_i
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -2090,7 +2090,7 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
     ATTR :private
   BODY
     PUSH 0
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -2117,7 +2117,7 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
         PARAM 0
         DEREF
         FIELD 1
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -2156,13 +2156,13 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
             FIELD 1
             LOCAL :__s2_left
             BINARY :less
-            LOCAL :__sc_and_6 :bool
+            LOCAL :__sc_and_16 :bool
             STORE
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_16
             IF
               THEN
                 LOCAL :__s2_smallest
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -2170,7 +2170,7 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
                 DEREF
                 FIELD 1
                 LOCAL :__s2_left
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -2178,10 +2178,10 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
                 DEREF
                 FIELD 1
                 BINARY :less
-                LOCAL :__sc_and_6
+                LOCAL :__sc_and_16
                 STORE
             ENDIF
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_16
             IF
               THEN
                 LOCAL :__s2_left
@@ -2193,13 +2193,13 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
             FIELD 1
             LOCAL :__s2_right
             BINARY :less
-            LOCAL :__sc_and_7 :bool
+            LOCAL :__sc_and_17 :bool
             STORE
-            LOCAL :__sc_and_7
+            LOCAL :__sc_and_17
             IF
               THEN
                 LOCAL :__s2_smallest
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -2207,7 +2207,7 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
                 DEREF
                 FIELD 1
                 LOCAL :__s2_right
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -2215,10 +2215,10 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
                 DEREF
                 FIELD 1
                 BINARY :less
-                LOCAL :__sc_and_7
+                LOCAL :__sc_and_17
                 STORE
             ENDIF
-            LOCAL :__sc_and_7
+            LOCAL :__sc_and_17
             IF
               THEN
                 LOCAL :__s2_right
@@ -2233,14 +2233,14 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
                 BREAK
             ENDIF
             LOCAL :__s2_smallest
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 0
             BINARY :add
             DEREF
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 0
@@ -2253,7 +2253,7 @@ FUNC :static_fn_graph_path_c_priority_queue_pop
         ENDLOOP
         LOCAL :__s1_last
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -2340,14 +2340,14 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
       BODY
         PUSH 2147483647
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s1_g_score
         BINARY :add
         DEREF
         STORE
         PUSH 2147483647
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s1_f_score
         BINARY :add
         DEREF
@@ -2361,7 +2361,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     ENDLOOP
     PUSH 0
     PARAM 1
-    AS :u64
+    AS :i64
     LOCAL :__s1_g_score
     BINARY :add
     DEREF
@@ -2370,7 +2370,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     PARAM 1
     CALL :static_fn_graph_path_c_heuristic
     PARAM 1
-    AS :u64
+    AS :i64
     LOCAL :__s1_f_score
     BINARY :add
     DEREF
@@ -2382,7 +2382,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     CALL :memset
     STACK :drop
     PARAM 1
-    AS :u64
+    AS :i64
     LOCAL :__s1_f_score
     BINARY :add
     DEREF
@@ -2401,7 +2401,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
     STORE
     PUSH 1 :u8
     PARAM 1
-    AS :u64
+    AS :i64
     LOCAL :__s2_in_open_set
     BINARY :add
     DEREF
@@ -2424,7 +2424,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
         STORE
         PUSH 0 :u8
         LOCAL :__s3_current
-        AS :u64
+        AS :i64
         LOCAL :__s2_in_open_set
         BINARY :add
         DEREF
@@ -2435,7 +2435,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
         IF
           THEN
             LOCAL :__s3_current
-            AS :u64
+            AS :i64
             LOCAL :__s1_g_score
             BINARY :add
             DEREF
@@ -2462,7 +2462,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
         ENDIF
         PUSH 1 :u8
         LOCAL :__s3_current
-        AS :u64
+        AS :i64
         LOCAL :__s1_visited
         BINARY :add
         DEREF
@@ -2473,7 +2473,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
         LOOP
           COND
             LOCAL :__s3_current
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 4
@@ -2483,9 +2483,9 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
             BINARY :less
           BODY
             LOCAL :__s4_i
-            AS :u64
+            AS :i64
             LOCAL :__s3_current
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 3
@@ -2497,7 +2497,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
             STORE
             PUSH 0 :u8
             LOCAL :__s5_neighbor
-            AS :u64
+            AS :i64
             LOCAL :__s1_visited
             BINARY :add
             DEREF
@@ -2508,7 +2508,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
             ENDIF
             PUSH 1
             LOCAL :__s3_current
-            AS :u64
+            AS :i64
             LOCAL :__s1_g_score
             BINARY :add
             DEREF
@@ -2516,7 +2516,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
             LOCAL :__s6_tentative_g :i32
             STORE
             LOCAL :__s5_neighbor
-            AS :u64
+            AS :i64
             LOCAL :__s1_g_score
             BINARY :add
             DEREF
@@ -2526,7 +2526,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
               THEN
                 LOCAL :__s6_tentative_g
                 LOCAL :__s5_neighbor
-                AS :u64
+                AS :i64
                 LOCAL :__s1_g_score
                 BINARY :add
                 DEREF
@@ -2540,14 +2540,14 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
                 STORE
                 LOCAL :__s7_f
                 LOCAL :__s5_neighbor
-                AS :u64
+                AS :i64
                 LOCAL :__s1_f_score
                 BINARY :add
                 DEREF
                 STORE
                 PUSH 0 :u8
                 LOCAL :__s5_neighbor
-                AS :u64
+                AS :i64
                 LOCAL :__s2_in_open_set
                 BINARY :add
                 DEREF
@@ -2561,7 +2561,7 @@ FUNC :static_fn_graph_path_c_graph_path_astar_search
                     CALL :static_fn_graph_path_c_priority_queue_push
                     PUSH 1 :u8
                     LOCAL :__s5_neighbor
-                    AS :u64
+                    AS :i64
                     LOCAL :__s2_in_open_set
                     BINARY :add
                     DEREF

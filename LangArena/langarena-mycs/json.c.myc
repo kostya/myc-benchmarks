@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_json_c_1
+  TYPE :__inline_type_json_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_json_c_2
+STRUCT :__inline_type_json_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -403,7 +403,7 @@ STRUCT :JsonParseMappingData
   TYPE :i64
 ENDSTRUCT
 
-ENUM :__inline_type_json_c_1
+ENUM :__inline_type_json_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -418,7 +418,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_json_c_2
+    TYPE :__inline_type_json_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -1266,7 +1266,6 @@ FUNC :JsonGenerate_prepare
         CALL :Helper_next_float
         CALL :static_fn_json_c_round_to_8_digits
         LOCAL :__s2_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1278,7 +1277,6 @@ FUNC :JsonGenerate_prepare
         CALL :Helper_next_float
         CALL :static_fn_json_c_round_to_8_digits
         LOCAL :__s2_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1290,7 +1288,6 @@ FUNC :JsonGenerate_prepare
         CALL :Helper_next_float
         CALL :static_fn_json_c_round_to_8_digits
         LOCAL :__s2_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1305,7 +1302,6 @@ FUNC :JsonGenerate_prepare
         PUSH "%.7f %u"
         PUSH 64 :u64
         LOCAL :__s2_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1318,7 +1314,6 @@ FUNC :JsonGenerate_prepare
         STACK :drop
         PUSH 1
         LOCAL :__s2_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1328,7 +1323,6 @@ FUNC :JsonGenerate_prepare
         STORE
         PUSH 1 :bool
         LOCAL :__s2_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1428,7 +1422,6 @@ FUNC :JsonGenerate_run
         BINARY :less
       BODY
         LOCAL :__s2_i
-        AS :u64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1560,9 +1553,9 @@ FUNC :JsonGenerate_run
     DEREF
     FIELD 2
     BINARY :not_eq
-    LOCAL :__sc_and_9 :bool
+    LOCAL :__sc_and_1 :bool
     STORE
-    LOCAL :__sc_and_9
+    LOCAL :__sc_and_1
     IF
       THEN
         PUSH 15 :u64
@@ -1571,13 +1564,13 @@ FUNC :JsonGenerate_run
         FIELD 2
         CALL :strlen
         BINARY :more_eq
-        LOCAL :__sc_and_9
+        LOCAL :__sc_and_1
         STORE
     ENDIF
-    LOCAL :__sc_and_9
-    LOCAL :__sc_and_9
+    LOCAL :__sc_and_1
+    LOCAL :__sc_and_0 :bool
     STORE
-    LOCAL :__sc_and_9
+    LOCAL :__sc_and_0
     IF
       THEN
         PUSH 0
@@ -1588,10 +1581,10 @@ FUNC :JsonGenerate_run
         FIELD 2
         CALL :strncmp
         BINARY :eq
-        LOCAL :__sc_and_9
+        LOCAL :__sc_and_0
         STORE
     ENDIF
-    LOCAL :__sc_and_9
+    LOCAL :__sc_and_0
     IF
       THEN
         PUSH 1 :u32
@@ -1762,16 +1755,16 @@ FUNC :JsonGenerate_get_result
         DEREF
         FIELD 2
         CALL :strdup
-        LOCAL :__ternary_1 :ptr<u8>
+        LOCAL :__ternary_2 :ptr<u8>
         STORE
       ELSE
         PUSH 0
         AS :ptr<void>
         AS :ptr<u8>
-        LOCAL :__ternary_1
+        LOCAL :__ternary_2
         STORE
     ENDIF
-    LOCAL :__ternary_1
+    LOCAL :__ternary_2
     RET
 ENDFUNC
 
@@ -1919,19 +1912,19 @@ FUNC :JsonParseDom_run
     AS :ptr<yyjson_val>
     LOCAL :__s2_coordinates
     BINARY :eq
-    LOCAL :__sc_or_4 :bool
+    LOCAL :__sc_or_3 :bool
     STORE
-    LOCAL :__sc_or_4
+    LOCAL :__sc_or_3
     IF
       THEN
       ELSE
         LOCAL :__s2_coordinates
         CALL :static_fn_json_c_yyjson_is_arr
         UNARY :lnot
-        LOCAL :__sc_or_4
+        LOCAL :__sc_or_3
         STORE
     ENDIF
-    LOCAL :__sc_or_4
+    LOCAL :__sc_or_3
     IF
       THEN
         LOCAL :__s0_doc
@@ -1993,65 +1986,65 @@ FUNC :JsonParseDom_run
         AS :ptr<yyjson_val>
         LOCAL :__s6_x_val
         BINARY :not_eq
-        LOCAL :__sc_and_15 :bool
+        LOCAL :__sc_and_8 :bool
         STORE
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_8
         IF
           THEN
             PUSH 0
             AS :ptr<yyjson_val>
             LOCAL :__s6_y_val
             BINARY :not_eq
-            LOCAL :__sc_and_15
+            LOCAL :__sc_and_8
             STORE
         ENDIF
-        LOCAL :__sc_and_15
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_8
+        LOCAL :__sc_and_7 :bool
         STORE
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_7
         IF
           THEN
             PUSH 0
             AS :ptr<yyjson_val>
             LOCAL :__s6_z_val
             BINARY :not_eq
-            LOCAL :__sc_and_15
+            LOCAL :__sc_and_7
             STORE
         ENDIF
-        LOCAL :__sc_and_15
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_7
+        LOCAL :__sc_and_6 :bool
         STORE
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_6
         IF
           THEN
             LOCAL :__s6_x_val
             CALL :static_fn_json_c_yyjson_is_num
-            LOCAL :__sc_and_15
+            LOCAL :__sc_and_6
             STORE
         ENDIF
-        LOCAL :__sc_and_15
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_6
+        LOCAL :__sc_and_5 :bool
         STORE
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_5
         IF
           THEN
             LOCAL :__s6_y_val
             CALL :static_fn_json_c_yyjson_is_num
-            LOCAL :__sc_and_15
+            LOCAL :__sc_and_5
             STORE
         ENDIF
-        LOCAL :__sc_and_15
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_5
+        LOCAL :__sc_and_4 :bool
         STORE
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_4
         IF
           THEN
             LOCAL :__s6_z_val
             CALL :static_fn_json_c_yyjson_is_num
-            LOCAL :__sc_and_15
+            LOCAL :__sc_and_4
             STORE
         ENDIF
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_4
         IF
           THEN
             LOCAL :__s6_x_val
@@ -2338,19 +2331,19 @@ FUNC :JsonParseMapping_run
     AS :ptr<yyjson_val>
     LOCAL :__s2_coordinates
     BINARY :eq
-    LOCAL :__sc_or_4 :bool
+    LOCAL :__sc_or_9 :bool
     STORE
-    LOCAL :__sc_or_4
+    LOCAL :__sc_or_9
     IF
       THEN
       ELSE
         LOCAL :__s2_coordinates
         CALL :static_fn_json_c_yyjson_is_arr
         UNARY :lnot
-        LOCAL :__sc_or_4
+        LOCAL :__sc_or_9
         STORE
     ENDIF
-    LOCAL :__sc_or_4
+    LOCAL :__sc_or_9
     IF
       THEN
         LOCAL :__s0_doc
@@ -2412,32 +2405,32 @@ FUNC :JsonParseMapping_run
         AS :ptr<yyjson_val>
         LOCAL :__s6_x_val
         BINARY :not_eq
-        LOCAL :__sc_and_15 :bool
+        LOCAL :__sc_and_11 :bool
         STORE
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_11
         IF
           THEN
             PUSH 0
             AS :ptr<yyjson_val>
             LOCAL :__s6_y_val
             BINARY :not_eq
-            LOCAL :__sc_and_15
+            LOCAL :__sc_and_11
             STORE
         ENDIF
-        LOCAL :__sc_and_15
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_11
+        LOCAL :__sc_and_10 :bool
         STORE
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_10
         IF
           THEN
             PUSH 0
             AS :ptr<yyjson_val>
             LOCAL :__s6_z_val
             BINARY :not_eq
-            LOCAL :__sc_and_15
+            LOCAL :__sc_and_10
             STORE
         ENDIF
-        LOCAL :__sc_and_15
+        LOCAL :__sc_and_10
         IF
           THEN
             LOCAL :__s6_x_val
@@ -2698,16 +2691,16 @@ FUNC :static_fn_json_c_yyjson_doc_get_root
         PARAM 0
         DEREF
         FIELD 0
-        LOCAL :__ternary_0 :ptr<yyjson_val>
+        LOCAL :__ternary_12 :ptr<yyjson_val>
         STORE
       ELSE
         PUSH 0
         AS :ptr<void>
         AS :ptr<yyjson_val>
-        LOCAL :__ternary_0
+        LOCAL :__ternary_12
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_12
     RET
 ENDFUNC
 
@@ -2782,16 +2775,16 @@ FUNC :static_fn_json_c_yyjson_is_num
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_is_num
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_13 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_13
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_13
     RET
 ENDFUNC
 
@@ -2812,16 +2805,16 @@ FUNC :static_fn_json_c_yyjson_is_arr
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_is_arr
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_14 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_14
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_14
     RET
 ENDFUNC
 
@@ -2842,16 +2835,16 @@ FUNC :static_fn_json_c_yyjson_is_obj
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_is_obj
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_15 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_15
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_15
     RET
 ENDFUNC
 
@@ -2872,14 +2865,14 @@ FUNC :static_fn_json_c_yyjson_get_num
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_get_num
-        LOCAL :__ternary_0 :f64
+        LOCAL :__ternary_16 :f64
         STORE
       ELSE
         PUSH 0.0 :f64
-        LOCAL :__ternary_0
+        LOCAL :__ternary_16
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_16
     RET
 ENDFUNC
 
@@ -2898,14 +2891,14 @@ FUNC :static_fn_json_c_yyjson_arr_size
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_get_len
-        LOCAL :__ternary_0 :u64
+        LOCAL :__ternary_17 :u64
         STORE
       ELSE
         PUSH 0 :u64
-        LOCAL :__ternary_0
+        LOCAL :__ternary_17
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_17
     RET
 ENDFUNC
 
@@ -2966,14 +2959,14 @@ FUNC :static_fn_json_c_yyjson_obj_get
       THEN
         PARAM 1
         CALL :strlen
-        LOCAL :__ternary_0 :u64
+        LOCAL :__ternary_18 :u64
         STORE
       ELSE
         PUSH 0 :u64
-        LOCAL :__ternary_0
+        LOCAL :__ternary_18
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_18
     PARAM 1
     PARAM 0
     CALL :static_fn_json_c_yyjson_obj_getn
@@ -3063,19 +3056,19 @@ FUNC :static_fn_json_c_yyjson_mut_str
     AS :ptr<yyjson_mut_doc>
     PARAM 0
     BINARY :not_eq
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_19 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_19
     IF
       THEN
         PUSH 0
         AS :ptr<u8>
         PARAM 1
         BINARY :not_eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_19
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_19
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -3125,19 +3118,19 @@ FUNC :static_fn_json_c_yyjson_mut_strcpy
     AS :ptr<yyjson_mut_doc>
     PARAM 0
     BINARY :not_eq
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_20 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_20
     IF
       THEN
         PUSH 0
         AS :ptr<u8>
         PARAM 1
         BINARY :not_eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_20
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_20
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -3172,14 +3165,14 @@ FUNC :static_fn_json_c_yyjson_mut_strcpy
             IF
               THEN
                 PUSH 8
-                LOCAL :__ternary_4 :i32
+                LOCAL :__ternary_21 :i32
                 STORE
               ELSE
                 PUSH 0
-                LOCAL :__ternary_4
+                LOCAL :__ternary_21
                 STORE
             ENDIF
-            LOCAL :__ternary_4
+            LOCAL :__ternary_21
             AS :u8
             LOCAL :__s3_sub :u8
             STORE
@@ -3207,7 +3200,8 @@ FUNC :static_fn_json_c_yyjson_mut_strcpy
             ENDIF
             LOCAL :__s3_len
             LOCAL :__s3_sub
-            PUSH 5 :u8
+            PUSH 5
+            AS :u8
             LOCAL :__s1_val
             AS :ptr<void>
             CALL :static_fn_json_c_unsafe_yyjson_set_tag
@@ -3288,19 +3282,19 @@ FUNC :static_fn_json_c_yyjson_mut_arr_append
     PUSH 0 :i64
     PARAM 0
     CALL :static_fn_json_c_yyjson_mut_is_arr
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_22 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_22
     IF
       THEN
         PUSH 0
         AS :ptr<yyjson_mut_val>
         PARAM 1
         BINARY :not_eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_22
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_22
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -3383,17 +3377,17 @@ FUNC :static_fn_json_c_yyjson_mut_arr_add_bool
     AS :ptr<yyjson_mut_doc>
     PARAM 0
     BINARY :not_eq
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_23 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_23
     IF
       THEN
         PARAM 1
         CALL :static_fn_json_c_yyjson_mut_is_arr
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_23
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_23
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -3429,17 +3423,17 @@ FUNC :static_fn_json_c_yyjson_mut_arr_add_uint
     AS :ptr<yyjson_mut_doc>
     PARAM 0
     BINARY :not_eq
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_24 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_24
     IF
       THEN
         PARAM 1
         CALL :static_fn_json_c_yyjson_mut_is_arr
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_24
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_24
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -3521,30 +3515,30 @@ FUNC :static_fn_json_c_yyjson_mut_obj_add
     PUSH 0 :i64
     PARAM 0
     CALL :static_fn_json_c_yyjson_mut_is_obj
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_26 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_26
     IF
       THEN
         PARAM 1
         CALL :static_fn_json_c_yyjson_mut_is_str
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_26
         STORE
     ENDIF
-    LOCAL :__sc_and_0
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_26
+    LOCAL :__sc_and_25 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_25
     IF
       THEN
         PUSH 0
         AS :ptr<yyjson_mut_val>
         PARAM 2
         BINARY :not_eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_25
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_25
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -3589,14 +3583,14 @@ FUNC :static_fn_json_c_unsafe_yyjson_get_next
     IF
       THEN
         LOCAL :__s0_ctn_ofs
-        LOCAL :__ternary_2 :u64
+        LOCAL :__ternary_27 :u64
         STORE
       ELSE
         PUSH 16 :u64
-        LOCAL :__ternary_2
+        LOCAL :__ternary_27
         STORE
     ENDIF
-    LOCAL :__ternary_2
+    LOCAL :__ternary_27
     LOCAL :__s0_ofs :u64
     STORE
     PARAM 0
@@ -3628,19 +3622,19 @@ FUNC :static_fn_json_c_yyjson_obj_getn
     PUSH 0 :i64
     PARAM 0
     CALL :static_fn_json_c_yyjson_is_obj
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_28 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_28
     IF
       THEN
         PUSH 0
         AS :ptr<u8>
         PARAM 1
         BINARY :not_eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_28
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_28
     UNARY :lnot
     UNARY :lnot
     AS :i64
@@ -3660,14 +3654,14 @@ FUNC :static_fn_json_c_yyjson_obj_getn
           COND
             PUSH 0 :u64
             LOCAL :__s1_len
-            LOCAL :__tmp_3 :u64
+            LOCAL :__tmp_29 :u64
             STORE
             PUSH 1 :u64
             LOCAL :__s1_len
             BINARY :sub
             LOCAL :__s1_len
             STORE
-            LOCAL :__tmp_3
+            LOCAL :__tmp_29
             BINARY :more
           BODY
             PARAM 2
@@ -3715,16 +3709,16 @@ FUNC :static_fn_json_c_yyjson_mut_is_str
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_is_str
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_30 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_30
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_30
     RET
 ENDFUNC
 
@@ -3745,16 +3739,16 @@ FUNC :static_fn_json_c_yyjson_mut_is_arr
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_is_arr
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_31 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_31
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_31
     RET
 ENDFUNC
 
@@ -3775,16 +3769,16 @@ FUNC :static_fn_json_c_yyjson_mut_is_obj
         PARAM 0
         AS :ptr<void>
         CALL :static_fn_json_c_unsafe_yyjson_is_obj
-        LOCAL :__ternary_0 :bool
+        LOCAL :__ternary_32 :bool
         STORE
       ELSE
         PUSH 0
         PUSH 0
         BINARY :not_eq
-        LOCAL :__ternary_0
+        LOCAL :__ternary_32
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_32
     RET
 ENDFUNC
 
@@ -3896,18 +3890,18 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
     PUSH 0
     PUSH 0
     BINARY :not_eq
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_33 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_33
     IF
       THEN
         PUSH 32 :u64
         PARAM 1
         BINARY :less_eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_33
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_33
     IF
       THEN
         PARAM 1
@@ -3916,7 +3910,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 0
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -3926,9 +3920,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s2_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_2 :bool
+            LOCAL :__sc_or_36 :bool
             STORE
-            LOCAL :__sc_or_2
+            LOCAL :__sc_or_36
             IF
               THEN
               ELSE
@@ -3936,13 +3930,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s2_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_2
+                LOCAL :__sc_or_36
                 STORE
             ENDIF
-            LOCAL :__sc_or_2
-            LOCAL :__sc_or_2
+            LOCAL :__sc_or_36
+            LOCAL :__sc_or_35 :bool
             STORE
-            LOCAL :__sc_or_2
+            LOCAL :__sc_or_35
             IF
               THEN
               ELSE
@@ -3950,13 +3944,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s2_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_2
+                LOCAL :__sc_or_35
                 STORE
             ENDIF
-            LOCAL :__sc_or_2
-            LOCAL :__sc_or_2
+            LOCAL :__sc_or_35
+            LOCAL :__sc_or_34 :bool
             STORE
-            LOCAL :__sc_or_2
+            LOCAL :__sc_or_34
             IF
               THEN
               ELSE
@@ -3964,10 +3958,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s2_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_2
+                LOCAL :__sc_or_34
                 STORE
             ENDIF
-            LOCAL :__sc_or_2
+            LOCAL :__sc_or_34
             IF
               THEN
                 PUSH 0 :bool
@@ -3980,7 +3974,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 1
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -3990,9 +3984,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s4_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_4 :bool
+            LOCAL :__sc_or_39 :bool
             STORE
-            LOCAL :__sc_or_4
+            LOCAL :__sc_or_39
             IF
               THEN
               ELSE
@@ -4000,13 +3994,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s4_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_4
+                LOCAL :__sc_or_39
                 STORE
             ENDIF
-            LOCAL :__sc_or_4
-            LOCAL :__sc_or_4
+            LOCAL :__sc_or_39
+            LOCAL :__sc_or_38 :bool
             STORE
-            LOCAL :__sc_or_4
+            LOCAL :__sc_or_38
             IF
               THEN
               ELSE
@@ -4014,13 +4008,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s4_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_4
+                LOCAL :__sc_or_38
                 STORE
             ENDIF
-            LOCAL :__sc_or_4
-            LOCAL :__sc_or_4
+            LOCAL :__sc_or_38
+            LOCAL :__sc_or_37 :bool
             STORE
-            LOCAL :__sc_or_4
+            LOCAL :__sc_or_37
             IF
               THEN
               ELSE
@@ -4028,10 +4022,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s4_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_4
+                LOCAL :__sc_or_37
                 STORE
             ENDIF
-            LOCAL :__sc_or_4
+            LOCAL :__sc_or_37
             IF
               THEN
                 PUSH 0 :bool
@@ -4044,7 +4038,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 2
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4054,9 +4048,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s6_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_6 :bool
+            LOCAL :__sc_or_42 :bool
             STORE
-            LOCAL :__sc_or_6
+            LOCAL :__sc_or_42
             IF
               THEN
               ELSE
@@ -4064,13 +4058,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s6_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_6
+                LOCAL :__sc_or_42
                 STORE
             ENDIF
-            LOCAL :__sc_or_6
-            LOCAL :__sc_or_6
+            LOCAL :__sc_or_42
+            LOCAL :__sc_or_41 :bool
             STORE
-            LOCAL :__sc_or_6
+            LOCAL :__sc_or_41
             IF
               THEN
               ELSE
@@ -4078,13 +4072,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s6_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_6
+                LOCAL :__sc_or_41
                 STORE
             ENDIF
-            LOCAL :__sc_or_6
-            LOCAL :__sc_or_6
+            LOCAL :__sc_or_41
+            LOCAL :__sc_or_40 :bool
             STORE
-            LOCAL :__sc_or_6
+            LOCAL :__sc_or_40
             IF
               THEN
               ELSE
@@ -4092,10 +4086,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s6_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_6
+                LOCAL :__sc_or_40
                 STORE
             ENDIF
-            LOCAL :__sc_or_6
+            LOCAL :__sc_or_40
             IF
               THEN
                 PUSH 0 :bool
@@ -4108,7 +4102,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 3
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4118,9 +4112,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s8_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_8 :bool
+            LOCAL :__sc_or_45 :bool
             STORE
-            LOCAL :__sc_or_8
+            LOCAL :__sc_or_45
             IF
               THEN
               ELSE
@@ -4128,13 +4122,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s8_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_8
+                LOCAL :__sc_or_45
                 STORE
             ENDIF
-            LOCAL :__sc_or_8
-            LOCAL :__sc_or_8
+            LOCAL :__sc_or_45
+            LOCAL :__sc_or_44 :bool
             STORE
-            LOCAL :__sc_or_8
+            LOCAL :__sc_or_44
             IF
               THEN
               ELSE
@@ -4142,13 +4136,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s8_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_8
+                LOCAL :__sc_or_44
                 STORE
             ENDIF
-            LOCAL :__sc_or_8
-            LOCAL :__sc_or_8
+            LOCAL :__sc_or_44
+            LOCAL :__sc_or_43 :bool
             STORE
-            LOCAL :__sc_or_8
+            LOCAL :__sc_or_43
             IF
               THEN
               ELSE
@@ -4156,10 +4150,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s8_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_8
+                LOCAL :__sc_or_43
                 STORE
             ENDIF
-            LOCAL :__sc_or_8
+            LOCAL :__sc_or_43
             IF
               THEN
                 PUSH 0 :bool
@@ -4172,7 +4166,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 4
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4182,9 +4176,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s10_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_10 :bool
+            LOCAL :__sc_or_48 :bool
             STORE
-            LOCAL :__sc_or_10
+            LOCAL :__sc_or_48
             IF
               THEN
               ELSE
@@ -4192,13 +4186,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s10_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_10
+                LOCAL :__sc_or_48
                 STORE
             ENDIF
-            LOCAL :__sc_or_10
-            LOCAL :__sc_or_10
+            LOCAL :__sc_or_48
+            LOCAL :__sc_or_47 :bool
             STORE
-            LOCAL :__sc_or_10
+            LOCAL :__sc_or_47
             IF
               THEN
               ELSE
@@ -4206,13 +4200,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s10_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_10
+                LOCAL :__sc_or_47
                 STORE
             ENDIF
-            LOCAL :__sc_or_10
-            LOCAL :__sc_or_10
+            LOCAL :__sc_or_47
+            LOCAL :__sc_or_46 :bool
             STORE
-            LOCAL :__sc_or_10
+            LOCAL :__sc_or_46
             IF
               THEN
               ELSE
@@ -4220,10 +4214,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s10_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_10
+                LOCAL :__sc_or_46
                 STORE
             ENDIF
-            LOCAL :__sc_or_10
+            LOCAL :__sc_or_46
             IF
               THEN
                 PUSH 0 :bool
@@ -4236,7 +4230,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 5
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4246,9 +4240,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s12_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_12 :bool
+            LOCAL :__sc_or_51 :bool
             STORE
-            LOCAL :__sc_or_12
+            LOCAL :__sc_or_51
             IF
               THEN
               ELSE
@@ -4256,13 +4250,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s12_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_12
+                LOCAL :__sc_or_51
                 STORE
             ENDIF
-            LOCAL :__sc_or_12
-            LOCAL :__sc_or_12
+            LOCAL :__sc_or_51
+            LOCAL :__sc_or_50 :bool
             STORE
-            LOCAL :__sc_or_12
+            LOCAL :__sc_or_50
             IF
               THEN
               ELSE
@@ -4270,13 +4264,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s12_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_12
+                LOCAL :__sc_or_50
                 STORE
             ENDIF
-            LOCAL :__sc_or_12
-            LOCAL :__sc_or_12
+            LOCAL :__sc_or_50
+            LOCAL :__sc_or_49 :bool
             STORE
-            LOCAL :__sc_or_12
+            LOCAL :__sc_or_49
             IF
               THEN
               ELSE
@@ -4284,10 +4278,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s12_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_12
+                LOCAL :__sc_or_49
                 STORE
             ENDIF
-            LOCAL :__sc_or_12
+            LOCAL :__sc_or_49
             IF
               THEN
                 PUSH 0 :bool
@@ -4300,7 +4294,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 6
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4310,9 +4304,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s14_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_14 :bool
+            LOCAL :__sc_or_54 :bool
             STORE
-            LOCAL :__sc_or_14
+            LOCAL :__sc_or_54
             IF
               THEN
               ELSE
@@ -4320,13 +4314,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s14_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_14
+                LOCAL :__sc_or_54
                 STORE
             ENDIF
-            LOCAL :__sc_or_14
-            LOCAL :__sc_or_14
+            LOCAL :__sc_or_54
+            LOCAL :__sc_or_53 :bool
             STORE
-            LOCAL :__sc_or_14
+            LOCAL :__sc_or_53
             IF
               THEN
               ELSE
@@ -4334,13 +4328,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s14_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_14
+                LOCAL :__sc_or_53
                 STORE
             ENDIF
-            LOCAL :__sc_or_14
-            LOCAL :__sc_or_14
+            LOCAL :__sc_or_53
+            LOCAL :__sc_or_52 :bool
             STORE
-            LOCAL :__sc_or_14
+            LOCAL :__sc_or_52
             IF
               THEN
               ELSE
@@ -4348,10 +4342,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s14_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_14
+                LOCAL :__sc_or_52
                 STORE
             ENDIF
-            LOCAL :__sc_or_14
+            LOCAL :__sc_or_52
             IF
               THEN
                 PUSH 0 :bool
@@ -4364,7 +4358,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 7
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4374,9 +4368,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s16_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_16 :bool
+            LOCAL :__sc_or_57 :bool
             STORE
-            LOCAL :__sc_or_16
+            LOCAL :__sc_or_57
             IF
               THEN
               ELSE
@@ -4384,13 +4378,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s16_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_16
+                LOCAL :__sc_or_57
                 STORE
             ENDIF
-            LOCAL :__sc_or_16
-            LOCAL :__sc_or_16
+            LOCAL :__sc_or_57
+            LOCAL :__sc_or_56 :bool
             STORE
-            LOCAL :__sc_or_16
+            LOCAL :__sc_or_56
             IF
               THEN
               ELSE
@@ -4398,13 +4392,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s16_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_16
+                LOCAL :__sc_or_56
                 STORE
             ENDIF
-            LOCAL :__sc_or_16
-            LOCAL :__sc_or_16
+            LOCAL :__sc_or_56
+            LOCAL :__sc_or_55 :bool
             STORE
-            LOCAL :__sc_or_16
+            LOCAL :__sc_or_55
             IF
               THEN
               ELSE
@@ -4412,10 +4406,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s16_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_16
+                LOCAL :__sc_or_55
                 STORE
             ENDIF
-            LOCAL :__sc_or_16
+            LOCAL :__sc_or_55
             IF
               THEN
                 PUSH 0 :bool
@@ -4428,7 +4422,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 8
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4438,9 +4432,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s18_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_18 :bool
+            LOCAL :__sc_or_60 :bool
             STORE
-            LOCAL :__sc_or_18
+            LOCAL :__sc_or_60
             IF
               THEN
               ELSE
@@ -4448,13 +4442,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s18_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_18
+                LOCAL :__sc_or_60
                 STORE
             ENDIF
-            LOCAL :__sc_or_18
-            LOCAL :__sc_or_18
+            LOCAL :__sc_or_60
+            LOCAL :__sc_or_59 :bool
             STORE
-            LOCAL :__sc_or_18
+            LOCAL :__sc_or_59
             IF
               THEN
               ELSE
@@ -4462,13 +4456,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s18_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_18
+                LOCAL :__sc_or_59
                 STORE
             ENDIF
-            LOCAL :__sc_or_18
-            LOCAL :__sc_or_18
+            LOCAL :__sc_or_59
+            LOCAL :__sc_or_58 :bool
             STORE
-            LOCAL :__sc_or_18
+            LOCAL :__sc_or_58
             IF
               THEN
               ELSE
@@ -4476,10 +4470,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s18_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_18
+                LOCAL :__sc_or_58
                 STORE
             ENDIF
-            LOCAL :__sc_or_18
+            LOCAL :__sc_or_58
             IF
               THEN
                 PUSH 0 :bool
@@ -4492,7 +4486,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 9
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4502,9 +4496,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s20_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_20 :bool
+            LOCAL :__sc_or_63 :bool
             STORE
-            LOCAL :__sc_or_20
+            LOCAL :__sc_or_63
             IF
               THEN
               ELSE
@@ -4512,13 +4506,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s20_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_20
+                LOCAL :__sc_or_63
                 STORE
             ENDIF
-            LOCAL :__sc_or_20
-            LOCAL :__sc_or_20
+            LOCAL :__sc_or_63
+            LOCAL :__sc_or_62 :bool
             STORE
-            LOCAL :__sc_or_20
+            LOCAL :__sc_or_62
             IF
               THEN
               ELSE
@@ -4526,13 +4520,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s20_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_20
+                LOCAL :__sc_or_62
                 STORE
             ENDIF
-            LOCAL :__sc_or_20
-            LOCAL :__sc_or_20
+            LOCAL :__sc_or_62
+            LOCAL :__sc_or_61 :bool
             STORE
-            LOCAL :__sc_or_20
+            LOCAL :__sc_or_61
             IF
               THEN
               ELSE
@@ -4540,10 +4534,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s20_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_20
+                LOCAL :__sc_or_61
                 STORE
             ENDIF
-            LOCAL :__sc_or_20
+            LOCAL :__sc_or_61
             IF
               THEN
                 PUSH 0 :bool
@@ -4556,7 +4550,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 10
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4566,9 +4560,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s22_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_22 :bool
+            LOCAL :__sc_or_66 :bool
             STORE
-            LOCAL :__sc_or_22
+            LOCAL :__sc_or_66
             IF
               THEN
               ELSE
@@ -4576,13 +4570,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s22_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_22
+                LOCAL :__sc_or_66
                 STORE
             ENDIF
-            LOCAL :__sc_or_22
-            LOCAL :__sc_or_22
+            LOCAL :__sc_or_66
+            LOCAL :__sc_or_65 :bool
             STORE
-            LOCAL :__sc_or_22
+            LOCAL :__sc_or_65
             IF
               THEN
               ELSE
@@ -4590,13 +4584,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s22_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_22
+                LOCAL :__sc_or_65
                 STORE
             ENDIF
-            LOCAL :__sc_or_22
-            LOCAL :__sc_or_22
+            LOCAL :__sc_or_65
+            LOCAL :__sc_or_64 :bool
             STORE
-            LOCAL :__sc_or_22
+            LOCAL :__sc_or_64
             IF
               THEN
               ELSE
@@ -4604,10 +4598,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s22_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_22
+                LOCAL :__sc_or_64
                 STORE
             ENDIF
-            LOCAL :__sc_or_22
+            LOCAL :__sc_or_64
             IF
               THEN
                 PUSH 0 :bool
@@ -4620,7 +4614,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 11
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4630,9 +4624,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s24_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_24 :bool
+            LOCAL :__sc_or_69 :bool
             STORE
-            LOCAL :__sc_or_24
+            LOCAL :__sc_or_69
             IF
               THEN
               ELSE
@@ -4640,13 +4634,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s24_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_24
+                LOCAL :__sc_or_69
                 STORE
             ENDIF
-            LOCAL :__sc_or_24
-            LOCAL :__sc_or_24
+            LOCAL :__sc_or_69
+            LOCAL :__sc_or_68 :bool
             STORE
-            LOCAL :__sc_or_24
+            LOCAL :__sc_or_68
             IF
               THEN
               ELSE
@@ -4654,13 +4648,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s24_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_24
+                LOCAL :__sc_or_68
                 STORE
             ENDIF
-            LOCAL :__sc_or_24
-            LOCAL :__sc_or_24
+            LOCAL :__sc_or_68
+            LOCAL :__sc_or_67 :bool
             STORE
-            LOCAL :__sc_or_24
+            LOCAL :__sc_or_67
             IF
               THEN
               ELSE
@@ -4668,10 +4662,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s24_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_24
+                LOCAL :__sc_or_67
                 STORE
             ENDIF
-            LOCAL :__sc_or_24
+            LOCAL :__sc_or_67
             IF
               THEN
                 PUSH 0 :bool
@@ -4684,7 +4678,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 12
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4694,9 +4688,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s26_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_26 :bool
+            LOCAL :__sc_or_72 :bool
             STORE
-            LOCAL :__sc_or_26
+            LOCAL :__sc_or_72
             IF
               THEN
               ELSE
@@ -4704,13 +4698,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s26_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_26
+                LOCAL :__sc_or_72
                 STORE
             ENDIF
-            LOCAL :__sc_or_26
-            LOCAL :__sc_or_26
+            LOCAL :__sc_or_72
+            LOCAL :__sc_or_71 :bool
             STORE
-            LOCAL :__sc_or_26
+            LOCAL :__sc_or_71
             IF
               THEN
               ELSE
@@ -4718,13 +4712,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s26_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_26
+                LOCAL :__sc_or_71
                 STORE
             ENDIF
-            LOCAL :__sc_or_26
-            LOCAL :__sc_or_26
+            LOCAL :__sc_or_71
+            LOCAL :__sc_or_70 :bool
             STORE
-            LOCAL :__sc_or_26
+            LOCAL :__sc_or_70
             IF
               THEN
               ELSE
@@ -4732,10 +4726,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s26_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_26
+                LOCAL :__sc_or_70
                 STORE
             ENDIF
-            LOCAL :__sc_or_26
+            LOCAL :__sc_or_70
             IF
               THEN
                 PUSH 0 :bool
@@ -4748,7 +4742,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 13
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4758,9 +4752,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s28_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_28 :bool
+            LOCAL :__sc_or_75 :bool
             STORE
-            LOCAL :__sc_or_28
+            LOCAL :__sc_or_75
             IF
               THEN
               ELSE
@@ -4768,13 +4762,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s28_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_28
+                LOCAL :__sc_or_75
                 STORE
             ENDIF
-            LOCAL :__sc_or_28
-            LOCAL :__sc_or_28
+            LOCAL :__sc_or_75
+            LOCAL :__sc_or_74 :bool
             STORE
-            LOCAL :__sc_or_28
+            LOCAL :__sc_or_74
             IF
               THEN
               ELSE
@@ -4782,13 +4776,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s28_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_28
+                LOCAL :__sc_or_74
                 STORE
             ENDIF
-            LOCAL :__sc_or_28
-            LOCAL :__sc_or_28
+            LOCAL :__sc_or_74
+            LOCAL :__sc_or_73 :bool
             STORE
-            LOCAL :__sc_or_28
+            LOCAL :__sc_or_73
             IF
               THEN
               ELSE
@@ -4796,10 +4790,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s28_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_28
+                LOCAL :__sc_or_73
                 STORE
             ENDIF
-            LOCAL :__sc_or_28
+            LOCAL :__sc_or_73
             IF
               THEN
                 PUSH 0 :bool
@@ -4812,7 +4806,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 14
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4822,9 +4816,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s30_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_30 :bool
+            LOCAL :__sc_or_78 :bool
             STORE
-            LOCAL :__sc_or_30
+            LOCAL :__sc_or_78
             IF
               THEN
               ELSE
@@ -4832,13 +4826,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s30_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_30
+                LOCAL :__sc_or_78
                 STORE
             ENDIF
-            LOCAL :__sc_or_30
-            LOCAL :__sc_or_30
+            LOCAL :__sc_or_78
+            LOCAL :__sc_or_77 :bool
             STORE
-            LOCAL :__sc_or_30
+            LOCAL :__sc_or_77
             IF
               THEN
               ELSE
@@ -4846,13 +4840,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s30_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_30
+                LOCAL :__sc_or_77
                 STORE
             ENDIF
-            LOCAL :__sc_or_30
-            LOCAL :__sc_or_30
+            LOCAL :__sc_or_77
+            LOCAL :__sc_or_76 :bool
             STORE
-            LOCAL :__sc_or_30
+            LOCAL :__sc_or_76
             IF
               THEN
               ELSE
@@ -4860,10 +4854,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s30_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_30
+                LOCAL :__sc_or_76
                 STORE
             ENDIF
-            LOCAL :__sc_or_30
+            LOCAL :__sc_or_76
             IF
               THEN
                 PUSH 0 :bool
@@ -4876,7 +4870,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 15
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4886,9 +4880,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s32_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_32 :bool
+            LOCAL :__sc_or_81 :bool
             STORE
-            LOCAL :__sc_or_32
+            LOCAL :__sc_or_81
             IF
               THEN
               ELSE
@@ -4896,13 +4890,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s32_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_32
+                LOCAL :__sc_or_81
                 STORE
             ENDIF
-            LOCAL :__sc_or_32
-            LOCAL :__sc_or_32
+            LOCAL :__sc_or_81
+            LOCAL :__sc_or_80 :bool
             STORE
-            LOCAL :__sc_or_32
+            LOCAL :__sc_or_80
             IF
               THEN
               ELSE
@@ -4910,13 +4904,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s32_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_32
+                LOCAL :__sc_or_80
                 STORE
             ENDIF
-            LOCAL :__sc_or_32
-            LOCAL :__sc_or_32
+            LOCAL :__sc_or_80
+            LOCAL :__sc_or_79 :bool
             STORE
-            LOCAL :__sc_or_32
+            LOCAL :__sc_or_79
             IF
               THEN
               ELSE
@@ -4924,10 +4918,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s32_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_32
+                LOCAL :__sc_or_79
                 STORE
             ENDIF
-            LOCAL :__sc_or_32
+            LOCAL :__sc_or_79
             IF
               THEN
                 PUSH 0 :bool
@@ -4940,7 +4934,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 16
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -4950,9 +4944,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s34_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_34 :bool
+            LOCAL :__sc_or_84 :bool
             STORE
-            LOCAL :__sc_or_34
+            LOCAL :__sc_or_84
             IF
               THEN
               ELSE
@@ -4960,13 +4954,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s34_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_34
+                LOCAL :__sc_or_84
                 STORE
             ENDIF
-            LOCAL :__sc_or_34
-            LOCAL :__sc_or_34
+            LOCAL :__sc_or_84
+            LOCAL :__sc_or_83 :bool
             STORE
-            LOCAL :__sc_or_34
+            LOCAL :__sc_or_83
             IF
               THEN
               ELSE
@@ -4974,13 +4968,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s34_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_34
+                LOCAL :__sc_or_83
                 STORE
             ENDIF
-            LOCAL :__sc_or_34
-            LOCAL :__sc_or_34
+            LOCAL :__sc_or_83
+            LOCAL :__sc_or_82 :bool
             STORE
-            LOCAL :__sc_or_34
+            LOCAL :__sc_or_82
             IF
               THEN
               ELSE
@@ -4988,10 +4982,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s34_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_34
+                LOCAL :__sc_or_82
                 STORE
             ENDIF
-            LOCAL :__sc_or_34
+            LOCAL :__sc_or_82
             IF
               THEN
                 PUSH 0 :bool
@@ -5004,7 +4998,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 17
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5014,9 +5008,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s36_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_36 :bool
+            LOCAL :__sc_or_87 :bool
             STORE
-            LOCAL :__sc_or_36
+            LOCAL :__sc_or_87
             IF
               THEN
               ELSE
@@ -5024,13 +5018,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s36_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_36
+                LOCAL :__sc_or_87
                 STORE
             ENDIF
-            LOCAL :__sc_or_36
-            LOCAL :__sc_or_36
+            LOCAL :__sc_or_87
+            LOCAL :__sc_or_86 :bool
             STORE
-            LOCAL :__sc_or_36
+            LOCAL :__sc_or_86
             IF
               THEN
               ELSE
@@ -5038,13 +5032,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s36_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_36
+                LOCAL :__sc_or_86
                 STORE
             ENDIF
-            LOCAL :__sc_or_36
-            LOCAL :__sc_or_36
+            LOCAL :__sc_or_86
+            LOCAL :__sc_or_85 :bool
             STORE
-            LOCAL :__sc_or_36
+            LOCAL :__sc_or_85
             IF
               THEN
               ELSE
@@ -5052,10 +5046,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s36_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_36
+                LOCAL :__sc_or_85
                 STORE
             ENDIF
-            LOCAL :__sc_or_36
+            LOCAL :__sc_or_85
             IF
               THEN
                 PUSH 0 :bool
@@ -5068,7 +5062,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 18
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5078,9 +5072,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s38_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_38 :bool
+            LOCAL :__sc_or_90 :bool
             STORE
-            LOCAL :__sc_or_38
+            LOCAL :__sc_or_90
             IF
               THEN
               ELSE
@@ -5088,13 +5082,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s38_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_38
+                LOCAL :__sc_or_90
                 STORE
             ENDIF
-            LOCAL :__sc_or_38
-            LOCAL :__sc_or_38
+            LOCAL :__sc_or_90
+            LOCAL :__sc_or_89 :bool
             STORE
-            LOCAL :__sc_or_38
+            LOCAL :__sc_or_89
             IF
               THEN
               ELSE
@@ -5102,13 +5096,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s38_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_38
+                LOCAL :__sc_or_89
                 STORE
             ENDIF
-            LOCAL :__sc_or_38
-            LOCAL :__sc_or_38
+            LOCAL :__sc_or_89
+            LOCAL :__sc_or_88 :bool
             STORE
-            LOCAL :__sc_or_38
+            LOCAL :__sc_or_88
             IF
               THEN
               ELSE
@@ -5116,10 +5110,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s38_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_38
+                LOCAL :__sc_or_88
                 STORE
             ENDIF
-            LOCAL :__sc_or_38
+            LOCAL :__sc_or_88
             IF
               THEN
                 PUSH 0 :bool
@@ -5132,7 +5126,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 19
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5142,9 +5136,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s40_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_40 :bool
+            LOCAL :__sc_or_93 :bool
             STORE
-            LOCAL :__sc_or_40
+            LOCAL :__sc_or_93
             IF
               THEN
               ELSE
@@ -5152,13 +5146,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s40_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_40
+                LOCAL :__sc_or_93
                 STORE
             ENDIF
-            LOCAL :__sc_or_40
-            LOCAL :__sc_or_40
+            LOCAL :__sc_or_93
+            LOCAL :__sc_or_92 :bool
             STORE
-            LOCAL :__sc_or_40
+            LOCAL :__sc_or_92
             IF
               THEN
               ELSE
@@ -5166,13 +5160,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s40_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_40
+                LOCAL :__sc_or_92
                 STORE
             ENDIF
-            LOCAL :__sc_or_40
-            LOCAL :__sc_or_40
+            LOCAL :__sc_or_92
+            LOCAL :__sc_or_91 :bool
             STORE
-            LOCAL :__sc_or_40
+            LOCAL :__sc_or_91
             IF
               THEN
               ELSE
@@ -5180,10 +5174,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s40_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_40
+                LOCAL :__sc_or_91
                 STORE
             ENDIF
-            LOCAL :__sc_or_40
+            LOCAL :__sc_or_91
             IF
               THEN
                 PUSH 0 :bool
@@ -5196,7 +5190,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 20
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5206,9 +5200,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s42_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_42 :bool
+            LOCAL :__sc_or_96 :bool
             STORE
-            LOCAL :__sc_or_42
+            LOCAL :__sc_or_96
             IF
               THEN
               ELSE
@@ -5216,13 +5210,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s42_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_42
+                LOCAL :__sc_or_96
                 STORE
             ENDIF
-            LOCAL :__sc_or_42
-            LOCAL :__sc_or_42
+            LOCAL :__sc_or_96
+            LOCAL :__sc_or_95 :bool
             STORE
-            LOCAL :__sc_or_42
+            LOCAL :__sc_or_95
             IF
               THEN
               ELSE
@@ -5230,13 +5224,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s42_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_42
+                LOCAL :__sc_or_95
                 STORE
             ENDIF
-            LOCAL :__sc_or_42
-            LOCAL :__sc_or_42
+            LOCAL :__sc_or_95
+            LOCAL :__sc_or_94 :bool
             STORE
-            LOCAL :__sc_or_42
+            LOCAL :__sc_or_94
             IF
               THEN
               ELSE
@@ -5244,10 +5238,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s42_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_42
+                LOCAL :__sc_or_94
                 STORE
             ENDIF
-            LOCAL :__sc_or_42
+            LOCAL :__sc_or_94
             IF
               THEN
                 PUSH 0 :bool
@@ -5260,7 +5254,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 21
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5270,9 +5264,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s44_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_44 :bool
+            LOCAL :__sc_or_99 :bool
             STORE
-            LOCAL :__sc_or_44
+            LOCAL :__sc_or_99
             IF
               THEN
               ELSE
@@ -5280,13 +5274,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s44_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_44
+                LOCAL :__sc_or_99
                 STORE
             ENDIF
-            LOCAL :__sc_or_44
-            LOCAL :__sc_or_44
+            LOCAL :__sc_or_99
+            LOCAL :__sc_or_98 :bool
             STORE
-            LOCAL :__sc_or_44
+            LOCAL :__sc_or_98
             IF
               THEN
               ELSE
@@ -5294,13 +5288,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s44_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_44
+                LOCAL :__sc_or_98
                 STORE
             ENDIF
-            LOCAL :__sc_or_44
-            LOCAL :__sc_or_44
+            LOCAL :__sc_or_98
+            LOCAL :__sc_or_97 :bool
             STORE
-            LOCAL :__sc_or_44
+            LOCAL :__sc_or_97
             IF
               THEN
               ELSE
@@ -5308,10 +5302,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s44_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_44
+                LOCAL :__sc_or_97
                 STORE
             ENDIF
-            LOCAL :__sc_or_44
+            LOCAL :__sc_or_97
             IF
               THEN
                 PUSH 0 :bool
@@ -5324,7 +5318,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 22
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5334,9 +5328,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s46_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_46 :bool
+            LOCAL :__sc_or_102 :bool
             STORE
-            LOCAL :__sc_or_46
+            LOCAL :__sc_or_102
             IF
               THEN
               ELSE
@@ -5344,13 +5338,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s46_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_46
+                LOCAL :__sc_or_102
                 STORE
             ENDIF
-            LOCAL :__sc_or_46
-            LOCAL :__sc_or_46
+            LOCAL :__sc_or_102
+            LOCAL :__sc_or_101 :bool
             STORE
-            LOCAL :__sc_or_46
+            LOCAL :__sc_or_101
             IF
               THEN
               ELSE
@@ -5358,13 +5352,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s46_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_46
+                LOCAL :__sc_or_101
                 STORE
             ENDIF
-            LOCAL :__sc_or_46
-            LOCAL :__sc_or_46
+            LOCAL :__sc_or_101
+            LOCAL :__sc_or_100 :bool
             STORE
-            LOCAL :__sc_or_46
+            LOCAL :__sc_or_100
             IF
               THEN
               ELSE
@@ -5372,10 +5366,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s46_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_46
+                LOCAL :__sc_or_100
                 STORE
             ENDIF
-            LOCAL :__sc_or_46
+            LOCAL :__sc_or_100
             IF
               THEN
                 PUSH 0 :bool
@@ -5388,7 +5382,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 23
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5398,9 +5392,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s48_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_48 :bool
+            LOCAL :__sc_or_105 :bool
             STORE
-            LOCAL :__sc_or_48
+            LOCAL :__sc_or_105
             IF
               THEN
               ELSE
@@ -5408,13 +5402,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s48_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_48
+                LOCAL :__sc_or_105
                 STORE
             ENDIF
-            LOCAL :__sc_or_48
-            LOCAL :__sc_or_48
+            LOCAL :__sc_or_105
+            LOCAL :__sc_or_104 :bool
             STORE
-            LOCAL :__sc_or_48
+            LOCAL :__sc_or_104
             IF
               THEN
               ELSE
@@ -5422,13 +5416,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s48_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_48
+                LOCAL :__sc_or_104
                 STORE
             ENDIF
-            LOCAL :__sc_or_48
-            LOCAL :__sc_or_48
+            LOCAL :__sc_or_104
+            LOCAL :__sc_or_103 :bool
             STORE
-            LOCAL :__sc_or_48
+            LOCAL :__sc_or_103
             IF
               THEN
               ELSE
@@ -5436,10 +5430,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s48_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_48
+                LOCAL :__sc_or_103
                 STORE
             ENDIF
-            LOCAL :__sc_or_48
+            LOCAL :__sc_or_103
             IF
               THEN
                 PUSH 0 :bool
@@ -5452,7 +5446,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 24
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5462,9 +5456,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s50_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_50 :bool
+            LOCAL :__sc_or_108 :bool
             STORE
-            LOCAL :__sc_or_50
+            LOCAL :__sc_or_108
             IF
               THEN
               ELSE
@@ -5472,13 +5466,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s50_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_50
+                LOCAL :__sc_or_108
                 STORE
             ENDIF
-            LOCAL :__sc_or_50
-            LOCAL :__sc_or_50
+            LOCAL :__sc_or_108
+            LOCAL :__sc_or_107 :bool
             STORE
-            LOCAL :__sc_or_50
+            LOCAL :__sc_or_107
             IF
               THEN
               ELSE
@@ -5486,13 +5480,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s50_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_50
+                LOCAL :__sc_or_107
                 STORE
             ENDIF
-            LOCAL :__sc_or_50
-            LOCAL :__sc_or_50
+            LOCAL :__sc_or_107
+            LOCAL :__sc_or_106 :bool
             STORE
-            LOCAL :__sc_or_50
+            LOCAL :__sc_or_106
             IF
               THEN
               ELSE
@@ -5500,10 +5494,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s50_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_50
+                LOCAL :__sc_or_106
                 STORE
             ENDIF
-            LOCAL :__sc_or_50
+            LOCAL :__sc_or_106
             IF
               THEN
                 PUSH 0 :bool
@@ -5516,7 +5510,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 25
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5526,9 +5520,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s52_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_52 :bool
+            LOCAL :__sc_or_111 :bool
             STORE
-            LOCAL :__sc_or_52
+            LOCAL :__sc_or_111
             IF
               THEN
               ELSE
@@ -5536,13 +5530,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s52_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_52
+                LOCAL :__sc_or_111
                 STORE
             ENDIF
-            LOCAL :__sc_or_52
-            LOCAL :__sc_or_52
+            LOCAL :__sc_or_111
+            LOCAL :__sc_or_110 :bool
             STORE
-            LOCAL :__sc_or_52
+            LOCAL :__sc_or_110
             IF
               THEN
               ELSE
@@ -5550,13 +5544,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s52_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_52
+                LOCAL :__sc_or_110
                 STORE
             ENDIF
-            LOCAL :__sc_or_52
-            LOCAL :__sc_or_52
+            LOCAL :__sc_or_110
+            LOCAL :__sc_or_109 :bool
             STORE
-            LOCAL :__sc_or_52
+            LOCAL :__sc_or_109
             IF
               THEN
               ELSE
@@ -5564,10 +5558,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s52_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_52
+                LOCAL :__sc_or_109
                 STORE
             ENDIF
-            LOCAL :__sc_or_52
+            LOCAL :__sc_or_109
             IF
               THEN
                 PUSH 0 :bool
@@ -5580,7 +5574,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 26
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5590,9 +5584,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s54_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_54 :bool
+            LOCAL :__sc_or_114 :bool
             STORE
-            LOCAL :__sc_or_54
+            LOCAL :__sc_or_114
             IF
               THEN
               ELSE
@@ -5600,13 +5594,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s54_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_54
+                LOCAL :__sc_or_114
                 STORE
             ENDIF
-            LOCAL :__sc_or_54
-            LOCAL :__sc_or_54
+            LOCAL :__sc_or_114
+            LOCAL :__sc_or_113 :bool
             STORE
-            LOCAL :__sc_or_54
+            LOCAL :__sc_or_113
             IF
               THEN
               ELSE
@@ -5614,13 +5608,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s54_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_54
+                LOCAL :__sc_or_113
                 STORE
             ENDIF
-            LOCAL :__sc_or_54
-            LOCAL :__sc_or_54
+            LOCAL :__sc_or_113
+            LOCAL :__sc_or_112 :bool
             STORE
-            LOCAL :__sc_or_54
+            LOCAL :__sc_or_112
             IF
               THEN
               ELSE
@@ -5628,10 +5622,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s54_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_54
+                LOCAL :__sc_or_112
                 STORE
             ENDIF
-            LOCAL :__sc_or_54
+            LOCAL :__sc_or_112
             IF
               THEN
                 PUSH 0 :bool
@@ -5644,7 +5638,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 27
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5654,9 +5648,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s56_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_56 :bool
+            LOCAL :__sc_or_117 :bool
             STORE
-            LOCAL :__sc_or_56
+            LOCAL :__sc_or_117
             IF
               THEN
               ELSE
@@ -5664,13 +5658,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s56_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_56
+                LOCAL :__sc_or_117
                 STORE
             ENDIF
-            LOCAL :__sc_or_56
-            LOCAL :__sc_or_56
+            LOCAL :__sc_or_117
+            LOCAL :__sc_or_116 :bool
             STORE
-            LOCAL :__sc_or_56
+            LOCAL :__sc_or_116
             IF
               THEN
               ELSE
@@ -5678,13 +5672,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s56_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_56
+                LOCAL :__sc_or_116
                 STORE
             ENDIF
-            LOCAL :__sc_or_56
-            LOCAL :__sc_or_56
+            LOCAL :__sc_or_116
+            LOCAL :__sc_or_115 :bool
             STORE
-            LOCAL :__sc_or_56
+            LOCAL :__sc_or_115
             IF
               THEN
               ELSE
@@ -5692,10 +5686,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s56_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_56
+                LOCAL :__sc_or_115
                 STORE
             ENDIF
-            LOCAL :__sc_or_56
+            LOCAL :__sc_or_115
             IF
               THEN
                 PUSH 0 :bool
@@ -5708,7 +5702,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 28
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5718,9 +5712,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s58_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_58 :bool
+            LOCAL :__sc_or_120 :bool
             STORE
-            LOCAL :__sc_or_58
+            LOCAL :__sc_or_120
             IF
               THEN
               ELSE
@@ -5728,13 +5722,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s58_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_58
+                LOCAL :__sc_or_120
                 STORE
             ENDIF
-            LOCAL :__sc_or_58
-            LOCAL :__sc_or_58
+            LOCAL :__sc_or_120
+            LOCAL :__sc_or_119 :bool
             STORE
-            LOCAL :__sc_or_58
+            LOCAL :__sc_or_119
             IF
               THEN
               ELSE
@@ -5742,13 +5736,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s58_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_58
+                LOCAL :__sc_or_119
                 STORE
             ENDIF
-            LOCAL :__sc_or_58
-            LOCAL :__sc_or_58
+            LOCAL :__sc_or_119
+            LOCAL :__sc_or_118 :bool
             STORE
-            LOCAL :__sc_or_58
+            LOCAL :__sc_or_118
             IF
               THEN
               ELSE
@@ -5756,10 +5750,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s58_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_58
+                LOCAL :__sc_or_118
                 STORE
             ENDIF
-            LOCAL :__sc_or_58
+            LOCAL :__sc_or_118
             IF
               THEN
                 PUSH 0 :bool
@@ -5772,7 +5766,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 29
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5782,9 +5776,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s60_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_60 :bool
+            LOCAL :__sc_or_123 :bool
             STORE
-            LOCAL :__sc_or_60
+            LOCAL :__sc_or_123
             IF
               THEN
               ELSE
@@ -5792,13 +5786,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s60_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_60
+                LOCAL :__sc_or_123
                 STORE
             ENDIF
-            LOCAL :__sc_or_60
-            LOCAL :__sc_or_60
+            LOCAL :__sc_or_123
+            LOCAL :__sc_or_122 :bool
             STORE
-            LOCAL :__sc_or_60
+            LOCAL :__sc_or_122
             IF
               THEN
               ELSE
@@ -5806,13 +5800,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s60_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_60
+                LOCAL :__sc_or_122
                 STORE
             ENDIF
-            LOCAL :__sc_or_60
-            LOCAL :__sc_or_60
+            LOCAL :__sc_or_122
+            LOCAL :__sc_or_121 :bool
             STORE
-            LOCAL :__sc_or_60
+            LOCAL :__sc_or_121
             IF
               THEN
               ELSE
@@ -5820,10 +5814,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s60_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_60
+                LOCAL :__sc_or_121
                 STORE
             ENDIF
-            LOCAL :__sc_or_60
+            LOCAL :__sc_or_121
             IF
               THEN
                 PUSH 0 :bool
@@ -5836,7 +5830,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 30
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5846,9 +5840,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s62_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_62 :bool
+            LOCAL :__sc_or_126 :bool
             STORE
-            LOCAL :__sc_or_62
+            LOCAL :__sc_or_126
             IF
               THEN
               ELSE
@@ -5856,13 +5850,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s62_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_62
+                LOCAL :__sc_or_126
                 STORE
             ENDIF
-            LOCAL :__sc_or_62
-            LOCAL :__sc_or_62
+            LOCAL :__sc_or_126
+            LOCAL :__sc_or_125 :bool
             STORE
-            LOCAL :__sc_or_62
+            LOCAL :__sc_or_125
             IF
               THEN
               ELSE
@@ -5870,13 +5864,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s62_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_62
+                LOCAL :__sc_or_125
                 STORE
             ENDIF
-            LOCAL :__sc_or_62
-            LOCAL :__sc_or_62
+            LOCAL :__sc_or_125
+            LOCAL :__sc_or_124 :bool
             STORE
-            LOCAL :__sc_or_62
+            LOCAL :__sc_or_124
             IF
               THEN
               ELSE
@@ -5884,10 +5878,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s62_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_62
+                LOCAL :__sc_or_124
                 STORE
             ENDIF
-            LOCAL :__sc_or_62
+            LOCAL :__sc_or_124
             IF
               THEN
                 PUSH 0 :bool
@@ -5900,7 +5894,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
         IF
           THEN
             PUSH 31
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -5910,9 +5904,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
             LOCAL :__s64_c
             AS :i32
             BINARY :less
-            LOCAL :__sc_or_64 :bool
+            LOCAL :__sc_or_129 :bool
             STORE
-            LOCAL :__sc_or_64
+            LOCAL :__sc_or_129
             IF
               THEN
               ELSE
@@ -5920,13 +5914,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s64_c
                 AS :i32
                 BINARY :more
-                LOCAL :__sc_or_64
+                LOCAL :__sc_or_129
                 STORE
             ENDIF
-            LOCAL :__sc_or_64
-            LOCAL :__sc_or_64
+            LOCAL :__sc_or_129
+            LOCAL :__sc_or_128 :bool
             STORE
-            LOCAL :__sc_or_64
+            LOCAL :__sc_or_128
             IF
               THEN
               ELSE
@@ -5934,13 +5928,13 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s64_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_64
+                LOCAL :__sc_or_128
                 STORE
             ENDIF
-            LOCAL :__sc_or_64
-            LOCAL :__sc_or_64
+            LOCAL :__sc_or_128
+            LOCAL :__sc_or_127 :bool
             STORE
-            LOCAL :__sc_or_64
+            LOCAL :__sc_or_127
             IF
               THEN
               ELSE
@@ -5948,10 +5942,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_is_str_noesc
                 LOCAL :__s64_c
                 AS :i32
                 BINARY :eq
-                LOCAL :__sc_or_64
+                LOCAL :__sc_or_127
                 STORE
             ENDIF
-            LOCAL :__sc_or_64
+            LOCAL :__sc_or_127
             IF
               THEN
                 PUSH 0 :bool
@@ -6206,8 +6200,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_set_real
     ATTR :private
   BODY
     PUSH 0 :u64
-    PUSH 16 :u8
-    PUSH 4 :u8
+    PUSH 16
+    AS :u8
+    PUSH 4
+    AS :u8
     PARAM 0
     CALL :static_fn_json_c_unsafe_yyjson_set_tag
     PARAM 1
@@ -6240,20 +6236,21 @@ FUNC :static_fn_json_c_unsafe_yyjson_set_str
     IF
       THEN
         PUSH 8
-        LOCAL :__ternary_2 :i32
+        LOCAL :__ternary_130 :i32
         STORE
       ELSE
         PUSH 0
-        LOCAL :__ternary_2
+        LOCAL :__ternary_130
         STORE
     ENDIF
-    LOCAL :__ternary_2
+    LOCAL :__ternary_130
     AS :u8
     LOCAL :__s0_subtype :u8
     STORE
     LOCAL :__s0_len
     LOCAL :__s0_subtype
-    PUSH 5 :u8
+    PUSH 5
+    AS :u8
     PARAM 0
     CALL :static_fn_json_c_unsafe_yyjson_set_tag
     PARAM 1
@@ -6306,6 +6303,7 @@ FUNC :static_fn_json_c_unsafe_yyjson_mut_strncpy
     STACK :drop
     PUSH 0 :u8
     PARAM 2
+    AS :i64
     LOCAL :__s0_mem
     BINARY :add
     DEREF
@@ -6548,9 +6546,9 @@ FUNC :static_fn_json_c_unsafe_yyjson_equals_strn
     PARAM 0
     CALL :static_fn_json_c_unsafe_yyjson_get_len
     BINARY :eq
-    LOCAL :__sc_and_0 :bool
+    LOCAL :__sc_and_131 :bool
     STORE
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_131
     IF
       THEN
         PUSH 0
@@ -6566,10 +6564,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_equals_strn
         AS :ptr<void>
         CALL :memcmp
         BINARY :eq
-        LOCAL :__sc_and_0
+        LOCAL :__sc_and_131
         STORE
     ENDIF
-    LOCAL :__sc_and_0
+    LOCAL :__sc_and_131
     RET
 ENDFUNC
 
@@ -6584,20 +6582,21 @@ FUNC :static_fn_json_c_unsafe_yyjson_set_bool
     IF
       THEN
         PUSH 8
-        LOCAL :__ternary_0 :i32
+        LOCAL :__ternary_132 :i32
         STORE
       ELSE
         PUSH 0
-        LOCAL :__ternary_0
+        LOCAL :__ternary_132
         STORE
     ENDIF
-    LOCAL :__ternary_0
+    LOCAL :__ternary_132
     AS :u8
     LOCAL :__s0_subtype :u8
     STORE
     PUSH 0 :u64
     LOCAL :__s0_subtype
-    PUSH 3 :u8
+    PUSH 3
+    AS :u8
     PARAM 0
     CALL :static_fn_json_c_unsafe_yyjson_set_tag
 ENDFUNC
@@ -6610,8 +6609,10 @@ FUNC :static_fn_json_c_unsafe_yyjson_set_uint
     ATTR :private
   BODY
     PUSH 0 :u64
-    PUSH 0 :u8
-    PUSH 4 :u8
+    PUSH 0
+    AS :u8
+    PUSH 4
+    AS :u8
     PARAM 0
     CALL :static_fn_json_c_unsafe_yyjson_set_tag
     PARAM 1

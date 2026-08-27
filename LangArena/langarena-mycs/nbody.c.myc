@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_nbody_c_1
+  TYPE :__inline_type_nbody_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_nbody_c_2
+STRUCT :__inline_type_nbody_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -271,7 +271,7 @@ STRUCT :NbodyData
   TYPE :f64
 ENDSTRUCT
 
-ENUM :__inline_type_nbody_c_1
+ENUM :__inline_type_nbody_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -286,7 +286,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_nbody_c_2
+    TYPE :__inline_type_nbody_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -578,7 +578,6 @@ FUNC :static_fn_nbody_c_Nbody_energy
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
         PARAM 0
         BINARY :add
         DEREF
@@ -630,7 +629,6 @@ FUNC :static_fn_nbody_c_Nbody_energy
             BINARY :less
           BODY
             LOCAL :__s1_j
-            AS :u64
             PARAM 0
             BINARY :add
             DEREF
@@ -735,7 +733,6 @@ FUNC :static_fn_nbody_c_Nbody_offset_momentum
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
         PARAM 0
         BINARY :add
         DEREF
@@ -783,7 +780,7 @@ FUNC :static_fn_nbody_c_Nbody_offset_momentum
         STORE
     ENDLOOP
     PUSH 0
-    AS :u64
+    AS :i64
     PARAM 0
     BINARY :add
     DEREF
@@ -828,7 +825,6 @@ FUNC :static_fn_nbody_c_Nbody_Planet_move_from_i
     PUSH 1 :i64
     PARAM 3
     BINARY :sub
-    AS :u64
     PARAM 0
     BINARY :add
     DEREF
@@ -845,7 +841,6 @@ FUNC :static_fn_nbody_c_Nbody_Planet_move_from_i
         BINARY :less
       BODY
         LOCAL :__s0_j
-        AS :u64
         PARAM 0
         BINARY :add
         DEREF
@@ -1077,7 +1072,7 @@ FUNC :Nbody_prepare
         PUSH 0.0 :f64
         PUSH 0.0 :f64
         PUSH 0
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -1093,7 +1088,7 @@ FUNC :Nbody_prepare
         PUSH -1.1603200440274284 :f64
         PUSH 4.841431442464721 :f64
         PUSH 1
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -1109,7 +1104,7 @@ FUNC :Nbody_prepare
         PUSH 4.124798564124305 :f64
         PUSH 8.34336671824458 :f64
         PUSH 2
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -1125,7 +1120,7 @@ FUNC :Nbody_prepare
         PUSH -15.111151401698631 :f64
         PUSH 12.894369562139131 :f64
         PUSH 3
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1
@@ -1141,7 +1136,7 @@ FUNC :Nbody_prepare
         PUSH -25.919314609987964 :f64
         PUSH 15.379697114850917 :f64
         PUSH 4
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 1

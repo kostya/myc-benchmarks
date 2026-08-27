@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_brainfuck_recursion_c_1
+  TYPE :__inline_type_brainfuck_recursion_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_brainfuck_recursion_c_2
+STRUCT :__inline_type_brainfuck_recursion_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -272,7 +272,7 @@ STRUCT :BrainfuckRecursionData
   TYPE :u32
 ENDSTRUCT
 
-ENUM :__inline_type_brainfuck_recursion_c_1
+ENUM :__inline_type_brainfuck_recursion_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -287,7 +287,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_brainfuck_recursion_c_2
+    TYPE :__inline_type_brainfuck_recursion_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -555,7 +555,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_get
     PARAM 0
     DEREF
     FIELD 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -574,7 +574,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_inc
     PARAM 0
     DEREF
     FIELD 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -584,7 +584,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_inc
     PARAM 0
     DEREF
     FIELD 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -603,7 +603,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_dec
     PARAM 0
     DEREF
     FIELD 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -613,7 +613,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_dec
     PARAM 0
     DEREF
     FIELD 2
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -675,7 +675,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_right
         DEREF
         FIELD 1
         BINARY :sub
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -835,9 +835,11 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         GOTO :__switch_2_7
         GOTO :__switch_2_end
         LABEL :__switch_2_0
+        PUSH 43
+        STACK :drop
         PUSH 0
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -847,7 +849,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         AS :ptr<void>
         AS :ptr<BrainfuckRecursion_Op>
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -855,7 +857,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         PUSH 0
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -868,9 +870,11 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         GOTO :__switch_2_end
         LABEL :__switch_2_1
+        PUSH 45
+        STACK :drop
         PUSH 1
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -880,7 +884,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         AS :ptr<void>
         AS :ptr<BrainfuckRecursion_Op>
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -888,7 +892,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         PUSH 0
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -901,9 +905,11 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         GOTO :__switch_2_end
         LABEL :__switch_2_2
+        PUSH 62
+        STACK :drop
         PUSH 2
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -913,7 +919,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         AS :ptr<void>
         AS :ptr<BrainfuckRecursion_Op>
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -921,7 +927,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         PUSH 0
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -934,9 +940,11 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         GOTO :__switch_2_end
         LABEL :__switch_2_3
+        PUSH 60
+        STACK :drop
         PUSH 3
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -946,7 +954,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         AS :ptr<void>
         AS :ptr<BrainfuckRecursion_Op>
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -954,7 +962,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         PUSH 0
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -967,9 +975,11 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         GOTO :__switch_2_end
         LABEL :__switch_2_4
+        PUSH 46
+        STACK :drop
         PUSH 4
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -979,7 +989,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         AS :ptr<void>
         AS :ptr<BrainfuckRecursion_Op>
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -987,7 +997,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         PUSH 0
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -1000,6 +1010,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         GOTO :__switch_2_end
         LABEL :__switch_2_5
+        PUSH 91
+        STACK :drop
         PUSH 1 :u64
         PARAM 0
         DEREF
@@ -1009,7 +1021,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         PUSH 5
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -1019,7 +1031,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         AS :ptr<void>
         AS :ptr<BrainfuckRecursion_Op>
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -1027,7 +1039,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         PUSH 0
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -1041,7 +1053,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         PARAM 0
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -1049,7 +1061,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         LOCAL :__s8_loop_ops_count
         LOCAL :__s0_count
-        AS :u64
+        AS :i64
         LOCAL :__s0_ops
         BINARY :add
         DEREF
@@ -1062,6 +1074,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_parse_ops
         STORE
         NEXT
         LABEL :__switch_2_6
+        PUSH 93
+        STACK :drop
         LOCAL :__s0_count
         PARAM 1
         DEREF
@@ -1121,40 +1135,40 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_free_ops
         PUSH 5 :u32
         AS :i32
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
         FIELD 0
         BINARY :eq
-        LOCAL :__sc_and_1 :bool
+        LOCAL :__sc_and_0 :bool
         STORE
-        LOCAL :__sc_and_1
+        LOCAL :__sc_and_0
         IF
           THEN
             PUSH 0
             AS :ptr<BrainfuckRecursion_Op>
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
             FIELD 1
             BINARY :not_eq
-            LOCAL :__sc_and_1
+            LOCAL :__sc_and_0
             STORE
         ENDIF
-        LOCAL :__sc_and_1
+        LOCAL :__sc_and_0
         IF
           THEN
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
             FIELD 2
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
@@ -1192,7 +1206,7 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_ops
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -1248,22 +1262,32 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_ops
         ENDIF
         GOTO :__switch_3_end
         LABEL :__switch_3_0
+        PUSH 0
+        STACK :drop
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_inc
         GOTO :__switch_3_end
         LABEL :__switch_3_1
+        PUSH 1
+        STACK :drop
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_dec
         GOTO :__switch_3_end
         LABEL :__switch_3_2
+        PUSH 2
+        STACK :drop
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_right
         GOTO :__switch_3_end
         LABEL :__switch_3_3
+        PUSH 3
+        STACK :drop
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_left
         GOTO :__switch_3_end
         LABEL :__switch_3_4
+        PUSH 4
+        STACK :drop
         PARAM 2
         CALL :static_fn_brainfuck_recursion_c_BrainfuckRecursion_Tape_get
         LOCAL :__s6_value :u8
@@ -1281,6 +1305,8 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_ops
         STORE
         GOTO :__switch_3_end
         LABEL :__switch_3_5
+        PUSH 5
+        STACK :drop
         LOOP
           COND
             PUSH 0
@@ -1322,23 +1348,23 @@ FUNC :static_fn_brainfuck_recursion_c_BrainfuckRecursion_run_program
     AS :ptr<u8>
     PARAM 0
     BINARY :eq
-    LOCAL :__sc_or_0 :bool
+    LOCAL :__sc_or_1 :bool
     STORE
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_1
     IF
       THEN
       ELSE
         PUSH 0 :u8
         PUSH 0
-        AS :u64
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
         BINARY :eq
-        LOCAL :__sc_or_0
+        LOCAL :__sc_or_1
         STORE
     ENDIF
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_1
     IF
       THEN
         PUSH 0 :u32

@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_mandelbrot_c_1
+  TYPE :__inline_type_mandelbrot_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_mandelbrot_c_2
+STRUCT :__inline_type_mandelbrot_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -262,7 +262,7 @@ STRUCT :MandelbrotData
   TYPE :u64
 ENDSTRUCT
 
-ENUM :__inline_type_mandelbrot_c_1
+ENUM :__inline_type_mandelbrot_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -277,7 +277,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_mandelbrot_c_2
+    TYPE :__inline_type_mandelbrot_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -551,14 +551,14 @@ FUNC :static_fn_mandelbrot_c_Mandelbrot_grow_result
             PUSH 2 :u64
             LOCAL :__s0_new_capacity
             BINARY :mul
-            LOCAL :__ternary_1 :u64
+            LOCAL :__ternary_0 :u64
             STORE
           ELSE
             PUSH 1024 :u64
-            LOCAL :__ternary_1
+            LOCAL :__ternary_0
             STORE
         ENDIF
-        LOCAL :__ternary_1
+        LOCAL :__ternary_0
         LOCAL :__s0_new_capacity
         STORE
     ENDLOOP
@@ -813,9 +813,9 @@ FUNC :Mandelbrot_run
                 PUSH 50
                 LOCAL :__s2_i
                 BINARY :less
-                LOCAL :__sc_and_18 :bool
+                LOCAL :__sc_and_1 :bool
                 STORE
-                LOCAL :__sc_and_18
+                LOCAL :__sc_and_1
                 IF
                   THEN
                     PUSH 4.0 :f64
@@ -823,10 +823,10 @@ FUNC :Mandelbrot_run
                     LOCAL :__s2_tr
                     BINARY :add
                     BINARY :less_eq
-                    LOCAL :__sc_and_18
+                    LOCAL :__sc_and_1
                     STORE
                 ENDIF
-                LOCAL :__sc_and_18
+                LOCAL :__sc_and_1
               BODY
                 LOCAL :__s1_ci
                 LOCAL :__s2_zi
@@ -966,9 +966,9 @@ FUNC :Mandelbrot_checksum
     DEREF
     FIELD 2
     BINARY :eq
-    LOCAL :__sc_or_1 :bool
+    LOCAL :__sc_or_2 :bool
     STORE
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_2
     IF
       THEN
       ELSE
@@ -977,10 +977,10 @@ FUNC :Mandelbrot_checksum
         DEREF
         FIELD 3
         BINARY :eq
-        LOCAL :__sc_or_1
+        LOCAL :__sc_or_2
         STORE
     ENDIF
-    LOCAL :__sc_or_1
+    LOCAL :__sc_or_2
     IF
       THEN
         PUSH 0 :u32

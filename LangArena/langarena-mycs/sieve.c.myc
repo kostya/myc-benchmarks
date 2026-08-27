@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_sieve_c_1
+  TYPE :__inline_type_sieve_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_sieve_c_2
+STRUCT :__inline_type_sieve_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -259,7 +259,7 @@ STRUCT :SieveData
   TYPE :u32
 ENDSTRUCT
 
-ENUM :__inline_type_sieve_c_1
+ENUM :__inline_type_sieve_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -274,7 +274,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_sieve_c_2
+    TYPE :__inline_type_sieve_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -546,14 +546,14 @@ FUNC :static_fn_sieve_c_sieve_generate
     STACK :drop
     PUSH 0 :u8
     PUSH 0
-    AS :u64
+    AS :i64
     LOCAL :__s1_primes
     BINARY :add
     DEREF
     STORE
     PUSH 0 :u8
     PUSH 1
-    AS :u64
+    AS :i64
     LOCAL :__s1_primes
     BINARY :add
     DEREF
@@ -575,7 +575,7 @@ FUNC :static_fn_sieve_c_sieve_generate
       BODY
         PUSH 1
         LOCAL :__s2_p
-        AS :u64
+        AS :i64
         LOCAL :__s1_primes
         BINARY :add
         DEREF
@@ -597,7 +597,7 @@ FUNC :static_fn_sieve_c_sieve_generate
               BODY
                 PUSH 0 :u8
                 LOCAL :__s4_multiple
-                AS :u64
+                AS :i64
                 LOCAL :__s1_primes
                 BINARY :add
                 DEREF
@@ -635,7 +635,7 @@ FUNC :static_fn_sieve_c_sieve_generate
       BODY
         PUSH 1
         LOCAL :__s5_n
-        AS :u64
+        AS :i64
         LOCAL :__s1_primes
         BINARY :add
         DEREF

@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_matmul1t_c_1
+  TYPE :__inline_type_matmul1t_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_matmul1t_c_2
+STRUCT :__inline_type_matmul1t_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -313,7 +313,7 @@ STRUCT :MatmulThreadData
   TYPE :i32
 ENDSTRUCT
 
-ENUM :__inline_type_matmul1t_c_1
+ENUM :__inline_type_matmul1t_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -328,7 +328,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_matmul1t_c_2
+    TYPE :__inline_type_matmul1t_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -609,7 +609,7 @@ FUNC :static_fn_matmul1t_c_matgen
         CALL :malloc
         AS :ptr<f64>
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_a
         BINARY :add
         DEREF
@@ -635,9 +635,9 @@ FUNC :static_fn_matmul1t_c_matgen
             BINARY :mul
             BINARY :mul
             LOCAL :__s1_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_a
             BINARY :add
             DEREF
@@ -687,7 +687,7 @@ FUNC :static_fn_matmul1t_c_free_matrix
         BINARY :less
       BODY
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -738,7 +738,7 @@ FUNC :static_fn_matmul1t_c_transpose
         CALL :malloc
         AS :ptr<f64>
         LOCAL :__s0_j
-        AS :u64
+        AS :i64
         LOCAL :__s0_b_t
         BINARY :add
         DEREF
@@ -753,18 +753,18 @@ FUNC :static_fn_matmul1t_c_transpose
             BINARY :less
           BODY
             LOCAL :__s0_j
-            AS :u64
+            AS :i64
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             PARAM 0
             BINARY :add
             DEREF
             BINARY :add
             DEREF
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_b_t
             BINARY :add
             DEREF
@@ -947,13 +947,13 @@ FUNC :static_fn_matmul1t_c_matmul_sequential
         CALL :malloc
         AS :ptr<f64>
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_c
         BINARY :add
         DEREF
         STORE
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         BINARY :add
         DEREF
@@ -972,7 +972,7 @@ FUNC :static_fn_matmul1t_c_matmul_sequential
             LOCAL :__s2_s :f64
             STORE
             LOCAL :__s1_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_b_t
             BINARY :add
             DEREF
@@ -988,12 +988,12 @@ FUNC :static_fn_matmul1t_c_matmul_sequential
                 BINARY :less
               BODY
                 LOCAL :__s2_k
-                AS :u64
+                AS :i64
                 LOCAL :__s2_b_tj
                 BINARY :add
                 DEREF
                 LOCAL :__s2_k
-                AS :u64
+                AS :i64
                 LOCAL :__s1_ai
                 BINARY :add
                 DEREF
@@ -1011,9 +1011,9 @@ FUNC :static_fn_matmul1t_c_matmul_sequential
             ENDLOOP
             LOCAL :__s2_s
             LOCAL :__s1_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_i
-            AS :u64
+            AS :i64
             LOCAL :__s0_c
             BINARY :add
             DEREF
@@ -1075,11 +1075,11 @@ FUNC :static_fn_matmul1t_c_Matmul_run
     PUSH 1
     LOCAL :__s0_n
     BINARY :shr
-    AS :u64
+    AS :i64
     PUSH 1
     LOCAL :__s0_n
     BINARY :shr
-    AS :u64
+    AS :i64
     LOCAL :__s0_c
     BINARY :add
     DEREF
@@ -1213,7 +1213,7 @@ FUNC :static_fn_matmul1t_c_thread_func
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 0
@@ -1222,7 +1222,7 @@ FUNC :static_fn_matmul1t_c_thread_func
         LOCAL :__s1_ai :ptr<f64>
         STORE
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_data
         DEREF
         FIELD 2
@@ -1245,7 +1245,7 @@ FUNC :static_fn_matmul1t_c_thread_func
             LOCAL :__s2_sum :f64
             STORE
             LOCAL :__s1_j
-            AS :u64
+            AS :i64
             LOCAL :__s0_data
             DEREF
             FIELD 1
@@ -1265,12 +1265,12 @@ FUNC :static_fn_matmul1t_c_thread_func
                 BINARY :less
               BODY
                 LOCAL :__s2_k
-                AS :u64
+                AS :i64
                 LOCAL :__s2_b_tj
                 BINARY :add
                 DEREF
                 LOCAL :__s2_k
-                AS :u64
+                AS :i64
                 LOCAL :__s1_ai
                 BINARY :add
                 DEREF
@@ -1288,7 +1288,7 @@ FUNC :static_fn_matmul1t_c_thread_func
             ENDLOOP
             LOCAL :__s2_sum
             LOCAL :__s1_j
-            AS :u64
+            AS :i64
             LOCAL :__s1_ci
             BINARY :add
             DEREF
@@ -1359,7 +1359,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         CALL :calloc
         AS :ptr<f64>
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_c
         BINARY :add
         DEREF
@@ -1391,7 +1391,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
       BODY
         PARAM 0
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
@@ -1399,7 +1399,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         STORE
         LOCAL :__s0_b_t
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
@@ -1407,7 +1407,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         STORE
         LOCAL :__s0_c
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
@@ -1415,7 +1415,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         STORE
         PARAM 2
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
@@ -1425,7 +1425,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         LOCAL :__s1_t
         BINARY :mul
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
@@ -1433,14 +1433,14 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         STORE
         LOCAL :__s1_rows_per_thread
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
         FIELD 4
         BINARY :add
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
@@ -1448,15 +1448,15 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         STORE
         PARAM 2
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
         FIELD 5
         BINARY :more
-        LOCAL :__sc_or_7 :bool
+        LOCAL :__sc_or_0 :bool
         STORE
-        LOCAL :__sc_or_7
+        LOCAL :__sc_or_0
         IF
           THEN
           ELSE
@@ -1465,15 +1465,15 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
             BINARY :sub
             LOCAL :__s1_t
             BINARY :eq
-            LOCAL :__sc_or_7
+            LOCAL :__sc_or_0
             STORE
         ENDIF
-        LOCAL :__sc_or_7
+        LOCAL :__sc_or_0
         IF
           THEN
             PARAM 2
             LOCAL :__s1_t
-            AS :u64
+            AS :i64
             LOCAL :__s0_thread_data
             BINARY :add
             DEREF
@@ -1481,7 +1481,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
             STORE
         ENDIF
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_thread_data
         BINARY :add
         DEREF
@@ -1492,7 +1492,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
         AS :ptr<void>
         AS :ptr<pthread_attr_t>
         LOCAL :__s1_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_threads
         BINARY :add
         DEREF
@@ -1511,7 +1511,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
             CALL :fprintf 1
             STACK :drop
             LOCAL :__s1_t
-            AS :u64
+            AS :i64
             LOCAL :__s0_thread_data
             BINARY :add
             DEREF
@@ -1521,7 +1521,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
             STACK :drop
             PUSH 0 :u64
             LOCAL :__s1_t
-            AS :u64
+            AS :i64
             LOCAL :__s0_threads
             BINARY :add
             DEREF
@@ -1545,7 +1545,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
       BODY
         PUSH 0 :u64
         LOCAL :__s4_t
-        AS :u64
+        AS :i64
         LOCAL :__s0_threads
         BINARY :add
         DEREF
@@ -1556,7 +1556,7 @@ FUNC :static_fn_matmul1t_c_matmul_parallel
             AS :ptr<void>
             AS :ptr<ptr<void>>
             LOCAL :__s4_t
-            AS :u64
+            AS :i64
             LOCAL :__s0_threads
             BINARY :add
             DEREF
@@ -1617,11 +1617,11 @@ FUNC :static_fn_matmul1t_c_MatmulParallel_run
     PUSH 1
     LOCAL :__s0_n
     BINARY :shr
-    AS :u64
+    AS :i64
     PUSH 1
     LOCAL :__s0_n
     BINARY :shr
-    AS :u64
+    AS :i64
     LOCAL :__s0_c
     BINARY :add
     DEREF

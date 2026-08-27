@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_maze_c_1
+  TYPE :__inline_type_maze_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_maze_c_2
+STRUCT :__inline_type_maze_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -312,7 +312,7 @@ STRUCT :MazeAStarData
   TYPE :i32
 ENDSTRUCT
 
-ENUM :__inline_type_maze_c_1
+ENUM :__inline_type_maze_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -327,7 +327,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_maze_c_2
+    TYPE :__inline_type_maze_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -622,7 +622,7 @@ FUNC :static_fn_maze_c_maze_cell_add_neighbor
         FIELD 2
         STORE
         LOCAL :__tmp_0
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 1
@@ -648,9 +648,9 @@ FUNC :static_fn_maze_c_maze_cell_is_walkable
     DEREF
     FIELD 0
     BINARY :eq
-    LOCAL :__sc_or_0 :bool
+    LOCAL :__sc_or_2 :bool
     STORE
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_2
     IF
       THEN
       ELSE
@@ -660,13 +660,13 @@ FUNC :static_fn_maze_c_maze_cell_is_walkable
         DEREF
         FIELD 0
         BINARY :eq
-        LOCAL :__sc_or_0
+        LOCAL :__sc_or_2
         STORE
     ENDIF
-    LOCAL :__sc_or_0
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_2
+    LOCAL :__sc_or_1 :bool
     STORE
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_1
     IF
       THEN
       ELSE
@@ -676,10 +676,10 @@ FUNC :static_fn_maze_c_maze_cell_is_walkable
         DEREF
         FIELD 0
         BINARY :eq
-        LOCAL :__sc_or_0
+        LOCAL :__sc_or_1
         STORE
     ENDIF
-    LOCAL :__sc_or_0
+    LOCAL :__sc_or_1
     RET
 ENDFUNC
 
@@ -755,7 +755,7 @@ FUNC :static_fn_maze_c_maze_create
         CALL :malloc
         AS :ptr<MazeCell>
         LOCAL :__s0_y
-        AS :u64
+        AS :i64
         LOCAL :__s0_maze
         DEREF
         FIELD 2
@@ -776,9 +776,9 @@ FUNC :static_fn_maze_c_maze_create
             CALL :static_fn_maze_c_maze_cell_create
             DEREF
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             LOCAL :__s0_maze
             DEREF
             FIELD 2
@@ -802,9 +802,9 @@ FUNC :static_fn_maze_c_maze_create
         STORE
     ENDLOOP
     PUSH 1
-    AS :u64
+    AS :i64
     PUSH 1
-    AS :u64
+    AS :i64
     LOCAL :__s0_maze
     DEREF
     FIELD 2
@@ -820,11 +820,11 @@ FUNC :static_fn_maze_c_maze_create
     PUSH 2
     PARAM 0
     BINARY :sub
-    AS :u64
+    AS :i64
     PUSH 2
     PARAM 1
     BINARY :sub
-    AS :u64
+    AS :i64
     LOCAL :__s0_maze
     DEREF
     FIELD 2
@@ -884,9 +884,9 @@ FUNC :static_fn_maze_c_maze_update_neighbors
             BINARY :less
           BODY
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -905,21 +905,21 @@ FUNC :static_fn_maze_c_maze_update_neighbors
             PUSH 0
             LOCAL :__s1_x
             BINARY :more
-            LOCAL :__sc_and_3 :bool
+            LOCAL :__sc_and_5 :bool
             STORE
-            LOCAL :__sc_and_3
+            LOCAL :__sc_and_5
             IF
               THEN
                 PUSH 0
                 LOCAL :__s0_y
                 BINARY :more
-                LOCAL :__sc_and_3
+                LOCAL :__sc_and_5
                 STORE
             ENDIF
-            LOCAL :__sc_and_3
-            LOCAL :__sc_and_3
+            LOCAL :__sc_and_5
+            LOCAL :__sc_and_4 :bool
             STORE
-            LOCAL :__sc_and_3
+            LOCAL :__sc_and_4
             IF
               THEN
                 PUSH 1
@@ -929,11 +929,11 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                 BINARY :sub
                 LOCAL :__s1_x
                 BINARY :less
-                LOCAL :__sc_and_3
+                LOCAL :__sc_and_4
                 STORE
             ENDIF
-            LOCAL :__sc_and_3
-            LOCAL :__sc_and_3
+            LOCAL :__sc_and_4
+            LOCAL :__sc_and_3 :bool
             STORE
             LOCAL :__sc_and_3
             IF
@@ -952,11 +952,11 @@ FUNC :static_fn_maze_c_maze_update_neighbors
             IF
               THEN
                 LOCAL :__s1_x
-                AS :u64
+                AS :i64
                 PUSH 1
                 LOCAL :__s0_y
                 BINARY :sub
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 2
@@ -968,11 +968,11 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                 LOCAL :__s2_cell
                 CALL :static_fn_maze_c_maze_cell_add_neighbor
                 LOCAL :__s1_x
-                AS :u64
+                AS :i64
                 PUSH 1
                 LOCAL :__s0_y
                 BINARY :add
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 2
@@ -986,9 +986,9 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                 PUSH 1
                 LOCAL :__s1_x
                 BINARY :add
-                AS :u64
+                AS :i64
                 LOCAL :__s0_y
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 2
@@ -1002,9 +1002,9 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                 PUSH 1
                 LOCAL :__s1_x
                 BINARY :sub
-                AS :u64
+                AS :i64
                 LOCAL :__s0_y
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 2
@@ -1040,7 +1040,7 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                     IF
                       THEN
                         LOCAL :__s4_i
-                        AS :u64
+                        AS :i64
                         LOCAL :__s2_cell
                         DEREF
                         FIELD 1
@@ -1051,7 +1051,7 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                         LOCAL :__s5_temp :ptr<MazeCell>
                         STORE
                         LOCAL :__s4_j
-                        AS :u64
+                        AS :i64
                         LOCAL :__s2_cell
                         DEREF
                         FIELD 1
@@ -1060,7 +1060,7 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                         BINARY :add
                         DEREF
                         LOCAL :__s4_i
-                        AS :u64
+                        AS :i64
                         LOCAL :__s2_cell
                         DEREF
                         FIELD 1
@@ -1071,7 +1071,7 @@ FUNC :static_fn_maze_c_maze_update_neighbors
                         STORE
                         LOCAL :__s5_temp
                         LOCAL :__s4_j
-                        AS :u64
+                        AS :i64
                         LOCAL :__s2_cell
                         DEREF
                         FIELD 1
@@ -1140,9 +1140,9 @@ FUNC :static_fn_maze_c_maze_reset
             BINARY :less
           BODY
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -1219,14 +1219,15 @@ FUNC :static_fn_maze_c_maze_dig
     STORE
     PARAM 1
     LOCAL :__s1_stack_size
-    LOCAL :__tmp_3 :u64
+    LOCAL :__tmp_6 :u64
     STORE
     PUSH 1 :u64
     LOCAL :__s1_stack_size
     BINARY :add
     LOCAL :__s1_stack_size
     STORE
-    LOCAL :__tmp_3
+    LOCAL :__tmp_6
+    AS :i64
     LOCAL :__s0_stack
     BINARY :add
     DEREF
@@ -1243,6 +1244,7 @@ FUNC :static_fn_maze_c_maze_dig
         LOCAL :__s1_stack_size
         STORE
         LOCAL :__s1_stack_size
+        AS :i64
         LOCAL :__s0_stack
         BINARY :add
         DEREF
@@ -1263,7 +1265,7 @@ FUNC :static_fn_maze_c_maze_dig
             BINARY :less
           BODY
             LOCAL :__s2_i
-            AS :u64
+            AS :i64
             LOCAL :__s2_cell
             DEREF
             FIELD 1
@@ -1311,7 +1313,7 @@ FUNC :static_fn_maze_c_maze_dig
             BINARY :less
           BODY
             LOCAL :__s5_i
-            AS :u64
+            AS :i64
             LOCAL :__s2_cell
             DEREF
             FIELD 1
@@ -1365,14 +1367,15 @@ FUNC :static_fn_maze_c_maze_dig
                 ENDIF
                 LOCAL :__s6_n
                 LOCAL :__s1_stack_size
-                LOCAL :__tmp_10 :u64
+                LOCAL :__tmp_7 :u64
                 STORE
                 PUSH 1 :u64
                 LOCAL :__s1_stack_size
                 BINARY :add
                 LOCAL :__s1_stack_size
                 STORE
-                LOCAL :__tmp_10
+                LOCAL :__tmp_7
+                AS :i64
                 LOCAL :__s0_stack
                 BINARY :add
                 DEREF
@@ -1417,15 +1420,15 @@ FUNC :static_fn_maze_c_maze_ensure_open_finish
     STORE
     PARAM 1
     LOCAL :__s0_stack_size
-    LOCAL :__tmp_2 :i32
+    LOCAL :__tmp_8 :i32
     STORE
     PUSH 1 :i32
     LOCAL :__s0_stack_size
     BINARY :add
     LOCAL :__s0_stack_size
     STORE
-    LOCAL :__tmp_2
-    AS :u64
+    LOCAL :__tmp_8
+    AS :i64
     LOCAL :__s0_stack
     BINARY :add
     DEREF
@@ -1442,7 +1445,7 @@ FUNC :static_fn_maze_c_maze_ensure_open_finish
         LOCAL :__s0_stack_size
         STORE
         LOCAL :__s0_stack_size
-        AS :u64
+        AS :i64
         LOCAL :__s0_stack
         BINARY :add
         DEREF
@@ -1468,7 +1471,7 @@ FUNC :static_fn_maze_c_maze_ensure_open_finish
             BINARY :less
           BODY
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             LOCAL :__s1_cell
             DEREF
             FIELD 1
@@ -1511,7 +1514,7 @@ FUNC :static_fn_maze_c_maze_ensure_open_finish
             BINARY :less
           BODY
             LOCAL :__s4_i
-            AS :u64
+            AS :i64
             LOCAL :__s1_cell
             DEREF
             FIELD 1
@@ -1531,15 +1534,15 @@ FUNC :static_fn_maze_c_maze_ensure_open_finish
               THEN
                 LOCAL :__s5_n
                 LOCAL :__s0_stack_size
-                LOCAL :__tmp_8 :i32
+                LOCAL :__tmp_9 :i32
                 STORE
                 PUSH 1 :i32
                 LOCAL :__s0_stack_size
                 BINARY :add
                 LOCAL :__s0_stack_size
                 STORE
-                LOCAL :__tmp_8
-                AS :u64
+                LOCAL :__tmp_9
+                AS :i64
                 LOCAL :__s0_stack
                 BINARY :add
                 DEREF
@@ -1578,7 +1581,7 @@ FUNC :static_fn_maze_c_maze_generate
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 3
@@ -1623,7 +1626,7 @@ FUNC :static_fn_maze_c_maze_generate
         BINARY :less
       BODY
         LOCAL :__s2_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 4
@@ -1669,13 +1672,13 @@ FUNC :static_fn_maze_c_maze_middle_cell
     DEREF
     FIELD 0
     BINARY :div
-    AS :u64
+    AS :i64
     PUSH 2
     PARAM 0
     DEREF
     FIELD 1
     BINARY :div
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 2
@@ -1726,9 +1729,9 @@ FUNC :static_fn_maze_c_maze_checksum
             PUSH 1 :u32
             AS :i32
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -1798,7 +1801,7 @@ FUNC :static_fn_maze_c_maze_free
         BINARY :less
       BODY
         LOCAL :__s1_y
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 2
@@ -2161,7 +2164,7 @@ FUNC :static_fn_maze_c_maze_bfs
         STORE
         PARAM 1
         PUSH 0
-        AS :u64
+        AS :i64
         LOCAL :__s1_result
         BINARY :add
         DEREF
@@ -2218,7 +2221,7 @@ FUNC :static_fn_maze_c_maze_bfs
         CALL :calloc
         AS :ptr<bool>
         LOCAL :__s1_y
-        AS :u64
+        AS :i64
         LOCAL :__s1_visited
         BINARY :add
         DEREF
@@ -2247,11 +2250,11 @@ FUNC :static_fn_maze_c_maze_bfs
     PARAM 1
     DEREF
     FIELD 3
-    AS :u64
+    AS :i64
     PARAM 1
     DEREF
     FIELD 4
-    AS :u64
+    AS :i64
     LOCAL :__s1_visited
     BINARY :add
     DEREF
@@ -2260,7 +2263,7 @@ FUNC :static_fn_maze_c_maze_bfs
     STORE
     PARAM 1
     LOCAL :__s2_path_count
-    AS :u64
+    AS :i64
     LOCAL :__s2_path_nodes
     BINARY :add
     DEREF
@@ -2268,7 +2271,7 @@ FUNC :static_fn_maze_c_maze_bfs
     STORE
     PUSH -1
     LOCAL :__s2_path_count
-    AS :u64
+    AS :i64
     LOCAL :__s2_path_nodes
     BINARY :add
     DEREF
@@ -2289,7 +2292,7 @@ FUNC :static_fn_maze_c_maze_bfs
     LOCAL :__s1_queue_tail
     STORE
     LOCAL :__tmp_10
-    AS :u64
+    AS :i64
     LOCAL :__s1_queue
     BINARY :add
     DEREF
@@ -2309,14 +2312,14 @@ FUNC :static_fn_maze_c_maze_bfs
         LOCAL :__s1_queue_head
         STORE
         LOCAL :__tmp_11
-        AS :u64
+        AS :i64
         LOCAL :__s1_queue
         BINARY :add
         DEREF
         LOCAL :__s3_path_id :i32
         STORE
         LOCAL :__s3_path_id
-        AS :u64
+        AS :i64
         LOCAL :__s2_path_nodes
         BINARY :add
         DEREF
@@ -2335,7 +2338,7 @@ FUNC :static_fn_maze_c_maze_bfs
             BINARY :less
           BODY
             LOCAL :__s3_i
-            AS :u64
+            AS :i64
             LOCAL :__s3_cell
             DEREF
             FIELD 1
@@ -2370,7 +2373,7 @@ FUNC :static_fn_maze_c_maze_bfs
                     LOCAL :__s5_length
                     STORE
                     LOCAL :__s5_cur
-                    AS :u64
+                    AS :i64
                     LOCAL :__s2_path_nodes
                     BINARY :add
                     DEREF
@@ -2393,15 +2396,15 @@ FUNC :static_fn_maze_c_maze_bfs
                 STORE
                 PARAM 2
                 LOCAL :__s6_idx
-                LOCAL :__tmp_20 :i32
+                LOCAL :__tmp_12 :i32
                 STORE
                 PUSH 1 :i32
                 LOCAL :__s6_idx
                 BINARY :sub
                 LOCAL :__s6_idx
                 STORE
-                LOCAL :__tmp_20
-                AS :u64
+                LOCAL :__tmp_12
+                AS :i64
                 LOCAL :__s6_result
                 BINARY :add
                 DEREF
@@ -2416,27 +2419,27 @@ FUNC :static_fn_maze_c_maze_bfs
                     BINARY :more_eq
                   BODY
                     LOCAL :__s5_cur
-                    AS :u64
+                    AS :i64
                     LOCAL :__s2_path_nodes
                     BINARY :add
                     DEREF
                     FIELD 0
                     LOCAL :__s6_idx
-                    LOCAL :__tmp_21 :i32
+                    LOCAL :__tmp_13 :i32
                     STORE
                     PUSH 1 :i32
                     LOCAL :__s6_idx
                     BINARY :sub
                     LOCAL :__s6_idx
                     STORE
-                    LOCAL :__tmp_21
-                    AS :u64
+                    LOCAL :__tmp_13
+                    AS :i64
                     LOCAL :__s6_result
                     BINARY :add
                     DEREF
                     STORE
                     LOCAL :__s5_cur
-                    AS :u64
+                    AS :i64
                     LOCAL :__s2_path_nodes
                     BINARY :add
                     DEREF
@@ -2461,7 +2464,7 @@ FUNC :static_fn_maze_c_maze_bfs
                     BINARY :less
                   BODY
                     LOCAL :__s7_y
-                    AS :u64
+                    AS :i64
                     LOCAL :__s1_visited
                     BINARY :add
                     DEREF
@@ -2485,40 +2488,40 @@ FUNC :static_fn_maze_c_maze_bfs
             ENDIF
             LOCAL :__s4_neighbor
             CALL :static_fn_maze_c_maze_cell_is_walkable
-            LOCAL :__sc_and_23 :bool
+            LOCAL :__sc_and_14 :bool
             STORE
-            LOCAL :__sc_and_23
+            LOCAL :__sc_and_14
             IF
               THEN
                 LOCAL :__s4_neighbor
                 DEREF
                 FIELD 3
-                AS :u64
+                AS :i64
                 LOCAL :__s4_neighbor
                 DEREF
                 FIELD 4
-                AS :u64
+                AS :i64
                 LOCAL :__s1_visited
                 BINARY :add
                 DEREF
                 BINARY :add
                 DEREF
                 UNARY :lnot
-                LOCAL :__sc_and_23
+                LOCAL :__sc_and_14
                 STORE
             ENDIF
-            LOCAL :__sc_and_23
+            LOCAL :__sc_and_14
             IF
               THEN
                 PUSH 1 :bool
                 LOCAL :__s4_neighbor
                 DEREF
                 FIELD 3
-                AS :u64
+                AS :i64
                 LOCAL :__s4_neighbor
                 DEREF
                 FIELD 4
-                AS :u64
+                AS :i64
                 LOCAL :__s1_visited
                 BINARY :add
                 DEREF
@@ -2527,7 +2530,7 @@ FUNC :static_fn_maze_c_maze_bfs
                 STORE
                 LOCAL :__s4_neighbor
                 LOCAL :__s2_path_count
-                AS :u64
+                AS :i64
                 LOCAL :__s2_path_nodes
                 BINARY :add
                 DEREF
@@ -2535,7 +2538,7 @@ FUNC :static_fn_maze_c_maze_bfs
                 STORE
                 LOCAL :__s3_path_id
                 LOCAL :__s2_path_count
-                AS :u64
+                AS :i64
                 LOCAL :__s2_path_nodes
                 BINARY :add
                 DEREF
@@ -2543,15 +2546,15 @@ FUNC :static_fn_maze_c_maze_bfs
                 STORE
                 LOCAL :__s2_path_count
                 LOCAL :__s1_queue_tail
-                LOCAL :__tmp_24 :i32
+                LOCAL :__tmp_15 :i32
                 STORE
                 PUSH 1 :i32
                 LOCAL :__s1_queue_tail
                 BINARY :add
                 LOCAL :__s1_queue_tail
                 STORE
-                LOCAL :__tmp_24
-                AS :u64
+                LOCAL :__tmp_15
+                AS :i64
                 LOCAL :__s1_queue
                 BINARY :add
                 DEREF
@@ -2587,7 +2590,7 @@ FUNC :static_fn_maze_c_maze_bfs
         BINARY :less
       BODY
         LOCAL :__s9_y
-        AS :u64
+        AS :i64
         LOCAL :__s1_visited
         BINARY :add
         DEREF
@@ -2635,7 +2638,7 @@ FUNC :static_fn_maze_c_mid_cell_checksum
     LOCAL :__s1_mid :i32
     STORE
     LOCAL :__s1_mid
-    AS :u64
+    AS :i64
     PARAM 0
     BINARY :add
     DEREF
@@ -2875,7 +2878,7 @@ FUNC :static_fn_maze_c_astar_pq_create
       BODY
         PUSH 2147483647
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         LOCAL :__s0_pq
         DEREF
         FIELD 1
@@ -2912,7 +2915,7 @@ FUNC :static_fn_maze_c_astar_pq_push
     ATTR :private
   BODY
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 1
@@ -2926,7 +2929,7 @@ FUNC :static_fn_maze_c_astar_pq_push
     ENDIF
     PARAM 2
     PARAM 1
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 1
@@ -2971,7 +2974,7 @@ FUNC :static_fn_maze_c_astar_pq_push
     PARAM 0
     DEREF
     FIELD 2
-    LOCAL :__tmp_0 :i32
+    LOCAL :__tmp_16 :i32
     STORE
     PUSH 1 :i32
     PARAM 0
@@ -2982,7 +2985,7 @@ FUNC :static_fn_maze_c_astar_pq_push
     DEREF
     FIELD 2
     STORE
-    LOCAL :__tmp_0
+    LOCAL :__tmp_16
     LOCAL :__s2_i :i32
     STORE
     LOOP
@@ -3000,7 +3003,7 @@ FUNC :static_fn_maze_c_astar_pq_push
         STORE
         PARAM 2
         LOCAL :__s3_parent
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -3013,14 +3016,14 @@ FUNC :static_fn_maze_c_astar_pq_push
             BREAK
         ENDIF
         LOCAL :__s3_parent
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
         BINARY :add
         DEREF
         LOCAL :__s2_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -3033,7 +3036,7 @@ FUNC :static_fn_maze_c_astar_pq_push
     ENDLOOP
     PARAM 2
     LOCAL :__s2_i
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -3043,7 +3046,7 @@ FUNC :static_fn_maze_c_astar_pq_push
     STORE
     PARAM 1
     LOCAL :__s2_i
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -3062,7 +3065,7 @@ FUNC :static_fn_maze_c_astar_pq_pop
     ATTR :private
   BODY
     PUSH 0
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 0
@@ -3089,7 +3092,7 @@ FUNC :static_fn_maze_c_astar_pq_pop
         PARAM 0
         DEREF
         FIELD 2
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -3128,13 +3131,13 @@ FUNC :static_fn_maze_c_astar_pq_pop
             FIELD 2
             LOCAL :__s2_left
             BINARY :less
-            LOCAL :__sc_and_6 :bool
+            LOCAL :__sc_and_17 :bool
             STORE
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_17
             IF
               THEN
                 LOCAL :__s2_smallest
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -3142,7 +3145,7 @@ FUNC :static_fn_maze_c_astar_pq_pop
                 DEREF
                 FIELD 0
                 LOCAL :__s2_left
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -3150,10 +3153,10 @@ FUNC :static_fn_maze_c_astar_pq_pop
                 DEREF
                 FIELD 0
                 BINARY :less
-                LOCAL :__sc_and_6
+                LOCAL :__sc_and_17
                 STORE
             ENDIF
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_17
             IF
               THEN
                 LOCAL :__s2_left
@@ -3165,13 +3168,13 @@ FUNC :static_fn_maze_c_astar_pq_pop
             FIELD 2
             LOCAL :__s2_right
             BINARY :less
-            LOCAL :__sc_and_7 :bool
+            LOCAL :__sc_and_18 :bool
             STORE
-            LOCAL :__sc_and_7
+            LOCAL :__sc_and_18
             IF
               THEN
                 LOCAL :__s2_smallest
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -3179,7 +3182,7 @@ FUNC :static_fn_maze_c_astar_pq_pop
                 DEREF
                 FIELD 0
                 LOCAL :__s2_right
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 0
@@ -3187,10 +3190,10 @@ FUNC :static_fn_maze_c_astar_pq_pop
                 DEREF
                 FIELD 0
                 BINARY :less
-                LOCAL :__sc_and_7
+                LOCAL :__sc_and_18
                 STORE
             ENDIF
-            LOCAL :__sc_and_7
+            LOCAL :__sc_and_18
             IF
               THEN
                 LOCAL :__s2_right
@@ -3205,14 +3208,14 @@ FUNC :static_fn_maze_c_astar_pq_pop
                 BREAK
             ENDIF
             LOCAL :__s2_smallest
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 0
             BINARY :add
             DEREF
             LOCAL :__s1_i
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 0
@@ -3225,7 +3228,7 @@ FUNC :static_fn_maze_c_astar_pq_pop
         ENDLOOP
         LOCAL :__s1_last
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 0
@@ -3350,7 +3353,7 @@ FUNC :static_fn_maze_c_maze_astar
         STORE
         PARAM 1
         PUSH 0
-        AS :u64
+        AS :i64
         LOCAL :__s1_result
         BINARY :add
         DEREF
@@ -3400,14 +3403,14 @@ FUNC :static_fn_maze_c_maze_astar
       BODY
         PUSH -1
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s1_came_from
         BINARY :add
         DEREF
         STORE
         PUSH 2147483647
         LOCAL :__s1_i
-        AS :u64
+        AS :i64
         LOCAL :__s1_g_score
         BINARY :add
         DEREF
@@ -3445,7 +3448,7 @@ FUNC :static_fn_maze_c_maze_astar
     STORE
     PUSH 0
     LOCAL :__s2_start_idx
-    AS :u64
+    AS :i64
     LOCAL :__s1_g_score
     BINARY :add
     DEREF
@@ -3493,7 +3496,7 @@ FUNC :static_fn_maze_c_maze_astar
                 LOCAL :__s4_length
                 STORE
                 LOCAL :__s4_cur
-                AS :u64
+                AS :i64
                 LOCAL :__s1_came_from
                 BINARY :add
                 DEREF
@@ -3533,9 +3536,9 @@ FUNC :static_fn_maze_c_maze_astar
                 LOCAL :__s6_x :i32
                 STORE
                 LOCAL :__s6_x
-                AS :u64
+                AS :i64
                 LOCAL :__s6_y
-                AS :u64
+                AS :i64
                 PARAM 0
                 DEREF
                 FIELD 2
@@ -3545,13 +3548,13 @@ FUNC :static_fn_maze_c_maze_astar
                 DEREF
                 ADDR
                 LOCAL :__s5_i
-                AS :u64
+                AS :i64
                 LOCAL :__s5_result
                 BINARY :add
                 DEREF
                 STORE
                 LOCAL :__s4_cur
-                AS :u64
+                AS :i64
                 LOCAL :__s1_came_from
                 BINARY :add
                 DEREF
@@ -3590,9 +3593,9 @@ FUNC :static_fn_maze_c_maze_astar
         LOCAL :__s6_current_x :i32
         STORE
         LOCAL :__s6_current_x
-        AS :u64
+        AS :i64
         LOCAL :__s6_current_y
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 2
@@ -3604,7 +3607,7 @@ FUNC :static_fn_maze_c_maze_astar
         LOCAL :__s6_current :ptr<MazeCell>
         STORE
         LOCAL :__s3_current_idx
-        AS :u64
+        AS :i64
         LOCAL :__s1_g_score
         BINARY :add
         DEREF
@@ -3622,7 +3625,7 @@ FUNC :static_fn_maze_c_maze_astar
             BINARY :less
           BODY
             LOCAL :__s6_i
-            AS :u64
+            AS :i64
             LOCAL :__s6_current
             DEREF
             FIELD 1
@@ -3655,7 +3658,7 @@ FUNC :static_fn_maze_c_maze_astar
             LOCAL :__s8_tentative_g :i32
             STORE
             LOCAL :__s8_neighbor_idx
-            AS :u64
+            AS :i64
             LOCAL :__s1_g_score
             BINARY :add
             DEREF
@@ -3665,14 +3668,14 @@ FUNC :static_fn_maze_c_maze_astar
               THEN
                 LOCAL :__s3_current_idx
                 LOCAL :__s8_neighbor_idx
-                AS :u64
+                AS :i64
                 LOCAL :__s1_came_from
                 BINARY :add
                 DEREF
                 STORE
                 LOCAL :__s8_tentative_g
                 LOCAL :__s8_neighbor_idx
-                AS :u64
+                AS :i64
                 LOCAL :__s1_g_score
                 BINARY :add
                 DEREF
@@ -3911,7 +3914,7 @@ FUNC :MazeAStar_checksum
     LOCAL :__s1_mid :i32
     STORE
     LOCAL :__s1_mid
-    AS :u64
+    AS :i64
     LOCAL :__s0_data
     DEREF
     FIELD 4

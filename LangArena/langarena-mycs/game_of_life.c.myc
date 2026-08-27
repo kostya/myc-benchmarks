@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_game_of_life_c_1
+  TYPE :__inline_type_game_of_life_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_game_of_life_c_2
+STRUCT :__inline_type_game_of_life_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -274,7 +274,7 @@ STRUCT :GameOfLifeData
   TYPE :GameOfLifeGrid
 ENDSTRUCT
 
-ENUM :__inline_type_game_of_life_c_1
+ENUM :__inline_type_game_of_life_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -289,7 +289,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_game_of_life_c_2
+    TYPE :__inline_type_game_of_life_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -619,7 +619,7 @@ FUNC :static_fn_game_of_life_c_cell_add_neighbor
     FIELD 3
     STORE
     LOCAL :__tmp_0
-    AS :u64
+    AS :i64
     PARAM 0
     DEREF
     FIELD 2
@@ -649,7 +649,7 @@ FUNC :static_fn_game_of_life_c_cell_compute_next_state
         BINARY :less
       BODY
         LOCAL :__s0_i
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 2
@@ -680,19 +680,19 @@ FUNC :static_fn_game_of_life_c_cell_compute_next_state
         PUSH 2
         LOCAL :__s0_alive_neighbors
         BINARY :eq
-        LOCAL :__sc_or_2 :bool
+        LOCAL :__sc_or_1 :bool
         STORE
-        LOCAL :__sc_or_2
+        LOCAL :__sc_or_1
         IF
           THEN
           ELSE
             PUSH 3
             LOCAL :__s0_alive_neighbors
             BINARY :eq
-            LOCAL :__sc_or_2
+            LOCAL :__sc_or_1
             STORE
         ENDIF
-        LOCAL :__sc_or_2
+        LOCAL :__sc_or_1
         PARAM 0
         DEREF
         FIELD 1
@@ -767,7 +767,7 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_init
         CALL :malloc
         AS :ptr<ptr<Cell>>
         LOCAL :__s0_y
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 2
@@ -785,9 +785,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_init
           BODY
             CALL :static_fn_game_of_life_c_cell_create
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -829,9 +829,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_init
             BINARY :less
           BODY
             LOCAL :__s3_x
-            AS :u64
+            AS :i64
             LOCAL :__s2_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -862,18 +862,18 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_init
                     PUSH 0
                     LOCAL :__s5_dx
                     BINARY :eq
-                    LOCAL :__sc_and_7 :bool
+                    LOCAL :__sc_and_2 :bool
                     STORE
-                    LOCAL :__sc_and_7
+                    LOCAL :__sc_and_2
                     IF
                       THEN
                         PUSH 0
                         LOCAL :__s4_dy
                         BINARY :eq
-                        LOCAL :__sc_and_7
+                        LOCAL :__sc_and_2
                         STORE
                     ENDIF
-                    LOCAL :__sc_and_7
+                    LOCAL :__sc_and_2
                     IF
                       THEN
                         NEXT
@@ -897,9 +897,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_init
                     LOCAL :__s7_nx :i32
                     STORE
                     LOCAL :__s7_nx
-                    AS :u64
+                    AS :i64
                     LOCAL :__s7_ny
-                    AS :u64
+                    AS :i64
                     PARAM 0
                     DEREF
                     FIELD 2
@@ -968,9 +968,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_free
             BINARY :less
           BODY
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -987,7 +987,7 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_free
             STORE
         ENDLOOP
         LOCAL :__s0_y
-        AS :u64
+        AS :i64
         PARAM 0
         DEREF
         FIELD 2
@@ -1038,9 +1038,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_next_generation
             BINARY :less
           BODY
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -1086,9 +1086,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_next_generation
             BINARY :less
           BODY
             LOCAL :__s3_x
-            AS :u64
+            AS :i64
             LOCAL :__s2_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -1147,9 +1147,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_count_alive
             BINARY :less
           BODY
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -1219,9 +1219,9 @@ FUNC :static_fn_game_of_life_c_game_of_life_grid_hash
             BINARY :less
           BODY
             LOCAL :__s1_x
-            AS :u64
+            AS :i64
             LOCAL :__s0_y
-            AS :u64
+            AS :i64
             PARAM 0
             DEREF
             FIELD 2
@@ -1367,9 +1367,9 @@ FUNC :GameOfLife_prepare
               THEN
                 PUSH 1 :bool
                 LOCAL :__s3_x
-                AS :u64
+                AS :i64
                 LOCAL :__s2_y
-                AS :u64
+                AS :i64
                 LOCAL :__s0_data
                 DEREF
                 FIELD 3

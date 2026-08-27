@@ -4,7 +4,7 @@ ENDSTRUCT
 
 STRUCT :__mbstate_t
   TYPE :i32
-  TYPE :__inline_type_csv_c_1
+  TYPE :__inline_type_csv_c_0
 ENDSTRUCT
 
 STRUCT :_G_fpos_t
@@ -98,7 +98,7 @@ STRUCT :fd_set
   TYPE "flat<i64, 16>"
 ENDSTRUCT
 
-STRUCT :__inline_type_csv_c_2
+STRUCT :__inline_type_csv_c_1
   TYPE :u32
   TYPE :u32
 ENDSTRUCT
@@ -266,7 +266,7 @@ STRUCT :Point
   TYPE :f64
 ENDSTRUCT
 
-ENUM :__inline_type_csv_c_1
+ENUM :__inline_type_csv_c_0
   TAG
     SKIP
   VARIANT :__wch
@@ -281,7 +281,7 @@ ENUM :__atomic_wide_counter
   VARIANT :__value64
     TYPE :u64
   VARIANT :__value32
-    TYPE :__inline_type_csv_c_2
+    TYPE :__inline_type_csv_c_1
 ENDENUM
 
 ENUM :pthread_mutexattr_t
@@ -620,14 +620,14 @@ FUNC :static_fn_csv_c_generate_csv_for_parsing
         IF
           THEN
             PUSH :true
-            LOCAL :__ternary_8 :ptr<u8>
+            LOCAL :__ternary_0 :ptr<u8>
             STORE
           ELSE
             PUSH :false
-            LOCAL :__ternary_8
+            LOCAL :__ternary_0
             STORE
         ENDIF
-        LOCAL :__ternary_8
+        LOCAL :__ternary_0
         LOCAL :__s2_z
         LOCAL :__s2_x
         PUSH 100 :i64
@@ -734,18 +734,18 @@ FUNC :static_fn_csv_c_parse_csv_line
         LOCAL :__s0_p
         DEREF
         BINARY :not_eq
-        LOCAL :__sc_and_6 :bool
+        LOCAL :__sc_and_1 :bool
         STORE
-        LOCAL :__sc_and_6
+        LOCAL :__sc_and_1
         IF
           THEN
             PUSH 6
             LOCAL :__s0_field_idx
             BINARY :less
-            LOCAL :__sc_and_6
+            LOCAL :__sc_and_1
             STORE
         ENDIF
-        LOCAL :__sc_and_6
+        LOCAL :__sc_and_1
       BODY
         PUSH 34
         LOCAL :__s0_p
@@ -766,23 +766,23 @@ FUNC :static_fn_csv_c_parse_csv_line
             DEREF
             AS :i32
             BINARY :eq
-            LOCAL :__sc_and_7 :bool
+            LOCAL :__sc_and_2 :bool
             STORE
-            LOCAL :__sc_and_7
+            LOCAL :__sc_and_2
             IF
               THEN
                 PUSH 0
                 LOCAL :__s0_in_quotes
                 BINARY :eq
-                LOCAL :__sc_and_7
+                LOCAL :__sc_and_2
                 STORE
             ENDIF
-            LOCAL :__sc_and_7
+            LOCAL :__sc_and_2
             IF
               THEN
                 LOCAL :__s0_start
                 LOCAL :__s0_field_idx
-                AS :u64
+                AS :i64
                 LOCAL :__s0_field_starts
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -791,7 +791,7 @@ FUNC :static_fn_csv_c_parse_csv_line
                 STORE
                 LOCAL :__s0_p
                 LOCAL :__s0_field_idx
-                AS :u64
+                AS :i64
                 LOCAL :__s0_field_ends
                 ADDR
                 AS :ptr<ptr<u8>>
@@ -821,24 +821,24 @@ FUNC :static_fn_csv_c_parse_csv_line
     PUSH 6
     LOCAL :__s0_field_idx
     BINARY :less
-    LOCAL :__sc_and_8 :bool
+    LOCAL :__sc_and_3 :bool
     STORE
-    LOCAL :__sc_and_8
+    LOCAL :__sc_and_3
     IF
       THEN
         PUSH 0 :u8
         LOCAL :__s0_start
         DEREF
         BINARY :not_eq
-        LOCAL :__sc_and_8
+        LOCAL :__sc_and_3
         STORE
     ENDIF
-    LOCAL :__sc_and_8
+    LOCAL :__sc_and_3
     IF
       THEN
         LOCAL :__s0_start
         LOCAL :__s0_field_idx
-        AS :u64
+        AS :i64
         LOCAL :__s0_field_starts
         ADDR
         AS :ptr<ptr<u8>>
@@ -850,7 +850,7 @@ FUNC :static_fn_csv_c_parse_csv_line
         LOCAL :__s0_start
         BINARY :add
         LOCAL :__s0_field_idx
-        AS :u64
+        AS :i64
         LOCAL :__s0_field_ends
         ADDR
         AS :ptr<ptr<u8>>
@@ -872,14 +872,14 @@ FUNC :static_fn_csv_c_parse_csv_line
         RET
     ENDIF
     PUSH 1
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_starts
     ADDR
     AS :ptr<ptr<u8>>
     BINARY :add
     DEREF
     PUSH 1
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_ends
     ADDR
     AS :ptr<ptr<u8>>
@@ -899,7 +899,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     ENDIF
     LOCAL :__s6_len
     PUSH 1
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_starts
     ADDR
     AS :ptr<ptr<u8>>
@@ -914,6 +914,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     STACK :drop
     PUSH 0 :u8
     LOCAL :__s6_len
+    AS :i64
     LOCAL :__s6_buf
     ADDR
     AS :ptr<u8>
@@ -931,14 +932,14 @@ FUNC :static_fn_csv_c_parse_csv_line
     DEREF
     STORE
     PUSH 3
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_starts
     ADDR
     AS :ptr<ptr<u8>>
     BINARY :add
     DEREF
     PUSH 3
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_ends
     ADDR
     AS :ptr<ptr<u8>>
@@ -958,7 +959,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     ENDIF
     LOCAL :__s6_len
     PUSH 3
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_starts
     ADDR
     AS :ptr<ptr<u8>>
@@ -973,6 +974,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     STACK :drop
     PUSH 0 :u8
     LOCAL :__s6_len
+    AS :i64
     LOCAL :__s6_buf
     ADDR
     AS :ptr<u8>
@@ -990,14 +992,14 @@ FUNC :static_fn_csv_c_parse_csv_line
     DEREF
     STORE
     PUSH 5
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_starts
     ADDR
     AS :ptr<ptr<u8>>
     BINARY :add
     DEREF
     PUSH 5
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_ends
     ADDR
     AS :ptr<ptr<u8>>
@@ -1017,7 +1019,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     ENDIF
     LOCAL :__s6_len
     PUSH 5
-    AS :u64
+    AS :i64
     LOCAL :__s0_field_starts
     ADDR
     AS :ptr<ptr<u8>>
@@ -1032,6 +1034,7 @@ FUNC :static_fn_csv_c_parse_csv_line
     STACK :drop
     PUSH 0 :u8
     LOCAL :__s6_len
+    AS :i64
     LOCAL :__s6_buf
     ADDR
     AS :ptr<u8>
@@ -1164,6 +1167,7 @@ FUNC :CsvParse_run
             STACK :drop
             PUSH 0 :u8
             LOCAL :__s4_len
+            AS :i64
             LOCAL :__s4_line
             ADDR
             AS :ptr<u8>
@@ -1186,7 +1190,7 @@ FUNC :CsvParse_run
               THEN
                 LOCAL :__s5_x
                 LOCAL :__s2_point_count
-                AS :u64
+                AS :i64
                 LOCAL :__s1_points
                 BINARY :add
                 DEREF
@@ -1194,7 +1198,7 @@ FUNC :CsvParse_run
                 STORE
                 LOCAL :__s5_y
                 LOCAL :__s2_point_count
-                AS :u64
+                AS :i64
                 LOCAL :__s1_points
                 BINARY :add
                 DEREF
@@ -1202,7 +1206,7 @@ FUNC :CsvParse_run
                 STORE
                 LOCAL :__s5_z
                 LOCAL :__s2_point_count
-                AS :u64
+                AS :i64
                 LOCAL :__s1_points
                 BINARY :add
                 DEREF
@@ -1246,7 +1250,7 @@ FUNC :CsvParse_run
             BINARY :less
           BODY
             LOCAL :__s7_i
-            AS :u64
+            AS :i64
             LOCAL :__s1_points
             BINARY :add
             DEREF
@@ -1256,7 +1260,7 @@ FUNC :CsvParse_run
             LOCAL :__s7_x_sum
             STORE
             LOCAL :__s7_i
-            AS :u64
+            AS :i64
             LOCAL :__s1_points
             BINARY :add
             DEREF
@@ -1266,7 +1270,7 @@ FUNC :CsvParse_run
             LOCAL :__s7_y_sum
             STORE
             LOCAL :__s7_i
-            AS :u64
+            AS :i64
             LOCAL :__s1_points
             BINARY :add
             DEREF
