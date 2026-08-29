@@ -81,7 +81,7 @@ cd LangArena; ruby run_c_benchmark.rb; cd -
 
 2. cproc proves fast C parsing is possible. cproc compiles the same C code in 726ms - 2.2x faster than Clang -O0. Runtime is only 40% slower than Clang -O3 (72.8s vs 51.8s). As we saw earlier from myc-qbe results, QBE (cproc's backend) spends ~262ms on codegen, meaning cproc's parsing itself is roughly ~464ms.
 
-3. mycc doesn't shine in this benchmark. mycc relies on libclang for parsing, and has very rough frontend implementation (3-week POC), not a production C frontend.
+3. mycc doesn't shine in this benchmark. Parsing through libclang adds noticeable overhead. 
 
 4. GCC has better O0->O3 scaling. 
 
