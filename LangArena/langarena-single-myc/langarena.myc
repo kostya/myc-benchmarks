@@ -44,17 +44,6 @@ STRUCT :timespec
   TYPE :i64
 ENDSTRUCT
 
-STRUCT :UT_hash_handle
-  TYPE :ptr<UT_hash_table>
-  TYPE :ptr<void>
-  TYPE :ptr<void>
-  TYPE :ptr<UT_hash_handle>
-  TYPE :ptr<UT_hash_handle>
-  TYPE :ptr<void>
-  TYPE :u32
-  TYPE :u32
-ENDSTRUCT
-
 STRUCT :UT_hash_bucket
   TYPE :ptr<UT_hash_handle>
   TYPE :u32
@@ -71,6 +60,17 @@ STRUCT :UT_hash_table
   TYPE :u32
   TYPE :u32
   TYPE :u32
+  TYPE :u32
+  TYPE :u32
+ENDSTRUCT
+
+STRUCT :UT_hash_handle
+  TYPE :ptr<UT_hash_table>
+  TYPE :ptr<void>
+  TYPE :ptr<void>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<UT_hash_handle>
+  TYPE :ptr<void>
   TYPE :u32
   TYPE :u32
 ENDSTRUCT

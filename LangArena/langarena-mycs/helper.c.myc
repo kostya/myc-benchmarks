@@ -1,3 +1,8 @@
+STRUCT :max_align_t
+  TYPE :i64
+  TYPE :f64
+ENDSTRUCT
+
 STRUCT :__fsid_t
   TYPE "flat<i32, 2>"
 ENDSTRUCT
