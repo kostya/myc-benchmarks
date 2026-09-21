@@ -1,13 +1,13 @@
 CMDS = [
-  ["gcc(O0)", "gcc -O0 index.c -o "],
-  ["gcc(O1)", "gcc -O1 index.c -o "],
-  ["gcc(O2)", "gcc -O2 index.c -o "],
-  ["gcc(O3)", "gcc -O3 index.c -o "],
-  ["clang(O0)", "clang -O0 index.c -o "],
-  ["clang(O1)", "clang -O1 index.c -o "],
-  ["clang(O2)", "clang -O2 index.c -o "],
-  ["clang(O3)", "clang -O3 index.c -o "],
-  ["cproc", "cproc index.c -o "],
+  ["gcc(O0)", "gcc -Wno-format -O0 index.c -lm -o "],
+  ["gcc(O1)", "gcc -Wno-format -O1 index.c -lm -o "],
+  ["gcc(O2)", "gcc -Wno-format -O2 index.c -lm -o "],
+  ["gcc(O3)", "gcc -Wno-format -O3 index.c -lm -o "],
+  ["clang(O0)", "clang -Wno-format -O0 index.c -lm -o "],
+  ["clang(O1)", "clang -Wno-format -O1 index.c -lm -o "],
+  ["clang(O2)", "clang -Wno-format -O2 index.c -lm -o "],
+  ["clang(O3)", "clang -Wno-format -O3 index.c -lm -o "],
+  ["cproc", "cproc index.c -lm -o "],
 ]
 
 ["--debug", "", "--final"].each do |mode|
