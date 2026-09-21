@@ -12,7 +12,11 @@ CMDS = [
 
 ["--debug", "", "--final"].each do |mode|
   %w{llvm qbe c}.each do |backend|
-    CMDS << ["mycc(#{backend}, #{mode == "" ? "default" : mode.sub("--", "")})", "mycc c --backend #{backend} #{mode} index.c "]
+    if (mode == "--final" && backend == "qbe") ||
+        (mode == "--debug" && backend == "c")
+    else
+      CMDS << ["mycc(#{backend}, #{mode == "" ? "default" : mode.sub("--", "")})", "mycc c --backend #{backend} #{mode} index.c "]
+    end
   end
 end
 
