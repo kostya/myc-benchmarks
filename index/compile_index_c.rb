@@ -23,7 +23,7 @@ def measure
 end
 
 def run_cmd(cmd)
-  puts cmd unless ENV["MYC_CI"] == "1"
+  print cmd unless ENV["MYC_CI"] == "1"
   `#{cmd}`
 end
 
@@ -38,6 +38,7 @@ def compile(cmd)
     cmd = "#{cmd} #{output}"
     run_cmd cmd
   end
+  puts " in #{delta.round(3)}s"
 
   [output, delta]
 end
@@ -55,6 +56,7 @@ p h
 
 h2 = {}
 outputs.each do |name, output|
+  print "Run #{name} "
   res = `#{output}`
   line = res.split("\n").find { |l| l.include?("Summary") }
   if line && line.include?("50, 50, ") && line =~ /Summary:\s*(\d+\.\d+)s/
