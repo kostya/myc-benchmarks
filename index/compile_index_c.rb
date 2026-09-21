@@ -1,18 +1,18 @@
 CMDS = [
-  "gcc -O0 index.c -o ",
-  "gcc -O1 index.c -o ",
-  "gcc -O2 index.c -o ",
-  "gcc -O3 index.c -o ",
-  "clang -O0 index.c -o ",
-  "clang -O1 index.c -o ",
-  "clang -O2 index.c -o ",
-  "clang -O3 index.c -o ",
-  "cproc index.c -o ",
+  ["gcc(O0)", "gcc -O0 index.c -o "],
+  ["gcc(O1)", "gcc -O1 index.c -o "],
+  ["gcc(O2)", "gcc -O2 index.c -o "],
+  ["gcc(O3)", "gcc -O3 index.c -o "],
+  ["clang(O0)", "clang -O0 index.c -o "],
+  ["clang(O1)", "clang -O1 index.c -o "],
+  ["clang(O2)", "clang -O2 index.c -o "],
+  ["clang(O3)", "clang -O3 index.c -o "],
+  ["cproc", "cproc index.c -o "],
 ]
 
 ["--debug", "", "--final"].each do |mode|
   %w{llvm qbe c}.each do |backend|
-    CMDS << "mycc c --backend #{backend} #{mode} ",
+    CMDS << ["mycc(#{backend}, #{mode == "" ? "default" : mode})", "mycc c --backend #{backend} #{mode} index.c "],
   end
 end
 
@@ -42,14 +42,28 @@ def compile(cmd)
   [output, delta]
 end
 
-outputs = []
+outputs = {}
 h = {}
 
-CMDS.each do |cmd|
+CMDS.each do |(name, cmd)|
   output, delta = compile(cmd)
-  outputs << output
-  h[cmd] = delta
+  outputs[name] = output
+  h[name] = delta
 end
 
 p h
 
+h2 = {}
+outputs.each do |name, output|
+  res = `#{output}`
+  line = res.split("\n").find { |l| l.include?("Summary") }
+  if line && line.include?("50, 50, ") && line =~ /Summary:\s*(\d+\.\d+)s/
+    delta = $1.to_f
+    puts "OK in #{delta}"
+    h2[name] = delta
+  else
+    puts "ERROR #{line}"
+  end
+end
+
+p h2
