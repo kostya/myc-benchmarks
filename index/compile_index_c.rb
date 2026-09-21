@@ -28,7 +28,7 @@ def run_cmd(cmd)
 end
 
 def output_path(cmd)
-  "/tmp/index_c_" + cmd.tr(" -", "__").downcase
+  "/tmp/index_c_" + cmd.tr(" -.", "___").downcase
 end
 
 def compile(cmd)
