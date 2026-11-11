@@ -18,7 +18,7 @@ RUN git clone https://github.com/vishvananda/cppgm-extended.git gm && \
     git checkout $gm_version && \
     make -C dev cppgm++ CXX=clang++ CPPGM_HOST_CXX=clang++ -j8
 
-ARG myc_version="add_gm"
+ARG myc_version="eec38069417dcfb894fbfac03c2c33421125dcd1"
 RUN git clone https://github.com/kostya/myc.git && \
     cd myc && \
     git checkout $myc_version && \
