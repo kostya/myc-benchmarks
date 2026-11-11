@@ -46,6 +46,8 @@ ruby run.rb
 | gcc | - | -O3 | 4.7703 | 50.6755 |
 | cproc | qbe |  | 0.2044 | 88.8468 |
 
+![plot](plot1.png)
+
 # 2. Pure IR files on index-c: (myc, clang)
 
 Running on [index-c](https://github.com/kostya/index-c) benchmark. But index.c transformed into index-c.myc and index-c.ll. This benchmark show pure IR compilation capabilities without C frontend overhead.
@@ -70,6 +72,8 @@ ruby run.rb
 | clang | llvm | -O1 | 1.4534 | 54.5575 |
 | clang | llvm | -O2 | 1.8094 | 52.109 |
 | clang | llvm | -O3 | 1.8932 | 51.3404 |
+
+![plot](plot2.png)
 
 # 3. Brainfuck compiler: (llvm, qbe, myc, cppgm)
 
