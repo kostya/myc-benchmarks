@@ -71,7 +71,7 @@ end
 
 puts
 puts "| Compiler | Backend | Flags | Compile (s) | Run (s) |"
-puts "|----------|---------|-------|-------------|---------|--------|"
+puts "|----------|---------|-------|-------------|---------|"
 RES.each do |compiler, backend, flags, compile_time, run_time, status|
   ct = compile_time ? compile_time.round(4) : ""
   rt = run_time ? run_time.round(4) : ""
