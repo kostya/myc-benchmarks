@@ -27,6 +27,7 @@ cd 1.index-c
 ruby run.rb
 ```
 
+
 | Compiler | Backend | Flags | Compile (s) | Run (s) |
 |----------|---------|-------|-------------|---------|--------|
 | mycc | llvm |  | 1.3861 | 60.1767 |
@@ -56,6 +57,7 @@ cd 2.index-c.ir
 ruby gen_ir.rb
 ruby run.rb
 ```
+
 
 | Compiler | Backend | Flags | Compile (s) | Run (s) |
 |----------|---------|-------|-------------|---------|--------|
