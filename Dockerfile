@@ -16,7 +16,9 @@ ARG gm_version="01bac61953a982df28933dfde0fa03eb65838ea4"
 RUN git clone https://github.com/vishvananda/cppgm-extended.git gm && \
     cd gm && \
     git checkout $gm_version && \
-    make -C dev cppgm++ CXX=clang++ CPPGM_HOST_CXX=clang++ -j8
+    make -C dev lowir-library CXX=clang++ CPPGM_HOST_CXX=clang++ -j8
+
+ENV GM_LIBRARY="/opt/gm/dev/libcppgm_lowir.so"
 
 ARG myc_version="4dcea3fadf690d19ecd652e41c29f2b3c1f00941"
 RUN git clone https://github.com/vishvananda/myc.git && \
