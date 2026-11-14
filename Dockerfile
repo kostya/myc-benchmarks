@@ -36,7 +36,7 @@ RUN cd /opt/myc \
     && crystal build ./src/cli/c.cr --release -o myc-c \
     && shards \
     && crystal build ./src/cli/gm.cr --release -o myc-gm \
-    && crystal build ./src/cli/mycc.cr --release -o mycc
+    && crystal build ./src/cli/mycc.cr --release -o mycc \
     && crystal build ./src/cli/gm.cr --release -o myc-gm-static \
     && crystal build ./src/cli/mycc.cr --release -o mycc-static
 
