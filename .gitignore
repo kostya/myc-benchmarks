@@ -8,3 +8,4 @@ bin_*
 *.ll
 *.ssa
 *.s
+*.lowir
