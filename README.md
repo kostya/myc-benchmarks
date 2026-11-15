@@ -109,46 +109,46 @@ ruby run.rb
 
 | Benchmark | Backend | Compile | Run |
 |:----------|:-------:|--------:|----:|
-| mandel.myc | myc-llvm | 228ms | 682ms |
-| | myc-qbe | 541ms | 852ms |
-| | myc-c | 988ms | 671ms |
-| | myc-gm | 132ms | 692ms |
-| | myc-llvm-final | 1166ms | 623ms |
-| | myc-qbe-final | 504ms | 852ms |
-| | myc-c-final | 1362ms | 666ms |
-| | myc-gm-final | 177ms | 657ms |
-| bf.myc | myc-llvm | 43ms | 2428ms |
-| | myc-qbe | 31ms | 2690ms |
-| | myc-c | 103ms | 1791ms |
-| | myc-gm | 30ms | 6051ms |
-| | myc-llvm-final | 54ms | 2547ms |
-| | myc-qbe-final | 31ms | 2690ms |
-| | myc-c-final | 204ms | 1109ms |
-| | myc-gm-final | 31ms | 1684ms |
-| loop.myc | myc-llvm | 37ms | 200ms |
-| | myc-qbe | 28ms | 2437ms |
-| | myc-c | 48ms | 169ms |
-| | myc-gm | 27ms | 331ms |
-| | myc-llvm-final | 39ms | 191ms |
-| | myc-qbe-final | 29ms | 2439ms |
-| | myc-c-final | 56ms | 116ms |
-| | myc-gm-final | 27ms | 324ms |
-| loop.c | myc-llvm | 74ms | 199ms |
-| | myc-qbe | 73ms | 2437ms |
-| | myc-c | 123ms | 183ms |
-| | myc-gm | 71ms | 330ms |
-| | myc-llvm-final | 74ms | 219ms |
-| | myc-qbe-final | 73ms | 202ms |
-| | myc-c-final | 73ms | 203ms |
-| | myc-gm-final | 73ms | 200ms |
-| sieve.c | myc-llvm | 87ms | 286ms |
-| | myc-qbe | 86ms | 291ms |
-| | myc-c | 108ms | 280ms |
-| | myc-gm | 85ms | 290ms |
-| | myc-llvm-final | 86ms | 285ms |
-| | myc-qbe-final | 86ms | 287ms |
-| | myc-c-final | 86ms | 282ms |
-| | myc-gm-final | 87ms | 286ms |
+| mandel.myc | myc-llvm | 232ms | 683ms |
+| | myc-qbe | 508ms | 852ms |
+| | myc-c | 1000ms | 675ms |
+| | myc-gm | 163ms | 682ms |
+| | myc-llvm-final | 1177ms | 629ms |
+| | myc-qbe-final | 545ms | 852ms |
+| | myc-c-final | 1390ms | 667ms |
+| | myc-gm-final | 209ms | 673ms |
+| bf.myc | myc-llvm | 44ms | 2430ms |
+| | myc-qbe | 64ms | 2689ms |
+| | myc-c | 104ms | 1792ms |
+| | myc-gm | 30ms | 6071ms |
+| | myc-llvm-final | 54ms | 2546ms |
+| | myc-qbe-final | 31ms | 2715ms |
+| | myc-c-final | 175ms | 1728ms |
+| | myc-gm-final | 33ms | 1585ms |
+| loop.myc | myc-llvm | 38ms | 201ms |
+| | myc-qbe | 29ms | 2438ms |
+| | myc-c | 49ms | 148ms |
+| | myc-gm | 27ms | 330ms |
+| | myc-llvm-final | 42ms | 190ms |
+| | myc-qbe-final | 29ms | 2438ms |
+| | myc-c-final | 57ms | 94ms |
+| | myc-gm-final | 28ms | 323ms |
+| loop.c | myc-llvm | 74ms | 201ms |
+| | myc-qbe | 74ms | 2438ms |
+| | myc-c | 91ms | 143ms |
+| | myc-gm | 73ms | 352ms |
+| | myc-llvm-final | 74ms | 199ms |
+| | myc-qbe-final | 74ms | 218ms |
+| | myc-c-final | 74ms | 200ms |
+| | myc-gm-final | 74ms | 200ms |
+| sieve.c | myc-llvm | 89ms | 293ms |
+| | myc-qbe | 87ms | 296ms |
+| | myc-c | 110ms | 290ms |
+| | myc-gm | 86ms | 302ms |
+| | myc-llvm-final | 87ms | 293ms |
+| | myc-qbe-final | 87ms | 290ms |
+| | myc-c-final | 88ms | 291ms |
+| | myc-gm-final | 88ms | 290ms |
 
 # 5. Myc-GM vs Clang in index-c. Detailed.
 
