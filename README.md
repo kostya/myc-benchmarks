@@ -14,7 +14,7 @@ docker build -t myc-benchmarks .
 
 Show versions:
 ```
-docker run --rm myc-benchmarks sh -c 'for t in clang gcc cproc qbe cppgm++ myc-llvm myc-qbe myc-c myc-gm; do printf "%s: " "$t"; command -v "$t" >/dev/null 2>&1 && { "$t" --version 2>&1 | head -n1 || "$t" -v 2>&1 | head -n1; } || echo "not found"; done'
+docker run --rm myc-benchmarks sh -c 'for t in clang gcc cproc qbe cppgm myc-llvm myc-qbe myc-c myc-gm; do printf "%s: " "$t"; command -v "$t" >/dev/null 2>&1 && { "$t" --version 2>&1 | head -n1 || "$t" -v 2>&1 | head -n1; } || echo "not found"; done'
 ```
 
 # 1. C compilers on index-c: (clang, gcc, mycc, cproc)

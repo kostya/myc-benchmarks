@@ -2,7 +2,7 @@
 
 CC = ENV["CC"] || "clang"
 QBE = ENV["QBE"] || "qbe"
-GM = ENV["GM"] || "cppgm++"
+GM = ENV["GM"] || "cppgm"
 MYC_LLVM = "myc-llvm"
 MYC_C = "myc-c"
 MYC_QBE = "myc-qbe"
@@ -75,7 +75,7 @@ CFG = {
 	},
 	"gm": {
 		"ir": "lowir",
-		"compiler": "cppgm++",
+		"compiler": "cppgm",
 		"src": "mandel.lowir",
 		"cmd": "bash -c '#{GM} -O3 -c mandel.lowir -o mandel_gm.o; cc mandel_gm.o -o ./bin_bf_gm'",
 		"run": "./bin_bf_gm",

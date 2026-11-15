@@ -27,10 +27,3 @@ RUN git clone https://github.com/kostya/myc.git && \
 
 ENV PATH="/opt/gm/dev:/opt/myc:/opt/cproc:/opt/qbe:${PATH}"
 
-RUN for t in clang gcc cproc qbe cppgm++ myc-llvm myc-qbe myc-c myc-gm; do \
-      printf '%s: ' "$t"; \
-      command -v "$t" >/dev/null 2>&1 \
-        && { "$t" --version 2>&1 | head -n1 || "$t" -v 2>&1 | head -n1; } \
-        || echo "not found"; \
-    done
-    
