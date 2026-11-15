@@ -29,22 +29,22 @@ ruby run.rb
 
 | Compiler | Backend | Flags | Compile (s) | Run (s) |
 |----------|---------|-------|-------------|---------|
-| mycc | llvm |  | 1.3861 | 60.1767 |
-| mycc | llvm | --final | 2.5244 | 51.9228 |
-| mycc | c |  | 2.8505 | 59.7757 |
-| mycc | c | --final | 5.8163 | 52.1159 |
-| mycc | gm |  | 0.768 | 61.326 |
-| mycc | gm | --final | 0.8727 | 53.3361 |
-| mycc | qbe |  | 0.7656 | 78.2328 |
-| clang | llvm | -O0 | 0.3439 | 142.5666 |
-| clang | llvm | -O1 | 1.6629 | 53.9996 |
-| clang | llvm | -O2 | 2.0166 | 51.156 |
-| clang | llvm | -O3 | 2.0844 | 51.0058 |
-| gcc | - | -O0 | 0.8005 | 132.4786 |
-| gcc | - | -O1 | 1.8718 | 57.3093 |
-| gcc | - | -O2 | 3.6296 | 52.2206 |
-| gcc | - | -O3 | 4.7703 | 50.6755 |
-| cproc | qbe |  | 0.2044 | 88.8468 |
+| mycc | llvm |  | 1.3593 | 60.134 |
+| mycc | llvm | --final | 2.5393 | 52.0551 |
+| mycc | c |  | 2.8693 | 59.4511 |
+| mycc | c | --final | 5.8343 | 52.0524 |
+| mycc | gm |  | 0.8394 | 57.5891 |
+| mycc | gm | --final | 0.9276 | 52.6172 |
+| mycc | qbe |  | 0.7798 | 78.3651 |
+| clang | llvm | -O0 | 0.3459 | 142.2597 |
+| clang | llvm | -O1 | 1.6685 | 54.0844 |
+| clang | llvm | -O2 | 2.0338 | 51.1672 |
+| clang | llvm | -O3 | 2.0754 | 51.5966 |
+| gcc | - | -O0 | 0.8085 | 132.7673 |
+| gcc | - | -O1 | 1.8853 | 57.5418 |
+| gcc | - | -O2 | 3.6455 | 52.3248 |
+| gcc | - | -O3 | 4.7855 | 50.5958 |
+| cproc | qbe |  | 0.2056 | 88.9484 |
 
 ![plot](plot1.png)
 
@@ -61,17 +61,17 @@ ruby run.rb
 
 | Compiler | Backend | Flags | Compile (s) | Run (s) |
 |----------|---------|-------|-------------|---------|
-| myc | llvm |  | 0.932 | 60.0968 |
-| myc | llvm | --final | 2.1277 | 52.0302 |
-| myc | c |  | 2.4351 | 59.0626 |
-| myc | c | --final | 5.3817 | 51.8694 |
-| myc | gm |  | 0.3415 | 61.5946 |
-| myc | gm | --final | 0.4541 | 53.4905 |
-| myc | qbe |  | 0.3453 | 78.1928 |
-| clang | llvm | -O0 | 0.197 | 139.2588 |
-| clang | llvm | -O1 | 1.4534 | 54.5575 |
-| clang | llvm | -O2 | 1.8094 | 52.109 |
-| clang | llvm | -O3 | 1.8932 | 51.3404 |
+| myc | llvm |  | 0.9413 | 60.4062 |
+| myc | llvm | --final | 2.1499 | 52.3026 |
+| myc | c |  | 2.4507 | 59.3027 |
+| myc | c | --final | 5.417 | 52.3337 |
+| myc | gm |  | 0.4055 | 57.3465 |
+| myc | gm | --final | 0.4992 | 52.6121 |
+| myc | qbe |  | 0.352 | 78.2827 |
+| clang | llvm | -O0 | 0.1984 | 140.4707 |
+| clang | llvm | -O1 | 1.464 | 54.4958 |
+| clang | llvm | -O2 | 1.8194 | 52.3311 |
+| clang | llvm | -O3 | 1.9003 | 51.9817 |
 
 ![plot](plot2.png)
 
@@ -87,17 +87,17 @@ ruby run.rb
 
 | IR | Compiler | IR size, Kb | Compile time | Run time |
 |:---------:|:---------:|:---------:|:---------:|:---------:|
-| llvm-ll | clang(-O3) | 1529 | 1160ms | 636ms |
-| myc | myc-llvm(default) | 486 | 216ms | 683ms |
-| myc | myc-llvm(final) | 486 | 1159ms | 621ms |
-| qbe-ssa | qbe + clang(as+linker) | 345 | 78ms + 49ms | 811ms |
-| myc | myc-qbe(default) | 486 | 497ms | 851ms |
-| c | clang(-O3) | 128 | 1224ms | 626ms |
-| myc | myc-c(default) | 486 | 961ms | 673ms |
-| myc | myc-c(final) | 486 | 1352ms | 667ms |
-| lowir | cppgm++ | 1157 | 106ms | 691ms |
-| myc | myc-gm(default) | 486 | 126ms | 692ms |
-| myc | myc-gm(final) | 486 | 170ms | 664ms |
+| llvm-ll | clang(-O3) | 1529 | 1177ms | 637ms |
+| myc | myc-llvm(default) | 486 | 222ms | 684ms |
+| myc | myc-llvm(final) | 486 | 1173ms | 623ms |
+| qbe-ssa | qbe + clang(as+linker) | 345 | 82ms + 49ms | 808ms |
+| myc | myc-qbe(default) | 486 | 502ms | 852ms |
+| c | clang(-O3) | 128 | 1272ms | 625ms |
+| myc | myc-c(default) | 486 | 974ms | 673ms |
+| myc | myc-c(final) | 486 | 1370ms | 665ms |
+| lowir | cppgm | 1157 | 152ms | 651ms |
+| myc | myc-gm(default) | 486 | 159ms | 681ms |
+| myc | myc-gm(final) | 486 | 206ms | 673ms |
 
 # 4. Myc examples: (myc)
 
