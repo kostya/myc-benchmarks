@@ -4,6 +4,7 @@ RUN pacman -Syu --noconfirm && \
     pacman -S --noconfirm base-devel git wget clang crystal shards lld ruby && \
     pacman -Scc --noconfirm
 
+ENV CC=clang
 WORKDIR /opt
 
 RUN git clone https://github.com/kostya/qbe.git && \
@@ -29,3 +30,4 @@ ARG myc_version="c154ee53f31d051e60f4b9a9a438963f73a265d7"
 RUN cd /opt/myc && \
     git checkout $myc_version && \
     sh build.sh
+
