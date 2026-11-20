@@ -71,17 +71,17 @@ ruby run.rb
 
 | Compiler | Backend | Flags | Compile (s) | Run (s) |
 |----------|---------|-------|-------------|---------|
-| myc | llvm |  | 0.9388 | 60.3338 |
-| myc | llvm | --final | 2.1202 | 51.9244 |
-| myc | c |  | 2.4502 | 59.1295 |
-| myc | c | --final | 5.4218 | 52.0605 |
-| myc | gm |  | 0.3641 | 57.1806 |
-| myc | gm | --final | 0.4604 | 52.4984 |
-| myc | qbe |  | 0.3503 | 78.3457 |
-| clang | llvm | -O0 | 0.3036 | 139.0683 |
-| clang | llvm | -O1 | 1.4524 | 54.2433 |
-| clang | llvm | -O2 | 1.8051 | 52.0981 |
-| clang | llvm | -O3 | 1.8923 | 51.5936 |
+| myc | llvm |  | 0.9525 | 60.3663 |
+| myc | llvm | --final | 2.1375 | 52.1098 |
+| myc | c |  | 2.0165 | 56.3654 |
+| myc | c | --final | 2.7407 | 52.0036 |
+| myc | gm |  | 0.3764 | 58.2623 |
+| myc | gm | --final | 0.471 | 53.3131 |
+| myc | qbe |  | 0.3589 | 78.3446 |
+| clang | llvm | -O0 | 0.1991 | 138.8511 |
+| clang | llvm | -O1 | 1.4592 | 54.3862 |
+| clang | llvm | -O2 | 1.8153 | 52.386 |
+| clang | llvm | -O3 | 1.891 | 51.587 |
 
 ![plot](plot2.png)
 
@@ -97,17 +97,17 @@ ruby run.rb
 
 | IR | Compiler | IR size, Kb | Compile time | Run time |
 |:---------:|:---------:|:---------:|:---------:|:---------:|
-| llvm-ll | clang(-O3) | 1529 | 1170ms | 636ms |
-| myc | myc-llvm(default) | 486 | 218ms | 682ms |
-| myc | myc-llvm(final) | 486 | 1161ms | 623ms |
-| qbe-ssa | qbe + clang(as+linker) | 345 | 79ms + 53ms | 808ms |
-| myc | myc-qbe(default) | 486 | 496ms | 851ms |
-| c | clang(-O3) | 128 | 1263ms | 625ms |
-| myc | myc-c(default) | 486 | 965ms | 671ms |
-| myc | myc-c(final) | 486 | 1362ms | 665ms |
-| lowir | cppgm(-O3) | 1157 | 150ms | 649ms |
-| myc | myc-gm(default) | 486 | 125ms | 682ms |
-| myc | myc-gm(final) | 486 | 173ms | 673ms |
+| llvm-ll | clang(-O3) | 1529 | 1173ms | 636ms |
+| myc | myc-llvm(default) | 486 | 235ms | 685ms |
+| myc | myc-llvm(final) | 486 | 1169ms | 622ms |
+| qbe-ssa | qbe + clang(as+linker) | 345 | 80ms + 51ms | 813ms |
+| myc | myc-qbe(default) | 486 | 511ms | 852ms |
+| c | clang(-O3) | 128 | 1237ms | 627ms |
+| myc | myc-c(default) | 486 | 1451ms | 635ms |
+| myc | myc-c(final) | 486 | 1649ms | 624ms |
+| lowir | cppgm(-O3) | 1157 | 148ms | 649ms |
+| myc | myc-gm(default) | 486 | 138ms | 682ms |
+| myc | myc-gm(final) | 486 | 186ms | 675ms |
 
 # 4. Myc examples: (myc)
 
@@ -119,46 +119,46 @@ ruby run.rb
 
 | Benchmark | Backend | Compile | Run |
 |:----------|:-------:|--------:|----:|
-| mandel.myc | myc-llvm | 229ms | 684ms |
-| | myc-qbe | 502ms | 852ms |
-| | myc-c | 1099ms | 672ms |
-| | myc-gm | 136ms | 682ms |
-| | myc-llvm-final | 1170ms | 621ms |
-| | myc-qbe-final | 503ms | 852ms |
-| | myc-c-final | 1388ms | 665ms |
-| | myc-gm-final | 180ms | 673ms |
-| bf.myc | myc-llvm | 109ms | 2420ms |
-| | myc-qbe | 31ms | 2696ms |
-| | myc-c | 104ms | 1788ms |
-| | myc-gm | 29ms | 6070ms |
-| | myc-llvm-final | 55ms | 2626ms |
-| | myc-qbe-final | 32ms | 2688ms |
-| | myc-c-final | 176ms | 1113ms |
-| | myc-gm-final | 32ms | 1596ms |
-| loop.myc | myc-llvm | 76ms | 201ms |
-| | myc-qbe | 29ms | 2440ms |
-| | myc-c | 81ms | 159ms |
-| | myc-gm | 26ms | 327ms |
-| | myc-llvm-final | 42ms | 195ms |
-| | myc-qbe-final | 29ms | 2437ms |
-| | myc-c-final | 90ms | 117ms |
-| | myc-gm-final | 27ms | 316ms |
-| loop.c | myc-llvm | 76ms | 200ms |
-| | myc-qbe | 76ms | 2437ms |
-| | myc-c | 95ms | 145ms |
-| | myc-gm | 72ms | 321ms |
-| | myc-llvm-final | 75ms | 200ms |
-| | myc-qbe-final | 76ms | 217ms |
-| | myc-c-final | 77ms | 199ms |
-| | myc-gm-final | 76ms | 199ms |
-| sieve.c | myc-llvm | 128ms | 288ms |
-| | myc-qbe | 88ms | 289ms |
-| | myc-c | 112ms | 287ms |
-| | myc-gm | 85ms | 295ms |
-| | myc-llvm-final | 90ms | 283ms |
-| | myc-qbe-final | 90ms | 285ms |
-| | myc-c-final | 90ms | 285ms |
-| | myc-gm-final | 90ms | 285ms |
+| mandel.myc | myc-llvm | 241ms | 684ms |
+| | myc-qbe | 520ms | 852ms |
+| | myc-c | 1470ms | 636ms |
+| | myc-gm | 143ms | 681ms |
+| | myc-llvm-final | 1189ms | 621ms |
+| | myc-qbe-final | 522ms | 853ms |
+| | myc-c-final | 1656ms | 626ms |
+| | myc-gm-final | 192ms | 674ms |
+| bf.myc | myc-llvm | 54ms | 2449ms |
+| | myc-qbe | 41ms | 2697ms |
+| | myc-c | 78ms | 2584ms |
+| | myc-gm | 39ms | 6074ms |
+| | myc-llvm-final | 64ms | 2549ms |
+| | myc-qbe-final | 42ms | 2691ms |
+| | myc-c-final | 83ms | 2781ms |
+| | myc-gm-final | 42ms | 1596ms |
+| loop.myc | myc-llvm | 48ms | 206ms |
+| | myc-qbe | 40ms | 2437ms |
+| | myc-c | 62ms | 185ms |
+| | myc-gm | 36ms | 327ms |
+| | myc-llvm-final | 52ms | 191ms |
+| | myc-qbe-final | 39ms | 2437ms |
+| | myc-c-final | 65ms | 139ms |
+| | myc-gm-final | 37ms | 318ms |
+| loop.c | myc-llvm | 85ms | 199ms |
+| | myc-qbe | 86ms | 2437ms |
+| | myc-c | 107ms | 185ms |
+| | myc-gm | 81ms | 321ms |
+| | myc-llvm-final | 86ms | 217ms |
+| | myc-qbe-final | 84ms | 205ms |
+| | myc-c-final | 84ms | 200ms |
+| | myc-gm-final | 85ms | 201ms |
+| sieve.c | myc-llvm | 99ms | 288ms |
+| | myc-qbe | 99ms | 291ms |
+| | myc-c | 123ms | 289ms |
+| | myc-gm | 94ms | 299ms |
+| | myc-llvm-final | 99ms | 290ms |
+| | myc-qbe-final | 99ms | 286ms |
+| | myc-c-final | 99ms | 287ms |
+| | myc-gm-final | 99ms | 289ms |
 
 # 5. Myc-GM vs Clang in index-c. Detailed.
 
@@ -168,57 +168,60 @@ cd 5.myc-gm-vs-clang/
 ruby run.rb
 ```
 
-| # | test | myc-gm --final | clang -O3 | Δ (s) | slowdown (%) | status |
-|---|---|---|---|---|---|---|
-| 1 | Etc::GameOfLife | 1.396 | 1.057 | +0.339 | +32.1% | OK |
-| 2 | Etc::TextRaytracer | 1.263 | 0.976 | +0.287 | +29.4% | OK |
-| 3 | Compress::HuffDecode | 0.634 | 0.491 | +0.143 | +29.1% | OK |
-| 4 | Compress::BWTEncode | 1.275 | 1.037 | +0.238 | +23.0% | OK |
-| 5 | Etc::NeuralNet | 1.222 | 0.996 | +0.226 | +22.7% | OK |
-| 6 | Distance::NGram | 1.155 | 1.025 | +0.130 | +12.7% | OK |
-| 7 | Template::Parse | 1.150 | 1.023 | +0.127 | +12.4% | OK |
-| 8 | CLBG::Spectralnorm | 1.119 | 1.014 | +0.105 | +10.4% | OK |
-| 9 | Maze::AStar | 1.145 | 1.043 | +0.102 | +9.8% | OK |
-| 10 | Distance::Jaro | 1.044 | 0.953 | +0.091 | +9.5% | OK |
-| 11 | Graph::BFS | 1.068 | 0.975 | +0.093 | +9.5% | OK |
-| 12 | Compress::LZWEncode | 1.288 | 1.184 | +0.104 | +8.8% | OK |
-| 13 | Sort::Quick | 1.073 | 0.989 | +0.084 | +8.5% | OK |
-| 14 | Maze::BFS | 1.097 | 1.030 | +0.067 | +6.5% | OK |
-| 15 | Compress::LZWDecode | 1.118 | 1.050 | +0.068 | +6.5% | OK |
-| 16 | Graph::DFS | 1.017 | 0.962 | +0.055 | +5.7% | OK |
-| 17 | Json::ParseMapping | 1.042 | 0.987 | +0.055 | +5.6% | OK |
-| 18 | Json::ParseDom | 1.063 | 1.010 | +0.053 | +5.2% | OK |
-| 19 | Sort::Merge | 0.816 | 0.780 | +0.036 | +4.6% | OK |
-| 20 | Etc::CacheSimulation | 1.029 | 0.991 | +0.038 | +3.8% | OK |
-| 21 | Maze::Generator | 1.047 | 1.010 | +0.037 | +3.7% | OK |
-| 22 | Graph::AStar | 0.857 | 0.831 | +0.026 | +3.1% | OK |
-| 23 | Base64::Decode | 1.098 | 1.065 | +0.033 | +3.1% | OK |
-| 24 | Brainfuck::Array | 1.356 | 1.318 | +0.038 | +2.9% | OK |
-| 25 | Sort::Self | 1.109 | 1.082 | +0.027 | +2.5% | OK |
-| 26 | Matmul::T16 | 1.004 | 0.981 | +0.023 | +2.3% | OK |
-| 27 | CLBG::Mandelbrot | 1.060 | 1.040 | +0.020 | +1.9% | OK |
-| 28 | Calculator::Interpreter | 1.064 | 1.045 | +0.019 | +1.8% | OK |
-| 29 | Calculator::Ast | 1.017 | 1.003 | +0.014 | +1.4% | OK |
-| 30 | Etc::Words | 1.047 | 1.036 | +0.011 | +1.1% | OK |
-| 31 | Compress::ArithEncode | 0.963 | 0.954 | +0.009 | +0.9% | OK |
-| 32 | Compress::ArithDecode | 0.967 | 0.958 | +0.009 | +0.9% | OK |
-| 33 | Template::Regex | 1.091 | 1.090 | +0.001 | +0.1% | OK |
-| 34 | Matmul::Single | 1.039 | 1.039 | +0.000 | +0.0% | OK |
-| 35 | Matmul::T8 | 0.994 | 0.994 | +0.000 | +0.0% | OK |
-| 36 | CSV::Parse | 0.969 | 0.970 | -0.001 | -0.1% | OK |
-| 37 | Matmul::T4 | 1.052 | 1.054 | -0.002 | -0.2% | OK |
-| 38 | Compress::BWTDecode | 1.044 | 1.068 | -0.024 | -2.2% | OK |
-| 39 | Json::Generate | 0.948 | 0.976 | -0.028 | -2.9% | OK |
-| 40 | CLBG::Nbody | 1.015 | 1.051 | -0.036 | -3.4% | OK |
-| 41 | Base64::Encode | 1.002 | 1.038 | -0.036 | -3.5% | OK |
-| 42 | Hash::CRC32 | 0.216 | 0.225 | -0.009 | -4.0% | OK |
-| 43 | Compress::HuffEncode | 1.267 | 1.338 | -0.071 | -5.3% | OK |
-| 44 | CLBG::Fannkuchredux | 1.028 | 1.088 | -0.060 | -5.5% | OK |
-| 45 | Binarytrees::Arena | 1.597 | 1.707 | -0.110 | -6.4% | OK |
-| 46 | Brainfuck::Recursion | 1.467 | 1.569 | -0.102 | -6.5% | OK |
-| 47 | Etc::LogParser | 0.760 | 0.814 | -0.054 | -6.6% | OK |
-| 48 | Binarytrees::Obj | 0.988 | 1.075 | -0.087 | -8.1% | OK |
-| 49 | Etc::Sieve | 1.090 | 1.484 | -0.394 | -26.5% | OK |
-| 50 | Hash::SHA256 | 0.331 | 1.014 | -0.683 | -67.4% | OK |
+compile mycc --backend gm --final in 0.884659357
+compile clang -O3 in 2.083505013
 
-Summary: myc-gm=52.501s clang=51.490s diff=+1.011s (+2.0%)
+| # | test | mycc --backend gm --final | clang -O3 | Δ (s) | slowdown (%) | status |
+|---|---|---|---|---|---|---|
+| 1 | Etc::GameOfLife | 1.407 | 1.085 | +0.322 | +29.7% | OK |
+| 2 | Etc::TextRaytracer | 1.265 | 0.977 | +0.288 | +29.5% | OK |
+| 3 | Base64::Decode | 1.362 | 1.066 | +0.296 | +27.8% | OK |
+| 4 | Compress::HuffDecode | 0.604 | 0.491 | +0.113 | +23.0% | OK |
+| 5 | Etc::NeuralNet | 1.223 | 0.997 | +0.226 | +22.7% | OK |
+| 6 | Compress::BWTEncode | 1.271 | 1.040 | +0.231 | +22.2% | OK |
+| 7 | Template::Parse | 1.138 | 1.022 | +0.116 | +11.4% | OK |
+| 8 | Distance::NGram | 1.134 | 1.022 | +0.112 | +11.0% | OK |
+| 9 | CLBG::Spectralnorm | 1.118 | 1.016 | +0.102 | +10.0% | OK |
+| 10 | Maze::AStar | 1.154 | 1.055 | +0.099 | +9.4% | OK |
+| 11 | Distance::Jaro | 1.041 | 0.952 | +0.089 | +9.3% | OK |
+| 12 | Brainfuck::Recursion | 1.703 | 1.568 | +0.135 | +8.6% | OK |
+| 13 | Sort::Quick | 1.074 | 0.997 | +0.077 | +7.7% | OK |
+| 14 | Compress::LZWEncode | 1.291 | 1.200 | +0.091 | +7.6% | OK |
+| 15 | Graph::BFS | 1.044 | 0.975 | +0.069 | +7.1% | OK |
+| 16 | Maze::BFS | 1.102 | 1.030 | +0.072 | +7.0% | OK |
+| 17 | Compress::LZWDecode | 1.124 | 1.056 | +0.068 | +6.4% | OK |
+| 18 | Json::ParseMapping | 1.043 | 0.989 | +0.054 | +5.5% | OK |
+| 19 | Json::ParseDom | 1.063 | 1.009 | +0.054 | +5.4% | OK |
+| 20 | Sort::Merge | 0.816 | 0.781 | +0.035 | +4.5% | OK |
+| 21 | Calculator::Ast | 1.043 | 0.999 | +0.044 | +4.4% | OK |
+| 22 | Brainfuck::Array | 1.369 | 1.313 | +0.056 | +4.3% | OK |
+| 23 | Graph::DFS | 1.016 | 0.976 | +0.040 | +4.1% | OK |
+| 24 | Maze::Generator | 1.048 | 1.011 | +0.037 | +3.7% | OK |
+| 25 | Sort::Self | 1.105 | 1.083 | +0.022 | +2.0% | OK |
+| 26 | Etc::Words | 1.058 | 1.037 | +0.021 | +2.0% | OK |
+| 27 | Compress::ArithEncode | 0.969 | 0.950 | +0.019 | +2.0% | OK |
+| 28 | CLBG::Mandelbrot | 1.060 | 1.041 | +0.019 | +1.8% | OK |
+| 29 | Compress::ArithDecode | 0.972 | 0.955 | +0.017 | +1.8% | OK |
+| 30 | Etc::CacheSimulation | 1.007 | 0.996 | +0.011 | +1.1% | OK |
+| 31 | Graph::AStar | 0.835 | 0.829 | +0.006 | +0.7% | OK |
+| 32 | Matmul::T4 | 1.053 | 1.048 | +0.005 | +0.5% | OK |
+| 33 | Matmul::T16 | 0.985 | 0.981 | +0.004 | +0.4% | OK |
+| 34 | Matmul::T8 | 0.996 | 0.992 | +0.004 | +0.4% | OK |
+| 35 | Matmul::Single | 1.039 | 1.037 | +0.002 | +0.2% | OK |
+| 36 | Etc::LogParser | 0.784 | 0.789 | -0.005 | -0.6% | OK |
+| 37 | CSV::Parse | 0.970 | 0.981 | -0.011 | -1.1% | OK |
+| 38 | Calculator::Interpreter | 1.032 | 1.044 | -0.012 | -1.1% | OK |
+| 39 | Template::Regex | 1.106 | 1.119 | -0.013 | -1.2% | OK |
+| 40 | Compress::BWTDecode | 1.041 | 1.067 | -0.026 | -2.4% | OK |
+| 41 | Json::Generate | 0.958 | 0.991 | -0.033 | -3.3% | OK |
+| 42 | Hash::CRC32 | 0.216 | 0.224 | -0.008 | -3.6% | OK |
+| 43 | CLBG::Nbody | 1.015 | 1.053 | -0.038 | -3.6% | OK |
+| 44 | Base64::Encode | 1.002 | 1.040 | -0.038 | -3.7% | OK |
+| 45 | CLBG::Fannkuchredux | 1.045 | 1.090 | -0.045 | -4.1% | OK |
+| 46 | Binarytrees::Obj | 1.001 | 1.080 | -0.079 | -7.3% | OK |
+| 47 | Compress::HuffEncode | 1.207 | 1.312 | -0.105 | -8.0% | OK |
+| 48 | Binarytrees::Arena | 1.631 | 1.885 | -0.254 | -13.5% | OK |
+| 49 | Etc::Sieve | 1.098 | 1.493 | -0.395 | -26.5% | OK |
+| 50 | Hash::SHA256 | 0.327 | 1.033 | -0.706 | -68.3% | OK |
+
+Summary: myc-gm=52.965s clang=51.777s diff=+1.188s (+2.3%)
