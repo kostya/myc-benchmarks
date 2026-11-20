@@ -20,11 +20,11 @@ docker run --rm myc-benchmarks sh -c 'for t in clang gcc cproc qbe cppgm myc-llv
 ```
 clang: clang version 23.1.5
 gcc: gcc (GCC) 16.2.1 20260810
-cppgm: cppgm 0.9.6 (host configuration: g++)
-myc-llvm: myc 0.12.1-c154ee5 LLVM 23.1.5 (https://github.com/kostya/myc)
-myc-qbe: myc 0.12.1-c154ee5 QBE fab6d40 (https://github.com/kostya/myc)
-myc-c: myc 0.12.1-c154ee5 C(cc (GCC) 16.2.1 20260810) (https://github.com/kostya/myc)
-myc-gm: myc 0.12.1-c154ee5 GM v0.9.6 (https://github.com/kostya/myc)
+cppgm: cppgm 0.10.0 (host configuration: g++)
+myc-llvm: myc 0.12.3-faed679 LLVM 23.1.5 (https://github.com/kostya/myc)
+myc-qbe: myc 0.12.3-faed679 QBE fab6d40 (https://github.com/kostya/myc)
+myc-c: myc 0.12.3-faed679 C(clang version 23.1.5) (https://github.com/kostya/myc)
+myc-gm: myc 0.12.3-faed679 GM v0.10.0 (https://github.com/kostya/myc)
 ```
 
 # 1. C compilers on index-c: (clang, gcc, mycc, cproc)
