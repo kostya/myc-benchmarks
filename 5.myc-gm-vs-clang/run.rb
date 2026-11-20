@@ -11,12 +11,12 @@ end
 cmd = "mycc index-c/index.c c --final --backend gm ./bin_gm"
 t = Time.now
 `#{cmd}`
-puts "compile myc-gm in #{Time.now - t}"
+puts "compile mycc --backend gm --final in #{Time.now - t}"
 
 cmd = "clang -O3 index-c/index.c -lm -o ./bin_clang"
 t = Time.now
 `#{cmd}`
-puts "compile clang in #{Time.now - t}"
+puts "compile clang -O3 in #{Time.now - t}"
 
 def run_and_parse(bin)
   out = `#{bin}`
@@ -29,9 +29,9 @@ def run_and_parse(bin)
   results
 end
 
-puts "Running bin_gm..."
+# puts "Running bin_gm..."
 gm = run_and_parse("./bin_gm")
-puts "Running bin_clang..."
+# puts "Running bin_clang..."
 clang = run_and_parse("./bin_clang")
 
 all_tests = gm.keys + (clang.keys - gm.keys)
@@ -50,7 +50,7 @@ end
 rows.sort_by! { |r| r[:slowdown] ? -r[:slowdown] : Float::INFINITY }
 
 puts
-puts "| # | test | myc-gm --final | clang -O3 | Δ (s) | slowdown (%) | status |"
+puts "| # | test | mycc --backend gm --final | clang -O3 | Δ (s) | slowdown (%) | status |"
 puts "|---|---|---|---|---|---|---|"
 rows.each_with_index do |r, i|
   gm_s   = r[:gm]  ? format("%.3f", r[:gm])  : "-"
