@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 from matplotlib.lines import Line2D
 
 markdown = """
@@ -64,8 +65,17 @@ labels = [name for name, _, _ in data]
 for i, (x, y) in enumerate(zip(x_coords, y_coords)):
     ax.scatter(x, y, c=colors[i], s=250, edgecolors='white', linewidth=1.2, zorder=5)
 
-ax.set_xlim(0, 6.5)
-ax.set_ylim(45, 150)
+# Логарифмическая шкала по Y
+ax.set_yscale('log')
+
+# Обычные числа на оси Y вместо степеней 10^n
+ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f'{v:g}'))
+ax.yaxis.set_minor_formatter(mticker.NullFormatter())
+
+# Явные «круглые» метки по Y
+ax.yaxis.set_major_locator(mticker.FixedLocator([50, 60, 70, 80, 90, 100, 120, 140]))
+
+ax.set_xlim(0, 5)
 
 for x, y, label in zip(x_coords, y_coords, labels):
     if label == 'clang llvm -O3':
@@ -82,13 +92,13 @@ for x, y, label in zip(x_coords, y_coords, labels):
     )
 
 ax.set_xlabel('Compile time (seconds)', color='white', fontsize=14)
-ax.set_ylabel('Runtime (seconds)', color='white', fontsize=14)
+ax.set_ylabel('Runtime (seconds, log scale)', color='white', fontsize=14)
 ax.tick_params(colors='white', labelsize=11)
 ax.spines['bottom'].set_color('gray')
 ax.spines['left'].set_color('gray')
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
-ax.grid(True, alpha=0.15, color='white')
+ax.grid(True, alpha=0.15, color='white', which='major')
 
 legend_elements = []
 for i, (name, _, _) in enumerate(data):
