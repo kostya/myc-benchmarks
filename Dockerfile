@@ -21,12 +21,12 @@ RUN git clone https://github.com/kostya/myc.git
 
 ENV PATH="/opt/myc:${PATH}"
 
-ARG gm_version="0.10.0"
+ARG gm_version="0.10.3"
 RUN mkdir -p /opt/myc/plugins/cppgm && wget -qO- https://github.com/vishvananda/cppgm/releases/download/v$gm_version/cppgm-v$gm_version-linux-x86_64.tar.gz | tar -xz -C /opt/myc/plugins/cppgm --strip-components=1
 
 ENV PATH="/opt/myc/plugins/cppgm/bin:$PATH"
 
-ARG myc_version="v0.12.3"
+ARG myc_version="da9932d0419f2db15a2777eade1f6a12e9c39d9f"
 RUN cd /opt/myc \
     && git fetch \
     && git checkout $myc_version \
