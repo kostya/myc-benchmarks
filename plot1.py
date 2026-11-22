@@ -4,22 +4,22 @@ from matplotlib.lines import Line2D
 markdown = """
 | Compiler | Backend | Flags | Compile (s) | Run (s) |
 |----------|---------|-------|-------------|---------|
-| mycc | llvm |  | 1.5451 | 60.1436 |
-| mycc | llvm | --final | 2.5695 | 51.9172 |
-| mycc | c |  | 2.9886 | 59.2757 |
-| mycc | c | --final | 5.8647 | 52.2412 |
-| mycc | gm |  | 0.8156 | 57.2475 |
-| mycc | gm | --final | 0.8767 | 52.5471 |
-| mycc | qbe |  | 0.8204 | 78.4971 |
-| clang | llvm | -O0 | 0.4201 | 142.773 |
-| clang | llvm | -O1 | 1.6904 | 54.1242 |
-| clang | llvm | -O2 | 2.0602 | 51.0166 |
-| clang | llvm | -O3 | 2.085 | 51.5749 |
-| gcc | - | -O0 | 0.8041 | 132.5994 |
-| gcc | - | -O1 | 1.9168 | 57.5374 |
-| gcc | - | -O2 | 3.6483 | 52.2808 |
-| gcc | - | -O3 | 4.8191 | 50.6065 |
-| cproc | qbe |  | 0.2372 | 88.7688 |
+| mycc | llvm |  | 1.2841 | 60.6917 |
+| mycc | llvm | --final | 2.4648 | 52.7678 |
+| mycc | c |  | 2.339 | 56.9229 |
+| mycc | c | --final | 3.0701 | 52.1554 |
+| mycc | gm |  | 0.7056 | 58.3647 |
+| mycc | gm | --final | 0.8172 | 52.9674 |
+| mycc | qbe |  | 0.6948 | 78.5655 |
+| clang | llvm | -O0 | 0.3466 | 142.9005 |
+| clang | llvm | -O1 | 1.662 | 54.1817 |
+| clang | llvm | -O2 | 2.0348 | 51.293 |
+| clang | llvm | -O3 | 2.084 | 51.548 |
+| gcc | - | -O0 | 0.8089 | 133.0356 |
+| gcc | - | -O1 | 1.8844 | 57.4204 |
+| gcc | - | -O2 | 3.6546 | 52.2313 |
+| gcc | - | -O3 | 4.7995 | 50.6496 |
+| cproc | qbe |  | 0.2044 | 89.2181 |
 """
 
 lines = markdown.strip().split('\n')
