@@ -26,7 +26,7 @@ RUN mkdir -p /opt/myc/plugins/cppgm && wget -qO- https://github.com/vishvananda/
 
 ENV PATH="/opt/myc/plugins/cppgm/bin:$PATH"
 
-ARG myc_version="6ae1303a097db1d38e6972a235e5dc41721ea984"
+ARG myc_version="v0.13.0"
 RUN cd /opt/myc \
     && git fetch \
     && git checkout $myc_version \
